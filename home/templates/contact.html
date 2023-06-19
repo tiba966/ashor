@@ -1,0 +1,325 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+   <!-- Page Title Section Start -->
+ <div class="page-title-section section">
+  <div class="page-title">
+ 
+  </div>
+  <div class="page-breadcrumb">
+      <div class="container">
+          <ul class="breadcrumb">
+              <li><a href="index.html">Home</a></li>
+              <li class="current">Contact us</li>
+
+          </ul>
+      </div>
+  </div>
+</div>
+<!-- Page Title Section End -->
+<!-- Blog Section Start -->
+<div class="section  fix">
+  <div class="container">
+      <div class="row max-mb-n50">
+
+          <div class="col-lg-12 col-12 order-lg-1 max-mb-50">
+              <!-- Blog Wrapper Start -->
+              <div class="row row-cols-1 g-0">
+
+                  <!-- Blog Start -->
+                  <div class=" col" data-aos="fade-up">
+
+
+                      <!-- Page Banner Section Start -->
+                      <div class="page-banner-section section overlay section-padding"
+                          data-bg-image="./assets/images/page-banner/course-bg.jpg">
+                          <div class="container">
+                              <div class="row">
+                                  <div class="col-12">
+                                      <div class="page-banner-title ashor-banner-title">
+                                          <h1 class="title" style="padding: 50px;">
+                                          </h1>
+                                      </div>
+
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Page Banner Section End -->
+
+
+
+                  </div>
+              </div>
+          </div>
+          <!-- Blog End -->
+
+
+      </div>
+      <!-- Blog Wrapper End -->
+  </div>
+
+
+</div>
+
+
+  <!-- Page Title Section End -->
+         <!-- Contact Information Section Start -->
+         <div class="contact-information-section section section-padding-bottom" style="padding-top: 50px;">
+          <div class="container">
+              <div class="row margin-bottom-85">
+                  <div class="col-12">
+                      <div class="contact-title max-width-740">
+                      </div>
+                  </div>
+              </div>
+              <div class="row row-30 row-cols-lg-3 row-cols-md-2 row-cols-1 max-mb-n30">
+                  <div class="col max-mb-30">
+                      <!-- Single Contact Info Start -->
+                      <div class="contact-info">
+                          <div class="icon">
+                              <i class="fal fa-map-marker-alt"></i>
+                          </div>
+                          <div class="info">
+                              <h4 class="title"> Address</h4>
+                              <span class="info-text"> 1800 Abbot Kinney Blvd. Unit D & E Venice</span>
+                          </div>
+                      </div>
+                      <!-- Single Contact Info End -->
+                  </div>
+                  <div class="col max-mb-30">
+                      <!-- Single Contact Info Start -->
+                      <div class="contact-info">
+                          <div class="icon">
+                              <i class="fal fa-phone"></i>
+                          </div>
+                          <div class="info">
+                              <h4 class="title"> Contact</h4>
+                              <span class="info-text"> Mobile: <strong>(+964 771 386 4587) </strong> 
+                                 
+                              </span>
+                          </div>
+                      </div>
+                      <!-- Single Contact Info End -->
+                  </div>
+                  <div class="col max-mb-30">
+                      <!-- Single Contact Info Start -->
+                      <div class="contact-info">
+                          <div class="icon">
+                              <i class="fal fa-map-marker-alt"></i>
+                          </div>
+                          <div class="info">
+                              <h4 class="title">Email</h4>
+                              <span class="info-text">  Mail: <a href="mailto:hello@hasthemes.com">hello@hasthemes.com</a>
+                              </span>
+                          </div>
+                      </div>
+                      <!-- Single Contact Info End -->
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Contact Information Section End -->
+
+      <!--Google Map Area Start-->
+      <div class="google-map-area section text-center">
+          <div class="container">
+              <div class="contact-map-area">
+                  <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2136.986005919501!2d-73.9685579655238!3d40.75862446708152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258e4a1c884e5%3A0x24fe1071086b36d5!2sThe%20Atrium!5e0!3m2!1sen!2sbd!4v1585132512970!5m2!1sen!2sbd" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              </div>
+          </div>
+      </div>
+      <!--Google Map Area Start-->
+
+      <!-- Contact Form Section Start -->
+      <div class="contact-form-section section section-padding">
+          <div class="container">
+              <div class="row">
+                  <div class="offset-lg-2 col-lg-8">
+                      <div class="contact-title max-width-600">
+                      </div>
+                      <div class="contact-form">
+                          <form action="assets/php/contact-mail.php" id="contact-form" method="post">
+                              <div class="row max-mb-n30">
+                                  <div class="col-md-6 col-12 max-mb-30">
+                                      <input type="text" placeholder="Your Name *" name="name">
+                                  </div>
+                                  <div class="col-md-6 col-12 max-mb-30">
+                                      <input type="email" placeholder="Email *" name="email">
+                                  </div>
+                                  <div class="col-md-12 col-12 max-mb-30">
+                                      <input type="text" placeholder="Subject *" name="subject">
+                                  </div>
+                                  <div class="col-12 max-mb-30">
+                                      <textarea name="message" placeholder="Message"></textarea>
+                                  </div>
+                                  <div class="col-12 text-center max-mb-30">
+                                      <button class="btn btn-primary btn-hover-secondary btn-width-180 btn-height-60">Submit</button>
+                                  </div>
+                              </div>
+                          </form>
+                          <p class="form-messege"></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="about-section section" style="padding: 50px;">
+          <div class="container">
+  
+  
+              <div class="row">
+                  <div class="col-12">
+                      <div class="event-content">
+  
+  
+  
+  
+  
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="section section-padding-bottom" style="padding-top: 50px;">
+          <div class="container">
+  
+              <!--  media Bar Start -->
+              <div class="row justify-content-between align-items-center max-mb-20">
+                  <div class="col-sm-auto col-12 max-mb-10">
+                      <p class="result-count">Latest Media</p>
+                  </div>
+  
+              </div>
+              <!-- media Top Bar End -->
+  
+              <!-- media  Start -->
+              <div class="row row-cols-xl-4 row-cols-lg-2 row-cols-md-2 row-cols-1 max-mb-n30">
+      
+                  <div class="col max-mb-30">
+                      <div class="media-6">
+                          <div class="thumbnail">
+                              <a class="image" href="media-details.html">
+                                  <img src="assets/images/courses/385/course-2.jpg" alt="">
+                                  <div class="media-overlay-bg"></div>
+                              </a>
+                          </div>
+                          <div class="info">
+                              <div class="media-caption-main">
+                                  <a class="category" style="color: white;">Articles & Tips</a>
+                                  <ul class="meta">
+                                      <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
+                                      <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
+                                  </ul>
+                                  <h3 class="title"><a href="media-details.html">Organization and delivery of vocational training  </a></h3>
+                              </div>
+                              <div class="media-caption-collapse">
+                                 
+                                  <div class="desc">
+                                      <p>The purpose of this course is to provide the advanced writing techniques commonly used for inspiring readers and …</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col max-mb-30">
+                      <div class="media-6">
+                          <div class="thumbnail">
+                              <a class="image" href="media-details.html">
+                                  <img src="assets/images/courses/385/course-2.jpg" alt="">
+                                  <div class="media-overlay-bg"></div>
+                              </a>
+                          </div>
+                          <div class="info">
+                              <div class="media-caption-main">
+                                  <a class="category" style="color: white;">Articles & Tips</a>
+                                  <ul class="meta">
+                                      <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
+                                      <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
+                                  </ul>
+                                  <h3 class="title"><a href="media-details.html">Organization and delivery of vocational training  </a></h3>
+                              </div>
+                              <div class="media-caption-collapse">
+                                 
+                                  <div class="desc">
+                                      <p>The purpose of this course is to provide the advanced writing techniques commonly used for inspiring readers and …</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col max-mb-30">
+                      <div class="media-6">
+                          <div class="thumbnail">
+                              <a class="image" href="media-details.html">
+                                  <img src="assets/images/courses/385/course-2.jpg" alt="">
+                                  <div class="media-overlay-bg"></div>
+                              </a>
+                          </div>
+                          <div class="info">
+                              <div class="media-caption-main">
+                                  <a class="category" style="color: white;">Articles & Tips</a>
+                                  <ul class="meta">
+                                      <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
+                                      <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
+                                  </ul>
+                                  <h3 class="title"><a href="media-details.html">Organization and delivery of vocational training  </a></h3>
+                              </div>
+                              <div class="media-caption-collapse">
+                                 
+                                  <div class="desc">
+                                      <p>The purpose of this course is to provide the advanced writing techniques commonly used for inspiring readers and …</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="col max-mb-30">
+                      <div class="media-6">
+                          <div class="thumbnail">
+                              <a class="image" href="media-details.html">
+                                  <img src="assets/images/courses/385/course-2.jpg" alt="">
+                                  <div class="media-overlay-bg"></div>
+                              </a>
+                          </div>
+                          <div class="info">
+                              <div class="media-caption-main">
+                                  <a class="category" style="color: white;">Articles & Tips</a>
+                                  <ul class="meta">
+                                      <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
+                                      <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
+                                  </ul>
+                                  <h3 class="title"><a href="media-details.html">Organization and delivery of vocational training  </a></h3>
+                              </div>
+                              <div class="media-caption-collapse">
+                                 
+                                  <div class="desc">
+                                      <p>The purpose of this course is to provide the advanced writing techniques commonly used for inspiring readers and …</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+               
+              
+  
+              </div>
+              <!-- media  End -->
+  
+  
+              <div class="row max-mt-50">
+                  <div class="col text-center">
+                      <a href="JavaScript:Void(0);" class="btn btn-outline-primary load-more-btn">Read More <i
+                              class="far fa-long-arrow-right ms-3"></i></a>
+                  </div>
+              </div>
+  
+          </div>
+      </div>
+      <!-- media Section End -->
+  
+
+    {% endblock body %} 

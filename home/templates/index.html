@@ -1,0 +1,497 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<!-- Page Banner Slider Start -->
+<div class="page-banner-slider section">
+    <div class="banner-slider swiper-container">
+  {% for slider in slider_show %}
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              
+                <!--Banner Slider Item start-->
+                <div class="banner-slider-item { % if forloop.counter0 == 0 %} active {% endif % }"
+                    data-bg-image="'{{slider.slide_image_index.url}}'">
+                    <div class="container">
+                        <div class="row row-25 banner-content-area">
+                            <div class="col-lg-4">
+                                <div class="banner-slider-content-2 right">
+                                    <h1>AWAKEN <br> YOUR GIFTS <br>NOW </h1>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+
+                                <!--Banner Slider Content start-->
+                                <div class="banner-slider-content-2 left">
+                                    <h3>
+                                        <span class="number">{% if LANGUAGE_CODE == 'en' %}{{slider.slide_num_index}}
+                                            {% elif LANGUAGE_CODE == 'ar' %}{{slider.slide_num_index_ar}}{% endif %}</span>
+                                        <span class="line"></span>
+                                        {% if LANGUAGE_CODE == 'en' %}{{slider.slide_title_index}}
+                                        {% elif LANGUAGE_CODE == 'ar' %}{{slider.slide_title_index_ar}}{% endif %}
+                                    </h3>
+                                    <p>{% if LANGUAGE_CODE == 'en' %}{{slider.slide_dsc_index}}
+                                        {% elif LANGUAGE_CODE == 'ar' %}{{slider.slide_dsc_index_ar}}{% endif %}</p>
+                                </div>
+                                <!--Banner Slider Content end-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Banner Slider Item end-->
+
+            </div>
+            {% endfor %}
+       
+
+        </div>
+
+        <div class="banner-slider-prev swiper-button-prev banner-slider-nav"><i class="fal fa-angle-left"></i>
+        </div>
+        <div class="banner-slider-next swiper-button-next banner-slider-nav"><i class="fal fa-angle-right"></i>
+        </div>
+
+    </div>
+</div>
+<!-- Page Banner Slider End -->
+
+
+<!-- About  Section Start -->
+<div class="about section position-relative section-padding-top section-padding-bottom-160">
+
+    <div class="container">
+        {% for i in data %}
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="about-content max-width-100 pl-60 pl-md-20 pl-sm-0 pl-xs-0 mt-sm-50 mt-xs-50">
+                    <span class="sub-title">Since <strong>2018</strong></span>
+                    <h2 class="title">Ashor <span>Iraq organization </span> </h2>
+                    <p>{% if LANGUAGE_CODE == 'en' %}{{i.text_about_index}}
+                        {% elif LANGUAGE_CODE == 'ar' %}{{i.text_about_index_ar}}{% endif %}</p>
+                    <a class="link link-lg" href="{% url 'about:about' %}"><mark>Read more <i
+                                class="far fa-long-arrow-right"></i></mark></a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="row row-cols-sm-2 row-cols-1 max-mb-n30">
+
+                    <!-- Funfact Start -->
+                    <div class="col max-mb-60" data-aos="fade-up">
+                        <div class="funfact">
+                            <div class="number"><span class="counter">{{i.num_employee_index}}</span></div>
+                            <h6 class="text">employee</h6>
+                        </div>
+                    </div>
+                    <!-- Funfact End -->
+
+                    <!-- Funfact Start -->
+                    <div class="col max-mb-60" data-aos="fade-up">
+                        <div class="funfact">
+                            <div class="number"><span class="counter">{{i.num_project_index}}</span>+</div>
+                            <h6 class="text">Projects</h6>
+                        </div>
+                    </div>
+                    <!-- Funfact End -->
+
+                    <!-- Funfact Start -->
+                    <div class="col max-mb-60" data-aos="fade-up">
+                        <div class="funfact">
+                            <div class="number"><span class="counter">{{i.num_benefi_index}}</span></div>
+                            <h6 class="text">beneficiaries</h6>
+                        </div>
+                    </div>
+                    <!-- Funfact End -->
+
+                    <!-- Funfact Start -->
+                    <div class="col max-mb-60" data-aos="fade-up">
+                        <div class="funfact">
+                            <div class="number"><span class="counter">{{i.num_volunteer_index}}</span>%</div>
+                            <h6 class="text">Volunteers</h6>
+                        </div>
+                    </div>
+                    <!-- Funfact End -->
+
+                </div>
+            </div>
+
+
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+</div>
+<!-- About  Section End -->
+
+<!-- Line  Section Start -->
+
+<div class="about-section section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="event-content">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Line  Section End -->
+
+<!-- Video Section  -->
+<div class="about-video-section section position-relative section-padding-top section-padding-bottom-160">
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <!-- Video Wrapper Start -->
+                <div class="about-me-video-wrapper about-us-one-video">
+
+                    <!-- Video Start -->
+                    <div class="embed-responsive embed-responsive-21by9">
+                        <video controls autoplay loop muted="false" playsinline data-object-fit="cover"
+                            width="100%">
+                            <source src="{% static 'careers/v1.mp4' %}" type="video/mp4">
+
+                            <source src="{% static 'careers/v1.ogg' %}" type="video/ogg">
+
+                        </video>
+                    </div>
+                    <!-- Video End -->
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+<!--  Video Section End -->
+<!-- Line  Section Start -->
+
+<div class="about-section section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="event-content">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Line  Section End -->
+
+<!-- themes Section Start -->
+<div class=" section fix section-padding position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="newsletter-content">
+                    <h2 class="title fz-48">Our <span>Themes</span></h2>
+                    <p>Enter your email address to register to our newsletter subscription <br
+                            class="d-none d-md-block">delivered on a regular basis! </p>
+                    <a class="link link-lg" href="themes.html"> <mark>read more <i
+                                class="far fa-long-arrow-right"></i></mark></a>
+                    <div class="row row-cols-xl-3 row-cols-sm-2 row-cols-1 max-mb-n30"
+                        style="padding-top: 15px;">
+
+                        <!-- Feature Start (Icon Box) -->
+                        <div class="col max-mb-30" data-aos="fade-up">
+                            <a href="themes-details.html" class="icon-box text-center" data-vivus-hover>
+                                <div class="icon"><img class="svgInject"
+                                        src="assets/images/svg/linea/linea-basic-flag2.svg" alt=""></div>
+                                <div class="content">
+                                    <h3 class="title">Economic Development and Resources Diversification </h3>
+                                    <div class="desc">
+
+                                    </div>
+                                    <span class="link">THEMES <i class="far fa-long-arrow-right"></i></span>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Feature Start (Icon Box) -->
+
+                        <!-- Feature Start (Icon Box) -->
+                        <div class="col max-mb-30" data-aos="fade-up">
+                            <a href="themes-details.html" class="icon-box text-center" data-vivus-hover>
+                                <div class="icon"><img class="svgInject"
+                                        src="assets/images/svg/linea/linea-basic-gear.svg" alt=""></div>
+                                <div class="content">
+                                    <h3 class="title">Gender Equality and Mainstreaming </h3>
+                                    <!-- <div class="desc">
+                        <p>Develop skills for career of various majors including computer science & language
+                            competence.</p>
+                    </div> -->
+                                    <span class="link">THEMES <i class="far fa-long-arrow-right"></i></span>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Feature Start (Icon Box) -->
+
+                        <!-- Feature Start (Icon Box) -->
+                        <div class="col max-mb-30" data-aos="fade-up">
+                            <a href="themes-details.html" class="icon-box text-center" data-vivus-hover>
+                                <div class="icon"><img class="svgInject"
+                                        src="assets/images/svg/linea/linea-basic-life-buoy.svg" alt=""></div>
+                                <div class="content">
+                                    <h3 class="title">Climate ,Environment and Biodiversity </h3>
+                                    <!-- <div class="desc">
+                        <p>Make a reservation with our special consultant to learn what's best for your
+                            dream career.</p>
+                    </div> -->
+                                    <span class="link">THEMES <i class="far fa-long-arrow-right"></i></span>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<!-- donate Section Start -->
+<div class="section section section-padding" data-bg-color="#f5f5f5">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="cta-content text-center">
+                <span class="sub-title">Become a vital part of <span>Ashuor Iraqi Foundation for Relief and
+                        Development</span></span>
+                <h2 class="title">& make a real difference to lives of many!</h2>
+                <div class="row max-mt-50">
+                    <div class="col text-center">
+                        <a href="donate.html"
+                            class="btn btn-outline-primary learn-more-btn btn-hover-secondary margin-15">Donate
+                        </a>
+                        <a href="volunteers.html" class="btn btn-primary btn-hover-secondary margin-15"> join us
+                            as volunteer </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<!-- media Section Start -->
+<div class="blog-section section section-padding">
+<div class="container">
+    <div class="row row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-1 max-mb-n30 ">
+
+        <div class="col-lg-4 max-mb-30" data-aos="fade-up">
+            <div class="blog-list-post-wrapper">
+                <!-- Section Title Start -->
+                <div class="section-title text-left mt-25 mb-25">
+                    <span class="sub-title">READ FOR MORE insights</span>
+                    <h2 class="title">Latest <span> Media</span></h2>
+                    <p>Spend some time to visit our website or head office and discover our current courses,
+                        enrollment procedure, and registration deadline. We're opening new classes every
+                        beginning of each month.Spend some time to visit our website or head office and discover
+                        our current courses,
+                        enrollment procedure, and registration deadline. We're opening new classes every
+                        beginning of each month </p>
+                    <a class="link link-lg" href="media.html"><mark>Read more <i
+                                class="far fa-long-arrow-right"></i></mark></a>
+                </div>
+                <!-- Section Title End -->
+
+            </div>
+        </div>
+
+        <div class="col-lg-8 max-mb-30" data-aos="fade-up">
+            <div class="row row-cols-xl-3 row-cols-lg-2 row-cols-md-2 row-cols-1 max-mb-n30">
+
+                <div class="col max-mb-30">
+                    <div class="media-6">
+                        <div class="thumbnail">
+                            <a class="image" href="media-details.html">
+                                <img src="assets/images/courses/385/course-2.jpg" alt="">
+                                <div class="media-overlay-bg"></div>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <div class="media-caption-main">
+                                <a class="category" style="color: white;">Articles & Tips</a>
+                                <ul class="meta">
+                                    <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
+                                    <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
+                                </ul>
+                                <h3 class="title"><a href="media-details.html">Organization and delivery of
+                                        vocational training </a></h3>
+                            </div>
+                            <div class="media-caption-collapse">
+
+                                <div class="desc">
+                                    <p>The purpose of this course is to provide the advanced writing techniques
+                                        commonly used for inspiring readers and …</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col max-mb-30">
+                    <div class="media-6">
+                        <div class="thumbnail">
+                            <a class="image" href="media-details.html">
+                                <img src="assets/images/courses/385/course-2.jpg" alt="">
+                                <div class="media-overlay-bg"></div>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <div class="media-caption-main">
+                                <a class="category" style="color: white;">Articles & Tips</a>
+                                <ul class="meta">
+                                    <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
+                                    <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
+                                </ul>
+                                <h3 class="title"><a href="media-details.html">Organization and delivery of
+                                        vocational training </a></h3>
+                            </div>
+                            <div class="media-caption-collapse">
+
+                                <div class="desc">
+                                    <p>The purpose of this course is to provide the advanced writing techniques
+                                        commonly used for inspiring readers and …</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col max-mb-30">
+                    <div class="media-6">
+                        <div class="thumbnail">
+                            <a class="image" href="media-details.html">
+                                <img src="assets/images/courses/385/course-2.jpg" alt="">
+                                <div class="media-overlay-bg"></div>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <div class="media-caption-main">
+                                <a class="category" style="color: white;">Articles & Tips</a>
+                                <ul class="meta">
+                                    <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
+                                    <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
+                                </ul>
+                                <h3 class="title"><a href="media-details.html">Organization and delivery of
+                                        vocational training </a></h3>
+                            </div>
+                            <div class="media-caption-collapse">
+
+                                <div class="desc">
+                                    <p>The purpose of this course is to provide the advanced writing techniques
+                                        commonly used for inspiring readers and …</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+</div>
+</div>
+<!-- Blog Section End -->
+<div class="about-section section">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="event-content">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Brand Section Start -->
+<div class="brand-section section section-padding">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="brand-wrapper">
+                <div class="brand-list">
+                    <div class="brand-carousel swiper-container" data-aos="fade-up">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide brand">
+                                <a href="#">
+                                    <img src="assets/images/brand/client-logo-01.png" alt="logo image">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide brand">
+                                <a href="#">
+                                    <img src="assets/images/brand/client-logo-02.png" alt="logo image">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide brand">
+                                <a href="#">
+                                    <img src="assets/images/brand/client-logo-03.png" alt="logo image">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide brand">
+                                <a href="#">
+                                    <img src="assets/images/brand/client-logo-04.png" alt="logo image">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide brand">
+                                <a href="#">
+                                    <img src="assets/images/brand/client-logo-05.png" alt="logo image">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide brand">
+                                <a href="#">
+                                    <img src="assets/images/brand/client-logo-06.png" alt="logo image">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide brand">
+                                <a href="#">
+                                    <img src="assets/images/brand/client-logo-07.png" alt="logo image">
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Brand Section End -->
+{% endblock body %}

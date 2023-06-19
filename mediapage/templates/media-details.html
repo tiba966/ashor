@@ -1,0 +1,256 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+        <div class="page-title-section section">
+            <div class="page-title">
+
+            </div>
+            <div class="page-breadcrumb">
+                <div class="container">
+                    <ul class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+
+                        <li class="current">Latest Stories</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Title Section End -->
+
+
+        <!-- About Event Section Start -->
+        <div class="about-event-section section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Section Title Start -->
+                        <div class="section-title text-center" data-aos="fade-up">
+
+                            <h2 class="title fz-12 heading-color">{% if LANGUAGE_CODE == 'en' %}{{ item.media_name }}
+                                {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name }}{% endif %}</h2>
+                            <div class="event-entry-meta">
+                                <div class="meta-item">
+                                    <i class="meta-icon fal fa-map-marker-alt"></i>
+                                    <span> {% if LANGUAGE_CODE == 'en' %}{{ item.media_location }}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}{% endif %}</span>
+                                </div>
+
+                                <div class="meta-item">
+                                    <i class="meta-icon fal fa-calendar"></i>
+                                    <span>{{ item.date }}</span>
+                                </div>
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+                    </div>
+                    <div class=" col" data-aos="fade-up">
+
+
+                        <!-- Page Banner Section Start -->
+                        <div class="page-banner-section section overlay section-padding"
+                            data-bg-image="{{ item.media_image.url }}">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="page-banner-title ashor-banner-title">
+                                            <h1 class="title" style="padding: 50px;">
+                                            </h1>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Page Banner Section End -->
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- About Event Section End -->
+
+
+        <!-- Blog Section Start -->
+        <div class="section  fix">
+            <div class="container">
+                <div class="row ">
+
+                    <div class="col-lg-12 col-12 ">
+                        <!-- Blog Wrapper Start -->
+                        <div class="row row-cols-1 ">
+
+                            <!-- Blog Start -->
+                            <div class="blog-3 blog-details col" data-aos="fade-up">
+
+
+                                <div class="info">
+                                    <div class="desc">
+                                        <p>{% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
+                                            {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1 }}{% endif %}</p>
+
+           
+                                        <blockquote class="block-quote">
+                                            <p>{% if LANGUAGE_CODE == 'en' %}{{ item.media_desc2 }}
+                                                {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc2 }}{% endif %}</p>
+                                        </blockquote>
+
+                                        <p>{% if LANGUAGE_CODE == 'en' %}{{ item.media_desc3 }}
+                                            {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc3 }}{% endif %}</p>
+
+                                    </div>
+
+                                    <div class="row justify-content-between align-items-center max-mt-50">
+                                        <div class="col-auto">
+                                            <div class="entry-post-tags">
+                                                <div class="tag-label">
+                                                    <span class="tag-icon far fa-tags"></span>
+                                                </div>
+                                                <div class="tag">
+                                                    <a href="#"> {% if LANGUAGE_CODE == 'en' %}{{ blog.category.en_name }}
+                                                        {% elif LANGUAGE_CODE == 'ar' %} {{ blog.category.ar_name }}{% endif %} </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="post-share">
+                                                <span class="label">Share this post</span>
+                                                <div class="media">
+                                                    <span class="icon"><i class="fas fa-share-alt"></i></span>
+                                                    <div class="list">
+                                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                                        <a href="#"><i class="fab fa-tumblr-square"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Blog End -->
+
+
+                    </div>
+                    <!-- Blog Wrapper End -->
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Blog Section End -->
+
+    <!-- Course Section Start -->
+    <div class="section section-padding-bottom" style="padding-top: 50px;">
+        <div class="container">
+
+            <!-- Course Top Bar Start -->
+            <div class="row justify-content-between align-items-center max-mb-20">
+                <div class="col-sm-auto col-12 max-mb-10">
+                    <p class="result-count">Related media</p>
+                </div>
+
+            </div>
+            <!-- Course Top Bar End -->
+
+            <!-- Zoom Meeting Wrapper Start -->
+            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 max-mb-n30">
+
+                <!-- Zoom Meeting Start -->
+                <div class="col max-mb-30" data-aos="fade-up">
+                    <div class="zoom-event">
+                        <div class="thumbnail">
+                            <a href="zoom-event-details.html" class="image"><img src="assets/images/zoom/370/zoom-1.jpg"
+                                    alt="Course Image"></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="title"><a href="zoom-event-details.html">Marketing Committee Meeting</a></h3>
+                            <div class="zoom-id">
+                                <span class="label">Blog </span>
+                            </div>
+                            <ul class="meta">
+                                <li><i class="far fa-calendar"></i>July 24, 2020 </li>
+                                <li><i class="far fa-map-marker-alt"></i>Erbil</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Zoom Meeting End -->
+
+                <!-- Zoom Meeting Start -->
+                <div class="col max-mb-30" data-aos="fade-up">
+                    <div class="zoom-event">
+                        <div class="thumbnail">
+                            <a href="zoom-event-details.html" class="image"><img src="assets/images/zoom/370/zoom-1.jpg"
+                                    alt="Course Image"></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="title"><a href="zoom-event-details.html">Marketing Committee Meeting</a></h3>
+                            <div class="zoom-id">
+                                <span class="label">Blog </span>
+                            </div>
+                            <ul class="meta">
+                                <li><i class="far fa-calendar"></i>July 24, 2020 </li>
+                                <li><i class="far fa-map-marker-alt"></i>Erbil</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Zoom Meeting End -->
+
+                <!-- Zoom Meeting Start -->
+                <div class="col max-mb-30" data-aos="fade-up">
+                    <div class="zoom-event">
+                        <div class="thumbnail">
+                            <a href="zoom-event-details.html" class="image"><img src="assets/images/zoom/370/zoom-1.jpg"
+                                    alt="Course Image"></a>
+                        </div>
+                        <div class="info">
+                            <h3 class="title"><a href="zoom-event-details.html">Marketing Committee Meeting</a></h3>
+                            <div class="zoom-id">
+                                <span class="label">Blog </span>
+                            </div>
+                            <ul class="meta">
+                                <li><i class="far fa-calendar"></i>July 24, 2020 </li>
+                                <li><i class="far fa-map-marker-alt"></i>Erbil</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Zoom Meeting End -->
+
+
+
+
+            </div>
+            <!-- Zoom Meeting Wrapper End -->
+
+
+            <div class="row max-mt-50">
+                <div class="col text-center">
+                    <a href="JavaScript:Void(0);" class="btn btn-outline-primary load-more-btn">Load More <i
+                            class="fal fa-redo ms-3"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Course Section End -->
+
+    {% endblock body %}

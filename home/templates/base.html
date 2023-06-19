@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ashor Iraqi Foundation for Relief and Development</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'home/images/favicon.png' %}">
+
+    <link rel="stylesheet" href="{% static 'home/css/vendor/vendor.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/plugins/plugins.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/style.min.css' %}">
+    <!-- Responsive Settings -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+</head>
+
+
+<body>
+
+    <div id="page">
+        <!-- Header Section Start -->
+        <div class="header-section header-shadow sticky-header section">
+            <div class="header-inner">
+                <div class="container position-relative">
+                    <div class="row justify-content-between align-items-center">
+
+                        <!-- Header Logo Start -->
+                        <div class="col-xl-1 col-auto">
+                            <div class="header-logo">
+                                <a href="{% url 'home:index' %}">
+                                    <img class="dark-logo" src="{% static 'home/images/logo/ashurlogo.png' %}"
+                                        alt="Learts Logo" width="150px" height="100px">
+                                    <img class="light-logo" src="{% static 'home/images/logo/ashurlogo.png' %}"
+                                        alt="Learts Logo">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Header Logo End -->
+
+                        <!-- Header Main Menu Start -->
+                        <div class="col d-none d-xl-block position-static">
+                            <nav class="site-main-menu menu-hover-1">
+                                <ul>
+
+                                    <li class="has-children">
+                                        <a href="{% url 'about:about' %}"><span class="menu-text">ABOUT ASHOR
+                                            </span></a>
+                                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'about:history' %}"><span
+                                                        class="menu-text">HISTORY</span></a></li>
+                                            <li><a href="{% url 'about:goals' %}"><span
+                                                        class="menu-text">GOALS</span></a></li>
+                                            <li><a href="{% url 'about:vission_mission' %}"><span
+                                                        class="menu-text">VISSION AND MISSION</span></a></li>
+                                            <li class="has-children">
+                                                <a href="{% url 'about:core_list' %}"><span class="menu-text">OUR PEOPLE
+                                                    </span></a>
+                                                <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                                <ul class="sub-menu">
+                                                    <li><a href="core.html"><span class="menu-text">
+                                                                CORE STAFF</span></a></li>
+                                                    <li><a href="core.html"><span class="menu-text">GRASS ROOT VOLUNTEER
+                                                                GROUPS </span></a></li>
+                                                    <li><a href="core.html"><span class="menu-text">Academics
+                                                            </span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{% url 'about:partener_network' %}"><span
+                                                        class="menu-text">PARTNERS & NETWORKS</span></a></li>
+                                            <li><a href="{% url 'about:internal_system' %}"><span
+                                                        class="menu-text">INTERNAL SYSTEM & RESOURCES</span></a></li>
+                                            <li><a href="{% url 'about:where_we_work' %}"><span class="menu-text"> WHERE
+                                                        WE WORK </span></a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="has-children">
+                                        <a href="{% url 'what_we_are_doing:what_we_are_doing' %}"><span
+                                                class="menu-text">WHAT WR ARE DOING</span></a>
+                                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'what_we_are_doing:themes' %}"><span
+                                                        class="menu-text">OUR THEMES
+                                                    </span></a></li>
+                                            <li><a href="projects.html"><span class="menu-text">OUR PROJECTS
+                                                    </span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a href="{% url 'get_involved:get_involved' %}"><span class="menu-text">GET
+                                                INVOLVED</span></a>
+                                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'get_involved:career_list' %}"><span
+                                                        class="menu-text">CAREERS</span></a></li>
+                                            <li><a href="{% url 'get_involved:volunteer' %}"><span
+                                                        class="menu-text">JOIN US AS VOLUNTEER</span></a></li>
+                                            <li><a href="{% url 'get_involved:donate' %}"><span
+                                                        class="menu-text">DONATE</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a href="{% url 'media:media' %}"><span class="menu-text">MEDIA</span></a>
+                                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            {%for category in categories %}
+                                            <li><a href="{% url 'media:media' %}?category={{category}}"><span
+                                                        class="menu-text">STORIES</span></a></li>
+                                            {% if LANGUAGE_CODE == 'en' %}
+                                            {{ category.en_name }}
+                                            {% elif LANGUAGE_CODE == 'ar' %}
+                                            {{ category.ar_name }}
+                                            {% endif %}
+                                            </span> </a>
+                                    </li>
+                                    {%endfor%}
+                                </ul>
+                                </li>
+
+                                <li>
+                                    <a href="{% url 'home:contact' %}"><span class="menu-text">CONTACT</span></a>
+
+                                </li>
+                                <li class="has-children">
+                                    <a href="#"><span class="menu-text">ENGLISH</span></a>
+                                    <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                    <ul class="sub-menu">
+
+                                        <li> <a href="">
+                                                <form action="{% url 'set_language' %}" method="post">
+                                                    {% csrf_token %}
+                                                    {% get_current_language as LANGUAGE_CODE %}
+                                                    <input name="next" type="hidden"
+                                                        value="{{ request.get_full_path|slice:'3:' }}">
+                                                    {% if LANGUAGE_CODE == 'ar' %}
+                                                    <button type='submit' name='language' value='en'
+                                                        class="theme-btn btn-style-ones">
+                                                        <span class="menu-text" style="padding-top:8px">English</span>
+                                                    </button>
+                                                    {% else %}
+                                                    <button type='submit' name='language' value='ar'
+                                                        class="theme-btn btn-style-ones">
+                                                        <span class="menu-text">العربيه</span>
+                                                    </button>
+                                                    {% endif %}
+                                                </form>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Header Main Menu End -->
+                        <!-- Header Right Start -->
+                        <div class="col-xl-2 col-auto">
+                            <div class="header-right">
+                                <div class="inner">
+
+
+                                    <!-- Header Search Start -->
+                                    <div class="header-search">
+                                        <button class="header-search-toggle"><i class="far fa-search"></i></button>
+                                        <div class="header-search-form">
+                                            <form action="#">
+                                                <input type="text" placeholder="Search...">
+                                                <button><i class="fas fa-search"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- Header Search End -->
+
+
+                                    <!-- Header Mobile Menu Toggle Start -->
+                                    <div class="header-mobile-menu-toggle d-xl-none ml-sm-2">
+                                        <button class="toggle">
+                                            <i class="icon-top"></i>
+                                            <i class="icon-middle"></i>
+                                            <i class="icon-bottom"></i>
+                                        </button>
+                                    </div>
+                                    <!-- Header Mobile Menu Toggle End -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Header Right End -->
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Section End -->
+
+        {% block body%}
+
+        {% endblock body%}
+
+        <div class="footer-section section">
+            <div class="container">
+
+                <!-- Footer Top Widgets Start -->
+                <div class="row">
+
+                    <!-- Footer Widget Start -->
+                    <div class="col-xl-6 col-md-5 col-12 max-mb-50">
+                        <div class="footer-widget">
+                            <h4 class="footer-widget-title">Address</h4>
+                            <div class="footer-widget-content">
+                                <div class="content">
+                                    <p>Salah Al-Den, Iraq</p>
+                                    <p><a href="tel:+964 773 1476 198"></a>+964 773 1476 198 </p>
+                                    <p><a href="mailto:representative@aifrd.org">representative@aifrd.org </a></p>
+                                </div>
+                                <div class="footer-social-inline">
+                                    <a href="https://www.facebook.com/ashuriraq/"><i
+                                            class="fab fa-facebook-square"></i></a>
+                                    <a href="https://twitter.com/ashoriqd?s=11"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/ashuriraq/"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/company/ashuor"><i
+                                            class="fab fa-linkedin"></i></a>
+                                    <a href="https://youtube.com/channel/UCzTbdmJoPxvdnby9Q9JMYJg"><i
+                                            class="fab fa-youtube"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer Widget End -->
+
+                    <!-- Footer Widget Start -->
+                    <div class="col-xl-3 col-md-4 col-sm-7 col-12 max-mb-50">
+                        <div class="footer-widget">
+                            <h4 class="footer-widget-title">Explore</h4>
+                            <div class="footer-widget-content">
+                                <ul class="column-2">
+                                    <li><a href="">ABOUT ASHOR</a></li>
+                                    <li><a href="{% url 'what_we_are_doing:themes' %}"> THEMES</a></li>
+                                    <li><a href="projects.html">PROJECTS</a></li>
+                                    <li><a href="{% url 'about:where_we_work' %}">WHERE WE WORK</a></li>
+                                    <li><a href="{% url 'get_involved:career_list' %}">CAREERS</a></li>
+                                    <li><a href="{% url 'get_involved:donate' %}"></a>DONATE</li>
+
+                                    <li><a href="{% url 'media:media' %}">MEDIA</a></li>
+
+                                    <li><a href="{% url 'home:contact' %}">CONTACT</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer Widget End -->
+
+                    <!-- Footer Widget Start -->
+                    <div class="col-xl-3 col-md-3 col-sm-5 col-12 max-mb-50">
+                        <div class="footer-widget">
+                            <h4 class="footer-widget-title">Information</h4>
+                            <div class="footer-widget-content">
+                                <ul>
+                                    <li><a href="{% url 'about:goals' %}">GOALS</a></li>
+                                    <li><a href="{% url 'about:vission_mission' %}">VISSION & MISSION</a></li>
+                                    <li><a href="{% url 'about:core_list' %}">OUR PEOPLE</a></li>
+                                    <li><a href="{% url 'about:partener_network' %}">PARTNERS & NETWORKS</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer Widget End -->
+
+                </div>
+                <!-- Footer Top Widgets End -->
+
+                <!-- Footer Copyright Start -->
+                <div class="row max-mt-20">
+                    <div class="col">
+                        <p class="copyright">&copy; 2023 Ashor. <a href="">All Rights
+                                Reserved</a></p>
+                    </div>
+                </div>
+                <!-- Footer Copyright End -->
+
+            </div>
+        </div>
+
+
+        <!-- Scroll Top Start -->
+        <a href="#" class="scroll-top" id="scroll-top">
+            <i class="arrow-top fal fa-long-arrow-up"></i>
+            <i class="arrow-bottom fal fa-long-arrow-up"></i>
+        </a>
+        <!-- Scroll Top End -->
+    </div>
+
+    <div id="site-main-mobile-menu" class="site-main-mobile-menu">
+        <div class="site-main-mobile-menu-inner">
+            <div class="mobile-menu-header">
+                <div class="mobile-menu-logo">
+                    <a href="index.html"><img src="{% static 'home/images/logo/ashurlogo.png' %}" width="" height="80px"
+                            alt=""></a>
+                </div>
+                <div class="mobile-menu-close">
+                    <button class="toggle">
+                        <i class="icon-top"></i>
+                        <i class="icon-bottom"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-menu-content">
+                <nav class="site-mobile-menu">
+                    <ul>
+                        <li class=" position-static">
+                            <a href="index.html"><span class="menu-text">HOME</span></a>
+                            <span class="menu-toggle"></span>
+
+
+                        </li>
+                        <li class="has-children">
+                            <a href="{% url 'about:about' %}"><span class="menu-text">ABOUT ASHOR</span></a>
+                            <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'about:history' %}"><span class="menu-text">HISTORY</span></a></li>
+                                <li><a href="{% url 'about:goals' %}"><span class="menu-text">GOALS</span></a></li>
+                                <li><a href="{% url 'about:vission_mission' %}"><span class="menu-text">VISSION AND
+                                            MISSION</span></a></li>
+                                <li class="has-children">
+                                    <a href="{% url 'about:core_list' %}"><span class="menu-text">OUR PEOPLE
+                                        </span></a>
+                                    <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'about:core_list' %}"><span class="menu-text">
+                                                    CORE STAFF</span></a></li>
+                                        <li><a href="core.html"><span class="menu-text">GRASS ROOT VOLUNTEER GROUPS
+                                                </span></a></li>
+                                        <li><a href="core.html"><span class="menu-text">Academics </span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'about:partener_network' %}"><span class="menu-text">PARTNERS AND
+                                            NETWORKS</span></a></li>
+                                <li><a href="{% url 'about:internal_system' %}"><span class="menu-text">INTERNAL SYSTEM
+                                            AND RESOURCES</span></a></li>
+                                <li><a href="{% url 'about:where_we_work' %}"><span class="menu-text"> WHERE WE WORK
+                                        </span></a></li>
+
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="{% url 'what_we_are_doing:what_we_are_doing' %}"><span class="menu-text">WHAT WE
+                                    ARE DOING</span></a>
+                            <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'what_we_are_doing:themes' %}"><span class="menu-text">OUR
+                                            THEMES</span></a>
+                                </li>
+                                <li><a href="projects.html"><span class="menu-text">OUR PROJECTS </span></a>
+                                </li>
+
+
+
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="{% url 'get_involved:get_involved' %}"><span class="menu-text">GET
+                                    INVOLVED</span></a>
+                            <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'get_involved:career_list' %}"><span
+                                            class="menu-text">CAREERS</span></a></li>
+                                <li><a href="{% url 'get_involved:volunteer' %}"><span class="menu-text">JOIN US AS
+                                            VOLUNTEER</span></a></li>
+                                <li><a href="{% url 'get_involved:donate' %}"><span class="menu-text">DONATE</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="{% url 'media:media' %}"><span class="menu-text">MEDIA</span></a>
+                            <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                            <ul class="sub-menu">
+                                {%for category in categories %}
+                                <li><a href="{% url 'media:media' %}?category={{category}}"><span
+                                            class="menu-text">STORIES
+                                {% if LANGUAGE_CODE == 'en' %}
+                                {{ category.en_name }}
+                                {% elif LANGUAGE_CODE == 'ar' %}
+                                {{ category.ar_name }}
+                                {% endif %}
+                                </span> </a>
+                        </li>
+                        {%endfor%}
+
+
+                    </ul>
+                    </li>
+                    <li>
+                        <a href="{% url 'home:contact' %}"><span class="menu-text">CONTACT</span></a>
+                        <span class="menu-toggle"></span>
+                    </li>
+                    <li class="has-children">
+                        <a href=""><span class="menu-text">ENGLISH</span></a>
+                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                        <ul class="sub-menu">
+                            <li><a href=""><span class="menu-text">ARABIC</span></a></li>
+                            <li><a href=""><span class="menu-text">GERMANY</span></a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS
+============================================ -->
+
+    <!-- Vendors JS -->
+    <!-- <script src="{% static 'careers/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+<script src="{% static 'careers/js/vendor/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'careers/js/vendor/jquery-migrate-3.3.2.min.js' %}"></script>
+<script src="{% static 'careers/js/vendor/bootstrap.bundle.min.js' %}"></script> -->
+
+    <!-- Plugins JS -->
+    <!-- <script src="{% static 'careers/js/plugins/parallax.min.js"></script>
+<script src="{% static 'careers/js/plugins/jquery.ajaxchimp.min.js"></script> -->
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+    <script src="{% static 'home/js/vendor/vendor.min.js' %}"></script>
+    <script src="{% static 'home/js/plugins/plugins.min.js' %}"></script>
+
+    <!-- Main Activation JS -->
+    <script src="{% static 'home/js/main.js' %}"></script>
+
+
+
+
+
+</body>
+
+</html>
