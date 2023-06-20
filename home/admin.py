@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import  Slider, Index, Contact
+from .models import  Slider, Index, Contact, Slider
 
 
 
@@ -24,7 +24,15 @@ class ContactAdmin(admin.ModelAdmin):
                
 
                     ]
-
+class SliderAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                    'slide_image_index',
+                    'slide_title_index',
+                    'slide_subtitle_index',
+                     'slide_title_index_ar',
+                    'slide_subtitle_index_ar',
+'slide_num_index',
+                    ]
 
 class IndexAdmin(admin.ModelAdmin):
     list_display = ['id',
@@ -34,11 +42,7 @@ class IndexAdmin(admin.ModelAdmin):
                      'num_project_index',
                      'num_benefi_index',
                      'num_volunteer_index',
-                    'image_story_index',
-                    'text_story_index',
-                    'whatDoDetail_text',
-                    'text_story_index_ar',
-                    'whatDoDetail_text_ar',
+                  
 
 
 
@@ -48,4 +52,5 @@ class IndexAdmin(admin.ModelAdmin):
 
 admin.site.register(Index, IndexAdmin)
 admin.site.register(Contact, ContactAdmin)
+admin.site.register(Slider, SliderAdmin)
 

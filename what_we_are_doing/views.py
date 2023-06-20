@@ -62,8 +62,10 @@ def themes(request):
 
 def themes_details(request, id):
     """Renders the create themes page."""
+ 
     themes = Themes.objects.get(id=id)
+    print(themes)
+    assert isinstance(request, HttpRequest)
 
     context = {'themes': themes}
     return render(request, 'themes-details.html', context)
-

@@ -112,7 +112,7 @@
 
                                         <div class="content-wrap">
 
-                                            <h5 class="heading">career opportunities</h5>
+                                          <a href="{% url 'get_involved:career_list' %}">  <h5 class="heading">Career opportunities</h5></a>
 
                                             <div class="text">{% if LANGUAGE_CODE == 'en' %} {{item.career_text}}
                                                 {% elif LANGUAGE_CODE == 'ar' %} {{item.career_text_ar}} {% endif %}</div>
@@ -136,7 +136,7 @@
 
                                         <div class="content-wrap">
 
-                                            <h5 class="heading">Join us as Volunteers</h5>
+                                            <a href="{% url 'get_involved:volunteer' %}"> <h5 class="heading">Join us as Volunteers</h5></a>
 
                                             <div class="text">{% if LANGUAGE_CODE == 'en' %} {{item.Volunteers_text}}
                                                 {% elif LANGUAGE_CODE == 'ar' %} {{item.Volunteers_text_ar}} {% endif %}</div>
@@ -159,7 +159,7 @@
 
                                         <div class="content-wrap">
 
-                                            <h5 class="heading">Donate</h5>
+                                            <a href="{% url 'get_involved:donate' %}"><h5 class="heading">Donate</h5></a>
 
                                             <div class="text">{% if LANGUAGE_CODE == 'en' %} {{item.Donate_text}}
                                                 {% elif LANGUAGE_CODE == 'ar' %} {{item.Donate_text_ar}} {% endif %} </div>

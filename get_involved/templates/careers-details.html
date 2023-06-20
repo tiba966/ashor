@@ -41,11 +41,15 @@
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="page-banner-title ashor-banner-title">
-                                                    <h1 class="title"> Head of HR (all genders)
+                                                    <h1 class="title"> {% if LANGUAGE_CODE == 'en' %} {{item.career_name}}
+                                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.career_name_ar}} {% endif %}
+                                                   
 
                                                     </h1>
-                                                    <h4 class="sub-title" style="color: white;"> Permanent employee,
-                                                        Full-time · Berlin
+                                                    <h4 class="sub-title" style="color: white;">  {% if LANGUAGE_CODE == 'en' %} {{item.career_employee_type}}
+                                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.career_employee_type_ar}} {% endif %} . {% if LANGUAGE_CODE == 'en' %} {{item.job_type}}
+                                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.job_type_ar}} {% endif %} {% if LANGUAGE_CODE == 'en' %} {{item.location}}
+                                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.location_ar}} {% endif %}
                                                     </h4>
                                                 </div>
 
@@ -84,34 +88,31 @@
                             <div class="content">
                                 <h3 class="title">Summary</h3>
 
-                                <p>Als Head of HR unterstützt Du mit Deinem Team die Organisation dabei ihre
-                                    Entwicklungsziele zu erreichen. Ihr ​betreut ​unsere wachsende Organisation mit
-                                    aktuell ​über 110 Mitarbeitern und richtet Euer Handeln auf unseren internationalen
-                                    Bedarf sowie unsere Organisationsstrategie aus.
+                                <p>{% if LANGUAGE_CODE == 'en' %} {{item.career_summary_text}}
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{item.career_summary_text_ar}} {% endif %}
                                 </p>
 
                                 <h3 class="title">DUTIES AND RESPONSIBILITIES
                                 </h3>
 
-                                <p>In order to buy any course or become a member of our center, customers/ learners must
-                                    first register with a personal account providing the following information:</p>
+                                <p>{% if LANGUAGE_CODE == 'en' %} {{item.career_duties_text}}
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{item.career_duties_text_ar}} {% endif %}:</p>
 
                                 <ul>
-                                    <li>Gemeinsam mit dem Director of Administration sorgst Du für eine gelungene
-                                        Zusammenarbeit mit dem Betriebsrat und den Gremien der Gesellschaft
+                                    <li>{% if LANGUAGE_CODE == 'en' %} {{item.duties_1}}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_1_ar}} {% endif %}
                                     </li>
-                                    <li>Du bist Teil des Teams der Abteilung Finance and Administration und arbeitest
-                                        eng mit dem Director of Administration an allen strategischen Themen
+                                    <li>{% if LANGUAGE_CODE == 'en' %} {{item.duties_2}}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_2_ar}} {% endif %}
                                     </li>
-                                    <li>Mit Deinem Team legst Du selbst Hand an bei der Absicherung der zentralen
-                                        Prozesse unseres People Business, von der Weiterentwicklung der Themengebiete
-                                        Personalplanung – und -entwicklung, Talent Acquisition, Talentmanagement und
-                                        nicht zuletzt bei der klassischen Personalverwaltung.
+                                    <li>{% if LANGUAGE_CODE == 'en' %} {{item.duties_3}}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_3_ar}} {% endif %}
                                     </li>
-                                    <li>Hierbei etablierst Du HR-relevante Hausstandards, Prozesse und Strukturen die
-                                        Digitalisierung des Hauses stets im Blick behaltend.
+                                    <li>{% if LANGUAGE_CODE == 'en' %} {{item.duties_4}}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_4_ar}} {% endif %}
                                     </li>
-                                    <li>Arbeitssicherheit und -schutz ergänzen Dein Tätigkeitsfeld
+                                    <li>{% if LANGUAGE_CODE == 'en' %} {{item.duties_5}}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_5_ar}} {% endif %}
                                     </li>
 
                                 </ul>
@@ -119,21 +120,20 @@
                                 <h3 class="title">DEINE KENNTNISSE, ERFAHRUNGEN & SKILLS
                                 </h3>
                                 <ul>
-                                    <li>Gemeinsam mit dem Director of Administration sorgst Du für eine gelungene
-                                        Zusammenarbeit mit dem Betriebsrat und den Gremien der Gesellschaft
+                                    <li>{% if LANGUAGE_CODE == 'en' %} {{item.skill_1}}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_1_ar}} {% endif %}
                                     </li>
-                                    <li>Du bist Teil des Teams der Abteilung Finance and Administration und arbeitest
-                                        eng mit dem Director of Administration an allen strategischen Themen
+                                    <li>{% if LANGUAGE_CODE == 'en' %} {{item.skill_2}}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_2_ar}} {% endif %}
                                     </li>
-                                    <li>Mit Deinem Team legst Du selbst Hand an bei der Absicherung der zentralen
-                                        Prozesse unseres People Business, von der Weiterentwicklung der Themengebiete
-                                        Personalplanung – und -entwicklung, Talent Acquisition, Talentmanagement und
-                                        nicht zuletzt bei der klassischen Personalverwaltung.
+                                    <li>{% if LANGUAGE_CODE == 'en' %} {{item.skill_2}}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_2_ar}} {% endif %}
                                     </li>
-                                    <li>Hierbei etablierst Du HR-relevante Hausstandards, Prozesse und Strukturen die
-                                        Digitalisierung des Hauses stets im Blick behaltend.
+                                    <li>{% if LANGUAGE_CODE == 'en' %} {{item.skill_3}}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_3_ar}} {% endif %}
                                     </li>
-                                    <li>Arbeitssicherheit und -schutz ergänzen Dein Tätigkeitsfeld
+                                    <li>{% if LANGUAGE_CODE == 'en' %} {{item.skill_4}}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_4_ar}} {% endif %}
                                     </li>
 
                                 </ul>

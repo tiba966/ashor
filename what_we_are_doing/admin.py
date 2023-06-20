@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import WhatWeAreDoing, Themes
+from .models import WhatWeAreDoing, Themes, ThemeBackgroundImage
 
 
 
@@ -27,5 +27,11 @@ class ThemesAdmin(admin.ModelAdmin):
                     'themes_dsc2',
                     'themes_dsc2_ar',
                     ]
+class ThemeBackgroundImageAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                'image_bg_theme'
+                    ]
 admin.site.register(WhatWeAreDoing, WhatWeAreDoingeAdmin)
+admin.site.register(ThemeBackgroundImage, ThemeBackgroundImageAdmin)
+
 admin.site.register(Themes, ThemesAdmin)

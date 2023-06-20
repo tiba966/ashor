@@ -202,55 +202,30 @@
                                 class="far fa-long-arrow-right"></i></mark></a>
                     <div class="row row-cols-xl-3 row-cols-sm-2 row-cols-1 max-mb-n30"
                         style="padding-top: 15px;">
+                       {% for theme in themes %}
+                       {% if forloop.counter < 4 %} <!--Service Block-->
 
-                        <!-- Feature Start (Icon Box) -->
-                        <div class="col max-mb-30" data-aos="fade-up">
-                            <a href="themes-details.html" class="icon-box text-center" data-vivus-hover>
-                                <div class="icon"><img class="svgInject"
-                                        src="assets/images/svg/linea/linea-basic-flag2.svg" alt=""></div>
-                                <div class="content">
-                                    <h3 class="title">Economic Development and Resources Diversification </h3>
-                                    <div class="desc">
+            <!-- themes Start (Icon Box) -->
+            <div class="col max-mb-30" data-aos="fade-up">
+                <a href="{% url 'what_we_are_doing:themes_details' theme.id %}" class="icon-box text-center" data-vivus-hover>
+                    <div class="icon"><img class="" src="{{ theme.themes_icons}}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3 class="title"> {% if LANGUAGE_CODE == 'en' %}{{theme.themes_title}}
+                            {% elif LANGUAGE_CODE == 'ar' %}{{theme.themes_title_ar}}{% endif %}
+                      </h3>
+                        <div class="desc">
 
-                                    </div>
-                                    <span class="link">THEMES <i class="far fa-long-arrow-right"></i></span>
-                                </div>
-                            </a>
                         </div>
-                        <!-- Feature Start (Icon Box) -->
+                        <span class="link">THEMES <i class="far fa-long-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            <!-- themes Start (Icon Box) -->
+            {% endif %}
 
-                        <!-- Feature Start (Icon Box) -->
-                        <div class="col max-mb-30" data-aos="fade-up">
-                            <a href="themes-details.html" class="icon-box text-center" data-vivus-hover>
-                                <div class="icon"><img class="svgInject"
-                                        src="assets/images/svg/linea/linea-basic-gear.svg" alt=""></div>
-                                <div class="content">
-                                    <h3 class="title">Gender Equality and Mainstreaming </h3>
-                                    <!-- <div class="desc">
-                        <p>Develop skills for career of various majors including computer science & language
-                            competence.</p>
-                    </div> -->
-                                    <span class="link">THEMES <i class="far fa-long-arrow-right"></i></span>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Feature Start (Icon Box) -->
-
-                        <!-- Feature Start (Icon Box) -->
-                        <div class="col max-mb-30" data-aos="fade-up">
-                            <a href="themes-details.html" class="icon-box text-center" data-vivus-hover>
-                                <div class="icon"><img class="svgInject"
-                                        src="assets/images/svg/linea/linea-basic-life-buoy.svg" alt=""></div>
-                                <div class="content">
-                                    <h3 class="title">Climate ,Environment and Biodiversity </h3>
-                                    <!-- <div class="desc">
-                        <p>Make a reservation with our special consultant to learn what's best for your
-                            dream career.</p>
-                    </div> -->
-                                    <span class="link">THEMES <i class="far fa-long-arrow-right"></i></span>
-                                </div>
-                            </a>
-                        </div>
+            {% endfor %}
+                  
 
                     </div>
 
@@ -277,10 +252,10 @@
                 <h2 class="title">& make a real difference to lives of many!</h2>
                 <div class="row max-mt-50">
                     <div class="col text-center">
-                        <a href="donate.html"
+                        <a href="{% url 'get_involved:donate' %}"
                             class="btn btn-outline-primary learn-more-btn btn-hover-secondary margin-15">Donate
                         </a>
-                        <a href="volunteers.html" class="btn btn-primary btn-hover-secondary margin-15"> join us
+                        <a href="{% url 'get_involved:volunteer' %}" class="btn btn-primary btn-hover-secondary margin-15"> join us
                             as volunteer </a>
                     </div>
                 </div>

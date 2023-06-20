@@ -35,7 +35,7 @@
 
                         <!-- Page Banner Section Start -->
                         <div class="page-banner-section section overlay section-padding"
-                            data-bg-image="{{ item.image_bg_themes}}">
+                            data-bg-image="{{ item.image_bg_themes.url}}">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12">
@@ -82,7 +82,7 @@
             <!-- themes Start (Icon Box) -->
             <div class="col max-mb-30" data-aos="fade-up">
                 <a href="{% url 'what_we_are_doing:themes_details' theme.id %}" class="icon-box text-center" data-vivus-hover>
-                    <div class="icon"><img class="svgInject" src="{{ theme.themes_icons}}" alt="">
+                    <div class="icon"><img class="" src="{{ theme.themes_icons}}" alt="">
                     </div>
                     <div class="content">
                         <h3 class="title"> {% if LANGUAGE_CODE == 'en' %}{{theme.themes_title}}

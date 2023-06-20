@@ -142,6 +142,7 @@
             <div class="col-xl-8">
                 <div class="testimonial-area mb-md-50 mb-sm-30 mb-xs-30">
                     <div class="row">
+                        
                         <div class="col-md-6">
                             <!-- Static Testimonial Start -->
                             <div class="static-testimonial">
@@ -209,7 +210,7 @@
                     <p>
                         {% if LANGUAGE_CODE == 'en' %}{{item.text_themes}}
         {% elif LANGUAGE_CODE == 'ar' %}{{item.text_themes_ar}}{% endif %}</p>{% endfor %}
-                    <a href="themes.html" class="btn btn-primary btn-hover-secondary mt-30">READ MORE </a>
+                    <a href="{% url 'what_we_are_doing:themes' %}" class="btn btn-primary btn-hover-secondary mt-30">READ MORE </a>
                 </div>
             </div>
         </div>

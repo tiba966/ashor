@@ -42,15 +42,18 @@ class Index(models.Model):
         max_length=1000, default='',  blank=True,) 
     num_volunteer_index = models.CharField(
         max_length=1000, default='',  blank=True,) 
-        
-    image_story_index = models.FileField(
+   
+class Slider(models.Model):
+    slide_image_index = models.FileField(
         validators=[validate_image_extension], upload_to='background/index/', blank=True, )
-    text_story_index = models.TextField(
-        max_length=1000, default='', blank=True, )
-    text_story_index_ar = models.TextField(
-        max_length=1000, default='', blank=True, )
-    whatDoDetail_text = models.TextField(
-        max_length=1000, default='', blank=True, )
-    whatDoDetail_text_ar = models.TextField(
-        max_length=1000, default='', blank=True, )
+    slide_title_index = models.CharField(
+        max_length=300, default='', blank=True, )
+    slide_title_index_ar = models.CharField(
+        max_length=300, default='', blank=True, )
+    slide_subtitle_index = models.CharField(
+        max_length=300, default='', blank=True, )
+    slide_subtitle_index_ar = models.CharField(
+        max_length=300, default='', blank=True, )
+    slide_num_index = models.CharField(
+        max_length=300, default='', blank=True, )
 

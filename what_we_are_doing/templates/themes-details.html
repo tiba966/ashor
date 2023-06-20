@@ -30,12 +30,13 @@
     
                             <!-- Page Banner Section Start -->
                             <div class="page-banner-section section overlay section-padding"
-                                data-bg-image="./assets/images/page-banner/course-bg.jpg">
+                                data-bg-image="{{ item.themes_details_image.url}}">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="page-banner-title ashor-banner-title">
-                                                <h1 class="title">Economic Development and Resources Diversification
+                                                <h1 class="title"> {% if LANGUAGE_CODE == 'en' %}{{theme.themes_title}}
+                                                    {% elif LANGUAGE_CODE == 'ar' %}{{theme.themes_title_ar}}{% endif %} 
                                                 </h1>
                                             </div>
     

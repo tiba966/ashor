@@ -113,11 +113,7 @@ def core_list(request):
     queryset = Core.objects.all()
     serializer_class = CoreSerializer(queryset, many=True)
 
-    # filters
-    # myfilter = cor(request.GET, queryset=core_list)
-    # core_list = myfilter.qs
 
-    # Show many contacts per page.
     paginator = Paginator(core_list, 10000000000000000)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
@@ -136,7 +132,6 @@ def core_detail(request, id):
     core_detail = Core.objects.get(id=id)
     print(core_detail)
     assert isinstance(request, HttpRequest)
-    serializer_class = CoreSerializer(core_detail, many=True)
 
-    context = {'core': core_detail, 'data': serializer_class.data}
+    context = {'core': core_detail}
     return render(request, 'core-details.html', context)

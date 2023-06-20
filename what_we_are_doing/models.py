@@ -22,6 +22,10 @@ class WhatWeAreDoing(models.Model):
     text_themes_ar = models.TextField(
         max_length=1000, default='',  blank=True,)
 
+class ThemeBackgroundImage(models.Model):
+    image_bg_theme = models.FileField(
+        validators=[validate_image_extension], upload_to='background/WhatWeAreDoing/', blank=True, )
+
 
 class Themes(models.Model):
     image_bg_themes = models.FileField(

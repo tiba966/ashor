@@ -63,6 +63,7 @@
 
 
         </div>
+        
         <div class="section  fix">
             <div class="container">
                 <div class="row max-mb-n80">
@@ -82,12 +83,11 @@
                                     
                                         <div class="row ht-team-member-style-three max-mb-n50">
                                             {% for item in core %}
-
                                             <div class="col-lg-3 col-md-6 col-sm-6 max-mb-50">
                                                 <div class="grid-item ">
                                                     <div class="ht-team-member">
                                                         <div class="team-image">
-                                                            <img class="img-fluid" src="{{ item.core_image}}" alt="">
+                                                            <img class="img-fluid" src="{{ item.core_image.url}}" alt="">
                                                             <div class="social-networks">
                                                                 <div class="inner">
                                                                     <a target="_blank" href="{% url 'about:core_detail' item.id %}"  >Read more
@@ -101,7 +101,6 @@
                                                                 {% elif LANGUAGE_CODE == 'ar' %}{{item.core_name_ar}}{% endif %}</h3>
                                                             <div class="position">{% if LANGUAGE_CODE == 'en' %}{{item.core_position}}
                                                                 {% elif LANGUAGE_CODE == 'ar' %}{{item.core_position_ar}}{% endif %}
-                                
                                                             </div>
                                                         </div>
                                                     </div>
@@ -121,6 +120,8 @@
                     </div>
                 </div>
             </div>
+        <div class="section  fix">
+          
             <div class="about-section section" style="padding: 50px;">
                 <div class="container">
         

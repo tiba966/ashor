@@ -147,11 +147,11 @@ def career_detail(request, id):
     career_detail = CareerDetail.objects.get(id=id)
     print(career_detail)
     assert isinstance(request, HttpRequest)
-    queryset = CareerDetatilImage.objects.all()
-    serializer_class = CareerDetatilImageSerializer(queryset, many=True)
+    queryset = CareerList.objects.all()
+    serializer_class = CareerListSerializer(queryset, many=True)
 
-    context = {'career': career_detail, 'data': serializer_class.data}
-    return render(request, 'careers-detail.html', context)
+    context = {'careers': career_detail, 'data': serializer_class.data}
+    return render(request, 'careers-details.html', context)
     
 def careerForm(request,carrer_name):
     if request.method == 'POST':
