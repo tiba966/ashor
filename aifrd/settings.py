@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'what_we_are_doing',
     'about',
     'get_involved',
-    'mediapage'
+    'mediapage',
+
 ]
 
 MIDDLEWARE = [
@@ -72,7 +73,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.template.context_processors.i18n',
-                'django.contrib.messages.context_processors.messages',  
+                'django.contrib.messages.context_processors.messages', 
+                "aifrd.context_processors.index", 
+ 
             ],
         },
     },

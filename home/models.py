@@ -5,25 +5,6 @@ from django.utils.translation import gettext_lazy as _
 
    
 
-   
-class Slider(models.Model):
-    slide_image_index = models.FileField(
-        validators=[validate_image_extension], upload_to='background/index/', blank=True, )
-    slide_title_index = models.CharField(
-        max_length=300, default='', blank=True, )
-    slide_title_index_ar = models.CharField(
-        max_length=300, default='', blank=True, )
-    slide_subtitle_index = models.CharField(
-        max_length=300, default='', blank=True, )
-    slide_subtitle_index_ar = models.CharField(
-        max_length=300, default='', blank=True, )
-    slide_dsc_index = models.CharField(
-        max_length=300, default='', blank=True, )
-    slide_dsc_index_ar = models.CharField(
-        max_length=300, default='', blank=True, )
-    slide_num_index = models.CharField(
-        max_length=300, default='', blank=True, )
-
 class Contact(models.Model):
     contact_bg_image = models.FileField(
         validators=[validate_image_extension], upload_to='background/index/', blank=True, )

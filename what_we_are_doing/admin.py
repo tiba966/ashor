@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import WhatWeAreDoing, Themes, ThemeBackgroundImage
+from .models import WhatWeAreDoing, Themes, ThemeBackgroundImage, Project, Category
 
 
 
@@ -31,7 +31,33 @@ class ThemeBackgroundImageAdmin(admin.ModelAdmin):
     list_display = ['id',
                 'image_bg_theme'
                     ]
+
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                'project_image',
+                'project_name',
+                'project_name_ar',
+                'project_date',
+                'category',
+                'project_location',
+                'project_location_ar',
+                'project_parteners',
+                'project_parteners_ar',
+                'project_dsc1',
+                'project_dsc1_ar',
+
+                    ]
+
+class ProjectCategoryAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                    'ar_name',
+                    'en_name'
+
+                    ]
+admin.site.register(Project, ProjectAdmin)
+
 admin.site.register(WhatWeAreDoing, WhatWeAreDoingeAdmin)
 admin.site.register(ThemeBackgroundImage, ThemeBackgroundImageAdmin)
+admin.site.register(Category, ProjectCategoryAdmin)
 
 admin.site.register(Themes, ThemesAdmin)

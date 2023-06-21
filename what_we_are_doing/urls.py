@@ -9,5 +9,7 @@ urlpatterns = [
     path('themes/', views.themes, name='themes'),
     path('themes_details/<int:id>', views.themes_details,
        name='themes_details'),
+           path('project/', views.project, name='project'),
+
 
 ]

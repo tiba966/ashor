@@ -36,7 +36,6 @@ def media_list(request):
     media = MediaDetail.objects.all().order_by("-date")
     myfilter = MediaDetailFilter(request.GET, queryset=media)
     media = myfilter.qs
-    mediaBackgroundImage = MediaBackgroundImage.objects.all()
 
     # Show many contacts per page.
     paginator = Paginator(media, 100000000000000000000)
@@ -49,7 +48,6 @@ def media_list(request):
         context = {
             "media": page_obj,
             "myfilter": myfilter,
-            'mediaBackgroundImage':mediaBackgroundImage
         }  # template name
 
     else:

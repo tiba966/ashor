@@ -17,4 +17,4 @@ class MediaDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = MediaDetail
         fields = '__all__'
-        ordering = ['-media_date']
+        ordering = ['-date']

@@ -1,4 +1,4 @@
-from media.models import Category
+from mediapage.models import Category
 
 def index(request):
     return {

@@ -71,20 +71,24 @@
     <div class="section section-padding-bottom" style="padding-top: 50px;">
         <div class="container">
 
-            <!-- Course Top Bar Start -->
             <div class="row justify-content-between align-items-center max-mb-20">
                 <div class="col-sm-auto col-12 max-mb-10">
-                    <p class="result-count">We found <span>22</span> media available for you</p>
+                  <p class="result-count">{% trans "We found" %} <span>{{media|length}}</span> {% trans "blogs available for you" %}</p>
                 </div>
+                
                 <div class="col-sm-auto col-12 max-mb-10">
-                    <select class="sort-by">
-                        <option selected="selected">All media</option>
-
-                      
-                        <option value="{% url 'media:media_filter' %}">{% trans "Default" %}</option>
+                  <div class="col-sm-auto col-12 max-mb-10">
+                    <div class="col-sm-auto col-12 max-mb-10">
+                        {% if LANGUAGE_CODE == 'en' %}
+                    <select class="sort-by" onchange="location = this.value;">
+                      {% elif LANGUAGE_CODE == 'ar' %} 
+                      <select class="sort-by-arabic" onchange="location = this.value;">
+                        {% endif %}  
+                                 <option value="{% url 'media:media_filter' %}">{% trans "Default" %}</option>
                         <option value="{% url 'media:media_filter' %}?order=popularity">{% trans "Popularity" %}</option>
                         <option  value="{% url 'media:media_filter' %}?order=latest">{% trans "Latest" %}</option>
-                        {% for category in categories  %}
+                        <optgroup label="__">
+                          {% for category in categories  %}
                         <option value="{% url 'media:media_filter' %}?category={{category}}">
                           {% if LANGUAGE_CODE == 'en' %}
                             {{ category.en_name }}
@@ -93,10 +97,18 @@
                           {% endif %}
                         </option></a>
                         {% endfor %}
-
-                    </select>
+                      </optgroup>
+            
+                        
+                      </select>
+                    </div>
+                   
+                    
+                  </div>
+          
+                  
                 </div>
-            </div>
+              </div>
             <div class="section section-fluid section-padding">
                 <div class="container">
                    

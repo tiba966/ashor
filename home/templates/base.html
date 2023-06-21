@@ -93,7 +93,7 @@
                                             <li><a href="{% url 'what_we_are_doing:themes' %}"><span
                                                         class="menu-text">OUR THEMES
                                                     </span></a></li>
-                                            <li><a href="projects.html"><span class="menu-text">OUR PROJECTS
+                                            <li><a href="{% url 'what_we_are_doing:project' %}"><span class="menu-text">OUR PROJECTS
                                                     </span></a></li>
                                         </ul>
                                     </li>
@@ -116,13 +116,13 @@
                                         <ul class="sub-menu">
                                             {%for category in categories %}
                                             <li><a href="{% url 'media:media' %}?category={{category}}"><span
-                                                        class="menu-text">STORIES</span></a></li>
+                                                        class="menu-text">
                                             {% if LANGUAGE_CODE == 'en' %}
                                             {{ category.en_name }}
                                             {% elif LANGUAGE_CODE == 'ar' %}
                                             {{ category.ar_name }}
                                             {% endif %}
-                                            </span> </a>
+                                        </span></a>
                                     </li>
                                     {%endfor%}
                                 </ul>
@@ -385,19 +385,16 @@
                             <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
                             <ul class="sub-menu">
                                 {%for category in categories %}
-                                <li><a href="{% url 'media:media' %}?category={{category}}"><span
-                                            class="menu-text">STORIES
-                                {% if LANGUAGE_CODE == 'en' %}
-                                {{ category.en_name }}
-                                {% elif LANGUAGE_CODE == 'ar' %}
-                                {{ category.ar_name }}
-                                {% endif %}
-                                </span> </a>
-                        </li>
-                        {%endfor%}
-
-
-                    </ul>
+                                <li><a href="{% url 'media:media' %}?category={{category}}"><span class="menu-text"> 
+                                    {% if LANGUAGE_CODE == 'en' %} 
+                                        {{ category.en_name }}
+                                    {% elif LANGUAGE_CODE == 'ar' %} 
+                                        {{ category.ar_name }}
+                                    {% endif %}
+                                </a></li>
+                      {%endfor%}  
+        
+                            </ul>
                     </li>
                     <li>
                         <a href="{% url 'home:contact' %}"><span class="menu-text">CONTACT</span></a>

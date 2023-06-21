@@ -1,5 +1,6 @@
 from django.db import models
 from .validators import validate_file_extension, validate_image_extension
+from datetime import date
 
 # Create your models here.
 class WhatWeAreDoing(models.Model):
@@ -49,4 +50,38 @@ class Themes(models.Model):
     themes_dsc2_ar = models.TextField(
         max_length=1000, default='', blank=True, )
 
+class Category(models.Model):
+    ar_name = models.CharField(blank=False, null=False, max_length=100)
+    en_name = models.CharField(blank=False, null=False, max_length=100)
+    
+    def __str__(self):
+        return self.en_name
 
+class Project(models.Model):
+ 
+    project_image = models.FileField(
+        validators=[validate_image_extension], upload_to='background/themes/', blank=True, ) 
+    project_name = models.CharField(
+        max_length=1000, default='', blank=True, )
+    project_name_ar = models.CharField(
+        max_length=1000, default='', blank=True, )
+    project_date = models.DateField(default=date.today, blank=True)
+
+    category =  models.ForeignKey(
+        'Category',
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True
+    )
+    project_location = models.CharField(
+        max_length=300, default='', blank=True)
+    project_location_ar = models.CharField(
+        max_length=300, default='', blank=True)
+    project_parteners = models.CharField(
+        max_length=1000, default='', blank=True, )
+    project_parteners_ar = models.CharField(
+        max_length=1000, default='', blank=True, )
+    project_dsc1 = models.TextField(
+        max_length=1000, default='', blank=True, )
+    project_dsc1_ar = models.TextField(
+        max_length=1000, default='', blank=True, )
