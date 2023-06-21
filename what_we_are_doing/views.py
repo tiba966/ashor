@@ -43,20 +43,12 @@ def themes(request):
 
     # filters
     myfilter = ThemesDetailFilter(request.GET, queryset=themes)
-    themes = myfilter.qs
      
-    # Show many contacts per page.
-    paginator = Paginator(themes, 10000000000000000)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
+    context = {
+        'themes': themes,
+        'myfilter': myfilter,
+    }  # template name
 
-    if themes:
-        context = {'themes': page_obj,
-                   'myfilter': myfilter,
-                   }  # template name
-
-    else:
-        context = {'message': "There are no themes available at the moment."}
     return render(request, 'themes.html', context)
 
 
@@ -64,11 +56,10 @@ def themes_details(request, id):
     """Renders the create themes page."""
  
     themes = Themes.objects.get(id=id)
-    print(themes)
-    assert isinstance(request, HttpRequest)
 
-    context = {'themes': themes}
+    context = {'item': themes}
     return render(request, 'themes-details.html', context)
+
 def project(request):
     """Renders the create what_we_are_doing page."""
     assert isinstance(request, HttpRequest)
@@ -76,7 +67,7 @@ def project(request):
     serializer_class = ProjectSerializer(queryset, many=True)
 
     return render(request, 'projects.html',
-                  {
-                      'data': serializer_class.data,
-                  }
-                  )
+        {
+            'data': serializer_class.data,
+        }
+        )
