@@ -198,8 +198,12 @@
                     <h2 class="title fz-48">Our <span>Themes</span></h2>
                     <p>Enter your email address to register to our newsletter subscription <br
                             class="d-none d-md-block">delivered on a regular basis! </p>
-                    <a class="link link-lg" href="themes.html"> <mark>read more <i
-                                class="far fa-long-arrow-right"></i></mark></a>
+                            
+                    <a class="link link-lg" href="">
+                        <mark>read more <i class="far fa-long-arrow-right"></i></mark>
+                        </a>
+
+
                     <div class="row row-cols-xl-3 row-cols-sm-2 row-cols-1 max-mb-n30"
                         style="padding-top: 15px;">
                        {% for theme in themes %}
@@ -207,6 +211,7 @@
 
             <!-- themes Start (Icon Box) -->
             <div class="col max-mb-30" data-aos="fade-up">
+                
                 <a href="{% url 'what_we_are_doing:themes_details' theme.id %}" class="icon-box text-center" data-vivus-hover>
                     <div class="icon"><img class="" src="{{ theme.themes_icons}}" alt="">
                     </div>

@@ -9,6 +9,7 @@ from django.core.paginator import Paginator
 from django.utils.translation import get_language, activate
 from what_we_are_doing.models import WhatWeAreDoing, Themes, Project
 from django.core.mail import send_mail,  EmailMessage
+from django.shortcuts import get_object_or_404, render
 
 from .filters import ThemesDetailFilter
 
@@ -52,12 +53,17 @@ def themes(request):
     return render(request, 'themes.html', context)
 
 
-def themes_details(request, id):
-    """Renders the create themes page."""
+# def themes_details(request, id):
+#     """Renders the create themes page."""
  
-    themes = Themes.objects.get(id=id)
+#     themes = Themes.objects.get(id=id)
 
-    context = {'item': themes}
+#     context = {'item': themes}
+#     return render(request, 'themes-details.html', context)
+
+def theme_detail(request, theme_id):
+    theme = get_object_or_404(Themes, pk=theme_id)
+    context = {'theme': theme}
     return render(request, 'themes-details.html', context)
 
 def project(request):
