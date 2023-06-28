@@ -98,7 +98,8 @@
                                                         </div>
                                                         <div class="team-info text-center">
                                                             <h3 class="name">{% if LANGUAGE_CODE == 'en' %}{{item.core_name}}
-                                                                {% elif LANGUAGE_CODE == 'ar' %}{{item.core_name_ar}}{% endif %}</h3>
+                                                                {% elif LANGUAGE_CODE == 'ar' %}{{item.core_name_ar}}{% endif %} <br> {% if LANGUAGE_CODE == 'en' %}{{item.core_position}}
+                                                                {% elif LANGUAGE_CODE == 'ar' %}{{item.core_position_ar}}{% endif %}</h3>
                                                             <div class="position">{% if LANGUAGE_CODE == 'en' %}{{item.core_position}}
                                                                 {% elif LANGUAGE_CODE == 'ar' %}{{item.core_position_ar}}{% endif %}
                                                             </div>

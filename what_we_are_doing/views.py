@@ -38,6 +38,23 @@ def what_we_are_doing(request):
                   }
                   )
 
+# def themes(request):
+#     """Renders the create themes page."""
+#     themes = Themes.objects.all()
+
+#     # filters
+#     myfilter = ThemesDetailFilter(request.GET, queryset=themes)
+     
+#     context = {
+#         'themes': themes,
+#         'myfilter': myfilter,
+#     }  # template name
+
+#     return render(request, 'themes.html', context)
+
+
+from django.shortcuts import render
+
 def themes(request):
     """Renders the create themes page."""
     themes = Themes.objects.all()
@@ -48,9 +65,16 @@ def themes(request):
     context = {
         'themes': themes,
         'myfilter': myfilter,
-    }  # template name
+    }
+    
+    # Render index.html
+    index_html = render(request, 'index.html', context)
+    
+    # Render themes.html
+    themes_html = render(request, 'themes.html', context)
 
-    return render(request, 'themes.html', context)
+    # Return both HTML pages
+    return index_html, themes_html
 
 
 # def themes_details(request, id):
