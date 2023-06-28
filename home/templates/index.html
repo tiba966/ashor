@@ -262,6 +262,9 @@
                         </a>
                         <a href="{% url 'get_involved:volunteer' %}" class="btn btn-primary btn-hover-secondary margin-15"> join us
                             as volunteer </a>
+                            {% for theme in themes %}
+                            <h1>{{ theme.themes_title}}</h1>
+                            {% endfor %}
                     </div>
                 </div>
             </div>

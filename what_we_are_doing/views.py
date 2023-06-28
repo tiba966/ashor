@@ -65,16 +65,9 @@ def themes(request):
     context = {
         'themes': themes,
         'myfilter': myfilter,
-    }
-    
-    # Render index.html
-    index_html = render(request, 'index.html', context)
-    
-    # Render themes.html
-    themes_html = render(request, 'themes.html', context)
+    }  # template name
 
-    # Return both HTML pages
-    return index_html, themes_html
+    return render(request, 'themes.html', context)
 
 
 # def themes_details(request, id):
