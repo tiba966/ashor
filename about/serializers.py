@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import About,Goal, VisionMissionValue,WhereWeWork, PartenerNetwork, InternalSystem, GoalList, Core, History
+from .models import About,Goal, VisionMissionValue,InternalSystemList, PartenerLogo, WhereWeWork, PartenerNetwork, InternalSystem, GoalList, Core, History
 
 
 class AboutSerializer(serializers.ModelSerializer):
@@ -14,6 +14,11 @@ class WhereWeWorkSerializer(serializers.ModelSerializer):
         model = WhereWeWork
         fields = '__all__'
 
+class PartenerLogoSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = PartenerLogo
+        fields = '__all__'
 
 class VisionMissionValueSerializer(serializers.ModelSerializer):
 
@@ -31,6 +36,11 @@ class InternalSystemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = InternalSystem
+        fields = '__all__'
+class InternalSystemListSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = InternalSystemList
         fields = '__all__'
 
 class GoalListSerializer(serializers.ModelSerializer):

@@ -3225,6 +3225,9 @@ textarea:focus {
 .link.link-color mark::after {
   background-color: #3a7e69;
 }
+.link i{
+  margin-inline-start: 5px;
+}
 .link mark {
   font-weight: 700;
   line-height: 1;
@@ -3368,10 +3371,10 @@ textarea:focus {
   }
 }
 .banner-slider .banner-slider-prev {
-  left: 30px;
+  inset-inline-start: 30px;
 }
 .banner-slider .banner-slider-next {
-  right: 30px;
+  inset-inline-end: 30px;
 }
 .banner-slider .banner-slider-next::after {
   display: none;
@@ -5017,16 +5020,20 @@ textarea:focus {
   }
 }
 .single-success-faq .success-faq-heading .icon {
-  margin-right: 15px;
-  margin-top: 5px;
+  margin-inline-end: 15px;
+  /* margin-top: 5px; */
   font-size: 18px;
   color: #20AD96;
+}
+[dir=rtl] .single-success-faq .success-faq-heading .icon{
+  transform: scale(-1);
 }
 .single-success-faq .success-faq-heading .text-wrap h4 {
   font-size: 18px;
   font-weight: 600;
-  line-height: 30px;
+  line-height: 36px;
   max-width: 310px;
+  margin: 0;
 }
 .single-success-faq .success-faq-content {
   display: -webkit-box;
@@ -5038,7 +5045,7 @@ textarea:focus {
 }
 .single-success-faq .success-faq-content .icon {
   margin-top: 2px;
-  margin-right: 15px;
+  margin-inline-end: 15px;
   font-size: 18px;
   color: #20AD96;
 }
@@ -8366,7 +8373,7 @@ textarea:focus {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
 }
 .site-main-menu > ul > li {
@@ -8395,7 +8402,7 @@ textarea:focus {
   font-family: "Font Awesome 5 Pro";
   font-size: 8px;
   font-weight: 900;
-  margin-left: 10px;
+  margin-inline-start: 10px;
   content: "";
 }
 .site-main-menu > ul > li:hover > a {
@@ -8410,7 +8417,7 @@ textarea:focus {
   position: absolute;
   z-index: 9999;
   top: 100%;
-  left: 0;
+  inset-inline-start: 0;
   visibility: hidden;
   width: 280px;
   margin-top: 20px;
@@ -8452,8 +8459,11 @@ textarea:focus {
   font-family: "Font Awesome 5 Pro";
   font-size: 8px;
   font-weight: 900;
-  margin-left: auto;
+  margin-inline-start: auto;
   content: "";
+}
+[dir=rtl] .site-main-menu .sub-menu li.has-children > a .menu-text::after, .site-main-menu .mega-menu li.has-children > a .menu-text::after{
+  transform: scale(-1);
 }
 .site-main-menu .sub-menu li:hover > a, .site-main-menu .sub-menu li.active > a, .site-main-menu .mega-menu li:hover > a, .site-main-menu .mega-menu li.active > a {
   color: #111111;
@@ -8465,10 +8475,10 @@ textarea:focus {
 }
 .site-main-menu .sub-menu .sub-menu, .site-main-menu .mega-menu .sub-menu {
   top: -18px;
-  left: 100%;
+  inset-inline-start: 100%;
 }
 .site-main-menu .mega-menu {
-  left: 0;
+  inset-inline-start: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8879,7 +8889,7 @@ textarea:focus {
 .site-mobile-menu > ul > li .menu-toggle {
   position: absolute;
   top: 11px;
-  right: 0;
+  inset-inline-end: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8918,7 +8928,7 @@ textarea:focus {
 .site-mobile-menu .sub-menu, .site-mobile-menu .mega-menu {
   display: none;
   margin: 14px 0;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
 }
 .site-mobile-menu .sub-menu li, .site-mobile-menu .mega-menu li {
@@ -8953,7 +8963,7 @@ textarea:focus {
 .site-mobile-menu .sub-menu ul, .site-mobile-menu .mega-menu ul {
   list-style: none;
   margin: 0;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
 }
 .site-mobile-menu .sub-menu ul li a .badge, .site-mobile-menu .mega-menu ul li a .badge {
@@ -13784,18 +13794,18 @@ textarea:focus {
       flex-wrap: wrap;
   margin-top: 10px;
   margin-bottom: 0;
-  padding-left: 0;
+  padding: 0;
   color: #FFFFFF;
   list-style: none;
 }
 .media-6 .info .meta li {
-  margin-right: 28px;
+  /* margin-right: 28px; */
 }
 .media-6 .info .meta li:last-child {
   margin-right: 0;
 }
 .media-6 .info .meta li i {
-  margin-right: 10px;
+  margin-inline-end: 10px;
 }
 .media-6 .info .desc {
   margin: 9px 0 0;
@@ -14851,7 +14861,7 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin-right: 30px;
+  margin-inline-end: 30px;
 }
 @media only screen and (max-width: 479px) {
   .event-list-box .event-caption .left-box {
@@ -15138,11 +15148,11 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
       flex-wrap: wrap;
   margin-top: 10px;
   margin-bottom: 0;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
 }
 .media-event .info .meta li {
-  margin-right: 28px;
+  margin-inline-end: 28px;
 }
 .media-event .info .meta li:last-child {
   margin-right: 0;
@@ -15151,7 +15161,7 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
   font-weight: 600;
 }
 .media-event .info .meta li i {
-  margin-right: 10px;
+  margin-inline-end: 10px;
 }
 .media-event:hover {
   background-color: #FFFFFF;
@@ -15814,6 +15824,7 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
   list-style: none;
   padding-left: 0;
   margin-bottom: 35px;
+  padding: 0;
 }
 .maxcoach-list.color-light li {
   color: #FFFFFF;
@@ -15830,7 +15841,7 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
   margin-top: 10px;
 }
 .maxcoach-list li .icon {
-  margin-right: 19px;
+  margin-inline-end: 19px;
   font-size: 15px;
   color: #20AD96;
 }
@@ -16668,7 +16679,7 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
           align-items: flex-start;
 }
 .contact-info .icon {
-  margin-right: 20px;
+  margin-inline-end: 20px;
   font-size: 32px;
   color: #20AD96;
 }
@@ -17299,17 +17310,17 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
       flex-wrap: wrap;
   margin-top: 15px;
   margin-bottom: 0;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
 }
 .blog .info .meta li {
-  margin-right: 28px;
+  margin-inline-end: 28px;
 }
 .blog .info .meta li:last-child {
   margin-right: 0;
 }
 .blog .info .meta li i {
-  margin-right: 10px;
+  margin-inline-end: 10px;
 }
 .blog:hover .thumbnail .image img {
   -webkit-transform: scale(1.1);
@@ -19384,7 +19395,7 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
 }
 .checkout-form .check-box input[type=checkbox] + label {
   position: relative;
-  padding-left: 30px;
+  padding-inline-start: 30px;
   line-height: 20px;
   font-size: 14px;
   font-weight: 400;
@@ -19393,7 +19404,7 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
 }
 .checkout-form .check-box input[type=checkbox] + label::before {
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 0;
   width: 20px;
   height: 20px;
@@ -19405,7 +19416,7 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
 }
 .checkout-form .check-box input[type=checkbox] + label::after {
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 0;
   display: block;
   content: "";
@@ -19512,7 +19523,7 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
 }
 .single-method input[type=radio] + label {
   position: relative;
-  padding-left: 30px;
+  padding-inline-start: 30px;
   line-height: 20px;
   font-size: 14px;
   font-weight: 400;
@@ -19521,7 +19532,7 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
 }
 .single-method input[type=radio] + label::before {
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 0;
   width: 20px;
   height: 20px;
@@ -19533,7 +19544,7 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
 }
 .single-method input[type=radio] + label::after {
   position: absolute;
-  left: 5px;
+  inset-inline-start: 5px;
   top: 5px;
   display: block;
   content: "";
@@ -20356,14 +20367,14 @@ ul.section-content .course-item .section-item-link .course-item-meta .item-meta-
   margin-bottom: 0;
 }
 .footer-widget-content ul {
-  margin-right: -20px;
+  /* margin-right: -20px; */
   margin-bottom: -11px;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
 }
 .footer-widget-content ul li {
   margin-bottom: 11px;
-  padding-right: 20px;
+  padding-inline-end: 20px;
 }
 .footer-widget-content ul.column-2 {
   display: -webkit-box;

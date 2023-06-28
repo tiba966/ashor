@@ -16,11 +16,6 @@ def index(request):
     queryset = Index.objects.all()
     serializer_class = IndexSerializer(queryset, many=True)
 
-
-   
-
-    
-
     slider_show = Slider.objects.all()[:4]
     context = {
         'data': serializer_class.data,

@@ -5,23 +5,26 @@
         <!-- Header Section End -->
         <div class="page-title-section section">
             <div class="page-title">
-           
+        
             </div>
             <div class="page-breadcrumb">
                 <div class="container">
-                    <ul class="breadcrumb">      <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Ashor</a></li>
-    
+                    <ul class="breadcrumb">
+                        <li><a href="{% url 'home:index' %}">Home</a></li>
+                        <li><a href="{% url 'about:about' %}">About Ashor</a></li>
+        
                         <li class="current">Where we work</li>
         
                     </ul>
                 </div>
             </div>
         </div>
+    
         <!-- Blog Section Start -->
         <div class="section  fix">
             <div class="container">
                 <div class="row max-mb-n50">
+                    {% for item in data %}
 
                     <div class="col-lg-12 col-12 order-lg-1 max-mb-50">
                         <!-- Blog Wrapper Start -->
@@ -33,7 +36,7 @@
 
                                 <!-- Page Banner Section Start -->
                                 <div class="page-banner-section section overlay section-padding"
-                                    data-bg-image="./assets/images/page-banner/course-bg.jpg">
+                                    data-bg-image="{{ item.image_banner_where_we_work}}">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-12">
@@ -54,7 +57,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Blog End -->
+                    {% endfor %}
 
 
                 </div>
@@ -64,7 +67,20 @@
 
         </div>
 
+        <div class="about-video-section section position-relative section-padding-top section-padding-bottom-160">
 
+            <div class="container">
+
+                <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 ">
+                    <div id="map"></div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
 
         <div class="about-video-section section position-relative section-padding-top section-padding-bottom-160">
 
@@ -290,5 +306,6 @@
 
         </div>
     </div>
+    
     <!-- media Section End -->
     {% endblock body %}

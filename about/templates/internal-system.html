@@ -9,8 +9,8 @@
             </div>
             <div class="page-breadcrumb">
                 <div class="container">
-                    <ul class="breadcrumb">      <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Ashor</a></li>
+                    <ul class="breadcrumb">      <li><a href="{% url 'home:index' %}">Home</a></li>
+                        <li><a href="{% url 'about:about' %}">About Ashor</a></li>
     
                         <li class="current">Internal system and control</li>
         
@@ -76,7 +76,19 @@
                             <p>{% if LANGUAGE_CODE == 'en' %}{{item.interanl_system_desc}}
                                 {% elif LANGUAGE_CODE == 'ar' %}{{item.interanl_system_desc_ar}}{% endif %}
                             </p>
-                           
+                            {% endfor %}
+
+                            <ol>
+                                {% for item in list %}
+
+
+                                <li>{% if LANGUAGE_CODE == 'en' %}{{item.internal_list}}
+                                    {% elif LANGUAGE_CODE == 'ar' %}{{item.internal_list_ar}}{% endif %}.
+                                </li>
+                               
+                                {% endfor %}
+
+                            </ol>
                         </div>
                         <!-- Section Title End -->
 
@@ -86,7 +98,6 @@
                 </div>
             </div>
         </div>
-        {% endfor %}
 
         <div class="about-section section" style="padding: 50px;">
             <div class="container">

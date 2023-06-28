@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block body %}
 {% load i18n %}
+{% load static %}
+
 {% get_current_language as LANGUAGE_CODE %}
         <!-- Page Title Section Start -->
         <div class="page-title-section section">
@@ -10,7 +12,7 @@
             <div class="page-breadcrumb">
                 <div class="container">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{% url 'home:index' %}">Home</a></li>
                         <li class="current">About Ashor </li>
                     </ul>
                 </div>
@@ -111,17 +113,16 @@
                     <div class="media-6">
                         <div class="thumbnail">
                             <a class="image" href="{% url 'about:history' %}">
-                                <img src="assets/images/gallery/start-here-gallery-image-01.jpg" alt="">
+                                <img src="{% static 'home/images/logo/what.jpg' %}"> 
                                 <div class="media-overlay-bg"></div>
                             </a>
                         </div>
+                        
                         <div class="info">
                             <div class="media-caption-main">
                                 <h3 class="title"><a href="{% url 'about:history' %}">Ashor History</a></h3>
                             </div>
                             <div class="media-caption-collapse">
-
-                              
                             </div>
                         </div>
                     </div>
@@ -130,7 +131,7 @@
                     <div class="media-6">
                         <div class="thumbnail">
                             <a class="image" href="{% url 'about:goals' %}">
-                                <img src="assets/images/gallery/start-here-gallery-image-01.jpg" alt="">
+                                <img src="{% static 'home/images/goals.jpg' %}" alt="">
                                 <div class="media-overlay-bg"></div>
                             </a>
                         </div>
@@ -150,7 +151,7 @@
                     <div class="media-6">
                         <div class="thumbnail">
                             <a class="image" href="{% url 'about:vission_mission' %}">
-                                <img src="assets/images/gallery/start-here-gallery-image-01.jpg" alt="">
+                                <img src="{% static 'home/images/vision.jpg' %}" alt="">
                                 <div class="media-overlay-bg"></div>
                             </a>
                         </div>
@@ -171,7 +172,7 @@
                     <div class="media-6">
                         <div class="thumbnail">
                             <a class="image" href="{% url 'about:core_list' %}">
-                                <img src="assets/images/gallery/start-here-gallery-image-01.jpg" alt="">
+                                <img src="{% static 'home/images/people.jpg' %}" alt="">
                                 <div class="media-overlay-bg"></div>
                             </a>
                         </div>
@@ -190,7 +191,7 @@
                     <div class="media-6">
                         <div class="thumbnail">
                             <a class="image" href="{% url 'about:partener_network' %}">
-                                <img src="assets/images/gallery/start-here-gallery-image-01.jpg" alt="">
+                                <img src="{% static 'home/images/partner.jpg' %}" alt="">
                                 <div class="media-overlay-bg"></div>
                             </a>
                         </div>
@@ -211,7 +212,7 @@
                     <div class="media-6">
                         <div class="thumbnail">
                             <a class="image" href="{% url 'about:internal_system' %}">
-                                <img src="assets/images/gallery/start-here-gallery-image-01.jpg" alt="">
+                                <img src="{% static 'home/images/internal.jpg' %}" alt="">
                                 <div class="media-overlay-bg"></div>
                             </a>
                         </div>
@@ -266,7 +267,7 @@
                     <div class="media-6">
                         <div class="thumbnail">
                             <a class="image" href="media-details.html">
-                                <img src="assets/images/courses/385/course-2.jpg" alt="">
+                                <img src="{% static 'home/images/ashurlogo.png' %}" alt="">
                                 <div class="media-overlay-bg"></div>
                             </a>
                         </div>
@@ -292,7 +293,7 @@
                     <div class="media-6">
                         <div class="thumbnail">
                             <a class="image" href="media-details.html">
-                                <img src="assets/images/courses/385/course-2.jpg" alt="">
+                                <img src="{% static 'home/images/ashurlogo.png' %}" alt="">
                                 <div class="media-overlay-bg"></div>
                             </a>
                         </div>
@@ -318,7 +319,7 @@
                     <div class="media-6">
                         <div class="thumbnail">
                             <a class="image" href="media-details.html">
-                                <img src="assets/images/courses/385/course-2.jpg" alt="">
+                                <img src="{% static 'home/images/ashurlogo.png' %}" alt="">
                                 <div class="media-overlay-bg"></div>
                             </a>
                         </div>
@@ -345,7 +346,7 @@
                     <div class="media-6">
                         <div class="thumbnail">
                             <a class="image" href="media-details.html">
-                                <img src="assets/images/courses/385/course-2.jpg" alt="">
+                                <img src="{% static 'home/images/ashurlogo.png' %}" alt="">
                                 <div class="media-overlay-bg"></div>
                             </a>
                         </div>

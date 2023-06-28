@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from django.contrib import admin
-from .models import About,WhereWeWork,Goal, VisionMissionValue, PartenerNetwork, InternalSystem, GoalList, Core, History
+from .models import About,WhereWeWork,Goal, PartenerLogo, InternalSystemList, VisionMissionValue, PartenerNetwork, InternalSystem, GoalList, Core, History
 
 class AboutAdmin(admin.ModelAdmin):
     list_display = ['id',
@@ -11,13 +11,17 @@ class AboutAdmin(admin.ModelAdmin):
                     'textabout_desc2',
                     'textabout_desc2_ar',
                     ]
-
+class InternalSystemListAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                   
+                    'internal_list',
+                    'internal_list_ar',
+                    ]
 
 class VisionMissionValueAdmin(admin.ModelAdmin):
     list_display = ['id',
                     'image_bg_vission_mission',
-                    'Vission_Mission_Value_desc1',
-                    'Vission_Mission_Value_desc1_ar',
+                   
                     'Vission_desc',
                     'Vission_desc_ar',
                     'mission_desc',
@@ -65,13 +69,11 @@ class PartenerNetworkAdmin(admin.ModelAdmin):
                     'partener_desc_ar',
                     'network_desc',
                     'network_desc_ar',
-                    'logo1',
-                    'logo2',
-                    'logo3',
-                    'logo4',
-                    'logo5',
-                    'logo6',
+                    ]
 
+class PartenerLogoAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                    'image_partener',
                     ]
 
 
@@ -97,3 +99,6 @@ admin.site.register(InternalSystem, InternalSystemAdmin)
 admin.site.register(About, AboutAdmin)
 admin.site.register(WhereWeWork, WhereWeWorkAdmin)
 admin.site.register(Goal, GoalAdmin)
+admin.site.register(PartenerLogo, PartenerLogoAdmin)
+
+admin.site.register(InternalSystemList, InternalSystemListAdmin)

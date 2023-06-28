@@ -2,8 +2,8 @@ from email.message import EmailMessage
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from rest_framework import generics, permissions
-from .models import About,Goal, VisionMissionValue, PartenerNetwork, InternalSystem, GoalList, Core, History
-from .serializers import AboutSerializer,GoalSerializer, VisionMissionValueSerializer, PartenerNetworkSerializer, InternalSystemSerializer, GoalListSerializer, CoreSerializer, HistorySerializer
+from .models import About,Goal, VisionMissionValue,WhereWeWork, InternalSystemList, Goal,PartenerLogo, PartenerNetwork, InternalSystem, GoalList, Core, History
+from .serializers import AboutSerializer,GoalSerializer,WhereWeWorkSerializer, InternalSystemListSerializer, VisionMissionValueSerializer, PartenerNetworkSerializer, InternalSystemSerializer, GoalListSerializer, CoreSerializer, HistorySerializer
 from django.http import HttpRequest
 from rest_framework.renderers import JSONRenderer, TemplateHTMLRenderer
 from django.core.paginator import Paginator
@@ -38,10 +38,12 @@ def goals(request):
     assert isinstance(request, HttpRequest)
     queryset = GoalList.objects.all()
     serializer_class = GoalListSerializer(queryset, many=True)
-
+    queryset = Goal.objects.all()
+    img = GoalSerializer(queryset, many=True)
     return render(request, 'goals.html',
                   {
                       'goal': serializer_class.data,
+                      'img': img.data
                   }
                   )
 
@@ -77,10 +79,12 @@ def partener_network(request):
     assert isinstance(request, HttpRequest)
     queryset = PartenerNetwork.objects.all()
     serializer_class = PartenerNetworkSerializer(queryset, many=True)
+    logo_show = PartenerLogo.objects.all()
 
     return render(request, 'parteners-networks.html',
                   {
                       'data': serializer_class.data,
+                      'logo': logo_show,
                   }
                   )
 def internal_system(request):
@@ -88,18 +92,20 @@ def internal_system(request):
     assert isinstance(request, HttpRequest)
     queryset = InternalSystem.objects.all()
     serializer_class = InternalSystemSerializer(queryset, many=True)
+    internal_list = InternalSystemList.objects.all()
 
     return render(request, 'internal-system.html',
                   {
                       'data': serializer_class.data,
+                      'list': internal_list
                   }
                   )
 
 def where_we_work(request):
     """Renders the create history page."""
     assert isinstance(request, HttpRequest)
-    queryset = InternalSystem.objects.all()
-    serializer_class = InternalSystemSerializer(queryset, many=True)
+    queryset = WhereWeWork.objects.all()
+    serializer_class = WhereWeWorkSerializer(queryset, many=True)
 
     return render(request, 'where-we-work.html',
                   {

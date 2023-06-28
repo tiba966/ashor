@@ -42,9 +42,11 @@ class IndexAdmin(admin.ModelAdmin):
                      'num_project_index',
                      'num_benefi_index',
                      'num_volunteer_index',
-                  
+               'text_themes_index',
+                     'text_themes_index_ar',
 
-
+                    'text_media_index',
+                     'text_media_index_ar',
 
                     ]
 

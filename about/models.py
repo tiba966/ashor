@@ -19,10 +19,6 @@ class About(models.Model):
 class VisionMissionValue(models.Model):
     image_bg_vission_mission = models.FileField(
         validators=[validate_image_extension], upload_to='background/vission_mission/', )
-    Vission_Mission_Value_desc1 = models.TextField(
-        max_length=1000, default='', blank=True, )
-    Vission_Mission_Value_desc1_ar = models.TextField(
-        max_length=1000, default='', blank=True, )
 
         
     Vission_desc = models.TextField(
@@ -94,6 +90,9 @@ class Core(models.Model):
 
 
 
+class PartenerLogo(models.Model):
+    image_partener = models.FileField(
+        validators=[validate_image_extension], upload_to='background/PartenerNetwork/', )
 
 
 class PartenerNetwork(models.Model):
@@ -110,25 +109,20 @@ class PartenerNetwork(models.Model):
         max_length=1000, default='',  blank=True,)
     network_desc_ar = models.CharField(
         max_length=1000, default='',  blank=True,)
-    logo1 = models.FileField(
-        validators=[validate_image_extension], upload_to='background/PartenerNetwork/', )  
-    logo2 = models.FileField(
-        validators=[validate_image_extension], upload_to='background/PartenerNetwork/', )  
-    logo3 = models.FileField(
-        validators=[validate_image_extension], upload_to='background/PartenerNetwork/', )  
-    logo4 = models.FileField(
-        validators=[validate_image_extension], upload_to='background/PartenerNetwork/', )  
-    logo5 = models.FileField(
-        validators=[validate_image_extension], upload_to='background/PartenerNetwork/', )  
-    logo6 = models.FileField(
-        validators=[validate_image_extension], upload_to='background/PartenerNetwork/', )  
-   
 
 
 
 class WhereWeWork(models.Model):
     image_banner_where_we_work = models.FileField(
         validators=[validate_image_extension], upload_to='background/WhereWeWork/', )
+
+class InternalSystemList(models.Model):
+    internal_list = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    internal_list_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+
+   
    
 
 class InternalSystem(models.Model):
