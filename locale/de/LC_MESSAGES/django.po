@@ -1,0 +1,391 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-02 00:12+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\about\templates\about.html:15 .\home\templates\base.html:341
+msgid "HOME"
+msgstr "HEIM"
+
+#: .\about\templates\about.html:16 .\about\templates\acadimic.html:13
+#: .\about\templates\capacity.html:13 .\about\templates\core-details.html:13
+#: .\about\templates\core.html:12 .\about\templates\crass_root.html:13
+#: .\about\templates\goals.html:13 .\about\templates\history.html:13
+#: .\about\templates\internal-system.html:13
+#: .\about\templates\parteners-networks.html:13
+#: .\about\templates\vission-mission.html:13
+#: .\about\templates\where-we-work.html:14
+msgid "About Ashor"
+msgstr "Über Ashor"
+
+#: .\about\templates\about.html:83
+msgid "The Iraqi"
+msgstr "Der Iraker"
+
+#: .\about\templates\about.html:83
+msgid "Ashor Foundation for Relief and Development"
+msgstr "Ashor-Stiftung für Hilfe und Entwicklung"
+
+#: .\about\templates\about.html:83
+msgid "was"
+msgstr "War"
+
+#: .\about\templates\about.html:105
+msgid "Ashor general informations"
+msgstr "Allgemeine Informationen zu Ashor"
+
+#: .\about\templates\about.html:123
+msgid "Ashor History"
+msgstr "Ashor-Geschichte"
+
+#: .\about\templates\about.html:140 .\about\templates\goals.html:14
+msgid "Goals"
+msgstr "Ziele"
+
+#: .\about\templates\about.html:160 .\about\templates\vission-mission.html:15
+msgid "Vission & Mission"
+msgstr "Vision & Mission"
+
+#: .\about\templates\about.html:181
+msgid "Our People"
+msgstr "Unsere Leute"
+
+#: .\about\templates\about.html:200
+msgid "Partners & networks"
+msgstr "Partner & Netzwerke"
+
+#: .\about\templates\about.html:221 .\about\templates\capacity.html:15
+#: .\home\templates\base.html:91
+msgid "Capacity Development"
+msgstr "Kapazitätsentwicklung"
+
+#: .\about\templates\about.html:240
+msgid "Where We Work"
+msgstr "Wo wir arbeiten"
+
+#: .\about\templates\about.html:295 .\about\templates\acadimic.html:128
+#: .\about\templates\capacity.html:129 .\about\templates\core-details.html:143
+#: .\about\templates\core.html:146 .\about\templates\crass_root.html:128
+#: .\about\templates\goals.html:141 .\about\templates\history.html:133
+#: .\about\templates\internal-system.html:125
+#: .\about\templates\parteners-networks.html:191
+#: .\about\templates\vission-mission.html:180
+#: .\about\templates\where-we-work.html:136
+msgid "Latest Media"
+msgstr "Neueste Medien"
+
+#: .\about\templates\about.html:346 .\about\templates\acadimic.html:179
+#: .\about\templates\capacity.html:180 .\about\templates\core-details.html:194
+#: .\about\templates\core.html:197 .\about\templates\crass_root.html:179
+#: .\about\templates\goals.html:192 .\about\templates\history.html:184
+#: .\about\templates\internal-system.html:176
+#: .\about\templates\parteners-networks.html:242
+#: .\about\templates\vission-mission.html:231
+#: .\about\templates\where-we-work.html:187
+msgid "Read More"
+msgstr "Weiterlesen"
+
+#: .\about\templates\acadimic.html:12 .\about\templates\capacity.html:12
+#: .\about\templates\core-details.html:12 .\about\templates\core.html:11
+#: .\about\templates\crass_root.html:12 .\about\templates\goals.html:12
+#: .\about\templates\history.html:12 .\about\templates\internal-system.html:12
+#: .\about\templates\parteners-networks.html:12
+#: .\about\templates\vission-mission.html:12
+#: .\about\templates\where-we-work.html:13
+msgid "Home"
+msgstr "Heim"
+
+#: .\about\templates\acadimic.html:15 .\home\templates\base.html:82
+#: .\home\templates\base.html:362
+msgid "Academics"
+msgstr "Akademiker"
+
+#: .\about\templates\core-details.html:86 .\home\templates\index.html:75
+#: .\home\templates\index.html:288
+msgid "Read more"
+msgstr "Weiterlesen"
+
+#: .\about\templates\core.html:13
+msgid "Core"
+msgstr "Kern"
+
+#: .\about\templates\crass_root.html:15
+msgid "Grass-root Volunteer Groups"
+msgstr "Freiwilligengruppen an der Basis"
+
+#: .\about\templates\history.html:15
+msgid "History of Ashor"
+msgstr "Geschichte von Ashor"
+
+#: .\about\templates\internal-system.html:15
+msgid "Internal system and control"
+msgstr "Internes System und Kontrolle"
+
+#: .\about\templates\parteners-networks.html:15
+msgid "Ashor Partners & Networks"
+msgstr "Partner & Netzwerke"
+
+#: .\about\templates\parteners-networks.html:84
+msgid "Partners"
+msgstr "Partner"
+
+#: .\about\templates\parteners-networks.html:145
+msgid "Networks"
+msgstr "Netzwerke"
+
+#: .\about\templates\vission-mission.html:94
+msgid "Ashor Vission"
+msgstr "Ashor Vision"
+
+#: .\about\templates\vission-mission.html:122
+msgid "Ashor Mission"
+msgstr "Ashor-Mission"
+
+#: .\about\templates\where-we-work.html:16
+msgid "Where we work"
+msgstr "Wo wir arbeiten"
+
+#: .\about\templates\where-we-work.html:79
+msgid "Adress"
+msgstr "Ein Kleid"
+
+#: .\aifrd\settings.py:147 .\home\templates\base.html:152
+#: .\home\templates\base.html:166
+msgid "English"
+msgstr "Englisch"
+
+#: .\aifrd\settings.py:148
+msgid "Arabic"
+msgstr "Arabisch"
+
+#: .\aifrd\settings.py:149 .\home\templates\base.html:155
+#: .\home\templates\base.html:162
+msgid "German"
+msgstr "Deutsch"
+
+#: .\home\templates\base.html:11 .\home\templates\base2.html:9
+msgid "Ashor Iraqi Foundation for Relief and Development"
+msgstr "Ashor Irakische Stiftung für Hilfe und Entwicklung"
+
+#: .\home\templates\base.html:64 .\home\templates\base.html:267
+#: .\home\templates\base.html:347
+msgid "ABOUT ASHOR"
+msgstr "ÜBER ASHOR"
+
+#: .\home\templates\base.html:69 .\home\templates\base.html:350
+msgid "HISTORY"
+msgstr "GESCHICHTE"
+
+#: .\home\templates\base.html:71 .\home\templates\base.html:289
+#: .\home\templates\base.html:351
+msgid "GOALS"
+msgstr "ZIELE"
+
+#: .\home\templates\base.html:73
+msgid "VISSION AND MISSION"
+msgstr "VISION & MISSION"
+
+#: .\home\templates\base.html:75 .\home\templates\base.html:291
+msgid "OUR PEOPLE"
+msgstr "UNSERE LEUTE"
+
+#: .\home\templates\base.html:87 .\home\templates\base.html:292
+msgid "PARTNERS & NETWORKS"
+msgstr "PARTNER & NETZWERKE"
+
+#: .\home\templates\base.html:89
+msgid "INTERNAL SYSTEM & RESOURCES"
+msgstr "INTERNES SYSTEM & RESSOURCEN"
+
+#: .\home\templates\base.html:92 .\home\templates\base.html:270
+#: .\home\templates\base.html:369
+msgid "WHERE WE WORK"
+msgstr "WO WIR ARBEITEN"
+
+#: .\home\templates\base.html:98
+msgid "WHAT WE ARE DOING"
+msgstr "WAS MACHST DU"
+
+#: .\home\templates\base.html:102
+msgid "OUR THEMES"
+msgstr "UNSERE THEMEN"
+
+#: .\home\templates\base.html:104 .\home\templates\base.html:382
+msgid "OUR PROJECTS"
+msgstr "UNSERE PROJEKTE"
+
+#: .\home\templates\base.html:109
+msgid "GET INVOLVED"
+msgstr "MACHEN SIE MIT"
+
+#: .\home\templates\base.html:113 .\home\templates\base.html:271
+#: .\home\templates\base.html:395
+msgid "CAREERS"
+msgstr "KARRIERE"
+
+#: .\home\templates\base.html:115
+msgid "JOIN US AS VOLUNTEER"
+msgstr "Treten Sie uns als Freiwilliger bei"
+
+#: .\home\templates\base.html:117 .\home\templates\base.html:272
+#: .\home\templates\base.html:398
+msgid "DONATE"
+msgstr "SPENDEN"
+
+#: .\home\templates\base.html:121 .\home\templates\base.html:274
+#: .\home\templates\base.html:403
+msgid "MEDIA"
+msgstr "MEDIEN"
+
+#: .\home\templates\base.html:139 .\home\templates\base.html:276
+#: .\home\templates\base.html:419
+msgid "CONTACT"
+msgstr "KONTAKT"
+
+#: .\home\templates\base.html:143 .\home\templates\base.html:423
+msgid "LANGUAGE"
+msgstr "SPRACHE"
+
+#: .\home\templates\base.html:159 .\home\templates\base.html:169
+msgid "العربية"
+msgstr "Arabisch"
+
+#: .\home\templates\base.html:238
+msgid "Address"
+msgstr "Ein Kleid"
+
+#: .\home\templates\base.html:241
+msgid "Salah Al-Den, Iraq"
+msgstr "Salah Al-Den, Irak"
+
+#: .\home\templates\base.html:264
+msgid "Explore"
+msgstr "Erkunden"
+
+#: .\home\templates\base.html:268 .\home\templates\index.html:224
+msgid "THEMES"
+msgstr "THEMEN"
+
+#: .\home\templates\base.html:286
+msgid "Information"
+msgstr "Information"
+
+#: .\home\templates\base.html:290
+msgid "VISSION & MISSION"
+msgstr "VISION & MISSION"
+
+#: .\home\templates\base.html:305
+msgid "Ashor"
+msgstr "Über Ashor"
+
+#: .\home\templates\base.html:305
+msgid "All Rights"
+msgstr "Alle Rechte"
+
+#: .\home\templates\base.html:360
+msgid "GRASS ROOT VOLUNTEER GROUPS"
+msgstr "GRASWURZEL-FREIWILLIGENGRUPPEN"
+
+#: .\home\templates\index.html:71
+msgid "Since"
+msgstr "Seit"
+
+#: .\home\templates\index.html:72
+msgid "Iraq organization"
+msgstr "Irak-Organisation"
+
+#: .\home\templates\index.html:86
+msgid "Employee"
+msgstr "Mitarbeiterin"
+
+#: .\home\templates\index.html:95
+msgid "Projects"
+msgstr "Projekte"
+
+#: .\home\templates\index.html:104
+msgid "Beneficiaries"
+msgstr "Begünstigte"
+
+#: .\home\templates\index.html:113
+msgid "Volunteers"
+msgstr "Freiwillige"
+
+#: .\home\templates\index.html:198
+msgid "Our"
+msgstr "Unser"
+
+#: .\home\templates\index.html:198
+msgid "Themes"
+msgstr "Themen"
+
+#: .\home\templates\index.html:205
+msgid "read more"
+msgstr "Weiterlesen"
+
+#: .\home\templates\index.html:254
+msgid "Become a vital part of"
+msgstr "Werden Sie ein wichtiger Teil von"
+
+#: .\home\templates\index.html:254
+msgid "Ashuor Iraqi Foundation for Relief and Development"
+msgstr "Ashor Irakische Stiftung für Hilfe und Entwicklung"
+
+#: .\home\templates\index.html:255
+msgid "make a real difference to lives of many!"
+msgstr "Machen Sie einen echten Unterschied im Leben vieler!"
+
+#: .\home\templates\index.html:259
+msgid "Donate"
+msgstr "Spenden"
+
+#: .\home\templates\index.html:261
+msgid "join us as volunteer"
+msgstr "Begleiten Sie uns als Freiwilliger"
+
+#: .\home\templates\index.html:281
+msgid "READ FOR MORE insights"
+msgstr "LESEN SIE FÜR WEITERE Einblicke"
+
+#: .\home\templates\index.html:282 .\mediapage\templates\media.html:94
+#: .\mediapage\templates\media_filter.html:90
+msgid "Latest"
+msgstr "Neueste"
+
+#: .\home\templates\index.html:282
+msgid "Media"
+msgstr "Medien"
+
+#: .\mediapage\templates\media.html:81
+#: .\mediapage\templates\media_filter.html:77
+msgid "We found"
+msgstr "Wir fanden"
+
+#: .\mediapage\templates\media.html:81
+#: .\mediapage\templates\media_filter.html:77
+msgid "blogs available for you"
+msgstr "Blogs für Sie verfügbar"
+
+#: .\mediapage\templates\media.html:92
+#: .\mediapage\templates\media_filter.html:88
+msgid "Default"
+msgstr "Standard"
+
+#: .\mediapage\templates\media.html:93
+#: .\mediapage\templates\media_filter.html:89
+msgid "Popularity"
+msgstr "Popularität"

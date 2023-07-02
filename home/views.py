@@ -2,42 +2,55 @@ from email.message import EmailMessage
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from rest_framework import generics, permissions
-from .models import Slider,Index
+from mediapage.models import MediaDetail
+from .models import Slider,Index, Contact
 from .serializers import  SliderSerializer, IndexSerializer
 from django.http import HttpRequest
 from rest_framework.renderers import JSONRenderer, TemplateHTMLRenderer
 from django.core.paginator import Paginator
 from django.utils.translation import get_language, activate
-
+from about.models import PartenerLogo
 from django.core.mail import send_mail,  EmailMessage
-
+from what_we_are_doing.models import Themes
 def index(request):
     assert isinstance(request, HttpRequest)
     queryset = Index.objects.all()
     serializer_class = IndexSerializer(queryset, many=True)
+    media = MediaDetail.objects.all()
 
+    # Show many contacts per page for stories
+    paginator_media = Paginator(media, 10000000000000000)
+    page_number_media = request.GET.get('page')
+    page_obj_media = paginator_media.get_page(page_number_media)
+    logo_show = PartenerLogo.objects.all()
+    themes = Themes.objects.all()
+
+    # Show many contacts per page for stories
     slider_show = Slider.objects.all()[:4]
     context = {
         'data': serializer_class.data,
         'slider_show': slider_show,
+        'media' : page_obj_media,
+        'logo':  logo_show,
+                'themes': themes,
+
        
     }
     return render(request, 'index.html', context)
 
 
 
+
 def contact(request):
-    assert isinstance(request, HttpRequest)
     queryset = Contact.objects.all()
-    serializer_class = ContactSerializer(queryset, many=True)
+    media = MediaDetail.objects.all()
+    assert isinstance(request, HttpRequest)
 
-    context = {
-        'data': serializer_class.data,
-       
-    }
-    return render(request, 'contact.html', context)
+    # Show many contacts per page for stories
+    paginator_media = Paginator(media, 10000000000000000)
+    page_number_media = request.GET.get('page')
+    page_obj_media = paginator_media.get_page(page_number_media)
 
-def contact(request):
     if request.method == 'POST':
         print("hello")
         name = request.POST.get('full_name')
@@ -67,7 +80,11 @@ def contact(request):
                 print("error")
                 print(error)
                 return HttpResponse('Invalid header found.')
-    return render(request, 'contact.html')
+    return render(request, 'contact.html',
+    {
+                'data': queryset,
+         'media' : page_obj_media
+    })
 
 
 def translate(language):

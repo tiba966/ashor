@@ -13,12 +13,11 @@
     <div class="page-breadcrumb">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="get-involved.html">Get involved</a></li>
+                <li><a href="{% url 'home:index' %}">Home</a></li>
+                <li><a href="{% url 'get_involved:get_involved' %}">Get involved</a></li>
 
-                <li><a href="career.html">Careers</a></li>
+                <li><a href="{% url 'get_involved:career_list' %}">Careers</a></li>
 
-                <li><a href="careers-details.html">Head of HR</a></li>
 
             </ul>
         </div>
@@ -265,121 +264,41 @@
 
             <!-- media  Start -->
             <div class="row row-cols-xl-4 row-cols-lg-2 row-cols-md-2 row-cols-1 max-mb-n30">
-
+                {% for item in media  %}
+                {% if forloop.counter < 5 %} 
                 <div class="col max-mb-30">
                     <div class="media-6">
                         <div class="thumbnail">
-                            <a class="image" href="media-details.html">
-                                <img src="assets/images/courses/385/course-2.jpg" alt="">
+                            <a class="image" href="{% url 'media:media_detail' item.id %}">
+                                <img src="{{item.media_image.url}}" height="350px" style="object-fit: cover;" alt="">
                                 <div class="media-overlay-bg"></div>
                             </a>
                         </div>
                         <div class="info">
                             <div class="media-caption-main">
-                                <a class="category" style="color: white;">Articles & Tips</a>
+                                <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ blog.category.en_name }}
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{ blog.category.ar_name }}{% endif %}</a>
                                 <ul class="meta">
-                                    <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
-                                    <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
+                                    <li><i class="far fa-map-marker-alt"></i> {% if LANGUAGE_CODE == 'en' %}{{ item.media_location }}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}{% endif %}</li>
+                                    <li><i class="far fa-calendar"></i>{{item.date|date:'d M o'}}</li>
                                 </ul>
-                                <h3 class="title"><a href="media-details.html">Organization and delivery of
-                                        vocational training </a></h3>
+                                <h3 class="title"><a href="{% url 'media:media_detail' item.id %}"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_name }}
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name }}{% endif %}</a></h3>
                             </div>
                             <div class="media-caption-collapse">
-
+                               
                                 <div class="desc">
-                                    <p>The purpose of this course is to provide the advanced writing techniques
-                                        commonly used for inspiring readers and …</p>
+                                    <p> {% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1 }}{% endif %}…</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
-                <div class="col max-mb-30">
-                    <div class="media-6">
-                        <div class="thumbnail">
-                            <a class="image" href="media-details.html">
-                                <img src="assets/images/courses/385/course-2.jpg" alt="">
-                                <div class="media-overlay-bg"></div>
-                            </a>
-                        </div>
-                        <div class="info">
-                            <div class="media-caption-main">
-                                <a class="category" style="color: white;">Articles & Tips</a>
-                                <ul class="meta">
-                                    <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
-                                    <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
-                                </ul>
-                                <h3 class="title"><a href="media-details.html">Organization and delivery of
-                                        vocational training </a></h3>
-                            </div>
-                            <div class="media-caption-collapse">
-
-                                <div class="desc">
-                                    <p>The purpose of this course is to provide the advanced writing techniques
-                                        commonly used for inspiring readers and …</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col max-mb-30">
-                    <div class="media-6">
-                        <div class="thumbnail">
-                            <a class="image" href="media-details.html">
-                                <img src="assets/images/courses/385/course-2.jpg" alt="">
-                                <div class="media-overlay-bg"></div>
-                            </a>
-                        </div>
-                        <div class="info">
-                            <div class="media-caption-main">
-                                <a class="category" style="color: white;">Articles & Tips</a>
-                                <ul class="meta">
-                                    <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
-                                    <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
-                                </ul>
-                                <h3 class="title"><a href="media-details.html">Organization and delivery of
-                                        vocational training </a></h3>
-                            </div>
-                            <div class="media-caption-collapse">
-
-                                <div class="desc">
-                                    <p>The purpose of this course is to provide the advanced writing techniques
-                                        commonly used for inspiring readers and …</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col max-mb-30">
-                    <div class="media-6">
-                        <div class="thumbnail">
-                            <a class="image" href="media-details.html">
-                                <img src="assets/images/courses/385/course-2.jpg" alt="">
-                                <div class="media-overlay-bg"></div>
-                            </a>
-                        </div>
-                        <div class="info">
-                            <div class="media-caption-main">
-                                <a class="category" style="color: white;">Articles & Tips</a>
-                                <ul class="meta">
-                                    <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
-                                    <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
-                                </ul>
-                                <h3 class="title"><a href="media-details.html">Organization and delivery of
-                                        vocational training </a></h3>
-                            </div>
-                            <div class="media-caption-collapse">
-
-                                <div class="desc">
-                                    <p>The purpose of this course is to provide the advanced writing techniques
-                                        commonly used for inspiring readers and …</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+             
+                {% endif %} {% endfor %}
 
 
             </div>
@@ -388,7 +307,7 @@
 
             <div class="row max-mt-50">
                 <div class="col text-center">
-                    <a href="JavaScript:Void(0);" class="btn btn-outline-primary load-more-btn">Read More <i
+                    <a href="{% url 'media:media' %}" class="btn btn-outline-primary load-more-btn">Read More <i
                             class="far fa-long-arrow-right ms-3"></i></a>
                 </div>
             </div>

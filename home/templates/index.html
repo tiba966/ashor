@@ -8,11 +8,11 @@
 
 <div class="page-banner-slider section">
     <div class="banner-slider swiper-container">
-  {% for slider in slider_show %}
         <div class="swiper-wrapper">
+            {% for slider in slider_show %}
 
             <div class="swiper-slide">
-              
+
                 <!--Banner Slider Item start-->
                 <div class="banner-slider-item { % if forloop.counter0 == 0 %} active {% endif % }"
                     data-bg-image="'{{slider.slide_image_index.url}}'">
@@ -42,12 +42,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
+
                 <!--Banner Slider Item end-->
 
             </div>
-            {% endfor %}
-       
+        </div>            {% endfor %}
 
         </div>
 
@@ -69,11 +68,11 @@
         <div class="row align-items-center">
             <div class="col-lg-7">
                 <div class="about-content max-width-100 pl-60 pl-md-20 pl-sm-0 pl-xs-0 mt-sm-50 mt-xs-50">
-                    <span class="sub-title">Since <strong>2018</strong></span>
-                    <h2 class="title">Ashor <span>Iraq organization </span> </h2>
+                    <span class="sub-title">{% trans "Since" %} <strong>2018</strong></span>
+                    <h2 class="title">Ashor <span>{% trans "Iraq organization" %} </span> </h2>
                     <p>{% if LANGUAGE_CODE == 'en' %}{{i.text_about_index}}
                         {% elif LANGUAGE_CODE == 'ar' %}{{i.text_about_index_ar}}{% endif %}</p>
-                    <a class="link link-lg" href="{% url 'about:about' %}"><mark>Read more <i
+                    <a class="link link-lg" href="{% url 'about:about' %}"><mark>{% trans "Read more" %} <i
                                 class="far fa-long-arrow-right"></i></mark></a>
                 </div>
             </div>
@@ -84,7 +83,7 @@
                     <div class="col max-mb-60" data-aos="fade-up">
                         <div class="funfact">
                             <div class="number"><span class="counter">{{i.num_employee_index}}</span></div>
-                            <h6 class="text">employee</h6>
+                            <h6 class="text">{% trans "Employee" %}</h6>
                         </div>
                     </div>
                     <!-- Funfact End -->
@@ -93,7 +92,7 @@
                     <div class="col max-mb-60" data-aos="fade-up">
                         <div class="funfact">
                             <div class="number"><span class="counter">{{i.num_project_index}}</span>+</div>
-                            <h6 class="text">Projects</h6>
+                            <h6 class="text">{% trans "Projects" %}</h6>
                         </div>
                     </div>
                     <!-- Funfact End -->
@@ -101,8 +100,8 @@
                     <!-- Funfact Start -->
                     <div class="col max-mb-60" data-aos="fade-up">
                         <div class="funfact">
-                            <div class="number"><span class="counter">{{i.num_benefi_index}}</span></div>
-                            <h6 class="text">beneficiaries</h6>
+                            <div class="number"><span class="counter">{{i.num_benefi_index}}</span>k</div>
+                            <h6 class="text">{% trans "Beneficiaries" %}</h6>
                         </div>
                     </div>
                     <!-- Funfact End -->
@@ -110,8 +109,8 @@
                     <!-- Funfact Start -->
                     <div class="col max-mb-60" data-aos="fade-up">
                         <div class="funfact">
-                            <div class="number"><span class="counter">{{i.num_volunteer_index}}</span>%</div>
-                            <h6 class="text">Volunteers</h6>
+                            <div class="number"><span class="counter">{{i.num_volunteer_index}}</span></div>
+                            <h6 class="text">{% trans "Volunteers" %}</h6>
                         </div>
                     </div>
                     <!-- Funfact End -->
@@ -196,14 +195,14 @@
         <div class="row">
             <div class="col-12">
                 <div class="newsletter-content">
-                    <h2 class="title fz-48">Our <span>Themes</span></h2>
+                    <h2 class="title fz-48">{% trans "Our" %} <span>{% trans "Themes" %}</span></h2>
                     {% for i in data %}
 
                     <p>{% if LANGUAGE_CODE == 'en' %}{{i.text_themes_index}}
                         {% elif LANGUAGE_CODE == 'ar' %}{{i.text_themes_index_ar}}{% endif %}</p>
                         {% endfor %}
 
-                    <a class="link link-lg" href="themes.html"> <mark>read more <i
+                    <a class="link link-lg" href="{% url 'what_we_are_doing:themes' %}"> <mark>{% trans "read more" %} <i
                                 class="far fa-long-arrow-right"></i></mark></a>
                     <div class="row row-cols-xl-3 row-cols-sm-2 row-cols-1 max-mb-n30"
                         style="padding-top: 15px;">
@@ -213,7 +212,7 @@
             <!-- themes Start (Icon Box) -->
             <div class="col max-mb-30" data-aos="fade-up">
                 <a href="{% url 'what_we_are_doing:themes_details' theme.id %}" class="icon-box text-center" data-vivus-hover>
-                    <div class="icon"><img class="" src="{{ theme.themes_icons}}" alt="">
+                    <div class="icon"><img class="" src="{{ theme.themes_icons.url}}" alt="" width="100px" height="100px">
                     </div>
                     <div class="content">
                         <h3 class="title"> {% if LANGUAGE_CODE == 'en' %}{{theme.themes_title}}
@@ -222,7 +221,7 @@
                         <div class="desc">
 
                         </div>
-                        <span class="link">THEMES <i class="far fa-long-arrow-right"></i></span>
+                        <span class="link">{% trans "THEMES" %} <i class="far fa-long-arrow-right"></i></span>
                     </div>
                 </a>
             </div>
@@ -252,16 +251,14 @@
     <div class="row">
         <div class="col-12">
             <div class="cta-content text-center">
-                <span class="sub-title">Become a vital part of <span>Ashuor Iraqi Foundation for Relief and
-                        Development</span></span>
-                <h2 class="title">& make a real difference to lives of many!</h2>
+                <span class="sub-title">{% trans "Become a vital part of" %} <span>{% trans "Ashuor Iraqi Foundation for Relief and Development" %}</span></span>
+                <h2 class="title">& {% trans "make a real difference to lives of many!" %}</h2>
                 <div class="row max-mt-50">
                     <div class="col text-center">
                         <a href="{% url 'get_involved:donate' %}"
-                            class="btn btn-outline-primary learn-more-btn btn-hover-secondary margin-15">Donate
+                            class="btn btn-outline-primary learn-more-btn btn-hover-secondary margin-15">{% trans "Donate" %}
                         </a>
-                        <a href="{% url 'get_involved:volunteer' %}" class="btn btn-primary btn-hover-secondary margin-15"> join us
-                            as volunteer </a>
+                        <a href="{% url 'get_involved:volunteer' %}" class="btn btn-primary btn-hover-secondary margin-15"> {% trans "join us as volunteer" %} </a>
                     </div>
                 </div>
             </div>
@@ -281,14 +278,14 @@
             <div class="blog-list-post-wrapper">
                 <!-- Section Title Start -->
                 <div class="section-title text-left mt-25 mb-25">
-                    <span class="sub-title">READ FOR MORE insights</span>
-                    <h2 class="title">Latest <span> Media</span></h2>
+                    <span class="sub-title">{% trans "READ FOR MORE insights" %}</span>
+                    <h2 class="title">{% trans "Latest" %} <span> {% trans "Media" %}</span></h2>
                     {% for i in data %}
 
                     <p>{% if LANGUAGE_CODE == 'en' %}{{i.text_media_index}}
                         {% elif LANGUAGE_CODE == 'ar' %}{{i.text_media_index_ar}}{% endif %}</p>
                         {% endfor %}
-                    <a class="link link-lg" href="media.html"><mark>Read more <i
+                    <a class="link link-lg" href="{% url 'media:media' %}"><mark>{% trans "Read more" %} <i
                                 class="far fa-long-arrow-right"></i></mark></a>
                 </div>
                 <!-- Section Title End -->
@@ -299,12 +296,14 @@
         <div class="col-lg-8 max-mb-30" data-aos="fade-up">
             <div class="row row-cols-xl-3 row-cols-lg-2 row-cols-md-2 row-cols-1 max-mb-n30">
                 {% for item in media  %}
-                {% if forloop.counter < 2 %} <div class=" col-lg-4 col-md-6 col-sm-12">
+                {% if forloop.counter < 4 %} 
+                <div class=" col-lg-4 col-md-6 col-sm-12">
+               
                     <div class="col max-mb-30">
                         <div class="media-6">
                             <div class="thumbnail">
                                 <a class="image" href="{% url 'media:media_detail' item.id %}">
-                                    <img src="{{item.media_image}}" alt="">
+                                    <img src="{{item.media_image.url}}" alt="" height="350px" style="object-fit: cover;">
                                     <div class="media-overlay-bg"></div>
                                 </a>
                             </div>
@@ -317,22 +316,29 @@
                                             {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}{% endif %}</li>
                                         <li><i class="far fa-calendar"></i>{{item.date|date:'d M o'}}</li>
                                     </ul>
-                                    <h3 class="title"><a href="{% url 'media:media_detail' item.id %}"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_name }}
+                                    <h3 class="title" style="  display: -webkit-box;
+                                    -webkit-line-clamp: 4;
+                                    -webkit-box-orient: vertical;
+                                    overflow: hidden;"><a href="{% url 'media:media_detail' item.id %}"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_name }}
                                         {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name }}{% endif %}</a></h3>
                                 </div>
                                 <div class="media-caption-collapse">
                                    
                                     <div class="desc">
-                                        <p> {% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
+                                        <p style="  display: -webkit-box;
+                                        -webkit-line-clamp: 3;
+                                        -webkit-box-orient: vertical;
+                                        overflow: hidden;"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
                                             {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1 }}{% endif %}…</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-          
-                {% endif %} {% endfor %}
 
+                    </div>
+
+              </div>
+              {% endif %} {% endfor %}
 
             </div>
         </div>
@@ -370,47 +376,15 @@
                 <div class="brand-list">
                     <div class="brand-carousel swiper-container" data-aos="fade-up">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide brand">
-                                <a href="#">
-                                    <img src="assets/images/brand/client-logo-01.png" alt="logo image">
-                                </a>
-                            </div>
+                           
+                            {% for item in logo %}
 
                             <div class="swiper-slide brand">
-                                <a href="#">
-                                    <img src="assets/images/brand/client-logo-02.png" alt="logo image">
-                                </a>
+                                <img src="{{item.image_partener.url}}">
                             </div>
 
-                            <div class="swiper-slide brand">
-                                <a href="#">
-                                    <img src="assets/images/brand/client-logo-03.png" alt="logo image">
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide brand">
-                                <a href="#">
-                                    <img src="assets/images/brand/client-logo-04.png" alt="logo image">
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide brand">
-                                <a href="#">
-                                    <img src="assets/images/brand/client-logo-05.png" alt="logo image">
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide brand">
-                                <a href="#">
-                                    <img src="assets/images/brand/client-logo-06.png" alt="logo image">
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide brand">
-                                <a href="#">
-                                    <img src="assets/images/brand/client-logo-07.png" alt="logo image">
-                                </a>
-                            </div>
+                            {% endfor %}
+                           
 
                         </div>
 

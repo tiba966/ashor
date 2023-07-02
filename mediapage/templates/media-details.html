@@ -9,9 +9,9 @@
             <div class="page-breadcrumb">
                 <div class="container">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
-
-                        <li class="current">Latest Stories</li>
+                        <li><a href="{% url 'home:index' %}">Home</a></li>
+        
+                        <li class="current">Media</li>
 
                     </ul>
                 </div>
@@ -119,8 +119,8 @@
                                                     <span class="tag-icon far fa-tags"></span>
                                                 </div>
                                                 <div class="tag">
-                                                    <a href="#"> {% if LANGUAGE_CODE == 'en' %}{{ blog.category.en_name }}
-                                                        {% elif LANGUAGE_CODE == 'ar' %} {{ blog.category.ar_name }}{% endif %} </a>
+                                                    <a href="#"> {% if LANGUAGE_CODE == 'en' %}{{ item.category.en_name }}
+                                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.category.ar_name }}{% endif %} </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -154,103 +154,62 @@
             </div>
         </div>
     </div>
-    <!-- Blog Section End -->
-
-    <!-- Course Section Start -->
     <div class="section section-padding-bottom" style="padding-top: 50px;">
         <div class="container">
 
-            <!-- Course Top Bar Start -->
+            <!--  media Bar Start -->
             <div class="row justify-content-between align-items-center max-mb-20">
                 <div class="col-sm-auto col-12 max-mb-10">
-                    <p class="result-count">Related media</p>
+                    <p class="result-count">Latest Media</p>
                 </div>
 
             </div>
-            <!-- Course Top Bar End -->
+            <!-- media Top Bar End -->
 
-            <!-- Zoom Meeting Wrapper Start -->
-            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 max-mb-n30">
-
-                <!-- Zoom Meeting Start -->
-                <div class="col max-mb-30" data-aos="fade-up">
-                    <div class="zoom-event">
+            <!-- media  Start -->
+            <div class="row row-cols-xl-4 row-cols-lg-2 row-cols-md-2 row-cols-1 max-mb-n30">
+                {% for item in medias  %}
+                {% if forloop.counter < 5 %} 
+                <div class="col max-mb-30">
+                    <div class="media-6">
                         <div class="thumbnail">
-                            <a href="zoom-event-details.html" class="image"><img src="assets/images/zoom/370/zoom-1.jpg"
-                                    alt="Course Image"></a>
+                            <a class="image" href="{% url 'media:media_detail' item.id %}">
+                                <img src="{{item.media_image.url}}" height="350px" style="object-fit: cover;" alt="">
+                                <div class="media-overlay-bg"></div>
+                            </a>
                         </div>
                         <div class="info">
-                            <h3 class="title"><a href="zoom-event-details.html">Marketing Committee Meeting</a></h3>
-                            <div class="zoom-id">
-                                <span class="label">Blog </span>
+                            <div class="media-caption-main">
+                                <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ blog.category.en_name }}
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{ blog.category.ar_name }}{% endif %}</a>
+                                <ul class="meta">
+                                    <li><i class="far fa-map-marker-alt"></i> {% if LANGUAGE_CODE == 'en' %}{{ item.media_location }}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}{% endif %}</li>
+                                    <li><i class="far fa-calendar"></i>{{item.date|date:'d M o'}}</li>
+                                </ul>
+                                <h3 class="title"><a href="{% url 'media:media_detail' item.id %}"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_name }}
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name_ar }}{% endif %}</a></h3>
                             </div>
-                            <ul class="meta">
-                                <li><i class="far fa-calendar"></i>July 24, 2020 </li>
-                                <li><i class="far fa-map-marker-alt"></i>Erbil</li>
-                            </ul>
+                            <div class="media-caption-collapse">
+                               
+                                <div class="desc">
+                                    <p> {% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1_ar }}{% endif %}…</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-                <!-- Zoom Meeting End -->
-
-                <!-- Zoom Meeting Start -->
-                <div class="col max-mb-30" data-aos="fade-up">
-                    <div class="zoom-event">
-                        <div class="thumbnail">
-                            <a href="zoom-event-details.html" class="image"><img src="assets/images/zoom/370/zoom-1.jpg"
-                                    alt="Course Image"></a>
-                        </div>
-                        <div class="info">
-                            <h3 class="title"><a href="zoom-event-details.html">Marketing Committee Meeting</a></h3>
-                            <div class="zoom-id">
-                                <span class="label">Blog </span>
-                            </div>
-                            <ul class="meta">
-                                <li><i class="far fa-calendar"></i>July 24, 2020 </li>
-                                <li><i class="far fa-map-marker-alt"></i>Erbil</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Zoom Meeting End -->
-
-                <!-- Zoom Meeting Start -->
-                <div class="col max-mb-30" data-aos="fade-up">
-                    <div class="zoom-event">
-                        <div class="thumbnail">
-                            <a href="zoom-event-details.html" class="image"><img src="assets/images/zoom/370/zoom-1.jpg"
-                                    alt="Course Image"></a>
-                        </div>
-                        <div class="info">
-                            <h3 class="title"><a href="zoom-event-details.html">Marketing Committee Meeting</a></h3>
-                            <div class="zoom-id">
-                                <span class="label">Blog </span>
-                            </div>
-                            <ul class="meta">
-                                <li><i class="far fa-calendar"></i>July 24, 2020 </li>
-                                <li><i class="far fa-map-marker-alt"></i>Erbil</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Zoom Meeting End -->
-
-
+             
+                {% endif %} {% endfor %}
 
 
             </div>
-            <!-- Zoom Meeting Wrapper End -->
+            <!-- media  End -->
 
 
-            <div class="row max-mt-50">
-                <div class="col text-center">
-                    <a href="JavaScript:Void(0);" class="btn btn-outline-primary load-more-btn">Load More <i
-                            class="fal fa-redo ms-3"></i></a>
-                </div>
-            </div>
 
         </div>
     </div>
-    <!-- Course Section End -->
-
     {% endblock body %}

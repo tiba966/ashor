@@ -9,9 +9,10 @@
             </div>
             <div class="page-breadcrumb">
                 <div class="container">
-                    <ul class="breadcrumb">      <li><a href="index.html">Home</a></li>
-                        <li><a href="media.html">Media</a></li>
-                        <li class="current">stories</li>
+                    <ul class="breadcrumb">    
+                        <li><a href="{% url 'home:index' %}">Home</a></li>
+        
+                        <li class="current">Media</li>
         
                     </ul>
                 </div>
@@ -29,10 +30,11 @@
                             <!-- Blog Start -->
                             <div class=" col" data-aos="fade-up">
 
+                                {% for item in media_bg %}
 
                                 <!-- Page Banner Section Start -->
                                 <div class="page-banner-section section overlay section-padding"
-                                    data-bg-image="./assets/images/page-banner/media-bg.jpg">
+                                    data-bg-image="{{ item.bg_image_story.url}}">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-12">
@@ -46,6 +48,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                {% endfor %}
+
                                 <!-- Page Banner Section End -->
 
 
@@ -120,27 +124,30 @@
                             <div class="media-6">
                                 <div class="thumbnail">
                                     <a class="image" href="{% url 'media:media_detail' item.id %}">
-                                        <img src="{{item.media_image.url}}" alt="">
+                                        <img src="{{item.media_image.url}}" alt="" height="350px" style="object-fit: cover;" >
                                         <div class="media-overlay-bg"></div>
                                     </a>
                                 </div>
                                 <div class="info">
                                     <div class="media-caption-main">
-                                        <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ blog.category.en_name }}
-                                            {% elif LANGUAGE_CODE == 'ar' %} {{ blog.category.ar_name }}{% endif %}</a>
+                                        <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ item.category.en_name }}
+                                            {% elif LANGUAGE_CODE == 'ar' %} {{ item.category.ar_name }}{% endif %}</a>
                                         <ul class="meta">
                                             <li><i class="far fa-map-marker-alt"></i> {% if LANGUAGE_CODE == 'en' %}{{ item.media_location }}
                                                 {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}{% endif %}</li>
                                             <li><i class="far fa-calendar"></i>{{ item.date }}</li>
                                         </ul>
                                         <h3 class="title"><a href="{% url 'media:media_detail' item.id %}"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_name }}
-                                            {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name }}{% endif %}</a></h3>
+                                            {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name_ar }}{% endif %}</a></h3>
                                     </div>
                                     <div class="media-caption-collapse">
                                        
                                         <div class="desc">
-                                            <p> {% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
-                                                {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1 }}{% endif %}…</p>
+                                            <p style="  display: -webkit-box;
+                                            -webkit-line-clamp: 3;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
+                                                {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1_ar }}{% endif %}…</p>
                                         </div>
                                     </div>
                                 </div>
@@ -151,11 +158,6 @@
     
                     </div>
     
-                    <div class="row max-mt-70">
-                        <div class="text-center col-xl-4 col-lg-7  mx-auto">
-                            <a class="link link-lg" href=".html">Take the control of their life back and start doing things to make their dream come true. <mark>View all media <i class="far fa-long-arrow-right"></i></mark></a>
-                        </div>
-                    </div>
                 </div>
             </div>
       

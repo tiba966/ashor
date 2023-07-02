@@ -8,9 +8,9 @@
             </div>
             <div class="page-breadcrumb">
                 <div class="container">
-                    <ul class="breadcrumb">    <li><a href="{% url 'home:index' %}">Home</a></li>
-                        <li><a href="{% url 'about:about' %}">About Ashor</a></li>
-                        <li class="current">Core</li>
+                    <ul class="breadcrumb">    <li><a href="{% url 'home:index' %}">{% trans "Home" %}</a></li>
+                        <li><a href="{% url 'about:about' %}">{% trans "About Ashor" %}</a></li>
+                        <li class="current">{% trans "Core" %}</li>
         
                     </ul>
                 </div>
@@ -29,10 +29,10 @@
                             <!-- Blog Start -->
                             <div class=" col" data-aos="fade-up">
 
-
+{% for item in core_bg %}
                                 <!-- Page Banner Section Start -->
                                 <div class="page-banner-section section overlay section-padding"
-                                    data-bg-image="./assets/images/page-banner/course-bg.jpg">
+                                    data-bg-image="{{ item.image_bg_core.url}}">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-12">
@@ -47,7 +47,7 @@
                                     </div>
                                 </div>
                                 <!-- Page Banner Section End -->
-
+{% endfor %}
 
 
                             </div>
@@ -72,10 +72,9 @@
                         <div class="row row-cols-1 g-0">
                          
                           
-                            
-                            <p style="padding-top: 50px;">ARD works to seek a constructive approach by looking to the
-                                conflict as an opportunity for change to maintain a good understanding and long-term
-                                relations among the individuals ,communities and the institutional structures.</p>
+                            {% for item in core_bg %}
+                            <p style="padding-top: 50px;">{% if LANGUAGE_CODE == 'en' %}{{item.textcore_desc1}}
+                                {% elif LANGUAGE_CODE == 'ar' %}{{item.textcore_desc1_ar}}{% endif %}.</p>{% endfor %}
                                 <div class="team-section section " style="padding-top: 50px;">
                                     <div class="container">
                                      
@@ -86,7 +85,7 @@
                                                 <div class="grid-item ">
                                                     <div class="ht-team-member">
                                                         <div class="team-image">
-                                                            <img class="img-fluid" src="{{ item.core_image.url}}" alt="">
+                                                            <img class="img-fluid" src="{{ item.core_image.url}}" alt="" height="350px" style="object-fit: cover; height: 250px;">
                                                             <div class="social-networks">
                                                                 <div class="inner">
                                                                     <a target="_blank" href="{% url 'about:core_detail' item.id %}"  >Read more
@@ -105,7 +104,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                
+                              
                                             {% endfor %}
 
                                    
@@ -144,7 +143,7 @@
                     <!--  media Bar Start -->
                     <div class="row justify-content-between align-items-center max-mb-20">
                         <div class="col-sm-auto col-12 max-mb-10">
-                            <p class="result-count">Latest Media</p>
+                            <p class="result-count">{% trans "Latest Media" %}</p>
                         </div>
         
                     </div>
@@ -152,114 +151,42 @@
         
                     <!-- media  Start -->
                     <div class="row row-cols-xl-4 row-cols-lg-2 row-cols-md-2 row-cols-1 max-mb-n30">
-            
+                        {% for item in media  %}
+                        {% if forloop.counter < 5 %} 
                         <div class="col max-mb-30">
                             <div class="media-6">
                                 <div class="thumbnail">
-                                    <a class="image" href="media-details.html">
-                                        <img src="assets/images/courses/385/course-2.jpg" alt="">
+                                    <a class="image" href="{% url 'media:media_detail' item.id %}">
+                                        <img src="{{item.media_image.url}}" height="350px" style="object-fit: cover;" alt="">
                                         <div class="media-overlay-bg"></div>
                                     </a>
                                 </div>
                                 <div class="info">
                                     <div class="media-caption-main">
-                                        <a class="category" style="color: white;">Articles & Tips</a>
+                                        <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ blog.category.en_name }}
+                                            {% elif LANGUAGE_CODE == 'ar' %} {{ blog.category.ar_name }}{% endif %}</a>
                                         <ul class="meta">
-                                            <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
-                                            <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
+                                            <li><i class="far fa-map-marker-alt"></i> {% if LANGUAGE_CODE == 'en' %}{{ item.media_location }}
+                                                {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}{% endif %}</li>
+                                            <li><i class="far fa-calendar"></i>{{item.date|date:'d M o'}}</li>
                                         </ul>
-                                        <h3 class="title"><a href="media-details.html">Organization and delivery of vocational training  </a></h3>
+                                        <h3 class="title"><a href="{% url 'media:media_detail' item.id %}"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_name }}
+                                            {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name }}{% endif %}</a></h3>
                                     </div>
                                     <div class="media-caption-collapse">
                                        
                                         <div class="desc">
-                                            <p>The purpose of this course is to provide the advanced writing techniques commonly used for inspiring readers and …</p>
+                                            <p> {% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
+                                                {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1 }}{% endif %}…</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col max-mb-30">
-                            <div class="media-6">
-                                <div class="thumbnail">
-                                    <a class="image" href="media-details.html">
-                                        <img src="assets/images/courses/385/course-2.jpg" alt="">
-                                        <div class="media-overlay-bg"></div>
-                                    </a>
-                                </div>
-                                <div class="info">
-                                    <div class="media-caption-main">
-                                        <a class="category" style="color: white;">Articles & Tips</a>
-                                        <ul class="meta">
-                                            <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
-                                            <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
-                                        </ul>
-                                        <h3 class="title"><a href="media-details.html">Organization and delivery of vocational training  </a></h3>
-                                    </div>
-                                    <div class="media-caption-collapse">
-                                       
-                                        <div class="desc">
-                                            <p>The purpose of this course is to provide the advanced writing techniques commonly used for inspiring readers and …</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col max-mb-30">
-                            <div class="media-6">
-                                <div class="thumbnail">
-                                    <a class="image" href="media-details.html">
-                                        <img src="assets/images/courses/385/course-2.jpg" alt="">
-                                        <div class="media-overlay-bg"></div>
-                                    </a>
-                                </div>
-                                <div class="info">
-                                    <div class="media-caption-main">
-                                        <a class="category" style="color: white;">Articles & Tips</a>
-                                        <ul class="meta">
-                                            <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
-                                            <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
-                                        </ul>
-                                        <h3 class="title"><a href="media-details.html">Organization and delivery of vocational training  </a></h3>
-                                    </div>
-                                    <div class="media-caption-collapse">
-                                       
-                                        <div class="desc">
-                                            <p>The purpose of this course is to provide the advanced writing techniques commonly used for inspiring readers and …</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
         
-                        <div class="col max-mb-30">
-                            <div class="media-6">
-                                <div class="thumbnail">
-                                    <a class="image" href="media-details.html">
-                                        <img src="assets/images/courses/385/course-2.jpg" alt="">
-                                        <div class="media-overlay-bg"></div>
-                                    </a>
-                                </div>
-                                <div class="info">
-                                    <div class="media-caption-main">
-                                        <a class="category" style="color: white;">Articles & Tips</a>
-                                        <ul class="meta">
-                                            <li><i class="far fa-map-marker-alt"></i>Ninewa Governorate</li>
-                                            <li><i class="far fa-calendar"></i>12 Nov 2022 </li>
-                                        </ul>
-                                        <h3 class="title"><a href="media-details.html">Organization and delivery of vocational training  </a></h3>
-                                    </div>
-                                    <div class="media-caption-collapse">
-                                       
-                                        <div class="desc">
-                                            <p>The purpose of this course is to provide the advanced writing techniques commonly used for inspiring readers and …</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                      
-                    
+                        {% endif %} {% endfor %}
+        
         
                     </div>
                     <!-- media  End -->
@@ -267,14 +194,12 @@
         
                     <div class="row max-mt-50">
                         <div class="col text-center">
-                            <a href="JavaScript:Void(0);" class="btn btn-outline-primary load-more-btn">Read More <i
+                            <a href="{% url 'media:media' %}" class="btn btn-outline-primary load-more-btn">{% trans "Read More" %} <i
                                     class="far fa-long-arrow-right ms-3"></i></a>
                         </div>
                     </div>
         
                 </div>
             </div>
-            <!-- media Section End -->
-        
       
             {% endblock body %} 

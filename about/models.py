@@ -15,7 +15,15 @@ class About(models.Model):
         max_length=1000, default='', blank=True, )
     textabout_desc2_ar = models.TextField(
         max_length=1000, default='', blank=True, )
-     
+
+
+class CoreBgImage(models.Model):
+    image_bg_core = models.FileField(
+        validators=[validate_image_extension], upload_to='background/vission_mission/', )
+    textcore_desc1 = models.TextField(
+        max_length=1000, default='', blank=True, )
+    textcore_desc1_ar = models.TextField(
+        max_length=1000, default='', blank=True, )
 class VisionMissionValue(models.Model):
     image_bg_vission_mission = models.FileField(
         validators=[validate_image_extension], upload_to='background/vission_mission/', )
@@ -71,6 +79,28 @@ class GoalList(models.Model):
     goal_desc_ar = models.TextField(
         max_length=1000, default='',  blank=True,)
 
+
+class Capacity(models.Model):
+    image_banner_capacity  = models.FileField(
+        validators=[validate_image_extension], upload_to='background/about/', )
+   
+    capacity_desc = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    capacity_desc_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    capacity_desc1 = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    capacity_desc1_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+
+  
+  
+class CapacityList(models.Model):
+    capacity_list = models.CharField(
+        max_length=1000, default='',  blank=True,)
+    capacity_list_ar = models.CharField(
+        max_length=1000, default='',  blank=True,)
+
 class Core(models.Model):
    
     core_name = models.CharField(
@@ -102,9 +132,6 @@ class PartenerNetwork(models.Model):
         max_length=1000, default='',  blank=True,)
     partener_desc_ar = models.TextField(
         max_length=1000, default='',  blank=True,)
-
-
-
     network_desc = models.CharField(
         max_length=1000, default='',  blank=True,)
     network_desc_ar = models.CharField(
@@ -122,7 +149,24 @@ class InternalSystemList(models.Model):
     internal_list_ar = models.TextField(
         max_length=1000, default='',  blank=True,)
 
-   
+
+class GrassRoot(models.Model):
+    image_banner_grassRoot = models.FileField(
+        validators=[validate_image_extension], upload_to='background/InternalSystem/', )
+    grassRoot_desc = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    grassRoot_desc_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+
+class Academics (models.Model):
+    image_banner_academics  = models.FileField(
+        validators=[validate_image_extension], upload_to='background/InternalSystem/', )
+    academics_desc = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    academics_desc_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+
+
    
 
 class InternalSystem(models.Model):

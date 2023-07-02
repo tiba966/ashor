@@ -3,7 +3,7 @@ from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
 from .models import GetInvolved,Volunteer, Donate,CareerDetail,CareerList
 from django.core.paginator import Paginator
-# from .form import CareerDetailForm
+from mediapage.models import MediaDetail 
 from django.urls import reverse
 from django.http import HttpRequest
 from .serializers import GetInvolvedSerializer,VolunteerSerializer,CareerListSerializer, DonateSerializer,CareerDetailSerializer
@@ -17,10 +17,17 @@ def get_involved(request):
     assert isinstance(request, HttpRequest)
     queryset = GetInvolved.objects.all()
     serializer_class = GetInvolvedSerializer(queryset, many=True)
+    media = MediaDetail.objects.all()
+
+    # Show many contacts per page for stories
+    paginator_media = Paginator(media, 10000000000000000)
+    page_number_media = request.GET.get('page')
+    page_obj_media = paginator_media.get_page(page_number_media)
 
     return render(request, 'get-involved.html',
                   {
                       'data': serializer_class.data,
+        'media' : page_obj_media
                   }
                   )
 
@@ -29,10 +36,17 @@ def volunteer(request):
     assert isinstance(request, HttpRequest)
     queryset = Volunteer.objects.all()
     serializer_class = VolunteerSerializer(queryset, many=True)
+    media = MediaDetail.objects.all()
+
+    # Show many contacts per page for stories
+    paginator_media = Paginator(media, 10000000000000000)
+    page_number_media = request.GET.get('page')
+    page_obj_media = paginator_media.get_page(page_number_media)
 
     return render(request, 'volunteers.html',
                   {
                       'data': serializer_class.data,
+        'media' : page_obj_media
                   }
                   )
 
@@ -106,16 +120,26 @@ def volunteerForm(request):
             #     send_mail.send()
             # except  Exception as error:
             #     return HttpResponse('Invalid header found.')
-    return render(request, 'volunteer.html')
+    return render(request, 'volunteer.html', {
+    
+        'media' : page_obj_media
+    })
 def donate(request):
     """Renders the create volunteer page."""
     assert isinstance(request, HttpRequest)
     queryset = Donate.objects.all()
     serializer_class = DonateSerializer(queryset, many=True)
+    media = MediaDetail.objects.all()
+
+    # Show many contacts per page for stories
+    paginator_media = Paginator(media, 10000000000000000)
+    page_number_media = request.GET.get('page')
+    page_obj_media = paginator_media.get_page(page_number_media)
 
     return render(request, 'donate.html',
                   {
                       'data': serializer_class.data,
+        'media' : page_obj_media
                   }
                   )
 
@@ -123,7 +147,12 @@ def career_list(request):
     career_list = CareerDetail.objects.all()
     assert isinstance(request, HttpRequest)
     queryset = CareerList.objects.all()
-    serializer_class = CareerListSerializer(queryset, many=True)
+    media = MediaDetail.objects.all()
+
+    # Show many contacts per page for stories
+    paginator_media = Paginator(media, 10000000000000000)
+    page_number_media = request.GET.get('page')
+    page_obj_media = paginator_media.get_page(page_number_media)
 
     # filters
     myfilter = CareerDetailFilter(request.GET, queryset=career_list)
@@ -136,7 +165,9 @@ def career_list(request):
 
     if career_list:
         context = {'careers': page_obj, 'myfilter': myfilter,
-                   'data': serializer_class.data}  # template name
+                   'data': serializer_class.data,
+        'media' : page_obj_media,
+        'img_bg': queryset}  # template name
 
     else:
         context = {'message': "There are no jobs available at the moment."}
@@ -147,7 +178,14 @@ def career_detail(request, id):
     career_detail = CareerDetail.objects.get(id=id)
     queryset = CareerList.objects.all()
     serializer_class = CareerListSerializer(queryset, many=True)
-    context = {'item': career_detail, 'data': serializer_class.data}
+    media = MediaDetail.objects.all()
+
+    # Show many contacts per page for stories
+    paginator_media = Paginator(media, 10000000000000000)
+    page_number_media = request.GET.get('page')
+    page_obj_media = paginator_media.get_page(page_number_media)
+
+    context = {'item': career_detail, 'data': serializer_class.data,   'media' : page_obj_media}
     return render(request, 'careers-details.html', context)
     
 def careerForm(request,carrer_name):
@@ -221,5 +259,8 @@ def careerForm(request,carrer_name):
             #     send_mail.send()
             # except  Exception as error:
             return HttpResponse('Invalid header found.')
-    return render(request, 'formCareer.html')
+    return render(request, 'formCareer.html',{
+    
+        'media' : page_obj_media
+    })
 

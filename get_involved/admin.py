@@ -42,6 +42,7 @@ class CareerListAdmin(admin.ModelAdmin):
 
 class CareerDetatilAdmin(admin.ModelAdmin):
     list_display = ['id',
+  
                     'career_name',
                     'career_name_ar',   
                     'career_name',

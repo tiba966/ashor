@@ -17,7 +17,6 @@ class WhatWeAreDoingeAdmin(admin.ModelAdmin):
 
 class ThemesAdmin(admin.ModelAdmin):
     list_display = ['id',
-                    'image_bg_themes',
                     'themes_icons',
                     'themes_details_image',
                     'themes_title',
@@ -38,6 +37,7 @@ class ProjectAdmin(admin.ModelAdmin):
                 'project_name',
                 'project_name_ar',
                 'project_date',
+                'year',
                 'category',
                 'project_location',
                 'project_location_ar',

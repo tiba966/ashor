@@ -59,7 +59,7 @@ JOB_TYPE_AR = (
     ('3', "تدريب"),
 )
 class CareerDetail(models.Model):
-   
+
     career_name = models.CharField(max_length=300, default='', null=True, blank=True)
     career_name_ar = models.CharField(max_length=300, default='', null=True, blank=True)
     career_desc = models.CharField(max_length=300, default='', null=True, blank=True)

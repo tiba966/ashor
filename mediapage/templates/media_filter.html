@@ -9,9 +9,10 @@
             </div>
             <div class="page-breadcrumb">
                 <div class="container">
-                    <ul class="breadcrumb">      <li><a href="index.html">Home</a></li>
-                        <li><a href="media.html">Media</a></li>
-                        <li class="current">stories</li>
+                    <ul class="breadcrumb">      
+                        <li><a href="{% url 'home:index' %}">Home</a></li>
+        
+                        <li class="current">Media</li>
         
                     </ul>
                 </div>
@@ -119,7 +120,7 @@
                             <div class="media-6">
                                 <div class="thumbnail">
                                     <a class="image" href="{% url 'media:media_detail' item.id %}">
-                                        <img src="{{item.media_image.url}}" alt="">
+                                        <img src="{{item.media_image.url}}" alt="" height="350px" style="object-fit: cover;">
                                         <div class="media-overlay-bg"></div>
                                     </a>
                                 </div>
@@ -133,13 +134,16 @@
                                             <li><i class="far fa-calendar"></i>{{ item.date }}</li>
                                         </ul>
                                         <h3 class="title"><a href="{% url 'media:media_detail' item.id %}"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_name }}
-                                            {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name }}{% endif %}</a></h3>
+                                            {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name_ar }}{% endif %}</a></h3>
                                     </div>
                                     <div class="media-caption-collapse">
                                        
                                         <div class="desc">
-                                            <p> {% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
-                                                {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1 }}{% endif %}…</p>
+                                            <p style="  display: -webkit-box;
+                                            -webkit-line-clamp: 3;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
+                                                {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1_ar }}{% endif %}…</p>
                                         </div>
                                     </div>
                                 </div>
@@ -150,11 +154,7 @@
     
                     </div>
     
-                    <div class="row max-mt-70">
-                        <div class="text-center col-xl-4 col-lg-7  mx-auto">
-                            <a class="link link-lg" href=".html">Take the control of their life back and start doing things to make their dream come true. <mark>View all media <i class="far fa-long-arrow-right"></i></mark></a>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
       

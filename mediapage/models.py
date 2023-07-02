@@ -42,17 +42,17 @@ class MediaDetail(models.Model):
         blank=True
     )
     media_desc1 = models.TextField(
-        max_length=120, default='', blank=True)
+        max_length=1000, default='', blank=True)
     media_desc1_ar = models.TextField(
         max_length=1000, default='', blank=True)
 
     media_desc2 = models.TextField(
-        max_length=120, default='', blank=True)
+        max_length=1000, default='', blank=True)
     media_desc2_ar = models.TextField(
         max_length=1000, default='', blank=True)
 
     media_desc3 = models.TextField(
-        max_length=120, default='', blank=True)
+        max_length=1000, default='', blank=True)
     media_desc3_ar = models.TextField(
         max_length=1000, default='', blank=True)
     views = models.PositiveIntegerField(default=0, validators=[

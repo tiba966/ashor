@@ -13,6 +13,10 @@ urlpatterns = [
         path('partener_network/', views.partener_network, name='partener_network'),
         path('internal_system/', views.internal_system, name='internal_system'),
         path('where_we_work/', views.where_we_work, name='where_we_work'),
+        path('grass_root/', views.grass_root, name='grass_root'),
+        path('academics/', views.academics, name='academics'),
+        path('capacity/', views.capacity, name='capacity'),
+
         path('core_list/', views.core_list, name='core_list'),
         path('core_detail/<int:id>', views.core_detail, name='core_detail'),
 

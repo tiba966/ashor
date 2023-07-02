@@ -29,8 +29,6 @@ class ThemeBackgroundImage(models.Model):
 
 
 class Themes(models.Model):
-    image_bg_themes = models.FileField(
-        validators=[validate_image_extension], upload_to='background/themes/', blank=True, )
     themes_icons = models.FileField(
         validators=[validate_image_extension], upload_to='background/themes/', blank=True, )
     themes_details_image = models.FileField(
@@ -56,6 +54,15 @@ class Category(models.Model):
     
     def __str__(self):
         return self.en_name
+YEAR = (
+    ('2018', "2018"),
+    ('2019', "2019"),
+        ('2020', "2020"),
+        ('2021', "2021"),
+        ('2022', "2022"),
+        ('2023', "2023"),
+
+)
 
 class Project(models.Model):
  
@@ -66,6 +73,7 @@ class Project(models.Model):
     project_name_ar = models.CharField(
         max_length=1000, default='', blank=True, )
     project_date = models.DateField(default=date.today, blank=True)
+    year = models.CharField(choices=YEAR, max_length=6)
 
     category =  models.ForeignKey(
         'Category',

@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from django.contrib import admin
-from .models import About,WhereWeWork,Goal, PartenerLogo, InternalSystemList, VisionMissionValue, PartenerNetwork, InternalSystem, GoalList, Core, History
+from .models import About,WhereWeWork,CoreBgImage,Capacity,CapacityList, Goal,GrassRoot, Academics, PartenerLogo, InternalSystemList, VisionMissionValue, PartenerNetwork, InternalSystem, GoalList, Core, History
 
 class AboutAdmin(admin.ModelAdmin):
     list_display = ['id',
@@ -11,13 +11,33 @@ class AboutAdmin(admin.ModelAdmin):
                     'textabout_desc2',
                     'textabout_desc2_ar',
                     ]
+class CoreBgImageAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                    'image_bg_core',
+                    'textcore_desc1',
+                    'textcore_desc1_ar',
+                    ]
+class CapacityListAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                   
+                    'capacity_list',
+                    'capacity_list_ar',
+                    ]
+class CapacityAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                   'image_banner_capacity',
+                    'capacity_desc',
+                    'capacity_desc_ar',
+                    'capacity_desc1',
+                    'capacity_desc1_ar',
+                    ]
 class InternalSystemListAdmin(admin.ModelAdmin):
     list_display = ['id',
                    
                     'internal_list',
                     'internal_list_ar',
                     ]
-
+                    
 class VisionMissionValueAdmin(admin.ModelAdmin):
     list_display = ['id',
                     'image_bg_vission_mission',
@@ -62,6 +82,24 @@ class CoreAdmin(admin.ModelAdmin):
                     'core_desc_ar'
                     ]
 
+class GrassRootAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                    'image_banner_grassRoot',
+                    'grassRoot_desc',
+                    'grassRoot_desc_ar',
+                                    ]
+                    
+
+
+class AcademicsAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                    'image_banner_academics',
+              
+                    'academics_desc',
+                    'academics_desc_ar',
+                
+                    ]
+
 class PartenerNetworkAdmin(admin.ModelAdmin):
     list_display = ['id',
                     'image_banner_partener_network',
@@ -100,5 +138,10 @@ admin.site.register(About, AboutAdmin)
 admin.site.register(WhereWeWork, WhereWeWorkAdmin)
 admin.site.register(Goal, GoalAdmin)
 admin.site.register(PartenerLogo, PartenerLogoAdmin)
+admin.site.register(Academics, AcademicsAdmin)
+admin.site.register(GrassRoot, GrassRootAdmin)
+admin.site.register(Capacity, CapacityAdmin)
+admin.site.register(CapacityList, CapacityListAdmin)
+admin.site.register(CoreBgImage, CoreBgImageAdmin)
 
 admin.site.register(InternalSystemList, InternalSystemListAdmin)

@@ -36,6 +36,7 @@ def media_list(request):
     media = MediaDetail.objects.all().order_by("-date")
     myfilter = MediaDetailFilter(request.GET, queryset=media)
     media = myfilter.qs
+    media_bg = MediaBackgroundImage.objects.all()
 
     # Show many contacts per page.
     paginator = Paginator(media, 100000000000000000000)
@@ -48,6 +49,7 @@ def media_list(request):
         context = {
             "media": page_obj,
             "myfilter": myfilter,
+            'media_bg':media_bg
         }  # template name
 
     else:
@@ -61,7 +63,14 @@ def media_detail(request, id):
     media.views = F("views") + 1
     media.save()
     media.refresh_from_db()
-    context = {"media": media,  'num_visits': media.views}
+    medias = MediaDetail.objects.all()
+
+    # Show many contacts per page for stories
+    paginator_media = Paginator(medias, 10000000000000000)
+    page_number_media = request.GET.get('page')
+    page_obj_media = paginator_media.get_page(page_number_media)
+
+    context = {"media": media,  'num_visits': media.views, 'medias': page_obj_media}
     return render(request, "media-details.html", context)
 
 
