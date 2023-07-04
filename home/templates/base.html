@@ -3,7 +3,12 @@
 {% load static %}
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
-<html lang="ar" dir="ltr">
+{% if LANGUAGE_CODE == 'en' %}  <html lang="en">
+    {% elif LANGUAGE_CODE == 'ar' %}  
+    <html lang="ar" dir="ltr">
+    
+    {% endif %}
+
 
 <head>
     <meta charset="utf-8">
@@ -20,12 +25,13 @@
     <link rel="stylesheet" href="{% static 'home/css/vendor/bootstrap.min.css' %}">
 
     {% if LANGUAGE_CODE == 'en' %}  <link rel="stylesheet" href="{% static 'home/css/style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}"> 
        {% elif LANGUAGE_CODE == 'de' %}  
        <link rel="stylesheet" href="{% static 'home/css/style.min.css' %}">
-    <!-- {% elif LANGUAGE_CODE == 'ar' %}  
+    {% elif LANGUAGE_CODE == 'ar' %}  
     <link rel="stylesheet" href="{% static 'home/css/style-ar.css' %}">
     <link rel="stylesheet" href="{% static 'home/css/style-ar.min.css' %}">
-     -->
+    
     {% endif %}
 
     <!-- Responsive Settings -->
