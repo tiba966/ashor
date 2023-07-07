@@ -29,6 +29,12 @@ class ThemeBackgroundImage(models.Model):
 
 
 class Themes(models.Model):
+<<<<<<< HEAD
+=======
+    id = models.AutoField(primary_key=True)
+    image_bg_themes = models.FileField(
+        validators=[validate_image_extension], upload_to='background/themes/', blank=True, )
+>>>>>>> fix_bugs
     themes_icons = models.FileField(
         validators=[validate_image_extension], upload_to='background/themes/', blank=True, )
     themes_details_image = models.FileField(

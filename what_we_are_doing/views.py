@@ -10,6 +10,8 @@ from django.utils.translation import get_language, activate
 from what_we_are_doing.models import WhatWeAreDoing, Themes, Project, ThemeBackgroundImage
 from django.core.mail import send_mail,  EmailMessage
 from mediapage.models import MediaDetail
+from django.shortcuts import get_object_or_404, render
+
 from .filters import ThemesDetailFilter
 
 
@@ -44,6 +46,23 @@ def what_we_are_doing(request):
                   }
                   )
 
+# def themes(request):
+#     """Renders the create themes page."""
+#     themes = Themes.objects.all()
+
+#     # filters
+#     myfilter = ThemesDetailFilter(request.GET, queryset=themes)
+     
+#     context = {
+#         'themes': themes,
+#         'myfilter': myfilter,
+#     }  # template name
+
+#     return render(request, 'themes.html', context)
+
+
+from django.shortcuts import render
+
 def themes(request):
     """Renders the create themes page."""
     themes = Themes.objects.all()
@@ -67,19 +86,17 @@ def themes(request):
     return render(request, 'themes.html', context)
 
 
-def themes_details(request, id):
-    """Renders the create themes page."""
-    media = MediaDetail.objects.all()
+# def themes_details(request, id):
+#     """Renders the create themes page."""
+ 
+#     themes = Themes.objects.get(id=id)
 
-    # Show many contacts per page for stories
-    paginator_media = Paginator(media, 10000000000000000)
-    page_number_media = request.GET.get('page')
-    page_obj_media = paginator_media.get_page(page_number_media)
+#     context = {'item': themes}
+#     return render(request, 'themes-details.html', context)
 
-    themes = Themes.objects.get(id=id)
-
-    context = {'item': themes,
-        'media' : page_obj_media}
+def theme_detail(request, theme_id):
+    theme = get_object_or_404(Themes, pk=theme_id)
+    context = {'theme': theme}
     return render(request, 'themes-details.html', context)
 
 def project(request):

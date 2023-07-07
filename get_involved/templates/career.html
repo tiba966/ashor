@@ -99,7 +99,7 @@
                 <div class="offset-lg-2 col-lg-8">
                     <div class="testimonial-two">
                         <div class="author-info">
-                            <a href="{% url 'get_involved:career_detail' item.id %}">
+                            <a href="{% url 'get_involved:career_detail' id=item.id %}">
                                 <div class="cite">
 
                                     <h6 class="name">{% if LANGUAGE_CODE == 'en' %} {{item.career_name}}
