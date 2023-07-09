@@ -12,9 +12,9 @@
             <div class="page-breadcrumb">
                 <div class="container">
                     <ul class="breadcrumb">
-                        <li><a href="{% url 'home:index' %}">Home</a></li>
+                        <li><a href="{% url 'home:index' %}">{% trans "Home" %}</a></li>
         
-                        <li class="current">Get invloved</li>
+                        <li class="current">{% trans "Get invloved" %}</li>
 
                     </ul>
                 </div>
@@ -79,14 +79,14 @@
                                 <div class="gradation-title-wrapper mb-50">
                                     <!-- Section Title Start -->
                                     <div class="section-title text-left mb-0" data-aos="fade-up">
-                                        <h2 class="title">3 Steps to be <span> part of Ashor
-                                                <br> Non-Governmental Organization</span> </h2>
+                                        <h2 class="title">3 {% trans "Steps to be" %} <span> {% trans "part of Ashor" %}
+                                                <br> {% trans "Non-Governmental Organization" %}</span> </h2>
                                     </div>
                                     <!-- Section Title End -->
 
 
                                     <div class="gradation-sub-heading" data-aos="fade-up">
-                                        <h3 class="heading"><mark>03</mark> Steps</h3>
+                                        <h3 class="heading"><mark>03</mark> {% trans "Steps</h3>
                                     </div>
                                 </div>
 
@@ -111,7 +111,7 @@
 
                                         <div class="content-wrap">
 
-                                          <a href="{% url 'get_involved:career_list' %}">  <h5 class="heading">Career opportunities</h5></a>
+                                          <a href="{% url 'get_involved:career_list' %}">  <h5 class="heading">{% trans "Career opportunities" %}</h5></a>
 
                                             <div class="text">{% if LANGUAGE_CODE == 'en' %} {{item.career_text}}
                                                 {% elif LANGUAGE_CODE == 'ar' %} {{item.career_text_ar}} {% endif %}</div>
@@ -135,7 +135,7 @@
 
                                         <div class="content-wrap">
 
-                                            <a href="{% url 'get_involved:volunteer' %}"> <h5 class="heading">Join us as Volunteers</h5></a>
+                                            <a href="{% url 'get_involved:volunteer' %}"> <h5 class="heading">{% trans "Join us as Volunteers" %}</h5></a>
 
                                             <div class="text">{% if LANGUAGE_CODE == 'en' %} {{item.Volunteers_text}}
                                                 {% elif LANGUAGE_CODE == 'ar' %} {{item.Volunteers_text_ar}} {% endif %}</div>
@@ -158,7 +158,7 @@
 
                                         <div class="content-wrap">
 
-                                            <a href="{% url 'get_involved:donate' %}"><h5 class="heading">Donate</h5></a>
+                                            <a href="{% url 'get_involved:donate' %}"><h5 class="heading">{% trans "Donate" %}</h5></a>
 
                                             <div class="text">{% if LANGUAGE_CODE == 'en' %} {{item.Donate_text}}
                                                 {% elif LANGUAGE_CODE == 'ar' %} {{item.Donate_text_ar}} {% endif %} </div>
@@ -217,7 +217,7 @@
                 <!--  media Bar Start -->
                 <div class="row justify-content-between align-items-center max-mb-20">
                     <div class="col-sm-auto col-12 max-mb-10">
-                        <p class="result-count">Latest Media</p>
+                        <p class="result-count">{% trans "Latest Media" %}</p>
                     </div>
     
                 </div>
@@ -268,7 +268,7 @@
     
                 <div class="row max-mt-50">
                     <div class="col text-center">
-                        <a href="{% url 'media:media' %}" class="btn btn-outline-primary load-more-btn">Read More <i
+                        <a href="{% url 'media:media' %}" class="btn btn-outline-primary load-more-btn">{% trans "Read More" %} <i
                                 class="far fa-long-arrow-right ms-3"></i></a>
                     </div>
                 </div>

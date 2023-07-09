@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-02 14:51+0300\n"
+"POT-Creation-Date: 2023-07-08 22:48+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,612 +19,1458 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\aifrd\settings.py:141 .\careers\templates\formCareer.html:113
-#: .\jobs\templates\volunteer.html:107
-msgid "English"
-msgstr ""
-
-#: .\aifrd\settings.py:142 .\careers\templates\formCareer.html:128
-msgid "Arabic"
-msgstr "العربية"
-
-#: .\blogs\templates\blogs.html:20 .\blogs\templates\stories.html:19
-#: .\blogs\templates\storiesAndBlogs.html:17
-#: .\blogs\templates\stories_detail.html:18 .\blogs\templates\teams.html:18
-#: .\careers\templates\career_list.html:22
-#: .\careers\templates\formCareer.html:19 .\jobs\templates\about.html:21
-#: .\jobs\templates\contact.html:20 .\jobs\templates\donate.html:18
-#: .\jobs\templates\get_involved.html:20
-#: .\jobs\templates\vision_mission_value.html:20
-#: .\jobs\templates\volunteer.html:20
-#: .\jobs\templates\what_we_are_doing.html:20
-#: .\jobs\templates\what_we_are_doing_details.html:18
-#: .\jobs\templates\who_we_are.html:22
+#: .\about\templates\about.html:15 .\home\templates\base.html:348
 msgid "HOME"
 msgstr "الرئيسية "
 
-#: .\blogs\templates\blogs.html:21
-msgid "BLOGS"
-msgstr "مدونتنا"
+#: .\about\templates\about.html:16 .\about\templates\acadimic.html:13
+#: .\about\templates\capacity.html:13 .\about\templates\core-details.html:13
+#: .\about\templates\core.html:12 .\about\templates\crass_root.html:13
+#: .\about\templates\goals.html:13 .\about\templates\history.html:13
+#: .\about\templates\internal-system.html:13
+#: .\about\templates\parteners-networks.html:13
+#: .\about\templates\vission-mission.html:13
+#: .\about\templates\where-we-work.html:14
+msgid "About Ashor"
+msgstr "عن اشور"
 
-#: .\blogs\templates\stories.html:13 .\blogs\templates\stories_detail.html:19
-msgid "STORIES"
-msgstr "قصصنا"
+#: .\about\templates\about.html:83
+msgid "The Iraqi"
+msgstr "العراقي"
 
-#: .\blogs\templates\stories.html:20 .\blogs\templates\storiesAndBlogs.html:11
-#: .\blogs\templates\storiesAndBlogs.html:18
-msgid "STORIES & BLOGS"
-msgstr "القصص والمدونة"
-
-#: .\blogs\templates\stories.html:82 .\careers\templates\career_list.html:78
-#: .\jobs\templates\index.html:54 .\jobs\templates\index.html:119
-#: .\jobs\templates\index.html:257
-msgid "READ MORE"
-msgstr "اقرا المزيد"
-
-#: .\blogs\templates\storiesAndBlogs.html:46 .\careers\templates\base.html:81
-msgid "OUR STORIES"
-msgstr "قصصنا"
-
-#: .\blogs\templates\storiesAndBlogs.html:68 .\careers\templates\base.html:82
-msgid "OUR BLOGS"
-msgstr "مدونتنا"
-
-#: .\blogs\templates\teams.html:12 .\careers\templates\base.html:72
-msgid "OUR TEAMS"
-msgstr "فريقنا"
-
-#: .\blogs\templates\teams.html:20 .\careers\templates\base.html:69
-#: .\careers\templates\base.html:218 .\jobs\templates\about.html:23
-#: .\jobs\templates\vision_mission_value.html:22
-#: .\jobs\templates\who_we_are.html:24
-msgid "ABOUT ASHUOR"
-msgstr " عن ASHUOR "
-
-#: .\careers\templates\base.html:10 .\careers\templates\base2.html:9
-#: .\careers\templates\test.html:8 .\jobs\templates\who_we_are.html:35
-msgid "Ashor Iraqi Foundation for Relief and Development"
+#: .\about\templates\about.html:83
+msgid "Ashor Foundation for Relief and Development"
 msgstr "مؤسسة آشور العراقية لألغاثة والتنمية "
 
-#: .\careers\templates\base.html:71 .\careers\templates\base.html:220
-#: .\careers\templates\test.html:64 .\jobs\templates\who_we_are.html:16
-msgid "WHO WE ARE"
-msgstr "من نحن"
-
-#: .\careers\templates\base.html:73 .\careers\templates\base.html:222
-msgid "VISION & MISSION"
-msgstr "الرؤية والهدف"
-
-#: .\careers\templates\base.html:77 .\careers\templates\base.html:255
-#: .\jobs\templates\what_we_are_doing.html:14
-#: .\jobs\templates\what_we_are_doing.html:21
-#: .\jobs\templates\what_we_are_doing_details.html:20
-msgid "WHAT WE ARE DOING"
-msgstr "ماذا نفعل"
-
-#: .\careers\templates\base.html:79 .\careers\templates\base.html:256
-msgid "STORIES & BLOG"
-msgstr "القصص والمدونة"
-
-#: .\careers\templates\base.html:86 .\careers\templates\base.html:257
-#: .\careers\templates\career_detail.html:17
-#: .\careers\templates\career_list.html:25
-#: .\careers\templates\formCareer.html:20 .\jobs\templates\get_involved.html:21
-#: .\jobs\templates\volunteer.html:21
-msgid "GET INVOLVED"
-msgstr "شارك"
-
-#: .\careers\templates\base.html:88 .\careers\templates\career_detail.html:20
-#: .\careers\templates\career_list.html:14
-#: .\jobs\templates\get_involved.html:46
-msgid "CAREERS"
-msgstr "الوظائف"
-
-#: .\careers\templates\base.html:89 .\jobs\templates\get_involved.html:66
-msgid "JOIN US AS VOLUNTEER"
-msgstr "انظم معنا كمتطوع"
-
-#: .\careers\templates\base.html:92 .\jobs\templates\contact.html:22
-msgid "CONTACT US"
-msgstr "اتصل بنا"
-
-#: .\careers\templates\base.html:94
-msgid "LANGUAGE"
-msgstr "اللغة"
-
-#: .\careers\templates\base.html:123
-msgid "Donate Now"
-msgstr "تبرع الان"
-
-#: .\careers\templates\base.html:199
-msgid ""
-"Ashor Iraqi Foundation for Relief and Development responds to the world’s "
-"worst humanitarian crises and helps people to survive and rebuild their "
-"lives."
-msgstr ""
-"تستجيب مؤسسة أشور العراقية للإغاثة والتنمية لأسوأ الأزمات الإنسانية في "
-"العالم وتساعد الناس على البقاء على قيد الحياة وإعادة بناء حياتهم."
-
-#: .\careers\templates\base.html:221
-msgid "OUR TEAM"
-msgstr "فريقنا"
-
-#: .\careers\templates\base.html:233
-msgid "Contact Us"
-msgstr "اتصل الان"
-
-#: .\careers\templates\base.html:235 .\jobs\templates\contact.html:83
-msgid "Salah Al-Den, Iraq"
-msgstr "صلاح الدين, العراق"
-
-#: .\careers\templates\base.html:252
-msgid "QUICK LINKS"
-msgstr "روابط سريعة"
-
-#: .\careers\templates\base.html:276
-msgid "Copyrights"
-msgstr "حقوق النشر"
-
-#: .\careers\templates\base.html:277
-msgid "Ashor Iraqi Foundation for Relief and Development."
-msgstr "مؤسسة آشور العراقية لألغاثة والتنمية "
-
-#: .\careers\templates\base.html:278
-msgid "All rights reserved."
-msgstr "كل الحقوق محفوظة"
-
-#: .\careers\templates\career_detail.html:39
-msgid "The Description"
-msgstr "الوصف"
-
-#: .\careers\templates\career_detail.html:42
-msgid "Job Information"
-msgstr "معلومات الوظيفة"
-
-#: .\careers\templates\career_detail.html:48
-msgid "Contract Duration"
-msgstr "مدة العقد"
-
-#: .\careers\templates\career_detail.html:52
-msgid "Governorate"
-msgstr "المحافظة"
-
-#: .\careers\templates\career_detail.html:57
-msgid "Working Hours"
-msgstr "عدد الساعات"
-
-#: .\careers\templates\career_detail.html:62
-msgid "Location"
-msgstr "الموقع"
-
-#: .\careers\templates\career_detail.html:68
-msgid "Posted"
-msgstr "تم النشر"
-
-#: .\careers\templates\career_detail.html:75
-msgid "Requirements"
-msgstr "المتطلبات"
-
-#: .\careers\templates\career_detail.html:81
-msgid "Minimum Education"
-msgstr "الحد الأدنى من التعليم"
-
-#: .\careers\templates\career_detail.html:86
-msgid "Minimum Experience"
-msgstr "الحد الأدنى من الخبرة"
-
-#: .\careers\templates\career_detail.html:90
-msgid "Required Travel"
-msgstr "السفر المطلوب"
-
-#: .\careers\templates\career_detail.html:99
-msgid "Job Status"
-msgstr "حالة الوظيفة"
-
-#: .\careers\templates\career_detail.html:105
-msgid "No Of Jobs"
-msgstr "عدد الوظائف"
-
-#: .\careers\templates\career_detail.html:109
-msgid "Published Date"
-msgstr "تاريخ النشر"
-
-#: .\careers\templates\career_detail.html:113
-msgid "Deadline Date"
-msgstr "تاريخ الموعد النهائي"
-
-#: .\careers\templates\career_detail.html:139
-msgid "Role and responsibilities"
-msgstr "الدور والمسؤوليات"
-
-#: .\careers\templates\career_detail.html:181
-msgid "Qualifications & Preferred Skills"
-msgstr "المؤهلات والمهارات المفضلة"
-
-#: .\careers\templates\career_detail.html:222
-msgid "Apply Now"
-msgstr "قدم الآن"
-
-#: .\careers\templates\career_list.html:46
-msgid "latest careers"
-msgstr "أحدث الوظائف"
-
-#: .\careers\templates\formCareer.html:12 .\jobs\templates\volunteer.html:13
-msgid ""
-"Become a vital part of Ashor Iraqi Foundation for Relief and Development & "
-"make a real difference to lives of many!"
-msgstr ""
-"كن جزءًا حيويًا من مؤسسة أشور العراقية للإغاثة والتنمية وأحدث فرقًا حقيقيًا في "
-"حياة الكثيرين!"
-
-#: .\careers\templates\formCareer.html:46 .\jobs\templates\contact.html:39
-#: .\jobs\templates\volunteer.html:41
-msgid "Fullname"
-msgstr "الاسم الثلاثي"
-
-#: .\careers\templates\formCareer.html:50 .\jobs\templates\volunteer.html:45
-msgid "Gender"
-msgstr "الجنس"
-
-#: .\careers\templates\formCareer.html:52 .\jobs\templates\volunteer.html:47
-msgid "Male"
-msgstr "ذكر"
-
-#: .\careers\templates\formCareer.html:53 .\jobs\templates\volunteer.html:48
-msgid "Female"
-msgstr "انثى"
-
-#: .\careers\templates\formCareer.html:57 .\jobs\templates\contact.html:44
-#: .\jobs\templates\volunteer.html:52
-msgid "Email"
-msgstr "البريد الالكتروني"
-
-#: .\careers\templates\formCareer.html:62 .\jobs\templates\contact.html:49
-#: .\jobs\templates\contact.html:84 .\jobs\templates\donate.html:44
-#: .\jobs\templates\volunteer.html:57
-msgid "Phone Number"
-msgstr "رقم الهاتف"
-
-#: .\careers\templates\formCareer.html:67 .\jobs\templates\volunteer.html:62
-msgid "Goverment"
-msgstr "المحافظة"
-
-#: .\careers\templates\formCareer.html:69 .\jobs\templates\volunteer.html:64
-msgid "Baghdad"
-msgstr "بغداد"
-
-#: .\careers\templates\formCareer.html:70 .\jobs\templates\volunteer.html:65
-msgid "Mousl"
-msgstr "الموصل"
-
-#: .\careers\templates\formCareer.html:71 .\jobs\templates\volunteer.html:66
-msgid "Erbil"
-msgstr "اربيل"
-
-#: .\careers\templates\formCareer.html:72 .\jobs\templates\volunteer.html:67
-msgid "Anbar"
-msgstr "الانبار"
-
-#: .\careers\templates\formCareer.html:73 .\jobs\templates\volunteer.html:68
-msgid "Babylon"
-msgstr "بابل"
-
-#: .\careers\templates\formCareer.html:74 .\jobs\templates\volunteer.html:69
-msgid "Basra"
-msgstr "البصرة"
-
-#: .\careers\templates\formCareer.html:75 .\jobs\templates\volunteer.html:70
-msgid "Dhi Qar"
-msgstr "ذي قار"
-
-#: .\careers\templates\formCareer.html:76 .\jobs\templates\volunteer.html:71
-msgid "Diyala"
-msgstr "ديالى"
-
-#: .\careers\templates\formCareer.html:77 .\jobs\templates\volunteer.html:72
-msgid "Dohuk"
-msgstr "دهوك"
-
-#: .\careers\templates\formCareer.html:78 .\jobs\templates\volunteer.html:73
-msgid "Karbala"
-msgstr "كربلا"
-
-#: .\careers\templates\formCareer.html:79 .\jobs\templates\volunteer.html:74
-msgid "KirKuk"
-msgstr "كركوك"
-
-#: .\careers\templates\formCareer.html:80 .\jobs\templates\volunteer.html:75
-msgid "Maysan"
-msgstr "ميسان"
-
-#: .\careers\templates\formCareer.html:81 .\jobs\templates\volunteer.html:76
-msgid "Najaf"
-msgstr "النجف"
-
-#: .\careers\templates\formCareer.html:82
-msgid "Qaisiyah"
-msgstr ""
-
-#: .\careers\templates\formCareer.html:83 .\jobs\templates\volunteer.html:77
-msgid "Salahaddin"
-msgstr "صلاح الدين"
-
-#: .\careers\templates\formCareer.html:84 .\jobs\templates\volunteer.html:78
-msgid "Sulaymaniyah"
-msgstr "سليمانية"
-
-#: .\careers\templates\formCareer.html:85 .\jobs\templates\volunteer.html:79
-msgid "Wasit"
-msgstr "واسط"
-
-#: .\careers\templates\formCareer.html:90 .\jobs\templates\volunteer.html:84
-msgid "Address"
-msgstr "العنوان"
-
-#: .\careers\templates\formCareer.html:94 .\jobs\templates\volunteer.html:88
-msgid "Upload your CV:"
-msgstr "حمل سيرتك الذاتية:"
-
-#: .\careers\templates\formCareer.html:99 .\jobs\templates\volunteer.html:93
-msgid "Select Language"
-msgstr "اختار اللغة"
-
-#: .\careers\templates\formCareer.html:143 .\jobs\templates\volunteer.html:137
-msgid "Kurdish"
-msgstr "كردي"
-
-#: .\careers\templates\formCareer.html:151 .\jobs\templates\volunteer.html:145
-msgid "Cover Letter"
-msgstr "رسالة تعريفية"
-
-#: .\careers\templates\formCareer.html:157 .\jobs\templates\contact.html:69
-#: .\jobs\templates\volunteer.html:151
-msgid "Submit"
-msgstr "تقديم"
-
-#: .\jobs\templates\about.html:15
+#: .\about\templates\about.html:83
+msgid "was"
+msgstr "كان"
+
+#: .\about\templates\about.html:105
+msgid "Ashor general informations"
+msgstr "معلومات عامة اشور"
+
+#: .\about\templates\about.html:123
+msgid "Ashor History"
+msgstr "Ashor History"
+
+#: .\about\templates\about.html:140 .\about\templates\goals.html:14
+msgid "Goals"
+msgstr "الأهداف"
+
+#: .\about\templates\about.html:160 .\about\templates\vission-mission.html:15
+msgid "Vission & Mission"
+msgstr "الرؤية والرسالة"
+
+#: .\about\templates\about.html:181
+msgid "Our People"
+msgstr "شعبنا"
+
+#: .\about\templates\about.html:200
+msgid "Partners & networks"
+msgstr "الشركاء والشبكات"
+
+#: .\about\templates\about.html:221 .\about\templates\capacity.html:15
+#: .\home\templates\base.html:98
+msgid "Capacity Development"
+msgstr "تنمية القدرات"
+
+#: .\about\templates\about.html:240
+msgid "Where We Work"
+msgstr "اين نعمل"
+
+#: .\about\templates\about.html:295 .\about\templates\acadimic.html:128
+#: .\about\templates\capacity.html:129 .\about\templates\core-details.html:143
+#: .\about\templates\core.html:146 .\about\templates\crass_root.html:128
+#: .\about\templates\goals.html:141 .\about\templates\history.html:133
+#: .\about\templates\internal-system.html:125
+#: .\about\templates\parteners-networks.html:191
+#: .\about\templates\vission-mission.html:180
+#: .\about\templates\where-we-work.html:136
+#: .\get_involved\templates\career-forms.html:253
+#: .\get_involved\templates\career.html:161
+#: .\get_involved\templates\careers-details.html:179
+#: .\get_involved\templates\donate.html:459
+#: .\get_involved\templates\get-involved.html:220
+#: .\get_involved\templates\volunteers.html:251
+#: .\home\templates\contact.html:193
+#: .\what_we_are_doing\templates\projects.html:248
+#: .\what_we_are_doing\templates\themes-details.html:129
+#: .\what_we_are_doing\templates\themes.html:132
+#: .\what_we_are_doing\templates\what-we-are-doing.html:220
 #, fuzzy
-msgid "ASHUOR Non-Governmental Organization"
-msgstr "منظمة غير الحكومية ASHUOR"
+#| msgid "Latest Stories"
+msgid "Latest Media"
+msgstr "اخر القصص"
 
-#: .\jobs\templates\about.html:73
-msgid "The goals of ASHUOR"
-msgstr "ASHUOR أهداف"
-
-#: .\jobs\templates\about.html:77
-msgid ""
-"The Foundation works on community awareness projects for the purpose of  "
-"advancing the community and combating extremist ideas."
-msgstr ""
-"تعمل المؤسسة على مشاريع توعية مجتمعية بهدف النهوض بالمجتمع ومكافحة الأفكار "
-"المتطرفة."
-
-#: .\jobs\templates\about.html:80
-msgid ""
-"The Foundation seeks to alleviate cases of  persecution and injustice "
-"against aggrieved citizens and help them restore their rights."
-msgstr ""
-"تسعى المؤسسة إلى التخفيف من حالات الاضطهاد والظلم بحق المواطنين المظلومين "
-"ومساعدتهم على استعادة حقوقهم."
-
-#: .\jobs\templates\about.html:83
-msgid ""
-"Contribute to achieving societal solidarity  among all segments of society, "
-"especially  minorities."
-msgstr ""
-"المساهمة في تحقيق التضامن المجتمعي بين جميع شرائح المجتمع وخاصة الأقليات."
-
-#: .\jobs\templates\about.html:86
-msgid ""
-"Work to secure the emergency response to the displaced and the displaced at "
-"any time  by implementing rapid interventions in the field."
-msgstr ""
-"العمل على تأمين الاستجابة الطارئة للنازحين والنازحين في أي وقت من خلال تنفيذ "
-"التدخلات السريعة في الميدان."
-
-#: .\jobs\templates\about.html:89
-msgid ""
-"Working to promote and build peaceful coexistence between different "
-"nationalities, religions and sects, reject violence and sectarianism, and "
-"spread peace."
-msgstr ""
-"العمل على تعزيز ووبناء التعايش السلمي بين مختلف القوميات والأديان والمذاهب "
-"ونبذ العنف والطائفية ونشر السلام"
-
-#: .\jobs\templates\about.html:92
-msgid ""
-"Spreading a culture of cooperation between society and the government to "
-"reach the  highest goals of transparency."
-msgstr ""
-"اشاعة ثقافة التعاون بين المجتمع والحكومة للوصول الى اعلى غايات الشفافية"
-
-#: .\jobs\templates\about.html:95
-msgid ""
-"Adopting renewable ideas and  encouraging the youth group to follow them and "
-"work to achieve them and to achieve the vision of the institution."
-msgstr ""
-".تبني االفكار المتجددة وتشجيع فئة الشباب بانتهاجها  والعمل على تحقيقها "
-"ولتحقيق رؤية المؤسسة"
-
-#: .\jobs\templates\about.html:125
-msgid "OUR VISION"
-msgstr "رؤيتنا"
-
-#: .\jobs\templates\about.html:127
-msgid ""
-" We aspire to a world in which the rights of children, as defined in the "
-"Convention on the Rights of the Child, are always respected. A world in "
-"which children can thrive in safe environments and become agents of change "
-"they wish to see in their lives."
-msgstr ""
-"إننا نتطلع إلى عالم تُحترم فيه دائ ًما حقوق األطفال ، علىالنحو المحدد في "
-"اتفاقية حقوق الطفل . عالم يستطيع فيهاألطفال االزدهار في بيئات آمنة ويصبحون "
-"عوامل تغييريرغبون في رؤيتها في حياتهم."
-
-#: .\jobs\templates\about.html:130 .\jobs\templates\about.html:148
+#: .\about\templates\about.html:346 .\about\templates\acadimic.html:179
+#: .\about\templates\capacity.html:180 .\about\templates\core-details.html:194
+#: .\about\templates\core.html:197 .\about\templates\crass_root.html:179
+#: .\about\templates\goals.html:192 .\about\templates\history.html:184
+#: .\about\templates\internal-system.html:176
+#: .\about\templates\parteners-networks.html:242
+#: .\about\templates\vission-mission.html:231
+#: .\about\templates\where-we-work.html:187
+#: .\get_involved\templates\career-forms.html:304
+#: .\get_involved\templates\career.html:212
+#: .\get_involved\templates\careers-details.html:230
+#: .\get_involved\templates\donate.html:510
+#: .\get_involved\templates\get-involved.html:271
+#: .\get_involved\templates\volunteers.html:302
+#: .\home\templates\contact.html:244
+#: .\what_we_are_doing\templates\projects.html:299
+#: .\what_we_are_doing\templates\themes-details.html:180
+#: .\what_we_are_doing\templates\themes.html:183
 msgid "Read More"
 msgstr "اقرا المزيد"
 
-#: .\jobs\templates\about.html:143
-msgid "OUR MISSION"
-msgstr "هدفنا"
+#: .\about\templates\acadimic.html:12 .\about\templates\capacity.html:12
+#: .\about\templates\core-details.html:12 .\about\templates\core.html:11
+#: .\about\templates\crass_root.html:12 .\about\templates\goals.html:12
+#: .\about\templates\history.html:12 .\about\templates\internal-system.html:12
+#: .\about\templates\parteners-networks.html:12
+#: .\about\templates\vission-mission.html:12
+#: .\about\templates\where-we-work.html:13
+#: .\get_involved\templates\career-forms.html:16
+#: .\get_involved\templates\career.html:16
+#: .\get_involved\templates\careers-details.html:16
+#: .\get_involved\templates\donate.html:15
+#: .\get_involved\templates\get-involved.html:15
+#: .\get_involved\templates\volunteers.html:17 .\home\templates\contact.html:13
+#: .\what_we_are_doing\templates\projects.html:15
+#: .\what_we_are_doing\templates\themes-details.html:11
+#: .\what_we_are_doing\templates\themes.html:13
+#: .\what_we_are_doing\templates\what-we-are-doing.html:13
+msgid "Home"
+msgstr "الرئيسية"
 
-#: .\jobs\templates\about.html:145
-msgid ""
-"Ashor Iraqi Foundation for Relief and Development, founded in 2014, is an "
-"independent, neutral and impartial Iraqi organisation committed to bringing "
-"meaningful and lasting change to the lives of children and youth, especially "
-"to those most exposed to risks. We strive to improve their well-being."
+#: .\about\templates\acadimic.html:15 .\home\templates\base.html:89
+#: .\home\templates\base.html:369
+msgid "Academics"
+msgstr "أكاديميون"
+
+#: .\about\templates\core-details.html:86 .\home\templates\index.html:75
+#: .\home\templates\index.html:288
+msgid "Read more"
+msgstr "اقرا المزيد"
+
+#: .\about\templates\core.html:13
+msgid "Core"
+msgstr "الاساسية"
+
+#: .\about\templates\crass_root.html:15
+msgid "Grass-root Volunteer Groups"
+msgstr "مجموعات المتطوعين الشعبية"
+
+#: .\about\templates\history.html:15
+msgid "History of Ashor"
+msgstr "تاريخ اشور"
+
+#: .\about\templates\internal-system.html:15
+msgid "Internal system and control"
+msgstr "النظام الداخلي والرقابة"
+
+#: .\about\templates\parteners-networks.html:15
+msgid "Ashor Partners & Networks"
+msgstr "شركاء وشبكات اشور"
+
+#: .\about\templates\parteners-networks.html:84
+msgid "Partners"
+msgstr "شركاء"
+
+#: .\about\templates\parteners-networks.html:145
+msgid "Networks"
+msgstr "الشبكات"
+
+#: .\about\templates\vission-mission.html:94
+msgid "Ashor Vission"
+msgstr "الرؤية"
+
+#: .\about\templates\vission-mission.html:122
+msgid "Ashor Mission"
+msgstr "الهدف"
+
+#: .\about\templates\where-we-work.html:16
+msgid "Where we work"
 msgstr ""
-"مؤسسة أشور العراقية للإغاثة والتنمية ، التي تأسست عام 2014 ، هي منظمة عراقية "
-"مستقلة ومحايدة وغير متحيزة ملتزمة بإحداث تغيير هادف ودائم في حياة الأطفال "
-"والشباب ، وخاصة أولئك الأكثر عرضة للمخاطر. نحن نسعى جاهدين لتحسين رفاهيتهم"
 
-#: .\jobs\templates\contact.html:13
-msgid ""
-"Become a vital part of ASHUOR & make a real difference to lives of many!"
+#: .\about\templates\where-we-work.html:79
+msgid "Adress"
+msgstr "العنوان"
+
+#: .\aifrd\settings.py:147 .\get_involved\templates\career-forms.html:168
+#: .\get_involved\templates\volunteers.html:167 .\home\templates\base.html:159
+#: .\home\templates\base.html:173
+msgid "English"
 msgstr ""
-"كن جزءًا حيويًا من مؤسسة أشور العراقية للإغاثة والتنمية وأحدث فرقًا حقيقيًا في "
-"حياة الكثيرين!"
 
-#: .\jobs\templates\contact.html:56
-msgid "Subject"
-msgstr "الموضوع"
+#: .\aifrd\settings.py:148 .\get_involved\templates\career-forms.html:172
+#: .\get_involved\templates\volunteers.html:171
+msgid "Arabic"
+msgstr "العربية"
 
-#: .\jobs\templates\contact.html:63
-msgid "Message"
-msgstr "الرسالة"
+#: .\aifrd\settings.py:149 .\home\templates\base.html:162
+#: .\home\templates\base.html:169
+msgid "German"
+msgstr "ألمانية"
 
-#: .\jobs\templates\contact.html:81 .\jobs\templates\donate.html:39
-msgid "Keep touch with us"
-msgstr "ابق على تواصل معنا"
+#: .\get_involved\templates\career-forms.html:17
+#: .\get_involved\templates\career.html:17
+#: .\get_involved\templates\careers-details.html:17
+#: .\get_involved\templates\donate.html:16
+#: .\get_involved\templates\volunteers.html:18
+msgid "Get involved"
+msgstr "شارك"
 
-#: .\jobs\templates\donate.html:19
+#: .\get_involved\templates\career-forms.html:19
+#: .\get_involved\templates\career.html:20
+#: .\get_involved\templates\careers-details.html:19
+msgid "Careers"
+msgstr "وظائف"
+
+#: .\get_involved\templates\career-forms.html:84
+msgid "YOUR APPLICATION!"
+msgstr "تقديمك الخاص بك!"
+
+#: .\get_involved\templates\career-forms.html:86
+msgid ""
+"We appreciate your interest in our organisation. Please fill in the "
+"following short form. Should you have any difficulties in uploading your "
+"files, please contact us by mail at representative@aifrd.org."
+msgstr ""
+"نحن نقدر اهتمامك بمنظمتنا. يرجى ملء اتباع النموذج القصير. إذا واجهتك أية "
+"صعوبات في تحميلالملفات ، يرجى الاتصال بنا عن طريق البريد على "
+"Representative@aifrd.org."
+
+#: .\get_involved\templates\career-forms.html:122
+#: .\get_involved\templates\volunteers.html:121
+msgid "Full Name"
+msgstr "الاسم الثلاثي"
+
+#: .\get_involved\templates\career-forms.html:127
+#: .\get_involved\templates\volunteers.html:126
+msgid "Gender"
+msgstr "الجنس"
+
+#: .\get_involved\templates\career-forms.html:129
+#: .\get_involved\templates\volunteers.html:128
+msgid "Male"
+msgstr "ذكر"
+
+#: .\get_involved\templates\career-forms.html:130
+msgid "Female"
+msgstr "انثى"
+
+#: .\get_involved\templates\career-forms.html:135
+#: .\get_involved\templates\donate.html:258
+#: .\get_involved\templates\volunteers.html:134
+msgid "Email Address"
+msgstr "العنوان"
+
+#: .\get_involved\templates\career-forms.html:140
+#: .\get_involved\templates\donate.html:263
+#: .\get_involved\templates\volunteers.html:139
+msgid "Phone no"
+msgstr "رقم الهاتف"
+
+#: .\get_involved\templates\career-forms.html:145
+#: .\get_involved\templates\donate.html:273
+#: .\get_involved\templates\volunteers.html:144 .\home\templates\base.html:245
+#: .\home\templates\contact.html:87
+msgid "Address"
+msgstr "العنوان"
+
+#: .\get_involved\templates\career-forms.html:152
+#: .\get_involved\templates\volunteers.html:151
+msgid "Goverment"
+msgstr "المحافظة"
+
+#: .\get_involved\templates\career-forms.html:154
+#: .\get_involved\templates\volunteers.html:153
+msgid "Mousl"
+msgstr "الموصل"
+
+#: .\get_involved\templates\career-forms.html:155
+#: .\get_involved\templates\volunteers.html:154
+msgid "Erbil"
+msgstr "اربيل"
+
+#: .\get_involved\templates\career-forms.html:156
+#: .\get_involved\templates\volunteers.html:155
+msgid "Bahgdad"
+msgstr ""
+
+#: .\get_involved\templates\career-forms.html:164
+#: .\get_involved\templates\volunteers.html:163
+msgid "Select Language"
+msgstr "اختار اللغة"
+
+#: .\get_involved\templates\career-forms.html:176
+#: .\get_involved\templates\volunteers.html:175
+msgid "Kurdish"
+msgstr "كردي"
+
+#: .\get_involved\templates\career-forms.html:181
+#: .\get_involved\templates\volunteers.html:180
+msgid "DOCUMENTS"
+msgstr "وثائق"
+
+#: .\get_involved\templates\career-forms.html:184
+#: .\get_involved\templates\volunteers.html:183
+msgid ""
+"Please upload your CV, recent certificates as well as a brief cover letter "
+"(in total max. 20 MB)."
+msgstr ""
+"يرجى تحميل سيرتك الذاتية والشهادات الحديثة بالإضافة إلى خطاب تغطية موجز (بحد "
+"أقصى إجمالي 20 ميغا بايت)."
+
+#: .\get_involved\templates\career-forms.html:199
+#: .\get_involved\templates\volunteers.html:198
+msgid "Cover Letter"
+msgstr "رسالة تعريفية"
+
+#: .\get_involved\templates\career-forms.html:206
+msgid "SUBMIT NOW"
+msgstr "قدم الان"
+
+#: .\get_involved\templates\career.html:88
+msgid "jobs"
+msgstr "وظائف"
+
+#: .\get_involved\templates\career.html:89
+msgid "Locations"
+msgstr "الموقع"
+
+#: .\get_involved\templates\career.html:90
+msgid "Categories"
+msgstr "اخر القصص"
+
+#: .\get_involved\templates\careers-details.html:90
+msgid "Summary"
+msgstr "ملخص"
+
+#: .\get_involved\templates\careers-details.html:121
+msgid "SKILLS"
+msgstr "مهارات"
+
+#: .\get_involved\templates\careers-details.html:144
+msgid "SUBMIT FOR THIS POSITION"
+msgstr "قدم لهذا المنصب"
+
+#: .\get_involved\templates\donate.html:18
+#: .\get_involved\templates\get-involved.html:161
+#: .\home\templates\index.html:259
+msgid "Donate"
+msgstr "تبرع الان"
+
+#: .\get_involved\templates\donate.html:149
+msgid "Please choose your amount"
+msgstr "الرجاء اختيار المبلغ الخاص بك"
+
+#: .\get_involved\templates\donate.html:186
+msgid "Other"
+msgstr "آخر"
+
+#: .\get_involved\templates\donate.html:205
+msgid "Choose a frequency"
+msgstr "اختر التردد"
+
+#: .\get_involved\templates\donate.html:212
+msgid "one time"
+msgstr "رقم الهاتف"
+
+#: .\get_involved\templates\donate.html:220
+msgid "monthly"
+msgstr "شهريا"
+
+#: .\get_involved\templates\donate.html:230
+msgid "yearly"
+msgstr "سنوي"
+
+#: .\get_involved\templates\donate.html:243
+msgid "Please fill in your contact data"
+msgstr "يرجى ملء بيانات الاتصال الخاصة بك"
+
+#: .\get_involved\templates\donate.html:248
+msgid "First Name"
+msgstr "الاسم الأول"
+
+#: .\get_involved\templates\donate.html:253
+msgid "Last Name"
+msgstr "اسم العائلة"
+
+#: .\get_involved\templates\donate.html:268
+msgid "Company Name"
+msgstr "اسم الشركة"
+
+#: .\get_involved\templates\donate.html:279
+msgid "Country"
+msgstr "دولة"
+
+#: .\get_involved\templates\donate.html:281
+msgid "Afghanistan"
+msgstr "أفغانستان"
+
+#: .\get_involved\templates\donate.html:282
+msgid "Albania"
+msgstr "ألبانيا"
+
+#: .\get_involved\templates\donate.html:283
+msgid "Algeria"
+msgstr "الجزائر"
+
+#: .\get_involved\templates\donate.html:284
+msgid "Andorra"
+msgstr "أندورا"
+
+#: .\get_involved\templates\donate.html:285
+msgid "Angola"
+msgstr "أنغولا"
+
+#: .\get_involved\templates\donate.html:286
+msgid "Antigua and Barbuda"
+msgstr "أنتيغوا وبربودا"
+
+#: .\get_involved\templates\donate.html:287
+msgid "Argentina"
+msgstr "الأرجنتين"
+
+#: .\get_involved\templates\donate.html:288
+msgid "Armenia"
+msgstr "أرمينيا"
+
+#: .\get_involved\templates\donate.html:289
+msgid "Australia"
+msgstr ""
+
+#: .\get_involved\templates\donate.html:290
+msgid "Austria"
+msgstr "أستراليا"
+
+#: .\get_involved\templates\donate.html:291
+msgid "Azerbaijan"
+msgstr "أذربيجان"
+
+#: .\get_involved\templates\donate.html:292
+msgid "Bahamas"
+msgstr "جزر البهاما"
+
+#: .\get_involved\templates\donate.html:293
+msgid "Bahrain"
+msgstr "البحرين"
+
+#: .\get_involved\templates\donate.html:294
+msgid "Bangladesh"
+msgstr "بنغلاديش"
+
+#: .\get_involved\templates\donate.html:295
+msgid "Barbados"
+msgstr "بربادوس"
+
+#: .\get_involved\templates\donate.html:296
+msgid "Belarus"
+msgstr ""
+
+#: .\get_involved\templates\donate.html:297
+msgid "Belgium"
+msgstr "بلجيكا"
+
+#: .\get_involved\templates\donate.html:298
+msgid "Belize"
+msgstr "بليز"
+
+#: .\get_involved\templates\donate.html:299
+msgid "Benin"
+msgstr "بنين"
+
+#: .\get_involved\templates\donate.html:300
+msgid "Bhutan"
+msgstr "بوتان"
+
+#: .\get_involved\templates\donate.html:301
+msgid "Bolivia"
+msgstr "بوليفيا"
+
+#: .\get_involved\templates\donate.html:302
+msgid "Bosnia and Herzegovina"
+msgstr "البوسنة والهرسك"
+
+#: .\get_involved\templates\donate.html:303
+msgid "Botswana"
+msgstr "بوتسوانا"
+
+#: .\get_involved\templates\donate.html:304
+msgid "Brazil"
+msgstr "البرازيل"
+
+#: .\get_involved\templates\donate.html:305
+msgid "Brunei"
+msgstr "بروناي"
+
+#: .\get_involved\templates\donate.html:306
+msgid "Bulgaria"
+msgstr "بلغاريا"
+
+#: .\get_involved\templates\donate.html:307
+msgid "Burkina Faso"
+msgstr "بوركينا فاسو"
+
+#: .\get_involved\templates\donate.html:308
+msgid "Burundi"
+msgstr "بوروندي"
+
+#: .\get_involved\templates\donate.html:309
+msgid "Cabo Verde"
+msgstr "كابو فيردي"
+
+#: .\get_involved\templates\donate.html:310
+msgid "Cambodia"
+msgstr "كمبوديا"
+
+#: .\get_involved\templates\donate.html:311
+msgid "Cameroon"
+msgstr "الكاميرون"
+
+#: .\get_involved\templates\donate.html:312
+msgid "Canada"
+msgstr "كندا"
+
+#: .\get_involved\templates\donate.html:313
+msgid "Central African Republic"
+msgstr "جمهورية افريقيا الوسطى"
+
+#: .\get_involved\templates\donate.html:314
+msgid "Chad"
+msgstr "تشاد"
+
+#: .\get_involved\templates\donate.html:315
+msgid "Chile"
+msgstr "تشيلي"
+
+#: .\get_involved\templates\donate.html:316
+msgid "China"
+msgstr "الصين"
+
+#: .\get_involved\templates\donate.html:317
+msgid "Colombia"
+msgstr "كولومبيا"
+
+#: .\get_involved\templates\donate.html:318
+msgid "Comoros"
+msgstr "جزر القمر"
+
+#: .\get_involved\templates\donate.html:319
+msgid "Congo, Democratic Republic of the"
+msgstr "جمهورية الكونغو الديمقراطية"
+
+#: .\get_involved\templates\donate.html:320
+msgid "Congo, Republic of the"
+msgstr "جمهورية الكونغو"
+
+#: .\get_involved\templates\donate.html:321
+msgid "Costa Rica"
+msgstr "كوستا ريكا"
+
+#: .\get_involved\templates\donate.html:322
+msgid "Cote d'Ivoire"
+msgstr "كوت ديفوار"
+
+#: .\get_involved\templates\donate.html:323
+msgid "Croatia"
+msgstr "كرواتيا"
+
+#: .\get_involved\templates\donate.html:324
+msgid "Cuba"
+msgstr "كوبا"
+
+#: .\get_involved\templates\donate.html:325
+msgid "Cyprus"
+msgstr "قبرص"
+
+#: .\get_involved\templates\donate.html:326
+msgid "Czech Republic"
+msgstr "الجمهورية التشيكية"
+
+#: .\get_involved\templates\donate.html:327
+msgid "Denmark"
+msgstr "الدنمارك"
+
+#: .\get_involved\templates\donate.html:328
+msgid "Djibouti"
+msgstr "جيبوتي"
+
+#: .\get_involved\templates\donate.html:329
+msgid "Dominica"
+msgstr "دومينيكا"
+
+#: .\get_involved\templates\donate.html:330
+msgid "Dominican Republic"
+msgstr "جمهورية الدومينيكان"
+
+#: .\get_involved\templates\donate.html:331
+msgid "East Timor (Timor-Leste)"
+msgstr "تيمور الشرقية (تيمور ليشتي)"
+
+#: .\get_involved\templates\donate.html:332
+msgid "Ecuador"
+msgstr "تيمور الشرقية (تيمور ليشتي)"
+
+#: .\get_involved\templates\donate.html:333
+msgid "Egypt"
+msgstr "مصر"
+
+#: .\get_involved\templates\donate.html:334
+msgid "El Salvador"
+msgstr "السلفادور"
+
+#: .\get_involved\templates\donate.html:335
+msgid "Equatorial Guinea"
+msgstr "غينيا الإستوائية"
+
+#: .\get_involved\templates\donate.html:336
+msgid "Eritrea"
+msgstr "إريتريا"
+
+#: .\get_involved\templates\donate.html:337
+msgid "Estonia"
+msgstr "إستونيا"
+
+#: .\get_involved\templates\donate.html:338
+msgid "Eswatini"
+msgstr ""
+
+#: .\get_involved\templates\donate.html:339
+msgid "Ethiopia"
+msgstr ""
+
+#: .\get_involved\templates\donate.html:340
+msgid "Fiji"
+msgstr ""
+
+#: .\get_involved\templates\donate.html:341
+msgid "Finland"
+msgstr "فنلندا"
+
+#: .\get_involved\templates\donate.html:342
+msgid "France"
+msgstr "فرنسا"
+
+#: .\get_involved\templates\donate.html:343
+msgid "Gabon"
+msgstr "الجابون"
+
+#: .\get_involved\templates\donate.html:344
+msgid "Gambia"
+msgstr "غامبيا"
+
+#: .\get_involved\templates\donate.html:345
+msgid "Georgia"
+msgstr "جورجيا"
+
+#: .\get_involved\templates\donate.html:346
+msgid "Germany"
+msgstr "ألمانيا"
+
+#: .\get_involved\templates\donate.html:347
+msgid "Ghana"
+msgstr "غانا"
+
+#: .\get_involved\templates\donate.html:348
+msgid "Greece"
+msgstr "اليونان"
+
+#: .\get_involved\templates\donate.html:349
+msgid "Grenada"
+msgstr "غرينادا"
+
+#: .\get_involved\templates\donate.html:350
+msgid "Guatemala"
+msgstr "غواتيمالا"
+
+#: .\get_involved\templates\donate.html:351
+msgid "Guinea"
+msgstr "غينيا"
+
+#: .\get_involved\templates\donate.html:352
+msgid "Guinea-Bissau"
+msgstr "غينيا بيساو"
+
+#: .\get_involved\templates\donate.html:353
+msgid "Guyana"
+msgstr "غيانا"
+
+#: .\get_involved\templates\donate.html:354
+msgid "Haiti"
+msgstr "هايتي"
+
+#: .\get_involved\templates\donate.html:355
+msgid "Honduras"
+msgstr "هندوراس"
+
+#: .\get_involved\templates\donate.html:356
+msgid "Hungary"
+msgstr "هنغاريا"
+
+#: .\get_involved\templates\donate.html:357
+msgid "Iceland"
+msgstr "أيسلندا"
+
+#: .\get_involved\templates\donate.html:358
+msgid "India"
+msgstr "الهند"
+
+#: .\get_involved\templates\donate.html:359
+msgid "Indonesia"
+msgstr "إندونيسيا"
+
+#: .\get_involved\templates\donate.html:360
+msgid "Iran"
+msgstr "إيران"
+
+#: .\get_involved\templates\donate.html:361
+msgid "Iraq"
+msgstr "العراق"
+
+#: .\get_involved\templates\donate.html:362
+msgid "Ireland"
+msgstr "أيرلندا"
+
+#: .\get_involved\templates\donate.html:363
+msgid "Israel"
+msgstr ""
+
+#: .\get_involved\templates\donate.html:364
+msgid "Italy"
+msgstr "إيطاليا"
+
+#: .\get_involved\templates\donate.html:365
+msgid "Jamaica"
+msgstr "جامايكا"
+
+#: .\get_involved\templates\donate.html:366
+msgid "Japan"
+msgstr "اليابان"
+
+#: .\get_involved\templates\donate.html:367
+msgid "Jordan"
+msgstr "الأردن"
+
+#: .\get_involved\templates\donate.html:368
+msgid "Kazakhstan"
+msgstr "كازاخستان"
+
+#: .\get_involved\templates\donate.html:369
+msgid "Kenya"
+msgstr "كينيا"
+
+#: .\get_involved\templates\donate.html:370
+msgid "Kiribati"
+msgstr "كيريباتي"
+
+#: .\get_involved\templates\donate.html:371
+msgid "Korea, North"
+msgstr "كوريا الشمالية"
+
+#: .\get_involved\templates\donate.html:372
+msgid "Korea, South"
+msgstr "كوريا الجنوبية"
+
+#: .\get_involved\templates\donate.html:373
+msgid "Kosovo"
+msgstr "كوسوفو"
+
+#: .\get_involved\templates\donate.html:374
+msgid "Kuwait"
+msgstr "الكويت"
+
+#: .\get_involved\templates\donate.html:375
+msgid "Kyrgyzstan"
+msgstr "قيرغيزستان"
+
+#: .\get_involved\templates\donate.html:376
+msgid "Laos"
+msgstr "لاوس"
+
+#: .\get_involved\templates\donate.html:377
+msgid "Latvia"
+msgstr "لاتفيا"
+
+#: .\get_involved\templates\donate.html:378
+msgid "Lebanon"
+msgstr "لبنان"
+
+#: .\get_involved\templates\donate.html:379
+msgid "Lesotho"
+msgstr "ليسوتو"
+
+#: .\get_involved\templates\donate.html:380
+msgid "Liberia"
+msgstr "ليبيريا"
+
+#: .\get_involved\templates\donate.html:381
+msgid "Libya"
+msgstr "ليبيا"
+
+#: .\get_involved\templates\donate.html:382
+msgid "Liechtenstein"
+msgstr "ليختنشتاين"
+
+#: .\get_involved\templates\donate.html:383
+msgid "Lithuania"
+msgstr "ليتوانيا"
+
+#: .\get_involved\templates\donate.html:384
+msgid "Luxembourg"
+msgstr "لوكسمبورغ"
+
+#: .\get_involved\templates\donate.html:385
+msgid "Madagascar"
+msgstr "مدغشقر"
+
+#: .\get_involved\templates\donate.html:391
+msgid "Town/City"
+msgstr "البلدة / المدينة"
+
+#: .\get_involved\templates\donate.html:396
+msgid "State"
+msgstr "ولاية"
+
+#: .\get_involved\templates\donate.html:401
+msgid "Zip Code"
+msgstr "الرمز البريدي"
+
+#: .\get_involved\templates\donate.html:422 .\home\templates\base.html:124
+#: .\home\templates\base.html:279 .\home\templates\base.html:405
 msgid "DONATE"
 msgstr "تبرع"
 
-#: .\jobs\templates\donate.html:30
-msgid "Spread The Love & Donate Now!"
-msgstr "انشر الحب وشارك!"
+#: .\get_involved\templates\get-involved.html:17
+msgid "Get invloved"
+msgstr "شارك"
 
-#: .\jobs\templates\donate.html:31 .\jobs\templates\get_involved.html:13
-msgid "Join Us To Save The World Of Humanitarian And Feel Happy To Support"
-msgstr "انضم إلينا لإنقاذ عالم العمل الإنساني واشعر بالسعادة لتقديم الدعم"
+#: .\get_involved\templates\get-involved.html:82
+msgid "Steps to be"
+msgstr "خطوات لتكون"
 
-#: .\jobs\templates\get_involved.html:12
-msgid "Spread The Love & Get Involved!"
-msgstr "انشر الحب وشارك!"
+#: .\get_involved\templates\get-involved.html:82
+msgid "part of Ashor"
+msgstr "جزء من اشور"
 
-#: .\jobs\templates\get_involved.html:51
-msgid "Discover Our Careers"
-msgstr "اكتشف وظائفنا"
+#: .\get_involved\templates\get-involved.html:83
+#, fuzzy
+msgid "Non-Governmental Organization"
+msgstr "منظمة غير الحكومية ASHUOR"
 
-#: .\jobs\templates\get_involved.html:71
-msgid "Join Us"
+#: .\get_involved\templates\get-involved.html:114
+msgid "Career opportunities"
+msgstr "فرص عمل"
+
+#: .\get_involved\templates\get-involved.html:138
+msgid "Join us as Volunteers"
+msgstr "انضم إلينا كمتطوعين"
+
+#: .\get_involved\templates\volunteers.html:20 .\home\templates\index.html:113
+msgid "Volunteers"
+msgstr "المتطوعين"
+
+#: .\get_involved\templates\volunteers.html:83
+msgid "Join us now!"
 msgstr "انضم إلينا"
 
-#: .\jobs\templates\index.html:48
-msgid "Since 2015"
-msgstr "2015 منذ "
+#: .\get_involved\templates\volunteers.html:85
+msgid ""
+"Become a vital part of Ashor Iraqi Foundation for Relief and Development & "
+"make a real  difference to lives of many!"
+msgstr ""
 
-#: .\jobs\templates\index.html:50
-msgid "Ashuor Iraqi Foundation for Relief and Development"
+#: .\get_involved\templates\volunteers.html:129
+msgid "Femel"
+msgstr "أنثى"
+
+#: .\get_involved\templates\volunteers.html:204
+msgid "JOIN NOW"
+msgstr "انضم الان"
+
+#: .\home\templates\base.html:16 .\home\templates\base2.html:9
+msgid "Ashor Iraqi Foundation for Relief and Development"
 msgstr "مؤسسة آشور العراقية لألغاثة والتنمية "
 
-#: .\jobs\templates\index.html:115
-msgid "What We Are Doing"
+#: .\home\templates\base.html:72 .\home\templates\base.html:274
+#: .\home\templates\base.html:354
+msgid "ABOUT ASHOR"
+msgstr " عن ASHUOR "
+
+#: .\home\templates\base.html:77 .\home\templates\base.html:357
+msgid "HISTORY"
+msgstr "تاريخ"
+
+#: .\home\templates\base.html:79 .\home\templates\base.html:296
+#: .\home\templates\base.html:358
+msgid "GOALS"
+msgstr "الأهداف"
+
+#: .\home\templates\base.html:81
+msgid "VISSION AND MISSION"
+msgstr "الرؤية والهدف"
+
+#: .\home\templates\base.html:83 .\home\templates\base.html:298
+msgid "OUR PEOPLE"
+msgstr "شعبنا"
+
+#: .\home\templates\base.html:88 .\home\templates\base.html:367
+msgid "GRASS ROOT VOLUNTEER GROUPS"
+msgstr "مجموعات المتطوعين "
+
+#: .\home\templates\base.html:94 .\home\templates\base.html:299
+msgid "PARTNERS & NETWORKS"
+msgstr "الشركاء والشبكات"
+
+#: .\home\templates\base.html:96
+msgid "INTERNAL SYSTEM & RESOURCES"
+msgstr "النظام الداخلي والموارد"
+
+#: .\home\templates\base.html:99 .\home\templates\base.html:277
+#: .\home\templates\base.html:376
+msgid "WHERE WE WORK"
+msgstr "من نحن"
+
+#: .\home\templates\base.html:105
+msgid "WHAT WE ARE DOING"
 msgstr "ماذا نفعل"
 
-#: .\jobs\templates\index.html:150 .\jobs\templates\what_we_are_doing.html:49
+#: .\home\templates\base.html:109
+msgid "OUR THEMES"
+msgstr "مواضيعنا"
+
+#: .\home\templates\base.html:111 .\home\templates\base.html:389
+msgid "OUR PROJECTS"
+msgstr "قصصنا"
+
+#: .\home\templates\base.html:116
+msgid "GET INVOLVED"
+msgstr "شارك"
+
+#: .\home\templates\base.html:120 .\home\templates\base.html:278
+#: .\home\templates\base.html:402
+msgid "CAREERS"
+msgstr "الوظائف"
+
+#: .\home\templates\base.html:122
+msgid "JOIN US AS VOLUNTEER"
+msgstr "انظم معنا كمتطوع"
+
+#: .\home\templates\base.html:128 .\home\templates\base.html:281
+#: .\home\templates\base.html:410
+msgid "MEDIA"
+msgstr "وسائط"
+
+#: .\home\templates\base.html:146 .\home\templates\base.html:283
+#: .\home\templates\base.html:426
+msgid "CONTACT"
+msgstr "اتصل بنا"
+
+#: .\home\templates\base.html:150 .\home\templates\base.html:430
+msgid "LANGUAGE"
+msgstr "اللغة"
+
+#: .\home\templates\base.html:166 .\home\templates\base.html:176
+msgid "العربية"
+msgstr "العربية"
+
+#: .\home\templates\base.html:248
+msgid "Salah Al-Den, Iraq"
+msgstr "صلاح الدين, العراق"
+
+#: .\home\templates\base.html:271
 msgid "Explore"
 msgstr "استكشف"
 
-#: .\jobs\templates\index.html:168
-msgid ""
-"Become a vital part of Ashuor Iraqi Foundation for Relief and Development & "
-"make a real difference to lives of many!"
+#: .\home\templates\base.html:275 .\home\templates\index.html:224
+#: .\what_we_are_doing\templates\themes.html:97
+msgid "THEMES"
+msgstr "المواضيع"
+
+#: .\home\templates\base.html:293
+msgid "Information"
+msgstr "معلومات الوظيفة"
+
+#: .\home\templates\base.html:297
+msgid "VISSION & MISSION"
+msgstr "الرؤية والهدف"
+
+#: .\home\templates\base.html:312
+msgid "Ashor"
+msgstr "Ashor"
+
+#: .\home\templates\base.html:312
+msgid "All Rights"
+msgstr "كل الحقوق محفوظة"
+
+#: .\home\templates\contact.html:15
+msgid "Contact us"
+msgstr "اتصل الان"
+
+#: .\home\templates\contact.html:88
+msgid "Kirkuk - Soma city"
+msgstr "كركوك - مدينة سوما"
+
+#: .\home\templates\contact.html:100
+msgid "Contact"
+msgstr "اتصل الان"
+
+#: .\home\templates\contact.html:101
+msgid "Mobile"
+msgstr "موبايل"
+
+#: .\home\templates\contact.html:115
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+#: .\home\templates\contact.html:116
+msgid "Mail"
+msgstr "بريد"
+
+#: .\home\templates\contact.html:160
+msgid "Submit"
+msgstr "تقديم"
+
+#: .\home\templates\index.html:71
+msgid "Since"
+msgstr "2015 منذ "
+
+#: .\home\templates\index.html:72
+msgid "Iraq organization"
+msgstr "منظمة العراق"
+
+#: .\home\templates\index.html:86
+msgid "Employee"
+msgstr "موظف"
+
+#: .\home\templates\index.html:95
+#: .\what_we_are_doing\templates\projects.html:18
+msgid "Projects"
+msgstr "المشاريع"
+
+#: .\home\templates\index.html:104
+msgid "Beneficiaries"
+msgstr "المستفيدون"
+
+#: .\home\templates\index.html:198
+msgid "Our"
+msgstr "لنا"
+
+#: .\home\templates\index.html:198
+#: .\what_we_are_doing\templates\what-we-are-doing.html:201
+msgid "Themes"
+msgstr "ثيمات"
+
+#: .\home\templates\index.html:205
+msgid "read more"
+msgstr "اقرا المزيد"
+
+#: .\home\templates\index.html:254
+msgid "Become a vital part of"
+msgstr "كن جزءًا حيويًا من"
+
+#: .\home\templates\index.html:254
+msgid "Ashuor Iraqi Foundation for Relief and Development"
+msgstr "مؤسسة آشور العراقية لألغاثة والتنمية "
+
+#: .\home\templates\index.html:255
+#| msgid ""
+#| "Become a vital part of ASHUOR & make a real difference to lives of many!"
+msgid "make a real difference to lives of many!"
 msgstr ""
 "كن جزءًا حيويًا من مؤسسة أشور العراقية للإغاثة والتنمية وأحدث فرقًا حقيقيًا في "
 "حياة الكثيرين!"
 
-#: .\jobs\templates\index.html:173
-msgid "JOIN US AS A VOLUNTEERS"
-msgstr "انظم معنا كمتطوع"
+#: .\home\templates\index.html:261
+msgid "join us as volunteer"
+msgstr "انضم إلينا كمتطوع"
 
-#: .\jobs\templates\index.html:201
-msgid "Latest Stories"
+#: .\home\templates\index.html:281
+msgid "READ FOR MORE insights"
+msgstr "اقرأ لمزيد من الأفكار"
+
+#: .\home\templates\index.html:282 .\mediapage\templates\media.html:94
+#: .\mediapage\templates\media_filter.html:90
+msgid "Latest"
 msgstr "اخر القصص"
 
-#: .\jobs\templates\index.html:205
-msgid "VIEW ALL STORIES"
-msgstr "عرض جميع القصص"
+#: .\home\templates\index.html:282
+msgid "Media"
+msgstr "وسائط"
 
-#: .\jobs\templates\index.html:276
-msgid "Our Sponsors"
-msgstr "رعاتنا"
+#: .\mediapage\templates\media.html:81
+#: .\mediapage\templates\media_filter.html:77
+msgid "We found"
+msgstr "وجدنا"
 
-#: .\jobs\templates\reply.html:18
-msgid "Thank You!"
-msgstr "شكرا لك!"
+#: .\mediapage\templates\media.html:81
+#: .\mediapage\templates\media_filter.html:77
+msgid "blogs available for you"
+msgstr "المدونات المتاحة لك"
 
-#: .\jobs\templates\reply.html:24
+#: .\mediapage\templates\media.html:92
+#: .\mediapage\templates\media_filter.html:88
+msgid "Default"
+msgstr "افتراضي"
+
+#: .\mediapage\templates\media.html:93
+#: .\mediapage\templates\media_filter.html:89
+msgid "Popularity"
+msgstr "شعبية"
+
+#: .\what_we_are_doing\templates\projects.html:16
+#: .\what_we_are_doing\templates\themes-details.html:12
+#: .\what_we_are_doing\templates\themes.html:14
+msgid "What we are doing"
+msgstr "ماذا نفعل"
+
+#: .\what_we_are_doing\templates\projects.html:82
+msgid "Past project"
+msgstr "المشاريع السابق"
+
+#: .\what_we_are_doing\templates\projects.html:83
+msgid "Current project"
+msgstr "المشاريع الحالي"
+
+#: .\what_we_are_doing\templates\themes-details.html:14
+#: .\what_we_are_doing\templates\themes.html:16
+msgid "Ashor themes"
+msgstr "مواضيع اشور"
+
+#: .\what_we_are_doing\templates\what-we-are-doing.html:15
+msgid "What We Are Doing"
+msgstr "ماذا نفعل"
+
+#: .\what_we_are_doing\templates\what-we-are-doing.html:98
+msgid "Project"
+msgstr "مشروع"
+
+#: .\what_we_are_doing\templates\what-we-are-doing.html:105
+msgid "LEARN MORE"
+msgstr "اقرا المزيد"
+
+#: .\what_we_are_doing\templates\what-we-are-doing.html:153
 msgid ""
-"For choosing Ashor Iraqi Foundation For Relief And Development, We’ll get "
-"back to you about your order as soon as possible."
+"A complex process of constructively changing relationships, attitudes,"
+"behaviours,interests and discourses in violence-prone conflict settings. "
+"Importantly,conflict."
 msgstr ""
-"لاختيارم مؤسسة اشور للإغاثة والتنمية سوف نقوم بالرد عليك بشأن طلبك في اقرب "
-"وقت"
+#: .\what_we_are_doing\templates\what-we-are-doing.html:158
+msgid "Economic Development and Resources Diversification"
+msgstr "التنمية الاقتصادية وتنويع الموارد"
 
-#: .\jobs\templates\reply.html:26
-msgid "Having trouble?"
-msgstr "هل تواجه مشكلة؟"
+#: .\what_we_are_doing\templates\what-we-are-doing.html:171
+msgid "Gender Equality and Mainstreaming"
+msgstr "المساواة بين الجنسين والتعميم"
 
-#: .\jobs\templates\reply.html:26
-msgid "Contact us"
-msgstr "اتصل الان"
+#: .\what_we_are_doing\templates\what-we-are-doing.html:181
+msgid ""
+"A complex process of constructively changing relationships, attitudes, "
+"behaviours, interests and discourses"
+msgstr "عملية معقدة لتغيير العلاقات والمواقف بشكل بناء "
+"السلوكيات والاهتمامات والخطابات"
 
-#: .\jobs\templates\reply.html:31
-msgid "back to home page"
-msgstr "العودة الى الصفحة الرئيسية"
+#: .\what_we_are_doing\templates\what-we-are-doing.html:186
+msgid "Gender Equality"
+msgstr "المساواة بين الجنسين"
 
-#: .\jobs\templates\vision_mission_value.html:14
-msgid "VISSION & MISSION"
-msgstr "الرؤية والهدف"
+#: .\what_we_are_doing\templates\what-we-are-doing.html:207
+msgid "READ MORE"
+msgstr "اقرا المزيد"
 
-#: .\jobs\templates\vision_mission_value.html:34
-msgid "Vision"
-msgstr "الرؤية"
+#~ msgid "BLOGS"
+#~ msgstr "مدونتنا"
 
-#: .\jobs\templates\vision_mission_value.html:48
-msgid "Mission"
-msgstr "الهدف"
+#~ msgid "STORIES"
+#~ msgstr "قصصنا"
 
-#: .\jobs\templates\volunteer.html:122
-msgid "Arabi"
-msgstr "العربية"
+#~ msgid "STORIES & BLOGS"
+#~ msgstr "القصص والمدونة"
 
-#: .\jobs\templates\what_we_are_doing.html:33
+#~ msgid "OUR BLOGS"
+#~ msgstr "مدونتنا"
+
+#~ msgid "VISION & MISSION"
+#~ msgstr "الرؤية والهدف"
+
+#~ msgid "STORIES & BLOG"
+#~ msgstr "القصص والمدونة"
+
+#~ msgid ""
+#~ "Ashor Iraqi Foundation for Relief and Development responds to the world’s "
+#~ "worst humanitarian crises and helps people to survive and rebuild their "
+#~ "lives."
+#~ msgstr ""
+#~ "تستجيب مؤسسة أشور العراقية للإغاثة والتنمية لأسوأ الأزمات الإنسانية في "
+#~ "العالم وتساعد الناس على البقاء على قيد الحياة وإعادة بناء حياتهم."
+
+#~ msgid "OUR TEAM"
+#~ msgstr "فريقنا"
+
+#~ msgid "QUICK LINKS"
+#~ msgstr "روابط سريعة"
+
+#~ msgid "Copyrights"
+#~ msgstr "حقوق النشر"
+
+#~ msgid "Ashor Iraqi Foundation for Relief and Development."
+#~ msgstr "مؤسسة آشور العراقية لألغاثة والتنمية "
+
+#~ msgid "The Description"
+#~ msgstr "الوصف"
+
+#~ msgid "Contract Duration"
+#~ msgstr "مدة العقد"
+
+#~ msgid "Governorate"
+#~ msgstr "المحافظة"
+
+#~ msgid "Working Hours"
+#~ msgstr "عدد الساعات"
+
+#~ msgid "Posted"
+#~ msgstr "تم النشر"
+
+#~ msgid "Requirements"
+#~ msgstr "المتطلبات"
+
+#~ msgid "Minimum Education"
+#~ msgstr "الحد الأدنى من التعليم"
+
+#~ msgid "Minimum Experience"
+#~ msgstr "الحد الأدنى من الخبرة"
+
+#~ msgid "Required Travel"
+#~ msgstr "السفر المطلوب"
+
+#~ msgid "Job Status"
+#~ msgstr "حالة الوظيفة"
+
+#~ msgid "No Of Jobs"
+#~ msgstr "عدد الوظائف"
+
+#~ msgid "Published Date"
+#~ msgstr "تاريخ النشر"
+
+#~ msgid "Deadline Date"
+#~ msgstr "تاريخ الموعد النهائي"
+
+#~ msgid "Role and responsibilities"
+#~ msgstr "الدور والمسؤوليات"
+
+#~ msgid "Qualifications & Preferred Skills"
+#~ msgstr "المؤهلات والمهارات المفضلة"
+
+#~ msgid "Apply Now"
+#~ msgstr "قدم الآن"
+
+#~ msgid "latest careers"
+#~ msgstr "أحدث الوظائف"
+
+#~ msgid "Baghdad"
+#~ msgstr "بغداد"
+
+#~ msgid "Anbar"
+#~ msgstr "الانبار"
+
+#~ msgid "Babylon"
+#~ msgstr "بابل"
+
+#~ msgid "Basra"
+#~ msgstr "البصرة"
+
+#~ msgid "Dhi Qar"
+#~ msgstr "ذي قار"
+
+#~ msgid "Diyala"
+#~ msgstr "ديالى"
+
+#~ msgid "Dohuk"
+#~ msgstr "دهوك"
+
+#~ msgid "Karbala"
+#~ msgstr "كربلا"
+
+#~ msgid "KirKuk"
+#~ msgstr "كركوك"
+
+#~ msgid "Maysan"
+#~ msgstr "ميسان"
+
+#~ msgid "Najaf"
+#~ msgstr "النجف"
+
+#~ msgid "Salahaddin"
+#~ msgstr "صلاح الدين"
+
+#~ msgid "Sulaymaniyah"
+#~ msgstr "سليمانية"
+
+#~ msgid "Wasit"
+#~ msgstr "واسط"
+
+#~ msgid "Upload your CV:"
+#~ msgstr "حمل سيرتك الذاتية:"
+
+#~ msgid "The goals of ASHUOR"
+#~ msgstr "ASHUOR أهداف"
+
+#~ msgid ""
+#~ "The Foundation works on community awareness projects for the purpose of  "
+#~ "advancing the community and combating extremist ideas."
+#~ msgstr ""
+#~ "تعمل المؤسسة على مشاريع توعية مجتمعية بهدف النهوض بالمجتمع ومكافحة "
+#~ "الأفكار المتطرفة."
+
+#~ msgid ""
+#~ "The Foundation seeks to alleviate cases of  persecution and injustice "
+#~ "against aggrieved citizens and help them restore their rights."
+#~ msgstr ""
+#~ "تسعى المؤسسة إلى التخفيف من حالات الاضطهاد والظلم بحق المواطنين المظلومين "
+#~ "ومساعدتهم على استعادة حقوقهم."
+
+#~ msgid ""
+#~ "Contribute to achieving societal solidarity  among all segments of "
+#~ "society, especially  minorities."
+#~ msgstr ""
+#~ "المساهمة في تحقيق التضامن المجتمعي بين جميع شرائح المجتمع وخاصة الأقليات."
+
+#~ msgid ""
+#~ "Work to secure the emergency response to the displaced and the displaced "
+#~ "at any time  by implementing rapid interventions in the field."
+#~ msgstr ""
+#~ "العمل على تأمين الاستجابة الطارئة للنازحين والنازحين في أي وقت من خلال "
+#~ "تنفيذ التدخلات السريعة في الميدان."
+
+#~ msgid ""
+#~ "Working to promote and build peaceful coexistence between different "
+#~ "nationalities, religions and sects, reject violence and sectarianism, and "
+#~ "spread peace."
+#~ msgstr ""
+#~ "العمل على تعزيز ووبناء التعايش السلمي بين مختلف القوميات والأديان "
+#~ "والمذاهب ونبذ العنف والطائفية ونشر السلام"
+
+#~ msgid ""
+#~ "Spreading a culture of cooperation between society and the government to "
+#~ "reach the  highest goals of transparency."
+#~ msgstr ""
+#~ "اشاعة ثقافة التعاون بين المجتمع والحكومة للوصول الى اعلى غايات الشفافية"
+
+#~ msgid ""
+#~ "Adopting renewable ideas and  encouraging the youth group to follow them "
+#~ "and work to achieve them and to achieve the vision of the institution."
+#~ msgstr ""
+#~ ".تبني االفكار المتجددة وتشجيع فئة الشباب بانتهاجها  والعمل على تحقيقها "
+#~ "ولتحقيق رؤية المؤسسة"
+
+#~ msgid "OUR VISION"
+#~ msgstr "رؤيتنا"
+
+#~ msgid ""
+#~ " We aspire to a world in which the rights of children, as defined in the "
+#~ "Convention on the Rights of the Child, are always respected. A world in "
+#~ "which children can thrive in safe environments and become agents of "
+#~ "change they wish to see in their lives."
+#~ msgstr ""
+#~ "إننا نتطلع إلى عالم تُحترم فيه دائ ًما حقوق األطفال ، علىالنحو المحدد في "
+#~ "اتفاقية حقوق الطفل . عالم يستطيع فيهاألطفال االزدهار في بيئات آمنة "
+#~ "ويصبحون عوامل تغييريرغبون في رؤيتها في حياتهم."
+
+#~ msgid "OUR MISSION"
+#~ msgstr "هدفنا"
+
+#~ msgid ""
+#~ "Ashor Iraqi Foundation for Relief and Development, founded in 2014, is an "
+#~ "independent, neutral and impartial Iraqi organisation committed to "
+#~ "bringing meaningful and lasting change to the lives of children and "
+#~ "youth, especially to those most exposed to risks. We strive to improve "
+#~ "their well-being."
+#~ msgstr ""
+#~ "مؤسسة أشور العراقية للإغاثة والتنمية ، التي تأسست عام 2014 ، هي منظمة "
+#~ "عراقية مستقلة ومحايدة وغير متحيزة ملتزمة بإحداث تغيير هادف ودائم في حياة "
+#~ "الأطفال والشباب ، وخاصة أولئك الأكثر عرضة للمخاطر. نحن نسعى جاهدين لتحسين "
+#~ "رفاهيتهم"
+
+#~ msgid "Subject"
+#~ msgstr "الموضوع"
+
+#~ msgid "Message"
+#~ msgstr "الرسالة"
+
+#~ msgid "Keep touch with us"
+#~ msgstr "ابق على تواصل معنا"
+
+#~ msgid "Spread The Love & Donate Now!"
+#~ msgstr "انشر الحب وشارك!"
+
+#~ msgid "Join Us To Save The World Of Humanitarian And Feel Happy To Support"
+#~ msgstr "انضم إلينا لإنقاذ عالم العمل الإنساني واشعر بالسعادة لتقديم الدعم"
+
+#~ msgid "Spread The Love & Get Involved!"
+#~ msgstr "انشر الحب وشارك!"
+
+#~ msgid "Discover Our Careers"
+#~ msgstr "اكتشف وظائفنا"
+
+#~ msgid ""
+#~ "Become a vital part of Ashuor Iraqi Foundation for Relief and Development "
+#~ "& make a real difference to lives of many!"
+#~ msgstr ""
+#~ "كن جزءًا حيويًا من مؤسسة أشور العراقية للإغاثة والتنمية وأحدث فرقًا حقيقيًا "
+#~ "في حياة الكثيرين!"
+
+#~ msgid "JOIN US AS A VOLUNTEERS"
+#~ msgstr "انظم معنا كمتطوع"
+
+#~ msgid "VIEW ALL STORIES"
+#~ msgstr "عرض جميع القصص"
+
+#~ msgid "Our Sponsors"
+#~ msgstr "رعاتنا"
+
+#~ msgid "Thank You!"
+#~ msgstr "شكرا لك!"
+
+#~ msgid ""
+#~ "For choosing Ashor Iraqi Foundation For Relief And Development, We’ll get "
+#~ "back to you about your order as soon as possible."
+#~ msgstr ""
+#~ "لاختيارم مؤسسة اشور للإغاثة والتنمية سوف نقوم بالرد عليك بشأن طلبك في "
+#~ "اقرب وقت"
+
+#~ msgid "Having trouble?"
+#~ msgstr "هل تواجه مشكلة؟"
+
+#~ msgid "back to home page"
+#~ msgstr "العودة الى الصفحة الرئيسية"
+
+#~ msgid "Arabi"
+#~ msgstr "العربية"
+
 #, fuzzy
-#| msgid ""
-#| "Ashuor Iraqi Foundation for Relief and Development responds to the "
-#| "world’s worst humanitarian crises and helps people to survive and rebuild "
-#| "their lives. ASHUOR offers life-saving care and life-changing assistance "
-#| "to IDPs and returnee that effected to flee from war or disaster. ASHUOR "
-#| "restores safety, dignity and hope to millions who are uprooted by "
-#| "conflict or disaster. ASHUOR leads the way from harm to home."
-msgid ""
-"Ashor Iraqi Foundation for Relief and Development responds to the world’s "
-"worst humanitarian crises and helps people to survive and rebuild their "
-"lives. ASHUOR offers life-saving care and life-changing assistance to IDPs "
-"and returnee that effected to flee from war or disaster. ASHUOR restores "
-"safety, dignity and hope to millions who are uprooted by conflict or "
-"disaster. ASHUOR leads the way from harm to home."
-msgstr ""
-"تستجيب مؤسسة أشور العراقية للإغاثة والتنمية لأسوأ الأزمات الإنسانية في "
-"العالم وتساعد الناس على البقاء على قيد الحياة وإعادة بناء حياتهم.  الرعاية "
-"المنقذة للحياة والمساعدة في تغيير الحياة للنازحين والعائدين الذين اضطروا "
-"للفرار من الحرب أو الكوارث ASHUOR تقدم السلامة والكرامة والأمل للملايين "
-"الذين اقتلعهم الصراع أو الكوارث ASHUOR يعيد  "
+#~| msgid ""
+#~| "Ashuor Iraqi Foundation for Relief and Development responds to the "
+#~| "world’s worst humanitarian crises and helps people to survive and "
+#~| "rebuild their lives. ASHUOR offers life-saving care and life-changing "
+#~| "assistance to IDPs and returnee that effected to flee from war or "
+#~| "disaster. ASHUOR restores safety, dignity and hope to millions who are "
+#~| "uprooted by conflict or disaster. ASHUOR leads the way from harm to home."
+#~ msgid ""
+#~ "Ashor Iraqi Foundation for Relief and Development responds to the world’s "
+#~ "worst humanitarian crises and helps people to survive and rebuild their "
+#~ "lives. ASHUOR offers life-saving care and life-changing assistance to "
+#~ "IDPs and returnee that effected to flee from war or disaster. ASHUOR "
+#~ "restores safety, dignity and hope to millions who are uprooted by "
+#~ "conflict or disaster. ASHUOR leads the way from harm to home."
+#~ msgstr ""
+#~ "تستجيب مؤسسة أشور العراقية للإغاثة والتنمية لأسوأ الأزمات الإنسانية في "
+#~ "العالم وتساعد الناس على البقاء على قيد الحياة وإعادة بناء حياتهم.  "
+#~ "الرعاية المنقذة للحياة والمساعدة في تغيير الحياة للنازحين والعائدين الذين "
+#~ "اضطروا للفرار من الحرب أو الكوارث ASHUOR تقدم السلامة والكرامة والأمل "
+#~ "للملايين الذين اقتلعهم الصراع أو الكوارث ASHUOR يعيد  "
 
 #~ msgid "ABOUT AIFRD"
 #~ msgstr " عن ASHUOR "
@@ -634,9 +1480,6 @@ msgstr ""
 
 #~ msgid "SEE MORE"
 #~ msgstr "رؤية المزيد"
-
-#~ msgid "Read more"
-#~ msgstr "اقرا المزيد"
 
 #~ msgid "Job Shift"
 #~ msgstr "تناوب العمل"

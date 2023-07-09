@@ -12,10 +12,10 @@
             <div class="page-breadcrumb">
                 <div class="container">
                     <ul class="breadcrumb">
-                        <li><a href="{% url 'home:index' %}">Home</a></li>
-                        <li><a href="{% url 'get_involved:get_involved' %}">Get involved</a></li>
+                        <li><a href="{% url 'home:index' %}">{% trans "Home" %}</a></li>
+                        <li><a href="{% url 'get_involved:get_involved' %}">{% trans "Get involved" %}</a></li>
         
-                        <li class="current">Donate</li>
+                        <li class="current">{% trans "Donate" %}</li>
 
                     </ul>
                 </div>
@@ -146,7 +146,7 @@
                                                             <div class="row row-40">
                                                                 <div class="checkout-payment-method">
                                                                     <div class="row">
-                                                                        <label for="payment_check">Please choose your amount</label>
+                                                                        <label for="payment_check">{% trans "Please choose your amount" %}</label>
                         
                                                                         <div class="col-md-2 col-3 mb-20">
                                                                             <div class="single-method">
@@ -183,7 +183,7 @@
                                                                             <div class="single-method check-box">
                                                                                 <input type="checkbox" id="shiping_address" data-shipping
                                                                                     value="payoneer">
-                                                                                <label for="shiping_address">Other</label>
+                                                                                <label for="shiping_address">{% trans "Other" %}</label>
                                                                             </div>
                         
                                                                         </div>
@@ -202,14 +202,14 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="row">
-                                                                        <label for="payment_check" style="padding-top: 10px;">Choose a frequency
+                                                                        <label for="payment_check" style="padding-top: 10px;">{% trans "Choose a frequency" %}
                                                                         </label>
                         
                                                                         <div class="col-md-2 col-6 mb-20">
                                                                             <div class="single-method">
                                                                                 <input type="radio" id="payment_check" name="payment-method"
                                                                                     value="check">
-                                                                                <label for="payment_check">one time</label>
+                                                                                <label for="payment_check">{% trans "one time" %}</label>
                         
                                                                             </div>
                                                                         </div>
@@ -217,7 +217,7 @@
                                                                             <div class="single-method">
                                                                                 <input type="radio" id="payment_bank" name="payment-method"
                                                                                     value="bank">
-                                                                                <label for="payment_bank">monthly
+                                                                                <label for="payment_bank">{% trans "monthly" %}
                         
                                                                                     </label>
                         
@@ -227,7 +227,7 @@
                                                                             <div class="single-method">
                                                                                 <input type="radio" id="payment_cash" name="payment-method"
                                                                                     value="cash">
-                                                                                <label for="payment_cash">yearly</label>
+                                                                                <label for="payment_cash">{% trans "yearly" %}</label>
                         
                                                                             </div>
                                                                         </div>
@@ -240,64 +240,165 @@
                                 
                                                                     <!-- Billing Address -->
                                                                     <div id="billing-form" class="mb-10">
-                                                                        <h4 class="checkout-title" style="padding-top: 20px;">Please fill in your contact data</h4>
+                                                                        <h4 class="checkout-title" style="padding-top: 20px;">{% trans "Please fill in your contact data" %}</h4>
                                 
                                                                         <div class="row">
                                 
                                                                             <div class="col-md-6 col-12 mb-20">
-                                                                                <label>First Name*</label>
+                                                                                <label>{% trans "First Name" %}*</label>
                                                                                 <input type="text" placeholder="First Name">
                                                                             </div>
                                 
                                                                             <div class="col-md-6 col-12 mb-20">
-                                                                                <label>Last Name*</label>
+                                                                                <label>{% trans "Last Name" %}*</label>
                                                                                 <input type="text" placeholder="Last Name">
                                                                             </div>
                                 
                                                                             <div class="col-md-6 col-12 mb-20">
-                                                                                <label>Email Address*</label>
+                                                                                <label>{% trans "Email Address" %}*</label>
                                                                                 <input type="email" placeholder="Email Address">
                                                                             </div>
                                 
                                                                             <div class="col-md-6 col-12 mb-20">
-                                                                                <label>Phone no*</label>
+                                                                                <label>{% trans "Phone no" %}*</label>
                                                                                 <input type="text" placeholder="Phone number">
                                                                             </div>
                                 
                                                                             <div class="col-12 mb-20">
-                                                                                <label>Company Name</label>
+                                                                                <label>{% trans "Company Name" %}</label>
                                                                                 <input type="text" placeholder="Company Name">
                                                                             </div>
                                 
                                                                             <div class="col-12 mb-20">
-                                                                                <label>Address*</label>
+                                                                                <label>{% trans "Address" %}*</label>
                                                                                 <input type="text" placeholder="Address line 1">
                                                                                 <input type="text" placeholder="Address line 2">
                                                                             </div>
                                 
                                                                             <div class="col-md-6 col-12 mb-20">
-                                                                                <label>Country*</label>
+                                                                                <label>{% trans "Country" %}*</label>
                                                                                 <select>
-                                                                                    <option>Bangladesh</option>
-                                                                                    <option>China</option>
-                                                                                    <option>country</option>
-                                                                                    <option>India</option>
-                                                                                    <option>Japan</option>
+                                                                                    <option>{% trans "Afghanistan" %}</option>
+                                                                                     <option>{% trans "Albania" %}</option>
+                                                                                     <option>{% trans "Algeria" %}</option>
+                                                                                     <option>{% trans "Andorra" %}</option>
+                                                                                     <option>{% trans "Angola" %}</option>
+                                                                                     <option>{% trans "Antigua and Barbuda" %}</option>
+                                                                                     <option>{% trans "Argentina" %}</option>
+                                                                                     <option>{% trans "Armenia" %}</option>
+                                                                                     <option>{% trans "Australia" %}</option>
+                                                                                     <option>{% trans "Austria" %}</option>
+                                                                                     <option>{% trans "Azerbaijan" %}</option>
+                                                                                     <option>{% trans "Bahamas" %}</option>
+                                                                                     <option>{% trans "Bahrain" %}</option>
+                                                                                     <option>{% trans "Bangladesh" %}</option>
+                                                                                     <option>{% trans "Barbados" %}</option>
+                                                                                     <option>{% trans "Belarus" %}</option>
+                                                                                     <option>{% trans "Belgium" %}</option>
+                                                                                     <option>{% trans "Belize" %}</option>
+                                                                                     <option>{% trans "Benin" %}</option>
+                                                                                     <option>{% trans "Bhutan" %}</option>
+                                                                                     <option>{% trans "Bolivia" %}</option>
+                                                                                     <option>{% trans "Bosnia and Herzegovina" %}</option>
+                                                                                     <option>{% trans "Botswana" %}</option>
+                                                                                     <option>{% trans "Brazil" %}</option>
+                                                                                     <option>{% trans "Brunei" %}</option>
+                                                                                     <option>{% trans "Bulgaria" %}</option>
+                                                                                     <option>{% trans "Burkina Faso" %}</option>
+                                                                                     <option>{% trans "Burundi" %}</option>
+                                                                                     <option>{% trans "Cabo Verde" %}</option>
+                                                                                     <option>{% trans "Cambodia" %}</option>
+                                                                                     <option>{% trans "Cameroon" %}</option>
+                                                                                     <option>{% trans "Canada" %}</option>
+                                                                                     <option>{% trans "Central African Republic" %}</option>
+                                                                                     <option>{% trans "Chad" %}</option>
+                                                                                     <option>{% trans "Chile" %}</option>
+                                                                                     <option>{% trans "China" %}</option>
+                                                                                     <option>{% trans "Colombia" %}</option>
+                                                                                     <option>{% trans "Comoros" %}</option>
+                                                                                     <option>{% trans "Congo, Democratic Republic of the" %}</option>
+                                                                                     <option>{% trans "Congo, Republic of the" %}</option>
+                                                                                     <option>{% trans "Costa Rica" %}</option>
+                                                                                     <option>{% trans "Cote d'Ivoire" %}</option>
+                                                                                     <option>{% trans "Croatia" %}</option>
+                                                                                     <option>{% trans "Cuba" %}</option>
+                                                                                     <option>{% trans "Cyprus" %}</option>
+                                                                                     <option>{% trans "Czech Republic" %}</option>
+                                                                                     <option>{% trans "Denmark" %}</option>
+                                                                                     <option>{% trans "Djibouti" %}</option>
+                                                                                     <option>{% trans "Dominica" %}</option>
+                                                                                     <option>{% trans "Dominican Republic" %}</option>
+                                                                                     <option>{% trans "East Timor (Timor-Leste)" %}</option>
+                                                                                     <option>{% trans "Ecuador" %}</option>
+                                                                                     <option>{% trans "Egypt" %}</option>
+                                                                                     <option>{% trans "El Salvador" %}</option>
+                                                                                     <option>{% trans "Equatorial Guinea" %}</option>
+                                                                                     <option>{% trans "Eritrea" %}</option>
+                                                                                     <option>{% trans "Estonia" %}</option>
+                                                                                     <option>{% trans "Eswatini" %}</option>
+                                                                                     <option>{% trans "Ethiopia" %}</option>
+                                                                                     <option>{% trans "Fiji" %}</option>
+                                                                                     <option>{% trans "Finland" %}</option>
+                                                                                     <option>{% trans "France" %}</option>
+                                                                                     <option>{% trans "Gabon" %}</option>
+                                                                                     <option>{% trans "Gambia" %}</option>
+                                                                                     <option>{% trans "Georgia" %}</option>
+                                                                                     <option>{% trans "Germany" %}</option>
+                                                                                     <option>{% trans "Ghana" %}</option>
+                                                                                     <option>{% trans "Greece" %}</option>
+                                                                                     <option>{% trans "Grenada" %}</option>
+                                                                                     <option>{% trans "Guatemala" %}</option>
+                                                                                     <option>{% trans "Guinea" %}</option>
+                                                                                     <option>{% trans "Guinea-Bissau" %}</option>
+                                                                                     <option>{% trans "Guyana" %}</option>
+                                                                                     <option>{% trans "Haiti" %}</option>
+                                                                                     <option>{% trans "Honduras" %}</option>
+                                                                                     <option>{% trans "Hungary" %}</option>
+                                                                                     <option>{% trans "Iceland" %}</option>
+                                                                                     <option>{% trans "India" %}</option>
+                                                                                     <option>{% trans "Indonesia" %}</option>
+                                                                                     <option>{% trans "Iran" %}</option>
+                                                                                     <option>{% trans "Iraq" %}</option>
+                                                                                     <option>{% trans "Ireland" %}</option>
+                                                                                     <option>{% trans "Israel" %}</option>
+                                                                                     <option>{% trans "Italy" %}</option>
+                                                                                     <option>{% trans "Jamaica" %}</option>
+                                                                                     <option>{% trans "Japan" %}</option>
+                                                                                     <option>{% trans "Jordan" %}</option>
+                                                                                     <option>{% trans "Kazakhstan" %}</option>
+                                                                                     <option>{% trans "Kenya" %}</option>
+                                                                                     <option>{% trans "Kiribati" %}</option>
+                                                                                     <option>{% trans "Korea, North" %}</option>
+                                                                                     <option>{% trans "Korea, South" %}</option>
+                                                                                     <option>{% trans "Kosovo" %}</option>
+                                                                                     <option>{% trans "Kuwait" %}</option>
+                                                                                     <option>{% trans "Kyrgyzstan" %}</option>
+                                                                                     <option>{% trans "Laos" %}</option>
+                                                                                     <option>{% trans "Latvia" %}</option>
+                                                                                     <option>{% trans "Lebanon" %}</option>
+                                                                                     <option>{% trans "Lesotho" %}</option>
+                                                                                     <option>{% trans "Liberia" %}</option>
+                                                                                     <option>{% trans "Libya" %}</option>
+                                                                                     <option>{% trans "Liechtenstein" %}</option>
+                                                                                     <option>{% trans "Lithuania" %}</option>
+                                                                                     <option>{% trans "Luxembourg" %}</option>
+                                                                                     <option>{% trans "Madagascar" %}</option>
+    
                                                                                 </select>
                                                                             </div>
                                 
                                                                             <div class="col-md-6 col-12 mb-20">
-                                                                                <label>Town/City*</label>
+                                                                                <label>{% trans "Town/City" %}*</label>
                                                                                 <input type="text" placeholder="Town/City">
                                                                             </div>
                                 
                                                                             <div class="col-md-6 col-12 mb-20">
-                                                                                <label>State*</label>
+                                                                                <label>{% trans "State" %}*</label>
                                                                                 <input type="text" placeholder="State">
                                                                             </div>
                                 
                                                                             <div class="col-md-6 col-12 mb-20">
-                                                                                <label>Zip Code*</label>
+                                                                                <label>{% trans "Zip Code" %}*</label>
                                                                                 <input type="text" placeholder="Zip Code">
                                                                             </div>
                                 
@@ -318,7 +419,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button class="btn btn-primary btn-hover-secondary btn-width-100 ">DONATE</button>
+                                        <button class="btn btn-primary btn-hover-secondary btn-width-100 ">{% trans "DONATE" %}</button>
                                     </div>
 
                                    
@@ -355,7 +456,7 @@
                 <!--  media Bar Start -->
                 <div class="row justify-content-between align-items-center max-mb-20">
                     <div class="col-sm-auto col-12 max-mb-10">
-                        <p class="result-count">Latest Media</p>
+                        <p class="result-count">{% trans "Latest Media" %}</p>
                     </div>
     
                 </div>
@@ -406,7 +507,7 @@
     
                 <div class="row max-mt-50">
                     <div class="col text-center">
-                        <a href="{% url 'media:media' %}" class="btn btn-outline-primary load-more-btn">Read More <i
+                        <a href="{% url 'media:media' %}" class="btn btn-outline-primary load-more-btn">{% trans "Read More" %} <i
                                 class="far fa-long-arrow-right ms-3"></i></a>
                     </div>
                 </div>

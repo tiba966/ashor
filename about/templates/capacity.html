@@ -74,7 +74,8 @@
                         <!-- Section Title Start -->
                         <div class="section-title" data-aos="fade-up" style="padding-top: 50px;">
                             <p>{% if LANGUAGE_CODE == 'en' %}{{item.capacity_desc}}
-                                {% elif LANGUAGE_CODE == 'ar' %}{{item.capacity_desc_ar}}{% endif %}
+                                {% elif LANGUAGE_CODE == 'ar' %}{{item.capacity_desc_ar}}
+                                {% elif LANGUAGE_CODE == 'de' %}{{item.capacity_desc_dr}}{% endif %}
                             </p>
                             {% endfor %}
 
@@ -83,7 +84,8 @@
 
 
                                 <li>{% if LANGUAGE_CODE == 'en' %}{{item.capacity_list}}
-                                    {% elif LANGUAGE_CODE == 'ar' %}{{item.capacity_list_ar}}{% endif %}.
+                                    {% elif LANGUAGE_CODE == 'ar' %}{{item.capacity_list_ar}}
+                                    {% elif LANGUAGE_CODE == 'de' %}{{item.capacity_list_dr}}{% endif %}.
                                 </li>
                                
                                 {% endfor %}
@@ -91,7 +93,8 @@
                             </ol>        {% for item in data %}
 
                             <p>{% if LANGUAGE_CODE == 'en' %}{{item.capacity_desc1}}
-                                {% elif LANGUAGE_CODE == 'ar' %}{{item.capacity_desc1_ar}}{% endif %}
+                                {% elif LANGUAGE_CODE == 'ar' %}{{item.capacity_desc1_ar}}
+                                {% elif LANGUAGE_CODE == 'de' %}{{item.capacity_desc1_dr}}{% endif %}
                             </p>  {% endfor %}
                         </div>
                         <!-- Section Title End -->

@@ -14,10 +14,10 @@
     <div class="page-breadcrumb">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="{% url 'home:index' %}">Home</a></li>
-                <li><a href="{% url 'get_involved:get_involved' %}">Get involved</a></li>
+                <li><a href="{% url 'home:index' %}">{% trans "Home" %}</a></li>
+                <li><a href="{% url 'get_involved:get_involved' %}">{% trans "Get involved" %}</a></li>
 
-                <li class="current">Volunteers</li>
+                <li class="current">{% trans "Volunteers" %}</li>
 
             </ul>
         </div>
@@ -80,10 +80,9 @@
 
                         <!-- Section Title Start -->
                         <div class="section-title text-left" data-aos="fade-up">
-                            <span class="sub-title">Join us now!
+                            <span class="sub-title">{% trans "Join us now!" %}
                             </span>
-                            <p>Become a vital part of Ashor Iraqi Foundation for Relief and Development & make a real
-                                difference to lives of many!
+                            <p>{% trans "Become a vital part of Ashor Iraqi Foundation for Relief and Development & make a real  difference to lives of many!" %}
                             </p>
                         </div>
 
@@ -119,41 +118,41 @@
                                                 <div class="row">
 
                                                     <div class="col-md-6 col-12 mb-20">
-                                                        <label>Full Name*</label>
+                                                        <label>{% trans "Full Name" %}*</label>
                                                         <input type="text" placeholder="Full Name">
                                                     </div>
 
                                                     <div class="col-md-6 col-12 mb-20">
-                                                        <label>Gender*</label>
+                                                        <label>{% trans "Gender" %}*</label>
                                                         <select>
-                                                            <option>Male</option>
-                                                            <option>Femel</option>
+                                                            <option>{% trans "Male" %}</option>
+                                                            <option>{% trans "Femel" %}</option>
                                                         </select>
                                                     </div>
 
                                                     <div class="col-md-6 col-12 mb-20">
-                                                        <label>Email Address*</label>
+                                                        <label>{% trans "Email Address" %}*</label>
                                                         <input type="email" placeholder="Email Address">
                                                     </div>
 
                                                     <div class="col-md-6 col-12 mb-20">
-                                                        <label>Phone no*</label>
+                                                        <label>{% trans "Phone no" %}*</label>
                                                         <input type="text" placeholder="Phone number">
                                                     </div>
 
                                                     <div class="col-6 mb-20">
-                                                        <label>Address*</label>
+                                                        <label>{% trans "Address" %}*</label>
                                                         <input type="text" placeholder="Address">
                                                     </div>
 
 
 
                                                     <div class="col-md-6 col-12 mb-20">
-                                                        <label>Goverment*</label>
+                                                        <label>{% trans "Goverment" %}*</label>
                                                         <select>
-                                                            <option>Mousl</option>
-                                                            <option>Erbil</option>
-                                                            <option>Bahgdad</option>
+                                                            <option>{% trans "Mousl" %}</option>
+                                                            <option>{% trans "Erbil" %}</option>
+                                                            <option>{% trans "Bahgdad" %}</option>
                                                         </select>
                                                     </div>
 
@@ -161,29 +160,27 @@
 
 
                                                     <div class="col-8 mb-20">
-                                                        <label for="">Select Language</label>
+                                                        <label for="">{% trans "Select Language" %}</label>
 
                                                         <div class="check-box">
                                                             <input type="checkbox" id="English">
-                                                            <label for="English">English</label>
+                                                            <label for="English">{% trans "English" %}</label>
                                                         </div>
                                                         <div class="check-box">
                                                             <input type="checkbox" id="Arabic">
-                                                            <label for="Arabic">Arabic</label>
+                                                            <label for="Arabic">{% trans "Arabic" %}</label>
                                                         </div>
                                                         <div class="check-box">
                                                             <input type="checkbox" id="Kurdish">
-                                                            <label for="Kurdish">Kurdish</label>
+                                                            <label for="Kurdish">{% trans "Kurdish" %}</label>
                                                         </div>
 
                                                     </div>
                                                     <div class="col-10 mb-20">
-                                                        <label for="">DOCUMENTS</label>
+                                                        <label for="">{% trans "DOCUMENTS" %}</label>
 
                                                         <div class="form-group form-group ">
-                                                            <div class="field-label">Please upload your CV, recent
-                                                                certificates as well as a brief cover letter (in total
-                                                                max. 20 MB).
+                                                            <div class="field-label">{% trans "Please upload your CV, recent certificates as well as a brief cover letter (in total max. 20 MB)." %}
                                                             </div>
                                                             <div class="mb-3">
                                                                 <input class="form-control" type="file"
@@ -198,14 +195,13 @@
 
 
                                                     <div class="col-12 mb-20">
-                                                        <label>Cover Letter*</label>
+                                                        <label>{% trans "Cover Letter" %}*</label>
 
                                                         <textarea name="message" placeholder="Cover Letter"></textarea>
                                                     </div>
                                                     <div class="col-12 text-center max-mb-30">
                                                         <button
-                                                            class="btn btn-primary btn-hover-secondary btn-width-100 ">JOIN
-                                                            NOW</button>
+                                                            class="btn btn-primary btn-hover-secondary btn-width-100 ">{% trans "JOIN NOW" %}</button>
                                                     </div>
                                                 </div>
 
@@ -252,7 +248,7 @@
             <!--  media Bar Start -->
             <div class="row justify-content-between align-items-center max-mb-20">
                 <div class="col-sm-auto col-12 max-mb-10">
-                    <p class="result-count">Latest Media</p>
+                    <p class="result-count">{% trans "Latest Media" %}</p>
                 </div>
 
             </div>
@@ -303,7 +299,7 @@
 
             <div class="row max-mt-50">
                 <div class="col text-center">
-                    <a href="{% url 'media:media' %}" class="btn btn-outline-primary load-more-btn">Read More <i
+                    <a href="{% url 'media:media' %}" class="btn btn-outline-primary load-more-btn">{% trans "Read More" %} <i
                             class="far fa-long-arrow-right ms-3"></i></a>
                 </div>
             </div>

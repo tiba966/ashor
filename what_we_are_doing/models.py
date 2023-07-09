@@ -11,16 +11,22 @@ class WhatWeAreDoing(models.Model):
         max_length=1000, default='', blank=True, )
     text_WhatWeAreDoing_ar = models.TextField(
         max_length=1000, default='', blank=True, )
+    text_WhatWeAreDoing_dr = models.TextField(
+        max_length=1000, default='', blank=True, )
 
     text_project = models.TextField(
         max_length=1000, default='',  blank=True,)
     text_project_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    text_project_dr = models.TextField(
         max_length=1000, default='',  blank=True,)
     image_bg_whatWeAreDoing_project = models.FileField(
         validators=[validate_image_extension], upload_to='background/about/', blank=True, )
     text_themes = models.TextField(
         max_length=1000, default='',  blank=True,)
     text_themes_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    text_themes_dr = models.TextField(
         max_length=1000, default='',  blank=True,)
 
 class ThemeBackgroundImage(models.Model):
@@ -37,21 +43,27 @@ class Themes(models.Model):
         max_length=1000, default='', blank=True, )
     themes_title_ar = models.CharField(
         max_length=1000, default='', blank=True, )
-
+    themes_title_dr = models.CharField(
+        max_length=1000, default='', blank=True, )
     themes_dsc1 = models.TextField(
         max_length=1000, default='', blank=True, )
     themes_dsc1_ar = models.TextField(
+        max_length=1000, default='', blank=True, )
+    themes_dsc1_dr = models.TextField(
         max_length=1000, default='', blank=True, )
 
     themes_dsc2 = models.TextField(
         max_length=1000, default='', blank=True, )
     themes_dsc2_ar = models.TextField(
         max_length=1000, default='', blank=True, )
+    themes_dsc2_dr = models.TextField(
+        max_length=1000, default='', blank=True, )
 
 class Category(models.Model):
     ar_name = models.CharField(blank=False, null=False, max_length=100)
     en_name = models.CharField(blank=False, null=False, max_length=100)
-    
+    dr_name = models.CharField(blank=False, null=False, max_length=100)
+
     def __str__(self):
         return self.en_name
 YEAR = (
@@ -72,6 +84,8 @@ class Project(models.Model):
         max_length=1000, default='', blank=True, )
     project_name_ar = models.CharField(
         max_length=1000, default='', blank=True, )
+    project_name_dr = models.CharField(
+        max_length=1000, default='', blank=True, )
     project_date = models.DateField(default=date.today, blank=True)
     year = models.CharField(choices=YEAR, max_length=6)
 
@@ -85,11 +99,17 @@ class Project(models.Model):
         max_length=300, default='', blank=True)
     project_location_ar = models.CharField(
         max_length=300, default='', blank=True)
+    project_location_dr = models.CharField(
+        max_length=300, default='', blank=True)
     project_parteners = models.CharField(
         max_length=1000, default='', blank=True, )
     project_parteners_ar = models.CharField(
         max_length=1000, default='', blank=True, )
+    project_parteners_dr = models.CharField(
+        max_length=1000, default='', blank=True, )
     project_dsc1 = models.TextField(
         max_length=1000, default='', blank=True, )
     project_dsc1_ar = models.TextField(
+        max_length=1000, default='', blank=True, )
+    project_dsc1_dr = models.TextField(
         max_length=1000, default='', blank=True, )

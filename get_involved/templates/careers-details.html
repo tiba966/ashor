@@ -13,10 +13,10 @@
             <div class="page-breadcrumb">
                 <div class="container">
                     <ul class="breadcrumb">
-                        <li><a href="{% url 'home:index' %}">Home</a></li>
-                        <li><a href="{% url 'get_involved:get_involved' %}">Get involved</a></li>
+                        <li><a href="{% url 'home:index' %}">{% trans "Home" %}</a></li>
+                        <li><a href="{% url 'get_involved:get_involved' %}">{% trans "Get involved" %}</a></li>
         
-                        <li><a href="{% url 'get_involved:career_list' %}">Careers</a></li>
+                        <li><a href="{% url 'get_involved:career_list' %}">{% trans "Careers" %}</a></li>
 
                     </ul>
                 </div>
@@ -87,7 +87,7 @@
                         <div class="purchase-guide-wrapper">
 
                             <div class="content">
-                                <h3 class="title">Summary</h3>
+                                <h3 class="title">{% trans "Summary" %}</h3>
 
                                 <p>{% if LANGUAGE_CODE == 'en' %} {{item.career_summary_text}}
                                     {% elif LANGUAGE_CODE == 'ar' %} {{item.career_summary_text_ar}} {% endif %}
@@ -118,7 +118,7 @@
 
                                 </ul>
 
-                                <h3 class="title">DEINE KENNTNISSE, ERFAHRUNGEN & SKILLS
+                                <h3 class="title">{% trans "SKILLS" %}
                                 </h3>
                                 <ul>
                                     <li>{% if LANGUAGE_CODE == 'en' %} {{item.skill_1}}
@@ -141,8 +141,7 @@
 
                                 <div class="col-12 text-center max-mb-30">
                                     <a href="career-forms.html"> <button
-                                            class="btn btn-primary btn-hover-secondary btn-width-200 btn-height-60">SUBMIT
-                                            FOR THIS POSITION</button></a>
+                                            class="btn btn-primary btn-hover-secondary btn-width-200 btn-height-60">{% trans "SUBMIT FOR THIS POSITION" %}</button></a>
                                 </div>
                             </div>
                         </div>
@@ -177,7 +176,7 @@
                 <!--  media Bar Start -->
                 <div class="row justify-content-between align-items-center max-mb-20">
                     <div class="col-sm-auto col-12 max-mb-10">
-                        <p class="result-count">Latest Media</p>
+                        <p class="result-count">{% trans "Latest Media" %}</p>
                     </div>
     
                 </div>
@@ -228,7 +227,7 @@
     
                 <div class="row max-mt-50">
                     <div class="col text-center">
-                        <a href="{% url 'media:media' %}" class="btn btn-outline-primary load-more-btn">Read More <i
+                        <a href="{% url 'media:media' %}" class="btn btn-outline-primary load-more-btn">{% trans "Read More" %} <i
                                 class="far fa-long-arrow-right ms-3"></i></a>
                     </div>
                 </div>

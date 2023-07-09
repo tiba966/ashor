@@ -82,13 +82,15 @@
 
                         <p class="desc">{% trans "The Iraqi" %} <strong> {% trans "Ashor Foundation for Relief and Development" %} </strong> {% trans "was" %}
                             {% if LANGUAGE_CODE == 'en' %}{{item.textabout_desc1}}
-                            {% elif LANGUAGE_CODE == 'ar' %}{{item.textabout_desc1_ar}}{% endif %}
+                            {% elif LANGUAGE_CODE == 'ar' %}{{item.textabout_desc1_ar}}
+                            {% elif LANGUAGE_CODE == 'de' %}{{item.textabout_desc1_dr}}{% endif %}
                                                </p>
 
 
 
                         <p style="padding-bottom: 50px;">   {% if LANGUAGE_CODE == 'en' %}{{item.textabout_desc2}}
-                            {% elif LANGUAGE_CODE == 'ar' %}{{item.textabout_desc2_ar}}{% endif %}
+                            {% elif LANGUAGE_CODE == 'ar' %}{{item.textabout_desc2_ar}}
+                            {% elif LANGUAGE_CODE == 'de' %}{{item.textabout_desc2_dr}}{% endif %}
                                            
                         </p>
                     </div>
@@ -313,20 +315,24 @@
                         <div class="info">
                             <div class="media-caption-main">
                                 <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ blog.category.en_name }}
-                                    {% elif LANGUAGE_CODE == 'ar' %} {{ blog.category.ar_name }}{% endif %}</a>
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{ blog.category.ar_name }}
+                                    {% elif LANGUAGE_CODE == 'de' %} {{ blog.category.dr_name }}{% endif %}</a>
                                 <ul class="meta">
                                     <li><i class="far fa-map-marker-alt"></i> {% if LANGUAGE_CODE == 'en' %}{{ item.media_location }}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}{% endif %}</li>
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}
+                                        {% elif LANGUAGE_CODE == 'de' %} {{ item.media_location_dr }}{% endif %}</li>
                                     <li><i class="far fa-calendar"></i>{{item.date|date:'d M o'}}</li>
                                 </ul>
                                 <h3 class="title"><a href="{% url 'media:media_detail' item.id %}"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_name }}
-                                    {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name }}{% endif %}</a></h3>
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name_ar }}
+                                    {% elif LANGUAGE_CODE == 'de' %} {{ item.media_name_dr }}{% endif %}</a></h3>
                             </div>
                             <div class="media-caption-collapse">
                                
                                 <div class="desc">
                                     <p> {% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1 }}{% endif %}…</p>
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1_ar }}
+                                        {% elif LANGUAGE_CODE == 'de' %} {{ item.media_desc1_dr }}{% endif %}…</p>
                                 </div>
                             </div>
                         </div>

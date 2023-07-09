@@ -16,7 +16,8 @@ class MediaBackgroundImage(models.Model):
 class Category(models.Model):
     ar_name = models.CharField(blank=False, null=False, max_length=100)
     en_name = models.CharField(blank=False, null=False, max_length=100)
-    
+    dr_name = models.CharField(blank=False, null=False, max_length=100)
+
     def __str__(self):
         return self.en_name
 
@@ -31,9 +32,13 @@ class MediaDetail(models.Model):
         max_length=300, default='', blank=True)
     media_location_ar = models.CharField(
         max_length=300, default='', blank=True)
+    media_location_dr = models.CharField(
+        max_length=300, default='', blank=True)
     media_name = models.CharField(
         max_length=300, default='', blank=True)
     media_name_ar = models.CharField(
+        max_length=300, default='', blank=True)
+    media_name_dr = models.CharField(
         max_length=300, default='', blank=True)
     category = models.ForeignKey(
         'Category',
@@ -45,15 +50,21 @@ class MediaDetail(models.Model):
         max_length=1000, default='', blank=True)
     media_desc1_ar = models.TextField(
         max_length=1000, default='', blank=True)
+    media_desc1_dr = models.TextField(
+        max_length=1000, default='', blank=True)
 
     media_desc2 = models.TextField(
         max_length=1000, default='', blank=True)
     media_desc2_ar = models.TextField(
         max_length=1000, default='', blank=True)
+    media_desc2_dr = models.TextField(
+        max_length=1000, default='', blank=True)
 
     media_desc3 = models.TextField(
         max_length=1000, default='', blank=True)
     media_desc3_ar = models.TextField(
+        max_length=1000, default='', blank=True)
+    media_desc3_dr = models.TextField(
         max_length=1000, default='', blank=True)
     views = models.PositiveIntegerField(default=0, validators=[
             MinValueValidator(0)

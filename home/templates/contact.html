@@ -10,9 +10,9 @@
   <div class="page-breadcrumb">
       <div class="container">
           <ul class="breadcrumb">
-            <li><a href="{% url 'home:index' %}">Home</a></li>
+            <li><a href="{% url 'home:index' %}">{% trans "Home" %}</a></li>
 
-              <li class="current">Contact us</li>
+              <li class="current">{% trans "Contact us" %}</li>
 
           </ul>
       </div>
@@ -84,8 +84,8 @@
                               <i class="fal fa-map-marker-alt"></i>
                           </div>
                           <div class="info">
-                              <h4 class="title"> Address</h4>
-                              <span class="info-text"> Kirkuk - Soma city</span>
+                              <h4 class="title"> {% trans "Address" %}</h4>
+                              <span class="info-text"> {% trans "Kirkuk - Soma city" %}</span>
                           </div>
                       </div>
                       <!-- Single Contact Info End -->
@@ -97,8 +97,8 @@
                               <i class="fal fa-phone"></i>
                           </div>
                           <div class="info">
-                              <h4 class="title"> Contact</h4>
-                              <span class="info-text"> Mobile: <strong>(+964 773 1476 198) </strong> 
+                              <h4 class="title"> {% trans "Contact" %}</h4>
+                              <span class="info-text"> {% trans "Mobile" %}: <strong>(+964 773 1476 198) </strong> 
                                  
                               </span>
                           </div>
@@ -112,8 +112,8 @@
                               <i class="fal fa-map-marker-alt"></i>
                           </div>
                           <div class="info">
-                              <h4 class="title">Email</h4>
-                              <span class="info-text">  Mail: <a href="mailto:representative@aifrd.org">representative@aifrd.org</a>
+                              <h4 class="title">{% trans "Email" %}</h4>
+                              <span class="info-text">  {% trans "Mail" %}: <a href="mailto:representative@aifrd.org">representative@aifrd.org</a>
                               </span>
                           </div>
                       </div>
@@ -157,7 +157,7 @@
                                       <textarea name="message" placeholder="Message"></textarea>
                                   </div>
                                   <div class="col-12 text-center max-mb-30">
-                                      <button class="btn btn-primary btn-hover-secondary btn-width-180 btn-height-60">Submit</button>
+                                      <button class="btn btn-primary btn-hover-secondary btn-width-180 btn-height-60">{% trans "Submit" %}</button>
                                   </div>
                               </div>
                           </form>
@@ -190,7 +190,7 @@
             <!--  media Bar Start -->
             <div class="row justify-content-between align-items-center max-mb-20">
                 <div class="col-sm-auto col-12 max-mb-10">
-                    <p class="result-count">Latest Media</p>
+                    <p class="result-count">{% trans "Latest Media" %}</p>
                 </div>
 
             </div>
@@ -241,7 +241,7 @@
 
             <div class="row max-mt-50">
                 <div class="col text-center">
-                    <a href="{% url 'media:media' %}" class="btn btn-outline-primary load-more-btn">Read More <i
+                    <a href="{% url 'media:media' %}" class="btn btn-outline-primary load-more-btn">{% trans "Read More" %} <i
                             class="far fa-long-arrow-right ms-3"></i></a>
                 </div>
             </div>

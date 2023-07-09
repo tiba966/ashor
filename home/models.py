@@ -14,6 +14,8 @@ class Index(models.Model):
         max_length=1000, default='',  blank=True,)
     text_about_index_ar = models.TextField(
         max_length=1000, default='',  blank=True,)
+    text_about_index_dr = models.TextField(
+        max_length=1000, default='',  blank=True,)
 
     num_employee_index = models.CharField(
         max_length=1000, default='',  blank=True,) 
@@ -27,9 +29,13 @@ class Index(models.Model):
         max_length=1000, default='',  blank=True,)
     text_themes_index_ar = models.TextField(
         max_length=1000, default='',  blank=True,)
+    text_themes_index_dr = models.TextField(
+        max_length=1000, default='',  blank=True,)
     text_media_index = models.TextField(
         max_length=1000, default='',  blank=True,)
     text_media_index_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    text_media_index_dr = models.TextField(
         max_length=1000, default='',  blank=True,)
 
 class Slider(models.Model):
@@ -39,9 +45,13 @@ class Slider(models.Model):
         max_length=300, default='', blank=True, )
     slide_title_index_ar = models.CharField(
         max_length=300, default='', blank=True, )
+    slide_title_index_dr = models.CharField(
+        max_length=300, default='', blank=True, )
     slide_subtitle_index = models.CharField(
         max_length=300, default='', blank=True, )
     slide_subtitle_index_ar = models.CharField(
+        max_length=300, default='', blank=True, )
+    slide_subtitle_index_dr = models.CharField(
         max_length=300, default='', blank=True, )
     slide_num_index = models.CharField(
         max_length=300, default='', blank=True, )
