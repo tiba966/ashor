@@ -77,7 +77,11 @@ JOB_TYPE_DR = (
     ('3', "Praktikum"),
 )
 class CareerDetail(models.Model):
+<<<<<<< HEAD
 
+=======
+    id = models.AutoField(primary_key=True)
+>>>>>>> fix_bugs
     career_name = models.CharField(max_length=300, default='', null=True, blank=True)
     career_name_ar = models.CharField(max_length=300, default='', null=True, blank=True)
     career_name_dr = models.CharField(max_length=300, default='', null=True, blank=True)
