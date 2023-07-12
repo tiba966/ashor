@@ -36,7 +36,7 @@
 
                         <!-- Page Banner Section Start -->
                         <div class="page-banner-section section overlay section-padding"
-                            data-bg-image="./assets/images/page-banner/course-bg.jpg">
+                            data-bg-image="{% static 'home/images/projects.jpg' %}">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12">
@@ -75,17 +75,10 @@
         <div class="row max-mb-n50">
 
             <div class="offset-lg col-lg-12 col-12 max-mb-50">
-                <!-- Course Details Wrapper Start -->
                 <div class="course-details-wrapper">
-                    <div class="course-nav-tab">
-                        <ul class="nav justify-content-center">
-                            <li><a class="active" data-bs-toggle="tab" href="#pastproject">{% trans "Past project" %}</a></li>
-                            <li><a data-bs-toggle="tab" href="#currentproject">{% trans "Current project" %}</a></li>
-                    
-                        </ul>
-                    </div>
+                
                     <div class="tab-content">
-                        <div id="pastproject" class="tab-pane fade show active">
+                        <div class="tab-pane fade show active">
                             <div class="course-overview">
                                 <div class="container">
 
@@ -96,41 +89,48 @@
                                                    
                                                     <li class="line"></li>
                                                     <li class="item animate">
-                                                        <div class="dots">
-                                                            <div class="middle-dot"></div>
-                                                        </div>
+                                                      
                     
                                                         <div class="row">
-                                                            
+                                                            {% for project in data %}
+
                                                             <div class="col-lg-6 timeline-col left timeline-feature">
                                                                 <div class="inner">
                                                                     <div class="title-wrap">
-                                                                        <h5 class="title">2021</h5>
+                                                                        <h5 class="title"></h5>
                                                                     </div>
                     
-                                                                    <div class="timeline-image">
+                                                                    <div class="timeline-image" style="padding-top:80px">
                                                                         <img
-                                                                            src="assets/images/courses/360/course-1.jpg" alt="Course Image">
+                                                                            src="{{ project.project_image.url}}" alt="project Image">
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-lg-6 timeline-col right timeline-info">
-                                                                <div class="inner">
+                                                            <div class="col-lg-6 timeline-col right timeline-info" >
+                                                                <div class="inner" >
                                                                     <div class="timeline-content-wrap">
                                                                         <div class="timeline-content-body">
                                                                             <div class="blog">
                                                                                 <div class="thumbnail">
-                                                                                    <h3 class="title">Organization and delivery of vocational
-                                                                                        training in civil works for unemployed people
+                                                                                    <h3 class="title" style="font-size: 22px;padding-bottom: 0px;padding-top: 20px;"> {% if LANGUAGE_CODE == 'en' %}{{project.project_name}}
+                                                                                        {% elif LANGUAGE_CODE == 'ar' %}{{project.project_name_ar}}
+                                                                                        {% elif LANGUAGE_CODE == 'de' %}{{project.project_name_dr}}{% endif %}
                                                                                     </h3>
                                                                                 </div>
-                                                                                <div class="info" style="padding-top: 5px;">
+                                                                                <div class="info" style="padding-top: 0px;">
                                                                                     <ul class="meta">
-                                                                                        <li><i class="far fa-calendar"></i>Apr 06, 2020</li>
-                                                                                        <li><i class="far fa-map-marker-alt"></i>Mousl, Iraq</li>
+                                                                                        <li><i class="far fa-calendar"></i>{{ project.project_date }}</li>
+                                                                                        <li><i class="far fa-map-marker-alt"></i> {% if LANGUAGE_CODE == 'en' %}{{project.project_location}}
+                                                                                            {% elif LANGUAGE_CODE == 'ar' %}{{project.project_location_ar}}
+                                                                                            {% elif LANGUAGE_CODE == 'de' %}{{project.project_location_dr}}{% endif %}</li>
+                                                                                            <li><i class="fas fa-donate"></i>
+                                                                                                {% if LANGUAGE_CODE == 'en' %}{{project.project_parteners}}
+                                                                                                {% elif LANGUAGE_CODE == 'ar' %}{{project.project_parteners_ar}}
+                                                                                                {% elif LANGUAGE_CODE == 'de' %}{{project.project_parteners_dr}}{% endif %}</li>
                                                                                     </ul>
-                                                                                    <p>Identify the fresh graduated and unemployed people in and implement small business development and vocational training for them to start the project and encourage them to create their livelihoods .
-                                                                                    </p>
+                                                                                    <p> {% if LANGUAGE_CODE == 'en' %}{{project.project_dsc1}}
+                                                                                        {% elif LANGUAGE_CODE == 'ar' %}{{project.project_dsc1_ar}}
+                                                                                        {% elif LANGUAGE_CODE == 'de' %}{{project.project_dsc1_dr}}{% endif %} </p>
                                                                                 </div>
                                                                             </div>
                                                                         
@@ -139,8 +139,10 @@
                                                                 </div>
                     
                                                             </div>
-                                                        
+                                                            {% endfor %}
+
                                                         </div>
+                                                        
                                                     </li> 
                                                 </ul>
                                             </div>
@@ -151,65 +153,7 @@
                             </div>
                         </div>
 
-                        <div id="currentproject" class="tab-pane fade">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="mx-timeline">
-                                        <ul class="mx-timeline-list mx-animation-queue">
-                                           
-                                            <li class="line"></li>
-                                            <li class="item animate">
-                                                <div class="dots">
-                                                    <div class="middle-dot"></div>
-                                                </div>
-            
-                                                <div class="row">
-                                                    
-                                                    <div class="col-lg-6 timeline-col left timeline-feature">
-                                                        <div class="inner">
-                                                            <div class="title-wrap">
-                                                                <h5 class="title">2021</h5>
-                                                            </div>
-            
-                                                            <div class="timeline-image">
-                                                                <img
-                                                                    src="assets/images/courses/360/course-1.jpg" alt="Course Image">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 timeline-col right timeline-info">
-                                                        <div class="inner">
-                                                            <div class="timeline-content-wrap">
-                                                                <div class="timeline-content-body">
-                                                                    <div class="blog">
-                                                                        <div class="thumbnail">
-                                                                            <h3 class="title">Organization and delivery of vocational
-                                                                                training in civil works for unemployed people
-                                                                            </h3>
-                                                                        </div>
-                                                                        <div class="info" style="padding-top: 5px;">
-                                                                            <ul class="meta">
-                                                                                <li><i class="far fa-calendar"></i>Apr 06, 2020</li>
-                                                                                <li><i class="far fa-map-marker-alt"></i>Mousl, Iraq</li>
-                                                                            </ul>
-                                                                            <p>Identify the fresh graduated and unemployed people in and implement small business development and vocational training for them to start the project and encourage them to create their livelihoods .
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                
-                                                                </div>
-                                                            </div>
-                                                        </div>
-            
-                                                    </div>
-                                                
-                                                </div>
-                                            </li> 
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                     
 
                      
                     </div>
@@ -265,21 +209,25 @@
                     </div>
                     <div class="info">
                         <div class="media-caption-main">
-                            <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ blog.category.en_name }}
-                                {% elif LANGUAGE_CODE == 'ar' %} {{ blog.category.ar_name }}{% endif %}</a>
+                            <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ item.category.en_name }}
+                                {% elif LANGUAGE_CODE == 'ar' %} {{ item.category.ar_name }}
+                                {% elif LANGUAGE_CODE == 'de' %} {{ item.category.dr_name }}{% endif %}</a>
                             <ul class="meta">
                                 <li><i class="far fa-map-marker-alt"></i> {% if LANGUAGE_CODE == 'en' %}{{ item.media_location }}
-                                    {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}{% endif %}</li>
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}
+                                    {% elif LANGUAGE_CODE == 'de' %} {{ item.media_location_dr }}{% endif %}</li>
                                 <li><i class="far fa-calendar"></i>{{item.date|date:'d M o'}}</li>
                             </ul>
                             <h3 class="title"><a href="{% url 'media:media_detail' item.id %}"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_name }}
-                                {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name }}{% endif %}</a></h3>
+                                {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name_ar }}
+                                {% elif LANGUAGE_CODE == 'de' %} {{ item.media_name_dr }}{% endif %}</a></h3>
                         </div>
                         <div class="media-caption-collapse">
                            
                             <div class="desc">
                                 <p> {% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
-                                    {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1 }}{% endif %}…</p>
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1_ar }}
+                                    {% elif LANGUAGE_CODE == 'de' %} {{ item.media_desc1_dr }}{% endif %}…</p>
                             </div>
                         </div>
                     </div>

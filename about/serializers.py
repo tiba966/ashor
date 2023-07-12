@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import About,Goal,CoreBgImage, Capacity,CapacityList, GrassRoot,Academics, VisionMissionValue,InternalSystemList, PartenerLogo, WhereWeWork, PartenerNetwork, InternalSystem, GoalList, Core, History
+from .models import About,Goal,CoreBgImage,Methodology, Capacity,CapacityList,MethodologyList, GrassRoot,Academics, VisionMissionValue,InternalSystemList, PartenerLogo, WhereWeWork, PartenerNetwork, InternalSystem, GoalList, Core, History
 
 
 class AboutSerializer(serializers.ModelSerializer):
@@ -7,6 +7,17 @@ class AboutSerializer(serializers.ModelSerializer):
     class Meta:
         model = About
         fields = '__all__'
+class MethodologyListSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MethodologyList
+        fields = '__all__'
+class MethodologySerialize(serializers.ModelSerializer):
+
+    class Meta:
+        model = Methodology
+        fields = '__all__'
+
 class CoreBgImageSerializer(serializers.ModelSerializer):
 
     class Meta:

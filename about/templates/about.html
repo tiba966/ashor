@@ -115,7 +115,7 @@
                     <div class="media-6">
                         <div class="thumbnail">
                             <a class="image" href="{% url 'about:history' %}">
-                                <img src="{% static 'home/images/logo/what.jpg' %}"> 
+                                <img src="{% static 'home/images/what.jpg' %}"> 
                                 <div class="media-overlay-bg"></div>
                             </a>
                         </div>
@@ -314,9 +314,9 @@
                         </div>
                         <div class="info">
                             <div class="media-caption-main">
-                                <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ blog.category.en_name }}
-                                    {% elif LANGUAGE_CODE == 'ar' %} {{ blog.category.ar_name }}
-                                    {% elif LANGUAGE_CODE == 'de' %} {{ blog.category.dr_name }}{% endif %}</a>
+                                <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ item.category.en_name }}
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{ item.category.ar_name }}
+                                    {% elif LANGUAGE_CODE == 'de' %} {{ item.category.dr_name }}{% endif %}</a>
                                 <ul class="meta">
                                     <li><i class="far fa-map-marker-alt"></i> {% if LANGUAGE_CODE == 'en' %}{{ item.media_location }}
                                         {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}

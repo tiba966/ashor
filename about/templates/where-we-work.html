@@ -77,7 +77,7 @@
                     <div class="col max-mb-60" data-aos="fade-up">
                         <div class="about-content ">
                             <span class="sub-title" style="text-align: center;">{% trans "Adress" %} <strong>1</strong></span>
-                            <h2 class="title" style="font-size: 25px;text-align: center;"> "Kirkuk <span>Soma city </span>
+                            <h2 class="title" style="font-size: 25px;text-align: center;"> Kirkuk <span>Soma city </span>
                             </h2>
                    
 
@@ -85,8 +85,57 @@
                         </div>
                     </div>
               
+                    <div class="col max-mb-60" data-aos="fade-up">
+                        <div class="about-content ">
+                            <span class="sub-title" style="text-align: center;">{% trans "Adress" %} <strong>2</strong></span>
+                            <h2 class="title" style="font-size: 25px;text-align: center;"> Erbil <span>Goverment </span>
+                            </h2>
+                   
 
 
+                        </div>
+                    </div>
+                    <div class="col max-mb-60" data-aos="fade-up">
+                        <div class="about-content ">
+                            <span class="sub-title" style="text-align: center;">{% trans "Adress" %} <strong>3</strong></span>
+                            <h2 class="title" style="font-size: 25px;text-align: center;"> Salah Al-Din <span>Goverment </span>
+                            </h2>
+                   
+
+
+                        </div>
+                    </div>
+                    <div class="col max-mb-60" data-aos="fade-up">
+                        <div class="about-content ">
+                            <span class="sub-title" style="text-align: center;">{% trans "Adress" %} <strong>4</strong></span>
+                            <h2 class="title" style="font-size: 25px;text-align: center;"> Ninewa <span>( Talafer and Mosul city) </span>
+                            </h2>
+                   
+
+
+                        </div>
+                    </div>
+                    <div class="col max-mb-60" data-aos="fade-up">
+                        <div class="about-content ">
+                            <span class="sub-title" style="text-align: center;">{% trans "Adress" %} <strong>5</strong></span>
+                            <h2 class="title" style="font-size: 25px;text-align: center;"> Anbar <span>Goverment </span>
+                            </h2>
+                   
+
+
+                        </div>
+                    </div>
+
+                    <div class="col max-mb-60" data-aos="fade-up">
+                        <div class="about-content ">
+                            <span class="sub-title" style="text-align: center;">{% trans "Adress" %} <strong>6</strong></span>
+                            <h2 class="title" style="font-size: 25px;text-align: center;"> Basra <span>Goverment </span>
+                            </h2>
+                   
+
+
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 max-mb-60" data-aos="fade-up">
                     <div class="about-content ">
@@ -129,16 +178,16 @@
     </div>
     <div class="section section-padding-bottom" style="padding-top: 50px;">
         <div class="container">
-    
+
             <!--  media Bar Start -->
             <div class="row justify-content-between align-items-center max-mb-20">
                 <div class="col-sm-auto col-12 max-mb-10">
                     <p class="result-count">{% trans "Latest Media" %}</p>
                 </div>
-    
+
             </div>
             <!-- media Top Bar End -->
-    
+
             <!-- media  Start -->
             <div class="row row-cols-xl-4 row-cols-lg-2 row-cols-md-2 row-cols-1 max-mb-n30">
                 {% for item in media  %}
@@ -153,42 +202,46 @@
                         </div>
                         <div class="info">
                             <div class="media-caption-main">
-                                <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ blog.category.en_name }}
-                                    {% elif LANGUAGE_CODE == 'ar' %} {{ blog.category.ar_name }}{% endif %}</a>
+                                <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ item.category.en_name }}
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{ item.category.ar_name }}
+                                    {% elif LANGUAGE_CODE == 'de' %} {{ item.category.dr_name }}{% endif %}</a>
                                 <ul class="meta">
                                     <li><i class="far fa-map-marker-alt"></i> {% if LANGUAGE_CODE == 'en' %}{{ item.media_location }}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}{% endif %}</li>
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}
+                                        {% elif LANGUAGE_CODE == 'de' %} {{ item.media_location_dr }}{% endif %}</li>
                                     <li><i class="far fa-calendar"></i>{{item.date|date:'d M o'}}</li>
                                 </ul>
                                 <h3 class="title"><a href="{% url 'media:media_detail' item.id %}"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_name }}
-                                    {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name }}{% endif %}</a></h3>
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name_ar }}
+                                    {% elif LANGUAGE_CODE == 'de' %} {{ item.media_name_dr }}{% endif %}</a></h3>
                             </div>
                             <div class="media-caption-collapse">
                                
                                 <div class="desc">
                                     <p> {% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1 }}{% endif %}…</p>
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1_ar }}
+                                        {% elif LANGUAGE_CODE == 'de' %} {{ item.media_desc1_dr }}{% endif %}…</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
              
                 {% endif %} {% endfor %}
-    
-    
+
+
             </div>
             <!-- media  End -->
-    
-    
+
+
             <div class="row max-mt-50">
                 <div class="col text-center">
                     <a href="{% url 'media:media' %}" class="btn btn-outline-primary load-more-btn">{% trans "Read More" %} <i
                             class="far fa-long-arrow-right ms-3"></i></a>
                 </div>
             </div>
-    
+
         </div>
     </div>
     <!-- media Section End -->

@@ -153,7 +153,6 @@ def career_list(request):
     paginator_media = Paginator(media, 10000000000000000)
     page_number_media = request.GET.get('page')
     page_obj_media = paginator_media.get_page(page_number_media)
-
     # filters
     myfilter = CareerDetailFilter(request.GET, queryset=career_list)
     career_list = myfilter.qs

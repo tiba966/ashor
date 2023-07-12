@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-08 22:48+0300\n"
+"POT-Creation-Date: 2023-07-11 11:39+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\about\templates\about.html:15 .\home\templates\base.html:348
+#: .\about\templates\about.html:15 .\home\templates\base.html:361
 msgid "HOME"
 msgstr "الرئيسية "
 
@@ -46,81 +46,79 @@ msgstr "مؤسسة آشور العراقية لألغاثة والتنمية "
 msgid "was"
 msgstr "كان"
 
-#: .\about\templates\about.html:105
+#: .\about\templates\about.html:107
 msgid "Ashor general informations"
 msgstr "معلومات عامة اشور"
 
-#: .\about\templates\about.html:123
+#: .\about\templates\about.html:125
 msgid "Ashor History"
 msgstr "Ashor History"
 
-#: .\about\templates\about.html:140 .\about\templates\goals.html:14
+#: .\about\templates\about.html:142 .\about\templates\goals.html:14
 msgid "Goals"
 msgstr "الأهداف"
 
-#: .\about\templates\about.html:160 .\about\templates\vission-mission.html:15
+#: .\about\templates\about.html:162 .\about\templates\vission-mission.html:15
 msgid "Vission & Mission"
 msgstr "الرؤية والرسالة"
 
-#: .\about\templates\about.html:181
+#: .\about\templates\about.html:183
 msgid "Our People"
 msgstr "شعبنا"
 
-#: .\about\templates\about.html:200
+#: .\about\templates\about.html:202
 msgid "Partners & networks"
 msgstr "الشركاء والشبكات"
 
-#: .\about\templates\about.html:221 .\about\templates\capacity.html:15
+#: .\about\templates\about.html:223 .\about\templates\capacity.html:15
 #: .\home\templates\base.html:98
 msgid "Capacity Development"
 msgstr "تنمية القدرات"
 
-#: .\about\templates\about.html:240
+#: .\about\templates\about.html:242
 msgid "Where We Work"
 msgstr "اين نعمل"
 
-#: .\about\templates\about.html:295 .\about\templates\acadimic.html:128
-#: .\about\templates\capacity.html:129 .\about\templates\core-details.html:143
-#: .\about\templates\core.html:146 .\about\templates\crass_root.html:128
-#: .\about\templates\goals.html:141 .\about\templates\history.html:133
-#: .\about\templates\internal-system.html:125
-#: .\about\templates\parteners-networks.html:191
+#: .\about\templates\about.html:297 .\about\templates\acadimic.html:129
+#: .\about\templates\capacity.html:132 .\about\templates\core-details.html:149
+#: .\about\templates\core.html:150 .\about\templates\crass_root.html:129
+#: .\about\templates\goals.html:144 .\about\templates\history.html:136
+#: .\about\templates\internal-system.html:127
+#: .\about\templates\parteners-networks.html:193
 #: .\about\templates\vission-mission.html:180
-#: .\about\templates\where-we-work.html:136
+#: .\about\templates\where-we-work.html:185
 #: .\get_involved\templates\career-forms.html:253
-#: .\get_involved\templates\career.html:161
-#: .\get_involved\templates\careers-details.html:179
-#: .\get_involved\templates\donate.html:459
-#: .\get_involved\templates\get-involved.html:220
+#: .\get_involved\templates\careers-details.html:184
+#: .\get_involved\templates\donate.html:465
+#: .\get_involved\templates\get-involved.html:223
 #: .\get_involved\templates\volunteers.html:251
 #: .\home\templates\contact.html:193
-#: .\what_we_are_doing\templates\projects.html:248
-#: .\what_we_are_doing\templates\themes-details.html:129
-#: .\what_we_are_doing\templates\themes.html:132
-#: .\what_we_are_doing\templates\what-we-are-doing.html:220
+#: .\what_we_are_doing\templates\projects.html:192
+#: .\what_we_are_doing\templates\themes-details.html:132
+#: .\what_we_are_doing\templates\themes.html:133
+#: .\what_we_are_doing\templates\what-we-are-doing.html:224
 #, fuzzy
 #| msgid "Latest Stories"
 msgid "Latest Media"
 msgstr "اخر القصص"
 
-#: .\about\templates\about.html:346 .\about\templates\acadimic.html:179
-#: .\about\templates\capacity.html:180 .\about\templates\core-details.html:194
-#: .\about\templates\core.html:197 .\about\templates\crass_root.html:179
-#: .\about\templates\goals.html:192 .\about\templates\history.html:184
-#: .\about\templates\internal-system.html:176
-#: .\about\templates\parteners-networks.html:242
+#: .\about\templates\about.html:352 .\about\templates\acadimic.html:180
+#: .\about\templates\capacity.html:183 .\about\templates\core-details.html:200
+#: .\about\templates\core.html:201 .\about\templates\crass_root.html:180
+#: .\about\templates\goals.html:195 .\about\templates\history.html:187
+#: .\about\templates\internal-system.html:178
+#: .\about\templates\parteners-networks.html:244
 #: .\about\templates\vission-mission.html:231
-#: .\about\templates\where-we-work.html:187
+#: .\about\templates\where-we-work.html:236
 #: .\get_involved\templates\career-forms.html:304
-#: .\get_involved\templates\career.html:212
-#: .\get_involved\templates\careers-details.html:230
-#: .\get_involved\templates\donate.html:510
-#: .\get_involved\templates\get-involved.html:271
+#: .\get_involved\templates\careers-details.html:235
+#: .\get_involved\templates\donate.html:516
+#: .\get_involved\templates\get-involved.html:274
 #: .\get_involved\templates\volunteers.html:302
 #: .\home\templates\contact.html:244
-#: .\what_we_are_doing\templates\projects.html:299
-#: .\what_we_are_doing\templates\themes-details.html:180
-#: .\what_we_are_doing\templates\themes.html:183
+#: .\what_we_are_doing\templates\projects.html:243
+#: .\what_we_are_doing\templates\themes-details.html:183
+#: .\what_we_are_doing\templates\themes.html:188
 msgid "Read More"
 msgstr "اقرا المزيد"
 
@@ -137,6 +135,9 @@ msgstr "اقرا المزيد"
 #: .\get_involved\templates\donate.html:15
 #: .\get_involved\templates\get-involved.html:15
 #: .\get_involved\templates\volunteers.html:17 .\home\templates\contact.html:13
+#: .\mediapage\templates\media-details.html:12
+#: .\mediapage\templates\media.html:13
+#: .\mediapage\templates\media_filter.html:13
 #: .\what_we_are_doing\templates\projects.html:15
 #: .\what_we_are_doing\templates\themes-details.html:11
 #: .\what_we_are_doing\templates\themes.html:13
@@ -145,12 +146,12 @@ msgid "Home"
 msgstr "الرئيسية"
 
 #: .\about\templates\acadimic.html:15 .\home\templates\base.html:89
-#: .\home\templates\base.html:369
+#: .\home\templates\base.html:381
 msgid "Academics"
 msgstr "أكاديميون"
 
-#: .\about\templates\core-details.html:86 .\home\templates\index.html:75
-#: .\home\templates\index.html:288
+#: .\about\templates\core-details.html:90 .\home\templates\index.html:79
+#: .\home\templates\index.html:295
 msgid "Read more"
 msgstr "اقرا المزيد"
 
@@ -178,7 +179,7 @@ msgstr "شركاء وشبكات اشور"
 msgid "Partners"
 msgstr "شركاء"
 
-#: .\about\templates\parteners-networks.html:145
+#: .\about\templates\parteners-networks.html:146
 msgid "Networks"
 msgstr "الشبكات"
 
@@ -195,12 +196,17 @@ msgid "Where we work"
 msgstr ""
 
 #: .\about\templates\where-we-work.html:79
+#: .\about\templates\where-we-work.html:90
+#: .\about\templates\where-we-work.html:100
+#: .\about\templates\where-we-work.html:110
+#: .\about\templates\where-we-work.html:120
+#: .\about\templates\where-we-work.html:131
 msgid "Adress"
 msgstr "العنوان"
 
 #: .\aifrd\settings.py:147 .\get_involved\templates\career-forms.html:168
-#: .\get_involved\templates\volunteers.html:167 .\home\templates\base.html:159
-#: .\home\templates\base.html:173
+#: .\get_involved\templates\volunteers.html:167 .\home\templates\base.html:173
+#: .\home\templates\base.html:187
 msgid "English"
 msgstr ""
 
@@ -209,8 +215,8 @@ msgstr ""
 msgid "Arabic"
 msgstr "العربية"
 
-#: .\aifrd\settings.py:149 .\home\templates\base.html:162
-#: .\home\templates\base.html:169
+#: .\aifrd\settings.py:149 .\home\templates\base.html:176
+#: .\home\templates\base.html:183
 msgid "German"
 msgstr "ألمانية"
 
@@ -262,20 +268,20 @@ msgid "Female"
 msgstr "انثى"
 
 #: .\get_involved\templates\career-forms.html:135
-#: .\get_involved\templates\donate.html:258
+#: .\get_involved\templates\donate.html:264
 #: .\get_involved\templates\volunteers.html:134
 msgid "Email Address"
 msgstr "العنوان"
 
 #: .\get_involved\templates\career-forms.html:140
-#: .\get_involved\templates\donate.html:263
+#: .\get_involved\templates\donate.html:269
 #: .\get_involved\templates\volunteers.html:139
 msgid "Phone no"
 msgstr "رقم الهاتف"
 
 #: .\get_involved\templates\career-forms.html:145
-#: .\get_involved\templates\donate.html:273
-#: .\get_involved\templates\volunteers.html:144 .\home\templates\base.html:245
+#: .\get_involved\templates\donate.html:279
+#: .\get_involved\templates\volunteers.html:144 .\home\templates\base.html:259
 #: .\home\templates\contact.html:87
 msgid "Address"
 msgstr "العنوان"
@@ -345,502 +351,502 @@ msgstr "الموقع"
 msgid "Categories"
 msgstr "اخر القصص"
 
-#: .\get_involved\templates\careers-details.html:90
+#: .\get_involved\templates\careers-details.html:91
 msgid "Summary"
 msgstr "ملخص"
 
-#: .\get_involved\templates\careers-details.html:121
+#: .\get_involved\templates\careers-details.html:128
 msgid "SKILLS"
 msgstr "مهارات"
 
-#: .\get_involved\templates\careers-details.html:144
+#: .\get_involved\templates\careers-details.html:149
 msgid "SUBMIT FOR THIS POSITION"
 msgstr "قدم لهذا المنصب"
 
 #: .\get_involved\templates\donate.html:18
-#: .\get_involved\templates\get-involved.html:161
-#: .\home\templates\index.html:259
+#: .\get_involved\templates\get-involved.html:163
+#: .\home\templates\index.html:265
 msgid "Donate"
 msgstr "تبرع الان"
 
-#: .\get_involved\templates\donate.html:149
+#: .\get_involved\templates\donate.html:155
 msgid "Please choose your amount"
 msgstr "الرجاء اختيار المبلغ الخاص بك"
 
-#: .\get_involved\templates\donate.html:186
+#: .\get_involved\templates\donate.html:192
 msgid "Other"
 msgstr "آخر"
 
-#: .\get_involved\templates\donate.html:205
+#: .\get_involved\templates\donate.html:211
 msgid "Choose a frequency"
 msgstr "اختر التردد"
 
-#: .\get_involved\templates\donate.html:212
+#: .\get_involved\templates\donate.html:218
 msgid "one time"
 msgstr "رقم الهاتف"
 
-#: .\get_involved\templates\donate.html:220
+#: .\get_involved\templates\donate.html:226
 msgid "monthly"
 msgstr "شهريا"
 
-#: .\get_involved\templates\donate.html:230
+#: .\get_involved\templates\donate.html:236
 msgid "yearly"
 msgstr "سنوي"
 
-#: .\get_involved\templates\donate.html:243
+#: .\get_involved\templates\donate.html:249
 msgid "Please fill in your contact data"
 msgstr "يرجى ملء بيانات الاتصال الخاصة بك"
 
-#: .\get_involved\templates\donate.html:248
+#: .\get_involved\templates\donate.html:254
 msgid "First Name"
 msgstr "الاسم الأول"
 
-#: .\get_involved\templates\donate.html:253
+#: .\get_involved\templates\donate.html:259
 msgid "Last Name"
 msgstr "اسم العائلة"
 
-#: .\get_involved\templates\donate.html:268
+#: .\get_involved\templates\donate.html:274
 msgid "Company Name"
 msgstr "اسم الشركة"
 
-#: .\get_involved\templates\donate.html:279
+#: .\get_involved\templates\donate.html:285
 msgid "Country"
 msgstr "دولة"
 
-#: .\get_involved\templates\donate.html:281
+#: .\get_involved\templates\donate.html:287
 msgid "Afghanistan"
 msgstr "أفغانستان"
 
-#: .\get_involved\templates\donate.html:282
+#: .\get_involved\templates\donate.html:288
 msgid "Albania"
 msgstr "ألبانيا"
 
-#: .\get_involved\templates\donate.html:283
+#: .\get_involved\templates\donate.html:289
 msgid "Algeria"
 msgstr "الجزائر"
 
-#: .\get_involved\templates\donate.html:284
+#: .\get_involved\templates\donate.html:290
 msgid "Andorra"
 msgstr "أندورا"
 
-#: .\get_involved\templates\donate.html:285
+#: .\get_involved\templates\donate.html:291
 msgid "Angola"
 msgstr "أنغولا"
 
-#: .\get_involved\templates\donate.html:286
+#: .\get_involved\templates\donate.html:292
 msgid "Antigua and Barbuda"
 msgstr "أنتيغوا وبربودا"
 
-#: .\get_involved\templates\donate.html:287
+#: .\get_involved\templates\donate.html:293
 msgid "Argentina"
 msgstr "الأرجنتين"
 
-#: .\get_involved\templates\donate.html:288
+#: .\get_involved\templates\donate.html:294
 msgid "Armenia"
 msgstr "أرمينيا"
 
-#: .\get_involved\templates\donate.html:289
+#: .\get_involved\templates\donate.html:295
 msgid "Australia"
 msgstr ""
 
-#: .\get_involved\templates\donate.html:290
+#: .\get_involved\templates\donate.html:296
 msgid "Austria"
 msgstr "أستراليا"
 
-#: .\get_involved\templates\donate.html:291
+#: .\get_involved\templates\donate.html:297
 msgid "Azerbaijan"
 msgstr "أذربيجان"
 
-#: .\get_involved\templates\donate.html:292
+#: .\get_involved\templates\donate.html:298
 msgid "Bahamas"
 msgstr "جزر البهاما"
 
-#: .\get_involved\templates\donate.html:293
+#: .\get_involved\templates\donate.html:299
 msgid "Bahrain"
 msgstr "البحرين"
 
-#: .\get_involved\templates\donate.html:294
+#: .\get_involved\templates\donate.html:300
 msgid "Bangladesh"
 msgstr "بنغلاديش"
 
-#: .\get_involved\templates\donate.html:295
+#: .\get_involved\templates\donate.html:301
 msgid "Barbados"
 msgstr "بربادوس"
 
-#: .\get_involved\templates\donate.html:296
+#: .\get_involved\templates\donate.html:302
 msgid "Belarus"
 msgstr ""
 
-#: .\get_involved\templates\donate.html:297
+#: .\get_involved\templates\donate.html:303
 msgid "Belgium"
 msgstr "بلجيكا"
 
-#: .\get_involved\templates\donate.html:298
+#: .\get_involved\templates\donate.html:304
 msgid "Belize"
 msgstr "بليز"
 
-#: .\get_involved\templates\donate.html:299
+#: .\get_involved\templates\donate.html:305
 msgid "Benin"
 msgstr "بنين"
 
-#: .\get_involved\templates\donate.html:300
+#: .\get_involved\templates\donate.html:306
 msgid "Bhutan"
 msgstr "بوتان"
 
-#: .\get_involved\templates\donate.html:301
+#: .\get_involved\templates\donate.html:307
 msgid "Bolivia"
 msgstr "بوليفيا"
 
-#: .\get_involved\templates\donate.html:302
+#: .\get_involved\templates\donate.html:308
 msgid "Bosnia and Herzegovina"
 msgstr "البوسنة والهرسك"
 
-#: .\get_involved\templates\donate.html:303
+#: .\get_involved\templates\donate.html:309
 msgid "Botswana"
 msgstr "بوتسوانا"
 
-#: .\get_involved\templates\donate.html:304
+#: .\get_involved\templates\donate.html:310
 msgid "Brazil"
 msgstr "البرازيل"
 
-#: .\get_involved\templates\donate.html:305
+#: .\get_involved\templates\donate.html:311
 msgid "Brunei"
 msgstr "بروناي"
 
-#: .\get_involved\templates\donate.html:306
+#: .\get_involved\templates\donate.html:312
 msgid "Bulgaria"
 msgstr "بلغاريا"
 
-#: .\get_involved\templates\donate.html:307
+#: .\get_involved\templates\donate.html:313
 msgid "Burkina Faso"
 msgstr "بوركينا فاسو"
 
-#: .\get_involved\templates\donate.html:308
+#: .\get_involved\templates\donate.html:314
 msgid "Burundi"
 msgstr "بوروندي"
 
-#: .\get_involved\templates\donate.html:309
+#: .\get_involved\templates\donate.html:315
 msgid "Cabo Verde"
 msgstr "كابو فيردي"
 
-#: .\get_involved\templates\donate.html:310
+#: .\get_involved\templates\donate.html:316
 msgid "Cambodia"
 msgstr "كمبوديا"
 
-#: .\get_involved\templates\donate.html:311
+#: .\get_involved\templates\donate.html:317
 msgid "Cameroon"
 msgstr "الكاميرون"
 
-#: .\get_involved\templates\donate.html:312
+#: .\get_involved\templates\donate.html:318
 msgid "Canada"
 msgstr "كندا"
 
-#: .\get_involved\templates\donate.html:313
+#: .\get_involved\templates\donate.html:319
 msgid "Central African Republic"
 msgstr "جمهورية افريقيا الوسطى"
 
-#: .\get_involved\templates\donate.html:314
+#: .\get_involved\templates\donate.html:320
 msgid "Chad"
 msgstr "تشاد"
 
-#: .\get_involved\templates\donate.html:315
+#: .\get_involved\templates\donate.html:321
 msgid "Chile"
 msgstr "تشيلي"
 
-#: .\get_involved\templates\donate.html:316
+#: .\get_involved\templates\donate.html:322
 msgid "China"
 msgstr "الصين"
 
-#: .\get_involved\templates\donate.html:317
+#: .\get_involved\templates\donate.html:323
 msgid "Colombia"
 msgstr "كولومبيا"
 
-#: .\get_involved\templates\donate.html:318
+#: .\get_involved\templates\donate.html:324
 msgid "Comoros"
 msgstr "جزر القمر"
 
-#: .\get_involved\templates\donate.html:319
+#: .\get_involved\templates\donate.html:325
 msgid "Congo, Democratic Republic of the"
 msgstr "جمهورية الكونغو الديمقراطية"
 
-#: .\get_involved\templates\donate.html:320
+#: .\get_involved\templates\donate.html:326
 msgid "Congo, Republic of the"
 msgstr "جمهورية الكونغو"
 
-#: .\get_involved\templates\donate.html:321
+#: .\get_involved\templates\donate.html:327
 msgid "Costa Rica"
 msgstr "كوستا ريكا"
 
-#: .\get_involved\templates\donate.html:322
+#: .\get_involved\templates\donate.html:328
 msgid "Cote d'Ivoire"
 msgstr "كوت ديفوار"
 
-#: .\get_involved\templates\donate.html:323
+#: .\get_involved\templates\donate.html:329
 msgid "Croatia"
 msgstr "كرواتيا"
 
-#: .\get_involved\templates\donate.html:324
+#: .\get_involved\templates\donate.html:330
 msgid "Cuba"
 msgstr "كوبا"
 
-#: .\get_involved\templates\donate.html:325
+#: .\get_involved\templates\donate.html:331
 msgid "Cyprus"
 msgstr "قبرص"
 
-#: .\get_involved\templates\donate.html:326
+#: .\get_involved\templates\donate.html:332
 msgid "Czech Republic"
 msgstr "الجمهورية التشيكية"
 
-#: .\get_involved\templates\donate.html:327
+#: .\get_involved\templates\donate.html:333
 msgid "Denmark"
 msgstr "الدنمارك"
 
-#: .\get_involved\templates\donate.html:328
+#: .\get_involved\templates\donate.html:334
 msgid "Djibouti"
 msgstr "جيبوتي"
 
-#: .\get_involved\templates\donate.html:329
+#: .\get_involved\templates\donate.html:335
 msgid "Dominica"
 msgstr "دومينيكا"
 
-#: .\get_involved\templates\donate.html:330
+#: .\get_involved\templates\donate.html:336
 msgid "Dominican Republic"
 msgstr "جمهورية الدومينيكان"
 
-#: .\get_involved\templates\donate.html:331
+#: .\get_involved\templates\donate.html:337
 msgid "East Timor (Timor-Leste)"
 msgstr "تيمور الشرقية (تيمور ليشتي)"
 
-#: .\get_involved\templates\donate.html:332
+#: .\get_involved\templates\donate.html:338
 msgid "Ecuador"
 msgstr "تيمور الشرقية (تيمور ليشتي)"
 
-#: .\get_involved\templates\donate.html:333
+#: .\get_involved\templates\donate.html:339
 msgid "Egypt"
 msgstr "مصر"
 
-#: .\get_involved\templates\donate.html:334
+#: .\get_involved\templates\donate.html:340
 msgid "El Salvador"
 msgstr "السلفادور"
 
-#: .\get_involved\templates\donate.html:335
+#: .\get_involved\templates\donate.html:341
 msgid "Equatorial Guinea"
 msgstr "غينيا الإستوائية"
 
-#: .\get_involved\templates\donate.html:336
+#: .\get_involved\templates\donate.html:342
 msgid "Eritrea"
 msgstr "إريتريا"
 
-#: .\get_involved\templates\donate.html:337
+#: .\get_involved\templates\donate.html:343
 msgid "Estonia"
 msgstr "إستونيا"
 
-#: .\get_involved\templates\donate.html:338
+#: .\get_involved\templates\donate.html:344
 msgid "Eswatini"
 msgstr ""
 
-#: .\get_involved\templates\donate.html:339
+#: .\get_involved\templates\donate.html:345
 msgid "Ethiopia"
 msgstr ""
 
-#: .\get_involved\templates\donate.html:340
+#: .\get_involved\templates\donate.html:346
 msgid "Fiji"
 msgstr ""
 
-#: .\get_involved\templates\donate.html:341
+#: .\get_involved\templates\donate.html:347
 msgid "Finland"
 msgstr "فنلندا"
 
-#: .\get_involved\templates\donate.html:342
+#: .\get_involved\templates\donate.html:348
 msgid "France"
 msgstr "فرنسا"
 
-#: .\get_involved\templates\donate.html:343
+#: .\get_involved\templates\donate.html:349
 msgid "Gabon"
 msgstr "الجابون"
 
-#: .\get_involved\templates\donate.html:344
+#: .\get_involved\templates\donate.html:350
 msgid "Gambia"
 msgstr "غامبيا"
 
-#: .\get_involved\templates\donate.html:345
+#: .\get_involved\templates\donate.html:351
 msgid "Georgia"
 msgstr "جورجيا"
 
-#: .\get_involved\templates\donate.html:346
+#: .\get_involved\templates\donate.html:352
 msgid "Germany"
 msgstr "ألمانيا"
 
-#: .\get_involved\templates\donate.html:347
+#: .\get_involved\templates\donate.html:353
 msgid "Ghana"
 msgstr "غانا"
 
-#: .\get_involved\templates\donate.html:348
+#: .\get_involved\templates\donate.html:354
 msgid "Greece"
 msgstr "اليونان"
 
-#: .\get_involved\templates\donate.html:349
+#: .\get_involved\templates\donate.html:355
 msgid "Grenada"
 msgstr "غرينادا"
 
-#: .\get_involved\templates\donate.html:350
+#: .\get_involved\templates\donate.html:356
 msgid "Guatemala"
 msgstr "غواتيمالا"
 
-#: .\get_involved\templates\donate.html:351
+#: .\get_involved\templates\donate.html:357
 msgid "Guinea"
 msgstr "غينيا"
 
-#: .\get_involved\templates\donate.html:352
+#: .\get_involved\templates\donate.html:358
 msgid "Guinea-Bissau"
 msgstr "غينيا بيساو"
 
-#: .\get_involved\templates\donate.html:353
+#: .\get_involved\templates\donate.html:359
 msgid "Guyana"
 msgstr "غيانا"
 
-#: .\get_involved\templates\donate.html:354
+#: .\get_involved\templates\donate.html:360
 msgid "Haiti"
 msgstr "هايتي"
 
-#: .\get_involved\templates\donate.html:355
+#: .\get_involved\templates\donate.html:361
 msgid "Honduras"
 msgstr "هندوراس"
 
-#: .\get_involved\templates\donate.html:356
+#: .\get_involved\templates\donate.html:362
 msgid "Hungary"
 msgstr "هنغاريا"
 
-#: .\get_involved\templates\donate.html:357
+#: .\get_involved\templates\donate.html:363
 msgid "Iceland"
 msgstr "أيسلندا"
 
-#: .\get_involved\templates\donate.html:358
+#: .\get_involved\templates\donate.html:364
 msgid "India"
 msgstr "الهند"
 
-#: .\get_involved\templates\donate.html:359
+#: .\get_involved\templates\donate.html:365
 msgid "Indonesia"
 msgstr "إندونيسيا"
 
-#: .\get_involved\templates\donate.html:360
+#: .\get_involved\templates\donate.html:366
 msgid "Iran"
 msgstr "إيران"
 
-#: .\get_involved\templates\donate.html:361
+#: .\get_involved\templates\donate.html:367
 msgid "Iraq"
 msgstr "العراق"
 
-#: .\get_involved\templates\donate.html:362
+#: .\get_involved\templates\donate.html:368
 msgid "Ireland"
 msgstr "أيرلندا"
 
-#: .\get_involved\templates\donate.html:363
+#: .\get_involved\templates\donate.html:369
 msgid "Israel"
 msgstr ""
 
-#: .\get_involved\templates\donate.html:364
+#: .\get_involved\templates\donate.html:370
 msgid "Italy"
 msgstr "إيطاليا"
 
-#: .\get_involved\templates\donate.html:365
+#: .\get_involved\templates\donate.html:371
 msgid "Jamaica"
 msgstr "جامايكا"
 
-#: .\get_involved\templates\donate.html:366
+#: .\get_involved\templates\donate.html:372
 msgid "Japan"
 msgstr "اليابان"
 
-#: .\get_involved\templates\donate.html:367
+#: .\get_involved\templates\donate.html:373
 msgid "Jordan"
 msgstr "الأردن"
 
-#: .\get_involved\templates\donate.html:368
+#: .\get_involved\templates\donate.html:374
 msgid "Kazakhstan"
 msgstr "كازاخستان"
 
-#: .\get_involved\templates\donate.html:369
+#: .\get_involved\templates\donate.html:375
 msgid "Kenya"
 msgstr "كينيا"
 
-#: .\get_involved\templates\donate.html:370
+#: .\get_involved\templates\donate.html:376
 msgid "Kiribati"
 msgstr "كيريباتي"
 
-#: .\get_involved\templates\donate.html:371
+#: .\get_involved\templates\donate.html:377
 msgid "Korea, North"
 msgstr "كوريا الشمالية"
 
-#: .\get_involved\templates\donate.html:372
+#: .\get_involved\templates\donate.html:378
 msgid "Korea, South"
 msgstr "كوريا الجنوبية"
 
-#: .\get_involved\templates\donate.html:373
+#: .\get_involved\templates\donate.html:379
 msgid "Kosovo"
 msgstr "كوسوفو"
 
-#: .\get_involved\templates\donate.html:374
+#: .\get_involved\templates\donate.html:380
 msgid "Kuwait"
 msgstr "الكويت"
 
-#: .\get_involved\templates\donate.html:375
+#: .\get_involved\templates\donate.html:381
 msgid "Kyrgyzstan"
 msgstr "قيرغيزستان"
 
-#: .\get_involved\templates\donate.html:376
+#: .\get_involved\templates\donate.html:382
 msgid "Laos"
 msgstr "لاوس"
 
-#: .\get_involved\templates\donate.html:377
+#: .\get_involved\templates\donate.html:383
 msgid "Latvia"
 msgstr "لاتفيا"
 
-#: .\get_involved\templates\donate.html:378
+#: .\get_involved\templates\donate.html:384
 msgid "Lebanon"
 msgstr "لبنان"
 
-#: .\get_involved\templates\donate.html:379
+#: .\get_involved\templates\donate.html:385
 msgid "Lesotho"
 msgstr "ليسوتو"
 
-#: .\get_involved\templates\donate.html:380
+#: .\get_involved\templates\donate.html:386
 msgid "Liberia"
 msgstr "ليبيريا"
 
-#: .\get_involved\templates\donate.html:381
+#: .\get_involved\templates\donate.html:387
 msgid "Libya"
 msgstr "ليبيا"
 
-#: .\get_involved\templates\donate.html:382
+#: .\get_involved\templates\donate.html:388
 msgid "Liechtenstein"
 msgstr "ليختنشتاين"
 
-#: .\get_involved\templates\donate.html:383
+#: .\get_involved\templates\donate.html:389
 msgid "Lithuania"
 msgstr "ليتوانيا"
 
-#: .\get_involved\templates\donate.html:384
+#: .\get_involved\templates\donate.html:390
 msgid "Luxembourg"
 msgstr "لوكسمبورغ"
 
-#: .\get_involved\templates\donate.html:385
+#: .\get_involved\templates\donate.html:391
 msgid "Madagascar"
 msgstr "مدغشقر"
 
-#: .\get_involved\templates\donate.html:391
+#: .\get_involved\templates\donate.html:397
 msgid "Town/City"
 msgstr "البلدة / المدينة"
 
-#: .\get_involved\templates\donate.html:396
+#: .\get_involved\templates\donate.html:402
 msgid "State"
 msgstr "ولاية"
 
-#: .\get_involved\templates\donate.html:401
+#: .\get_involved\templates\donate.html:407
 msgid "Zip Code"
 msgstr "الرمز البريدي"
 
-#: .\get_involved\templates\donate.html:422 .\home\templates\base.html:124
-#: .\home\templates\base.html:279 .\home\templates\base.html:405
+#: .\get_involved\templates\donate.html:428 .\home\templates\base.html:138
+#: .\home\templates\base.html:293 .\home\templates\base.html:411
 msgid "DONATE"
 msgstr "تبرع"
 
@@ -861,15 +867,21 @@ msgstr "جزء من اشور"
 msgid "Non-Governmental Organization"
 msgstr "منظمة غير الحكومية ASHUOR"
 
+#: .\get_involved\templates\get-involved.html:89
+#, fuzzy
+#| msgid "Steps to be"
+msgid "Steps"
+msgstr "خطوات لتكون"
+
 #: .\get_involved\templates\get-involved.html:114
 msgid "Career opportunities"
 msgstr "فرص عمل"
 
-#: .\get_involved\templates\get-involved.html:138
+#: .\get_involved\templates\get-involved.html:139
 msgid "Join us as Volunteers"
 msgstr "انضم إلينا كمتطوعين"
 
-#: .\get_involved\templates\volunteers.html:20 .\home\templates\index.html:113
+#: .\get_involved\templates\volunteers.html:20 .\home\templates\index.html:117
 msgid "Volunteers"
 msgstr "المتطوعين"
 
@@ -895,33 +907,34 @@ msgstr "انضم الان"
 msgid "Ashor Iraqi Foundation for Relief and Development"
 msgstr "مؤسسة آشور العراقية لألغاثة والتنمية "
 
-#: .\home\templates\base.html:72 .\home\templates\base.html:274
-#: .\home\templates\base.html:354
+#: .\home\templates\base.html:72 .\home\templates\base.html:288
+#: .\home\templates\base.html:367
 msgid "ABOUT ASHOR"
 msgstr " عن ASHUOR "
 
-#: .\home\templates\base.html:77 .\home\templates\base.html:357
+#: .\home\templates\base.html:77 .\home\templates\base.html:370
 msgid "HISTORY"
 msgstr "تاريخ"
 
-#: .\home\templates\base.html:79 .\home\templates\base.html:296
-#: .\home\templates\base.html:358
+#: .\home\templates\base.html:79 .\home\templates\base.html:310
+#: .\home\templates\base.html:371
 msgid "GOALS"
 msgstr "الأهداف"
 
-#: .\home\templates\base.html:81
+#: .\home\templates\base.html:81 .\home\templates\base.html:372
 msgid "VISSION AND MISSION"
 msgstr "الرؤية والهدف"
 
-#: .\home\templates\base.html:83 .\home\templates\base.html:298
+#: .\home\templates\base.html:83 .\home\templates\base.html:312
+#: .\home\templates\base.html:374
 msgid "OUR PEOPLE"
 msgstr "شعبنا"
 
-#: .\home\templates\base.html:88 .\home\templates\base.html:367
+#: .\home\templates\base.html:88 .\home\templates\base.html:379
 msgid "GRASS ROOT VOLUNTEER GROUPS"
 msgstr "مجموعات المتطوعين "
 
-#: .\home\templates\base.html:94 .\home\templates\base.html:299
+#: .\home\templates\base.html:94 .\home\templates\base.html:313
 msgid "PARTNERS & NETWORKS"
 msgstr "الشركاء والشبكات"
 
@@ -929,82 +942,98 @@ msgstr "الشركاء والشبكات"
 msgid "INTERNAL SYSTEM & RESOURCES"
 msgstr "النظام الداخلي والموارد"
 
-#: .\home\templates\base.html:99 .\home\templates\base.html:277
-#: .\home\templates\base.html:376
+#: .\home\templates\base.html:99 .\home\templates\base.html:291
+#: .\home\templates\base.html:386
 msgid "WHERE WE WORK"
 msgstr "من نحن"
 
-#: .\home\templates\base.html:105
+#: .\home\templates\base.html:105 .\home\templates\base.html:392
 msgid "WHAT WE ARE DOING"
 msgstr "ماذا نفعل"
 
-#: .\home\templates\base.html:109
+#: .\home\templates\base.html:109 .\home\templates\base.html:395
 msgid "OUR THEMES"
 msgstr "مواضيعنا"
 
-#: .\home\templates\base.html:111 .\home\templates\base.html:389
+#: .\home\templates\base.html:111 .\home\templates\base.html:397
 msgid "OUR PROJECTS"
 msgstr "قصصنا"
 
-#: .\home\templates\base.html:116
+#: .\home\templates\base.html:130 .\home\templates\base.html:405
 msgid "GET INVOLVED"
 msgstr "شارك"
 
-#: .\home\templates\base.html:120 .\home\templates\base.html:278
-#: .\home\templates\base.html:402
+#: .\home\templates\base.html:134 .\home\templates\base.html:292
+#: .\home\templates\base.html:409
 msgid "CAREERS"
 msgstr "الوظائف"
 
-#: .\home\templates\base.html:122
+#: .\home\templates\base.html:136 .\home\templates\base.html:410
 msgid "JOIN US AS VOLUNTEER"
 msgstr "انظم معنا كمتطوع"
 
-#: .\home\templates\base.html:128 .\home\templates\base.html:281
-#: .\home\templates\base.html:410
+#: .\home\templates\base.html:142 .\home\templates\base.html:295
+#: .\home\templates\base.html:416
 msgid "MEDIA"
 msgstr "وسائط"
 
-#: .\home\templates\base.html:146 .\home\templates\base.html:283
-#: .\home\templates\base.html:426
+#: .\home\templates\base.html:160 .\home\templates\base.html:297
+#: .\home\templates\base.html:432
 msgid "CONTACT"
 msgstr "اتصل بنا"
 
-#: .\home\templates\base.html:150 .\home\templates\base.html:430
+#: .\home\templates\base.html:164 .\home\templates\base.html:436
 msgid "LANGUAGE"
 msgstr "اللغة"
 
-#: .\home\templates\base.html:166 .\home\templates\base.html:176
+#: .\home\templates\base.html:180 .\home\templates\base.html:190
 msgid "العربية"
 msgstr "العربية"
 
-#: .\home\templates\base.html:248
+#: .\home\templates\base.html:262
 msgid "Salah Al-Den, Iraq"
 msgstr "صلاح الدين, العراق"
 
-#: .\home\templates\base.html:271
+#: .\home\templates\base.html:285
 msgid "Explore"
 msgstr "استكشف"
 
-#: .\home\templates\base.html:275 .\home\templates\index.html:224
-#: .\what_we_are_doing\templates\themes.html:97
+#: .\home\templates\base.html:289 .\home\templates\index.html:230
+#: .\what_we_are_doing\templates\themes.html:98
 msgid "THEMES"
 msgstr "المواضيع"
 
-#: .\home\templates\base.html:293
+#: .\home\templates\base.html:290
+#, fuzzy
+#| msgid "OUR PROJECTS"
+msgid "PROJECTS"
+msgstr "قصصنا"
+
+#: .\home\templates\base.html:307
 msgid "Information"
 msgstr "معلومات الوظيفة"
 
-#: .\home\templates\base.html:297
+#: .\home\templates\base.html:311
 msgid "VISSION & MISSION"
 msgstr "الرؤية والهدف"
 
-#: .\home\templates\base.html:312
+#: .\home\templates\base.html:326
 msgid "Ashor"
 msgstr "Ashor"
 
-#: .\home\templates\base.html:312
-msgid "All Rights"
+#: .\home\templates\base.html:326
+#, fuzzy
+#| msgid "All Rights"
+msgid "All Rights Reserved"
 msgstr "كل الحقوق محفوظة"
+
+#: .\home\templates\base.html:384
+msgid "PARTNERS AND NETWORKS"
+msgstr "الشركاء والشبكات"
+
+#: .\home\templates\base.html:385
+msgid "INTERNAL SYSTEM AND RESOURCES"
+msgstr "النظام الداخلي والموارد"
 
 #: .\home\templates\contact.html:15
 msgid "Contact us"
@@ -1034,89 +1063,89 @@ msgstr "بريد"
 msgid "Submit"
 msgstr "تقديم"
 
-#: .\home\templates\index.html:71
+#: .\home\templates\index.html:74
 msgid "Since"
 msgstr "2015 منذ "
 
-#: .\home\templates\index.html:72
+#: .\home\templates\index.html:75
 msgid "Iraq organization"
 msgstr "منظمة العراق"
 
-#: .\home\templates\index.html:86
+#: .\home\templates\index.html:90
 msgid "Employee"
 msgstr "موظف"
 
-#: .\home\templates\index.html:95
+#: .\home\templates\index.html:99
 #: .\what_we_are_doing\templates\projects.html:18
 msgid "Projects"
 msgstr "المشاريع"
 
-#: .\home\templates\index.html:104
+#: .\home\templates\index.html:108
 msgid "Beneficiaries"
 msgstr "المستفيدون"
 
-#: .\home\templates\index.html:198
+#: .\home\templates\index.html:202
 msgid "Our"
 msgstr "لنا"
 
-#: .\home\templates\index.html:198
-#: .\what_we_are_doing\templates\what-we-are-doing.html:201
+#: .\home\templates\index.html:202
+#: .\what_we_are_doing\templates\what-we-are-doing.html:204
 msgid "Themes"
 msgstr "ثيمات"
 
-#: .\home\templates\index.html:205
+#: .\home\templates\index.html:209
 msgid "read more"
 msgstr "اقرا المزيد"
 
-#: .\home\templates\index.html:254
+#: .\home\templates\index.html:260
 msgid "Become a vital part of"
 msgstr "كن جزءًا حيويًا من"
 
-#: .\home\templates\index.html:254
+#: .\home\templates\index.html:260
 msgid "Ashuor Iraqi Foundation for Relief and Development"
 msgstr "مؤسسة آشور العراقية لألغاثة والتنمية "
 
-#: .\home\templates\index.html:255
-#| msgid ""
-#| "Become a vital part of ASHUOR & make a real difference to lives of many!"
+#: .\home\templates\index.html:261
 msgid "make a real difference to lives of many!"
 msgstr ""
 "كن جزءًا حيويًا من مؤسسة أشور العراقية للإغاثة والتنمية وأحدث فرقًا حقيقيًا في "
 "حياة الكثيرين!"
 
-#: .\home\templates\index.html:261
+#: .\home\templates\index.html:267
 msgid "join us as volunteer"
 msgstr "انضم إلينا كمتطوع"
 
-#: .\home\templates\index.html:281
+#: .\home\templates\index.html:287
 msgid "READ FOR MORE insights"
 msgstr "اقرأ لمزيد من الأفكار"
 
-#: .\home\templates\index.html:282 .\mediapage\templates\media.html:94
+#: .\home\templates\index.html:288 .\mediapage\templates\media.html:93
 #: .\mediapage\templates\media_filter.html:90
 msgid "Latest"
 msgstr "اخر القصص"
 
-#: .\home\templates\index.html:282
+#: .\home\templates\index.html:288 .\mediapage\templates\media-details.html:14
+#: .\mediapage\templates\media.html:14
+#: .\mediapage\templates\media_filter.html:15
 msgid "Media"
 msgstr "وسائط"
 
-#: .\mediapage\templates\media.html:81
+#: .\mediapage\templates\media.html:80
 #: .\mediapage\templates\media_filter.html:77
 msgid "We found"
 msgstr "وجدنا"
 
-#: .\mediapage\templates\media.html:81
+#: .\mediapage\templates\media.html:80
 #: .\mediapage\templates\media_filter.html:77
 msgid "blogs available for you"
 msgstr "المدونات المتاحة لك"
 
-#: .\mediapage\templates\media.html:92
+#: .\mediapage\templates\media.html:91
 #: .\mediapage\templates\media_filter.html:88
 msgid "Default"
 msgstr "افتراضي"
 
-#: .\mediapage\templates\media.html:93
+#: .\mediapage\templates\media.html:92
 #: .\mediapage\templates\media_filter.html:89
 msgid "Popularity"
 msgstr "شعبية"
@@ -1127,14 +1156,6 @@ msgstr "شعبية"
 msgid "What we are doing"
 msgstr "ماذا نفعل"
 
-#: .\what_we_are_doing\templates\projects.html:82
-msgid "Past project"
-msgstr "المشاريع السابق"
-
-#: .\what_we_are_doing\templates\projects.html:83
-msgid "Current project"
-msgstr "المشاريع الحالي"
-
 #: .\what_we_are_doing\templates\themes-details.html:14
 #: .\what_we_are_doing\templates\themes.html:16
 msgid "Ashor themes"
@@ -1144,42 +1165,50 @@ msgstr "مواضيع اشور"
 msgid "What We Are Doing"
 msgstr "ماذا نفعل"
 
-#: .\what_we_are_doing\templates\what-we-are-doing.html:98
+#: .\what_we_are_doing\templates\what-we-are-doing.html:100
 msgid "Project"
 msgstr "مشروع"
 
-#: .\what_we_are_doing\templates\what-we-are-doing.html:105
+#: .\what_we_are_doing\templates\what-we-are-doing.html:108
 msgid "LEARN MORE"
 msgstr "اقرا المزيد"
 
-#: .\what_we_are_doing\templates\what-we-are-doing.html:153
+#: .\what_we_are_doing\templates\what-we-are-doing.html:156
 msgid ""
 "A complex process of constructively changing relationships, attitudes,"
 "behaviours,interests and discourses in violence-prone conflict settings. "
 "Importantly,conflict."
 msgstr ""
-#: .\what_we_are_doing\templates\what-we-are-doing.html:158
+
+#: .\what_we_are_doing\templates\what-we-are-doing.html:161
 msgid "Economic Development and Resources Diversification"
 msgstr "التنمية الاقتصادية وتنويع الموارد"
 
-#: .\what_we_are_doing\templates\what-we-are-doing.html:171
+#: .\what_we_are_doing\templates\what-we-are-doing.html:174
 msgid "Gender Equality and Mainstreaming"
 msgstr "المساواة بين الجنسين والتعميم"
 
-#: .\what_we_are_doing\templates\what-we-are-doing.html:181
+#: .\what_we_are_doing\templates\what-we-are-doing.html:184
 msgid ""
 "A complex process of constructively changing relationships, attitudes, "
 "behaviours, interests and discourses"
-msgstr "عملية معقدة لتغيير العلاقات والمواقف بشكل بناء "
-"السلوكيات والاهتمامات والخطابات"
+msgstr ""
+"عملية معقدة لتغيير العلاقات والمواقف بشكل بناء السلوكيات والاهتمامات "
+"والخطابات"
 
-#: .\what_we_are_doing\templates\what-we-are-doing.html:186
+#: .\what_we_are_doing\templates\what-we-are-doing.html:189
 msgid "Gender Equality"
 msgstr "المساواة بين الجنسين"
 
-#: .\what_we_are_doing\templates\what-we-are-doing.html:207
+#: .\what_we_are_doing\templates\what-we-are-doing.html:211
 msgid "READ MORE"
 msgstr "اقرا المزيد"
+
+#~ msgid "Past project"
+#~ msgstr "المشاريع السابق"
+
+#~ msgid "Current project"
+#~ msgstr "المشاريع الحالي"
 
 #~ msgid "BLOGS"
 #~ msgstr "مدونتنا"

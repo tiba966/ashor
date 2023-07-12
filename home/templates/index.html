@@ -29,13 +29,16 @@
                                 <div class="banner-slider-content-2 left">
                                     <h3>
                                         <span class="number">{% if LANGUAGE_CODE == 'en' %}{{slider.slide_num_index}}
-                                            {% elif LANGUAGE_CODE == 'ar' %}{{slider.slide_num_index_ar}}{% endif %}</span>
+                                            {% elif LANGUAGE_CODE == 'ar' %}{{slider.slide_num_index_ar}}
+                                            {% elif LANGUAGE_CODE == 'de' %}{{slider.slide_num_index_dr}}{% endif %}</span>
                                         <span class="line"></span>
                                         {% if LANGUAGE_CODE == 'en' %}{{slider.slide_title_index}}
-                                        {% elif LANGUAGE_CODE == 'ar' %}{{slider.slide_title_index_ar}}{% endif %}
+                                        {% elif LANGUAGE_CODE == 'ar' %}{{slider.slide_title_index_ar}}
+                                        {% elif LANGUAGE_CODE == 'de' %}{{slider.slide_title_index_dr}}{% endif %}
                                     </h3>
                                     <p>{% if LANGUAGE_CODE == 'en' %}{{slider.slide_dsc_index}}
-                                        {% elif LANGUAGE_CODE == 'ar' %}{{slider.slide_dsc_index_ar}}{% endif %}</p>
+                                        {% elif LANGUAGE_CODE == 'ar' %}{{slider.slide_dsc_index_ar}}
+                                        {% elif LANGUAGE_CODE == 'de' %}{{slider.slide_dsc_index_dr}}{% endif %}</p>
                                 </div>
                                 <!--Banner Slider Content end-->
 
@@ -71,7 +74,8 @@
                     <span class="sub-title">{% trans "Since" %} <strong>2018</strong></span>
                     <h2 class="title">Ashor <span>{% trans "Iraq organization" %} </span> </h2>
                     <p>{% if LANGUAGE_CODE == 'en' %}{{i.text_about_index}}
-                        {% elif LANGUAGE_CODE == 'ar' %}{{i.text_about_index_ar}}{% endif %}</p>
+                        {% elif LANGUAGE_CODE == 'ar' %}{{i.text_about_index_ar}}
+                        {% elif LANGUAGE_CODE == 'de' %}{{i.text_about_index_dr}}{% endif %}</p>
                     <a class="link link-lg" href="{% url 'about:about' %}"><mark>{% trans "Read more" %} <i
                                 class="far fa-long-arrow-right"></i></mark></a>
                 </div>
@@ -199,7 +203,7 @@
                     {% for i in data %}
 
                     <p>{% if LANGUAGE_CODE == 'en' %}{{i.text_themes_index}}
-                        {% elif LANGUAGE_CODE == 'ar' %}{{i.text_themes_index_ar}}{% endif %}</p>
+                        {% elif LANGUAGE_CODE == 'ar' %}{{i.text_themes_index_ar}} {% elif LANGUAGE_CODE == 'de' %}{{i.text_themes_index_dr}}{% endif %}</p>
                         {% endfor %}
 
                     <a class="link link-lg" href="{% url 'what_we_are_doing:themes' %}"> <mark>{% trans "read more" %} <i
@@ -217,7 +221,8 @@
                     </div>
                     <div class="content">
                         <h3 class="title"> {% if LANGUAGE_CODE == 'en' %}{{theme.themes_title}}
-                            {% elif LANGUAGE_CODE == 'ar' %}{{theme.themes_title_ar}}{% endif %}
+                            {% elif LANGUAGE_CODE == 'ar' %}{{theme.themes_title_ar}}
+                            {% elif LANGUAGE_CODE == 'de' %}{{theme.themes_title_dr}}{% endif %}
                       </h3>
                         <div class="desc">
 
@@ -284,7 +289,8 @@
                     {% for i in data %}
 
                     <p>{% if LANGUAGE_CODE == 'en' %}{{i.text_media_index}}
-                        {% elif LANGUAGE_CODE == 'ar' %}{{i.text_media_index_ar}}{% endif %}</p>
+                        {% elif LANGUAGE_CODE == 'ar' %}{{i.text_media_index_ar}}
+                        {% elif LANGUAGE_CODE == 'de' %}{{i.text_media_index_dr}}{% endif %}</p>
                         {% endfor %}
                     <a class="link link-lg" href="{% url 'media:media' %}"><mark>{% trans "Read more" %} <i
                                 class="far fa-long-arrow-right"></i></mark></a>

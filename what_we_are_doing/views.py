@@ -11,8 +11,7 @@ from what_we_are_doing.models import WhatWeAreDoing, Themes, Project, ThemeBackg
 from django.core.mail import send_mail,  EmailMessage
 from mediapage.models import MediaDetail
 from django.shortcuts import get_object_or_404, render
-
-from .filters import ThemesDetailFilter
+from .filters import ThemesDetailFilter, ProjectDetailFilter
 
 
 renderer_classes = (JSONRenderer, TemplateHTMLRenderer,)
@@ -102,8 +101,16 @@ def theme_detail(request, theme_id):
 def project(request):
     """Renders the create what_we_are_doing page."""
     assert isinstance(request, HttpRequest)
-    queryset = Project.objects.all()
-    serializer_class = ProjectSerializer(queryset, many=True)
+ 
+    order = request.GET.get("order", None)
+    if order == "popularity":
+        project = Project.objects.order_by("-views")
+    elif order == "latest":
+        project = Project.objects.all().order_by("-date")
+    else:
+        project = Project.objects.all()
+    serializer_class = ProjectDetailFilter(request.GET, queryset=project).qs
+
     media = MediaDetail.objects.all()
 
     # Show many contacts per page for stories
@@ -113,7 +120,7 @@ def project(request):
 
     return render(request, 'projects.html',
         {
-            'data': serializer_class.data,
+            'data': serializer_class,
         'media' : page_obj_media
         }
         )

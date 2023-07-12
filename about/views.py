@@ -3,8 +3,8 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from rest_framework import generics, permissions
 from mediapage.models import MediaDetail
-from .models import About,Goal,Academics,CoreBgImage, GrassRoot,Capacity, CapacityList, VisionMissionValue,WhereWeWork, InternalSystemList, Goal,PartenerLogo, PartenerNetwork, InternalSystem, GoalList, Core, History
-from .serializers import AboutSerializer,CoreBgImageSerializer,GoalSerializer,CapacityListSerializer, CapacitySerializer, AcademicsSerializer, GrassRootSerializer, WhereWeWorkSerializer, InternalSystemListSerializer, VisionMissionValueSerializer, PartenerNetworkSerializer, InternalSystemSerializer, GoalListSerializer, CoreSerializer, HistorySerializer
+from .models import About,Goal,Academics,CoreBgImage,MethodologyList, GrassRoot,Capacity,Methodology, CapacityList, VisionMissionValue,WhereWeWork, InternalSystemList, Goal,PartenerLogo, PartenerNetwork, InternalSystem, GoalList, Core, History
+from .serializers import AboutSerializer,CoreBgImageSerializer,MethodologyListSerializer, GoalSerializer,MethodologySerialize, CapacityListSerializer, CapacitySerializer, AcademicsSerializer, GrassRootSerializer, WhereWeWorkSerializer, InternalSystemListSerializer, VisionMissionValueSerializer, PartenerNetworkSerializer, InternalSystemSerializer, GoalListSerializer, CoreSerializer, HistorySerializer
 from django.http import HttpRequest
 from rest_framework.renderers import JSONRenderer, TemplateHTMLRenderer
 from django.core.paginator import Paginator
@@ -264,3 +264,28 @@ def core_detail(request, id):
     context = {'core': core_detail,
         'media' : page_obj_media}
     return render(request, 'core-details.html', context)
+
+
+def methodology(request):
+    assert isinstance(request, HttpRequest)
+    queryset = Methodology.objects.all()
+    serializer_class = MethodologySerialize(queryset, many=True)
+    media = MediaDetail.objects.all()
+
+    # Show many contacts per page for stories
+    paginator_media = Paginator(media, 10000000000000000)
+    page_number_media = request.GET.get('page')
+    page_obj_media = paginator_media.get_page(page_number_media)
+
+    # Show many contacts per page for stories
+    methodology_list = MethodologyList.objects.all()
+    context = {
+        'data': serializer_class.data,
+        'methodology_list': methodology_list,
+        'media' : page_obj_media,
+
+       
+    }
+    return render(request, 'methodology.html', context)
+
+

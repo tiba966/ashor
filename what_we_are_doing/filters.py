@@ -1,5 +1,5 @@
 import django_filters
-from .models import Themes
+from .models import Themes, Project
 
 
 class ThemesDetailFilter(django_filters.FilterSet):
@@ -16,3 +16,13 @@ class ThemesDetailFilter(django_filters.FilterSet):
             'themes_details_image',
 
         ]
+
+
+class ProjectDetailFilter(django_filters.FilterSet):
+    category = django_filters.CharFilter(field_name='category__en_name', lookup_expr='exact')
+
+    class Meta:
+        model = Project
+        fields = ["category"]
+                   
+

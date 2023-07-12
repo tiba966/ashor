@@ -16,6 +16,7 @@ urlpatterns = [
         path('grass_root/', views.grass_root, name='grass_root'),
         path('academics/', views.academics, name='academics'),
         path('capacity/', views.capacity, name='capacity'),
+        path('methodology/', views.methodology, name='methodology'),
 
         path('core_list/', views.core_list, name='core_list'),
         path('core_detail/<int:id>', views.core_detail, name='core_detail'),

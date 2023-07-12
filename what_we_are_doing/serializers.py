@@ -33,5 +33,5 @@ class ProjectSerializer(serializers.ModelSerializer):
 class ProjectCategorySerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Project
+        model = Category
         fields = '__all__'

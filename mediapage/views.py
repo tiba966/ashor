@@ -7,6 +7,7 @@ from django.http import HttpRequest
 from .filters import MediaDetailFilter
 # from .form import StoryDetailForm
 from django.core.paginator import Paginator
+from django.shortcuts import get_object_or_404, render
 
 def media_filter(request):
 
@@ -58,6 +59,7 @@ def media_list(request):
 
 
 def media_detail(request, id):
+    media = get_object_or_404(MediaDetail, pk=id)
 
     media = MediaDetail.objects.filter(id=id).last()
     media.views = F("views") + 1
@@ -72,7 +74,6 @@ def media_detail(request, id):
 
     context = {"media": media,  'num_visits': media.views, 'medias': page_obj_media}
     return render(request, "media-details.html", context)
-
 
 
 

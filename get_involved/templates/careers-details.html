@@ -43,14 +43,15 @@
                                             <div class="col-12">
                                                 <div class="page-banner-title ashor-banner-title">
                                                     <h1 class="title"> {% if LANGUAGE_CODE == 'en' %} {{item.career_name}}
-                                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.career_name_ar}} {% endif %}
+                                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.career_name_ar}} 
+                                                        {% elif LANGUAGE_CODE == 'de' %} {{item.career_name_dr}}{% endif %}
                                                    
 
                                                     </h1>
                                                     <h4 class="sub-title" style="color: white;">  {% if LANGUAGE_CODE == 'en' %} {{item.career_employee_type}}
-                                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.career_employee_type_ar}} {% endif %} . {% if LANGUAGE_CODE == 'en' %} {{item.job_type}}
-                                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.job_type_ar}} {% endif %} {% if LANGUAGE_CODE == 'en' %} {{item.location}}
-                                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.location_ar}} {% endif %}
+                                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.career_employee_type_ar}}  {% elif LANGUAGE_CODE == 'de' %} {{item.career_employee_type_dr}}{% endif %} . {% if LANGUAGE_CODE == 'en' %} {{item.job_type}}
+                                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.job_type_ar}}{% elif LANGUAGE_CODE == 'de' %} {{item.job_type_dr}} {% endif %} {% if LANGUAGE_CODE == 'en' %} {{item.location}}
+                                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.location_ar}}{% elif LANGUAGE_CODE == 'de' %} {{item.location_dr}} {% endif %}
                                                     </h4>
                                                 </div>
 
@@ -90,30 +91,36 @@
                                 <h3 class="title">{% trans "Summary" %}</h3>
 
                                 <p>{% if LANGUAGE_CODE == 'en' %} {{item.career_summary_text}}
-                                    {% elif LANGUAGE_CODE == 'ar' %} {{item.career_summary_text_ar}} {% endif %}
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{item.career_summary_text_ar}} 
+                                    {% elif LANGUAGE_CODE == 'de' %} {{item.career_summary_text_dr}}{% endif %}
                                 </p>
 
                                 <h3 class="title">DUTIES AND RESPONSIBILITIES
                                 </h3>
 
                                 <p>{% if LANGUAGE_CODE == 'en' %} {{item.career_duties_text}}
-                                    {% elif LANGUAGE_CODE == 'ar' %} {{item.career_duties_text_ar}} {% endif %}:</p>
+                                    {% elif LANGUAGE_CODE == 'ar' %} {{item.career_duties_text_ar}}
+                                    {% elif LANGUAGE_CODE == 'de' %} {{item.career_duties_text_dr}} {% endif %}:</p>
 
                                 <ul>
                                     <li>{% if LANGUAGE_CODE == 'en' %} {{item.duties_1}}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_1_ar}} {% endif %}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_1_ar}} 
+                                        {% elif LANGUAGE_CODE == 'de' %} {{item.duties_1_dr}}{% endif %}
                                     </li>
                                     <li>{% if LANGUAGE_CODE == 'en' %} {{item.duties_2}}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_2_ar}} {% endif %}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_2_ar}}
+                                        {% elif LANGUAGE_CODE == 'de' %} {{item.duties_2_dr}} {% endif %}
                                     </li>
                                     <li>{% if LANGUAGE_CODE == 'en' %} {{item.duties_3}}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_3_ar}} {% endif %}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_3_ar}}
+                                        {% elif LANGUAGE_CODE == 'de' %} {{item.duties_3_dr}} {% endif %}
                                     </li>
                                     <li>{% if LANGUAGE_CODE == 'en' %} {{item.duties_4}}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_4_ar}} {% endif %}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_4_ar}}  {% elif LANGUAGE_CODE == 'de' %} {{item.duties_4_dr}} {% endif %}
                                     </li>
                                     <li>{% if LANGUAGE_CODE == 'en' %} {{item.duties_5}}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_5_ar}} {% endif %}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.duties_5_ar}}
+                                        {% elif LANGUAGE_CODE == 'de' %} {{item.duties_5_dr}} {% endif %}
                                     </li>
 
                                 </ul>
@@ -122,19 +129,17 @@
                                 </h3>
                                 <ul>
                                     <li>{% if LANGUAGE_CODE == 'en' %} {{item.skill_1}}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_1_ar}} {% endif %}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_1_ar}} {% elif LANGUAGE_CODE == 'de' %} {{item.skill_1_dr}} {% endif %}
                                     </li>
                                     <li>{% if LANGUAGE_CODE == 'en' %} {{item.skill_2}}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_2_ar}} {% endif %}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_2_ar}}{% elif LANGUAGE_CODE == 'de' %} {{item.skill_2_dr}} {% endif %}
                                     </li>
-                                    <li>{% if LANGUAGE_CODE == 'en' %} {{item.skill_2}}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_2_ar}} {% endif %}
-                                    </li>
+                                 
                                     <li>{% if LANGUAGE_CODE == 'en' %} {{item.skill_3}}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_3_ar}} {% endif %}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_3_ar}}  {% elif LANGUAGE_CODE == 'de' %} {{item.skill_3_dr}}{% endif %}
                                     </li>
                                     <li>{% if LANGUAGE_CODE == 'en' %} {{item.skill_4}}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_4_ar}} {% endif %}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{item.skill_4_ar}}{% elif LANGUAGE_CODE == 'de' %} {{item.skill_4_dr}} {% endif %}
                                     </li>
 
                                 </ul>
@@ -196,21 +201,25 @@
                             </div>
                             <div class="info">
                                 <div class="media-caption-main">
-                                    <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ blog.category.en_name }}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{ blog.category.ar_name }}{% endif %}</a>
+                                    <a class="category" style="color: white;"> {% if LANGUAGE_CODE == 'en' %}{{ item.category.en_name }}
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.category.ar_name }}
+                                        {% elif LANGUAGE_CODE == 'de' %} {{ item.category.dr_name }}{% endif %}</a>
                                     <ul class="meta">
                                         <li><i class="far fa-map-marker-alt"></i> {% if LANGUAGE_CODE == 'en' %}{{ item.media_location }}
-                                            {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}{% endif %}</li>
+                                            {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_location_ar }}
+                                            {% elif LANGUAGE_CODE == 'de' %} {{ item.media_location_dr }}{% endif %}</li>
                                         <li><i class="far fa-calendar"></i>{{item.date|date:'d M o'}}</li>
                                     </ul>
                                     <h3 class="title"><a href="{% url 'media:media_detail' item.id %}"> {% if LANGUAGE_CODE == 'en' %}{{ item.media_name }}
-                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name }}{% endif %}</a></h3>
+                                        {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_name_ar }}
+                                        {% elif LANGUAGE_CODE == 'de' %} {{ item.media_name_dr }}{% endif %}</a></h3>
                                 </div>
                                 <div class="media-caption-collapse">
                                    
                                     <div class="desc">
                                         <p> {% if LANGUAGE_CODE == 'en' %}{{ item.media_desc1 }}
-                                            {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1 }}{% endif %}…</p>
+                                            {% elif LANGUAGE_CODE == 'ar' %} {{ item.media_desc1_ar }}
+                                            {% elif LANGUAGE_CODE == 'de' %} {{ item.media_desc1_dr }}{% endif %}…</p>
                                     </div>
                                 </div>
                             </div>

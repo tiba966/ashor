@@ -11,4 +11,5 @@ urlpatterns = [
     # path('themes/<int:id>/', views.theme_detail, name='themes_details'),
     path('themes/<int:theme_id>/', views.theme_detail, name='themes_details'),
     path('project/', views.project, name='project'),
+
 ]

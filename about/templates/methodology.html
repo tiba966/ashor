@@ -12,7 +12,7 @@
                     <ul class="breadcrumb">      <li><a href="{% url 'home:index' %}">{% trans "Home" %}</a></li>
                         <li><a href="{% url 'about:about' %}">{% trans "About Ashor" %}</a></li>
     
-                        <li class="current">{% trans "Capacity Development" %} </li>
+                        <li class="current">{% trans "Methodologies and Approaches" %}l</li>
         
                     </ul>
                 </div>
@@ -34,7 +34,7 @@
 
                                 <!-- Page Banner Section Start -->
                                 <div class="page-banner-section section overlay section-padding"
-                                    data-bg-image="{{ item.image_banner_capacity}}">
+                                    data-bg-image="{{ item.image_banner_methodology}}">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-12">
@@ -73,29 +73,24 @@
 
                         <!-- Section Title Start -->
                         <div class="section-title" data-aos="fade-up" style="padding-top: 50px;">
-                            <p>{% if LANGUAGE_CODE == 'en' %}{{item.capacity_desc}}
-                                {% elif LANGUAGE_CODE == 'ar' %}{{item.capacity_desc_ar}}
-                                {% elif LANGUAGE_CODE == 'de' %}{{item.capacity_desc_dr}}{% endif %}
+                            <p>{% if LANGUAGE_CODE == 'en' %}{{item.methodology_desc}}
+                                {% elif LANGUAGE_CODE == 'ar' %}{{item.methodology_desc_ar}}
+                                {% elif LANGUAGE_CODE == 'de' %}{{item.methodology_desc_dr}}{% endif %}
                             </p>
                             {% endfor %}
 
                             <ol>
-                                {% for item in list %}
+                                {% for item in methodology_list %}
 
 
-                                <li>{% if LANGUAGE_CODE == 'en' %}{{item.capacity_list}}
-                                    {% elif LANGUAGE_CODE == 'ar' %}{{item.capacity_list_ar}}
-                                    {% elif LANGUAGE_CODE == 'de' %}{{item.capacity_list_dr}}{% endif %}.
+                                <li>{% if LANGUAGE_CODE == 'en' %}{{item.methodology_list}}
+                                    {% elif LANGUAGE_CODE == 'ar' %}{{item.methodology_list_ar}}
+                                    {% elif LANGUAGE_CODE == 'de' %}{{item.methodology_list_dr}}{% endif %}.
                                 </li>
                                
                                 {% endfor %}
 
-                            </ol>        {% for item in data %}
-
-                            <p>{% if LANGUAGE_CODE == 'en' %}{{item.capacity_desc1}}
-                                {% elif LANGUAGE_CODE == 'ar' %}{{item.capacity_desc1_ar}}
-                                {% elif LANGUAGE_CODE == 'de' %}{{item.capacity_desc1_dr}}{% endif %}
-                            </p>  {% endfor %}
+                            </ol>
                         </div>
                         <!-- Section Title End -->
 

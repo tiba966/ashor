@@ -79,9 +79,27 @@ class Goal(models.Model):
     goal_desc_dr = models.TextField(
         max_length=1000, default='',  blank=True,)
   
-class GoalList(models.Model):
+class MethodologyList(models.Model):
+    methodology_list = models.CharField(
+        max_length=1000, default='',  blank=True,)
+    methodology_list_ar = models.CharField(
+        max_length=1000, default='',  blank=True,)
+    methodology_list_dr = models.CharField(
+        max_length=1000, default='',  blank=True,)
    
-  
+class Methodology(models.Model):
+    image_banner_methodology  = models.FileField(
+        validators=[validate_image_extension], upload_to='background/about/', )
+   
+    methodology_desc = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    methodology_desc_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    methodology_desc_dr = models.TextField(
+        max_length=1000, default='',  blank=True,)
+        
+
+class GoalList(models.Model):
     goal_name = models.CharField(
         max_length=1000, default='',  blank=True,)
     goal_name_ar = models.CharField(
@@ -97,6 +115,17 @@ class GoalList(models.Model):
     goal_desc_dr = models.TextField(
         max_length=1000, default='',  blank=True,)
 
+# class Capacity(models.Model):
+    # image_banner_capacity  = models.FileField(
+    #     validators=[validate_image_extension], upload_to='background/about/', )
+   
+    # capacity_desc = models.TextField(
+    #     max_length=1000, default='',  blank=True,)
+    # capacity_desc_ar = models.TextField(
+    #     max_length=1000, default='',  blank=True,)
+    # capacity_desc_dr = models.TextField(
+    #     max_length=1000, default='',  blank=True,)
+        
 class Capacity(models.Model):
     image_banner_capacity  = models.FileField(
         validators=[validate_image_extension], upload_to='background/about/', )

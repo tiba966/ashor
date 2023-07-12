@@ -1,8 +1,24 @@
 from django.contrib import admin
 
 from django.contrib import admin
-from .models import About,WhereWeWork,CoreBgImage,Capacity,CapacityList, Goal,GrassRoot, Academics, PartenerLogo, InternalSystemList, VisionMissionValue, PartenerNetwork, InternalSystem, GoalList, Core, History
+from .models import About,WhereWeWork,MethodologyList,Methodology, CoreBgImage,Capacity,CapacityList, Goal,GrassRoot, Academics, PartenerLogo, InternalSystemList, VisionMissionValue, PartenerNetwork, InternalSystem, GoalList, Core, History
 
+class MethodologyListAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                    'methodology_list',
+                    'methodology_list_ar',
+                    'methodology_list_dr',
+                  
+                    ]
+
+class MethodologyAdmin(admin.ModelAdmin):
+    list_display = ['id',
+    'image_banner_methodology',
+                    'methodology_desc',
+                    'methodology_desc_ar',
+                    'methodology_desc_dr',
+                  
+                    ]
 class AboutAdmin(admin.ModelAdmin):
     list_display = ['id',
                     'image_bg_about',
@@ -161,6 +177,9 @@ admin.site.register(InternalSystem, InternalSystemAdmin)
 admin.site.register(About, AboutAdmin)
 admin.site.register(WhereWeWork, WhereWeWorkAdmin)
 admin.site.register(Goal, GoalAdmin)
+admin.site.register(MethodologyList, MethodologyListAdmin)
+admin.site.register(Methodology, MethodologyAdmin)
+
 admin.site.register(PartenerLogo, PartenerLogoAdmin)
 admin.site.register(Academics, AcademicsAdmin)
 admin.site.register(GrassRoot, GrassRootAdmin)
