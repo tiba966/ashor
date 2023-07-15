@@ -109,7 +109,7 @@ def volunteerForm(request):
             email = EmailMessage(
                               data['name'],    
                               message,
-                              'info@ashuor.org', ['volunteer@ashuor.org'],)
+                              'Info@ashuor.org', ['Info@ashuor.org'],)
                           
             if request.FILES:
                             uploaded_file = request.FILES['upload_cv'] # file is the name value which you have provided in form for file field
@@ -164,7 +164,6 @@ def career_list(request):
 
     if career_list:
         context = {'careers': page_obj, 'myfilter': myfilter,
-                   'data': serializer_class.data,
         'media' : page_obj_media,
         'img_bg': queryset}  # template name
 
@@ -188,6 +187,12 @@ def career_detail(request, id):
     return render(request, 'careers-details.html', context)
     
 def careerForm(request,carrer_name):
+    media = MediaDetail.objects.all()
+
+    # Show many contacts per page for stories
+    paginator_media = Paginator(media, 10000000000000000)
+    page_number_media = request.GET.get('page')
+    page_obj_media = paginator_media.get_page(page_number_media)
     if request.method == 'POST':
         print("hello")
         name = request.POST.get('full_name')
@@ -247,7 +252,7 @@ def careerForm(request,carrer_name):
             email = EmailMessage(
                               data['carrer_name'],    
                               message,
-                              'info@ashuor.org', ['hr@ashuor.org'],)
+                              'Info@ashuor.org', ['Info@ashuor.org'],)
                           
             if request.FILES:
                             uploaded_file = request.FILES['upload_cv'] # file is the name value which you have provided in form for file field
@@ -258,7 +263,7 @@ def careerForm(request,carrer_name):
             #     send_mail.send()
             # except  Exception as error:
             return HttpResponse('Invalid header found.')
-    return render(request, 'formCareer.html',{
+    return render(request, 'career-forms.html',{
     
         'media' : page_obj_media
     })

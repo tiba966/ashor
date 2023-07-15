@@ -12,9 +12,9 @@
                 <li><a href="{% url 'home:index' %}">{% trans "Home" %}</a></li>
                 <li><a href="{% url 'about:about' %}">{% trans "About Ashor" %}</a></li>
 
-                <li class="current">{% if LANGUAGE_CODE == 'en' %}{{item.core_name}}
-                    {% elif LANGUAGE_CODE == 'ar' %}{{item.core_name_ar}}
-                    {% elif LANGUAGE_CODE == 'de' %}{{item.core_name_dr}}{% endif %}</li>
+                <li class="current">{% if LANGUAGE_CODE == 'en' %}{{core.core_name}}
+                    {% elif LANGUAGE_CODE == 'ar' %}{{core.core_name_ar}}
+                    {% elif LANGUAGE_CODE == 'de' %}{{core.core_name_dr}}{% endif %}</li>
 
             </ul>
         </div>
@@ -33,20 +33,20 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-12 ">
                                 <div class="profile-image">
-                                    <img src="{{item.core_image.url}}" alt="profile">
+                                    <img src="{{core.core_image.url}}" alt="profile">
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <div class="profile-info">
-                                    <h5 style="padding-top: 20px;"><a href="">{% if LANGUAGE_CODE == 'en' %}{{item.core_name}}
-                                        {% elif LANGUAGE_CODE == 'ar' %}{{item.core_name_ar}}
-                                        {% elif LANGUAGE_CODE == 'de' %}{{item.core_name_dr}}{% endif %}</a></h5>
-                                    <div class="author-career">/{% if LANGUAGE_CODE == 'en' %}{{item.core_position}}
-                                        {% elif LANGUAGE_CODE == 'ar' %}{{item.core_position_ar}}
-                                        {% elif LANGUAGE_CODE == 'de' %}{{item.core_position_dr}}{% endif %}</div>
-                                    <p class="author-bio">{% if LANGUAGE_CODE == 'en' %}{{item.core_desc}}
-                                        {% elif LANGUAGE_CODE == 'ar' %}{{item.core_desc_ar}}
-                                        {% elif LANGUAGE_CODE == 'de' %}{{item.core_desc_dr}}{% endif %}</p>
+                                    <h5 style="padding-top: 20px;"><a href="">{% if LANGUAGE_CODE == 'en' %}{{core.core_name}}
+                                        {% elif LANGUAGE_CODE == 'ar' %}{{core.core_name_ar}}
+                                        {% elif LANGUAGE_CODE == 'de' %}{{core.core_name_dr}}{% endif %}</a></h5>
+                                    <div class="author-career">/{% if LANGUAGE_CODE == 'en' %}{{core.core_position}}
+                                        {% elif LANGUAGE_CODE == 'ar' %}{{core.core_position_ar}}
+                                        {% elif LANGUAGE_CODE == 'de' %}{{core.core_position_dr}}{% endif %}</div>
+                                    <p class="author-bio">{% if LANGUAGE_CODE == 'en' %}{{core.core_desc}}
+                                        {% elif LANGUAGE_CODE == 'ar' %}{{core.core_desc_ar}}
+                                        {% elif LANGUAGE_CODE == 'de' %}{{core.core_desc_dr}}{% endif %}</p>
 
 
 
@@ -94,13 +94,13 @@
                                                 </div>
                                             </div>
                                             <div class="team-info text-center">
-                                                <h3 class="name">{% if LANGUAGE_CODE == 'en' %}{{item.core_name}}
-                                                    {% elif LANGUAGE_CODE == 'ar' %}{{item.core_name_ar}}
-                                                    {% elif LANGUAGE_CODE == 'de' %}{{item.core_name_dr}}{% endif %}
+                                                <h3 class="name">{% if LANGUAGE_CODE == 'en' %}{{core.core_name}}
+                                                    {% elif LANGUAGE_CODE == 'ar' %}{{core.core_name_ar}}
+                                                    {% elif LANGUAGE_CODE == 'de' %}{{core.core_name_dr}}{% endif %}
                                                 </h3>
-                                                <div class="position">{% if LANGUAGE_CODE == 'en' %}{{item.core_name}}
-                                                    {% elif LANGUAGE_CODE == 'ar' %}{{item.core_name_ar}}
-                                                    {% elif LANGUAGE_CODE == 'de' %}{{item.core_name_dr}}{% endif %}
+                                                <div class="position">{% if LANGUAGE_CODE == 'en' %}{{core.core_name}}
+                                                    {% elif LANGUAGE_CODE == 'ar' %}{{core.core_name_ar}}
+                                                    {% elif LANGUAGE_CODE == 'de' %}{{core.core_name_dr}}{% endif %}
 
                                                 </div>
                                             </div>

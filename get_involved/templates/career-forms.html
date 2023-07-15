@@ -44,10 +44,17 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="page-banner-title ashor-banner-title">
-                                            <h1 class="title"> Head of HR (all genders)
+                                            <h1 class="title">  {% if LANGUAGE_CODE == 'en' %} {{item.career_name}}
+                                                    {% elif LANGUAGE_CODE == 'ar' %} {{item.career_name_ar}}
+                                                    {% elif LANGUAGE_CODE == 'de' %} {{item.career_name_dr}} {% endif %}
 
                                             </h1>
-                                            <h4 class="sub-title" style="color: white;"> Permanent employee, Full-time · Berlin
+                                            <h4 class="sub-title" style="color: white;"> {% if LANGUAGE_CODE == 'en' %} {{item.career_employee_type}}
+                                                {% elif LANGUAGE_CODE == 'ar' %} {{item.career_employee_type_ar}}
+                                                {% elif LANGUAGE_CODE == 'de' %} {{item.career_employee_type_dr}} {% endif %} . {% if LANGUAGE_CODE == 'en' %} {{item.job_type}}
+                                                {% elif LANGUAGE_CODE == 'ar' %} {{item.job_type_ar}} {% endif %} {% if LANGUAGE_CODE == 'en' %} {{item.location}}
+                                                {% elif LANGUAGE_CODE == 'ar' %} {{item.location_ar}}
+                                                {% elif LANGUAGE_CODE == 'de' %} {{item.location_dr}} {% endif %}
                                             </h4>
                                         </div>
 
@@ -114,10 +121,18 @@
                                             <div class="col-lg-8">
 
                                                 <!-- Billing Address -->
-                                                <div id="billing-form" class="mb-10">
+                                                <form  method="POST" enctype="multipart/form-data"  id="billing-form" class="mb-10">
+                                                    {% csrf_token %}
+                                            
 
                                                     <div class="row">
-
+                                                        <div  style="  display:none;
+                                                        visibility:hidden; "
+                                                     
+                                                       class="form-group col-md-6 col-sm-12">
+                                                          <div class="field-label">{{career}}</div>
+                                                          <input type="text" name="career_name" value="{{ career }}" placeholder="" />
+                                                        </div>
                                                         <div class="col-md-6 col-12 mb-20">
                                                             <label>{% trans "Full Name" %}*</label>
                                                             <input type="text" placeholder="Full Name">

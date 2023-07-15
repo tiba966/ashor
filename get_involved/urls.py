@@ -9,6 +9,8 @@ urlpatterns = [
 
     path('donate/', views.donate, name='donate'),
     path('careerlist/', views.career_list, name='career_list'),
+    path('api/careerForm/<str:carrer_name>', views.careerForm, name='careerForm'),
+
     # path('careerdetail/<int:id>', views.career_detail, name='career_detail'),
     # path('careerdetail/<int:career_id>', views.career_detail, name='career_detail'),
     path('careerdetail/<int:id>/', views.career_detail, name='career_detail'),
