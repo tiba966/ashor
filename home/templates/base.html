@@ -29,9 +29,10 @@
        {% elif LANGUAGE_CODE == 'de' %}  <link rel="stylesheet" href="{% static 'home/css/style.css' %}"> 
        <link rel="stylesheet" href="{% static 'home/css/style.min.css' %}">
     {% elif LANGUAGE_CODE == 'ar' %}  
-    <link rel="stylesheet" href="{% static 'home/css/style-ar.css' %}">
-    <link rel="stylesheet" href="{% static 'home/css/style-ar.min.css' %}">
-    
+    <!-- <link rel="stylesheet" href="{% static 'home/css/style-ar.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/style-ar.min.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}"> 
+       <link rel="stylesheet" href="{% static 'home/css/style.min.css' %}">
     {% endif %}
 
     <!-- Responsive Settings -->
@@ -360,105 +361,143 @@
             </div>
             <div class="mobile-menu-content">
                 <nav class="site-mobile-menu">
-                    <ul>
-                        <li class=" position-static">
-                            <a href="index.html"><span class="menu-text">{% trans "HOME" %}</span></a>
-                            <span class="menu-toggle"></span>
-
-
-                        </li>
-                        <li class="has-children">
-                            <a href="{% url 'about:about' %}"><span class="menu-text">{% trans "ABOUT ASHOR" %}</span></a>
-                            <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
-                            <ul class="sub-menu">
-                                <li><a href="{% url 'about:history' %}"><span class="menu-text">{% trans "HISTORY" %}</span></a></li>
-                                <li><a href="{% url 'about:goals' %}"><span class="menu-text">{% trans "GOALS" %}</span></a></li>
-                                <li><a href="{% url 'about:vission_mission' %}"><span class="menu-text">{% trans "VISSION AND MISSION" %}</span></a></li>
-                                <li class="has-children">
-                                    <a href="{% url 'about:core_list' %}"><span class="menu-text">{% trans "OUR PEOPLE" %}
+                      <ul>
+    
+                                    <li class="has-children">
+                                        <a href="{% url 'about:about' %}"><span class="menu-text">{% trans "ABOUT ASHOR" %}
+                                            </span></a>
+                                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'about:history' %}"><span
+                                                        class="menu-text">{% trans "HISTORY" %}</span></a></li>
+                                            <li><a href="{% url 'about:goals' %}"><span
+                                                        class="menu-text">{% trans "GOALS" %}</span></a></li>
+                                            <li><a href="{% url 'about:vission_mission' %}"><span
+                                                        class="menu-text">{% trans "VISSION AND MISSION" %}</span></a></li>
+                                            <li class="has-children">
+                                                <a href="{% url 'about:core_list' %}"><span class="menu-text">{% trans "OUR PEOPLE" %}
+                                                    </span></a>
+                                                <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                                <ul class="sub-menu">
+                                                    
+                                                    <li><a href="{% url 'about:grass_root' %}"><span class="menu-text">{% trans "GRASS ROOT VOLUNTEER GROUPS" %} </span></a></li>
+                                                    <li><a href="{% url 'about:academics' %}"><span class="menu-text">{% trans "Academics" %}
+                                                            </span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{% url 'about:partener_network' %}"><span
+                                                        class="menu-text">{% trans "PARTNERS & NETWORKS" %}</span></a></li>
+                                            <li><a href="{% url 'about:internal_system' %}"><span
+                                                        class="menu-text">{% trans "INTERNAL SYSTEM & RESOURCES" %}</span></a></li>
+                                                        <li><a href="{% url 'about:capacity' %}"><span
+                                                            class="menu-text">{% trans "Capacity Development" %} </span></a></li>
+                                                            <li><a href="{% url 'about:methodology' %}"><span
+                                                                class="menu-text">{% trans "Methodologies and Approaches" %} </span></a></li>
+                                            <li><a href="{% url 'about:where_we_work' %}"><span class="menu-text"> {% trans "WHERE WE WORK" %} </span></a></li>
+                                        </ul>
+                                    </li>
+    
+                                    <li class="has-children">
+                                        <a href="{% url 'what_we_are_doing:what_we_are_doing' %}"><span
+                                                class="menu-text">{% trans "WHAT WE ARE DOING" %}</span></a>
+                                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'what_we_are_doing:themes' %}"><span
+                                                        class="menu-text">{% trans "OUR THEMES" %}
+                                                    </span></a></li>
+                                            <li class="has-children"><a href="{% url 'what_we_are_doing:project' %}"><span class="menu-text">{% trans "OUR PROJECTS" %}
+                                                <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                                <ul class="sub-menu">
+                                                    
+                                                    {%for category in project_categories %}
+                                            <li><a href="{% url 'what_we_are_doing:project' %}?category={{category}}"><span
+                                                        class="menu-text">
+                                            {% if LANGUAGE_CODE == 'en' %}
+                                            {{ category.en_name }}
+                                            {% elif LANGUAGE_CODE == 'ar' %}
+                                            {{ category.ar_name }}
+                                            {% endif %}
                                         </span></a>
-                                    <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                    </li>
+                                    {%endfor%}
+                                                </ul></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a href="{% url 'get_involved:get_involved' %}"><span class="menu-text">{% trans "GET INVOLVED" %}</span></a>
+                                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'get_involved:career_list' %}"><span
+                                                        class="menu-text">{% trans "CAREERS" %}</span></a></li>
+                                            <li><a href="{% url 'get_involved:volunteer' %}"><span
+                                                        class="menu-text">{% trans "JOIN US AS VOLUNTEER" %}</span></a></li>
+                                            <li><a href="{% url 'get_involved:donate' %}"><span
+                                                        class="menu-text">{% trans "DONATE" %}</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-children">
+                                        <a href="{% url 'media:media' %}"><span class="menu-text">{% trans "MEDIA" %}</span></a>
+                                        <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                        <ul class="sub-menu">
+                                            {%for category in categories %}
+                                            <li><a href="{% url 'media:media' %}?category={{category}}"><span
+                                                        class="menu-text">
+                                            {% if LANGUAGE_CODE == 'en' %}
+                                            {{ category.en_name }}
+                                            {% elif LANGUAGE_CODE == 'ar' %}
+                                            {{ category.ar_name }}
+                                            {% elif LANGUAGE_CODE == 'de' %}
+                                            {{ category.dr_name }}
+                                            {% endif %}
+                                        </span></a>
+                                    </li>
+                                    {%endfor%}
+                                </ul>
+                                </li>
+
+                                <li>
+                                    <a href="{% url 'home:contact' %}"><span class="menu-text">{% trans "CONTACT" %}</span></a>
+
+                                </li>
+                                <li class="has-children">
+                                    <a href=""><span class="menu-text">{% trans "LANGUAGE" %}</span></a>
                                     <ul class="sub-menu">
-                                        <li><a href="{% url 'about:core_list' %}"><span class="menu-text">
-                                        <li><a href="core.html"><span class="menu-text">{% trans "GRASS ROOT VOLUNTEER GROUPS" %}
-                                                </span></a></li>
-                                        <li><a href="core.html"><span class="menu-text">{% trans "Academics" %} </span></a></li>
+                                        <li>
+                                            <a href=""><span class="menu-text"><form action="{% url 'set_language' %}" method="post">
+                                                {% csrf_token %}
+                                                {% get_current_language as LANGUAGE_CODE %}
+                                                <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}">
+                                                {% if LANGUAGE_CODE == 'ar' %}
+                                                <li><a><span class="menu-text"><button type='submit' name='language' value='en'>
+                                                       {% trans "English" %}</span>
+                                                    </button></span></a> </li>
+                                                <li><a><span  class="menu-text"><button type='submit' name='language' value='de' style="border: none;background-color: white;">
+                                                        <span class="btn-title">{% trans "German" %}</span>
+                                                    </button></span></a> </li>
+                                                {% elif LANGUAGE_CODE == 'en' %}
+                                                <li><a><span class="menu-text"><button type='submit' name='language' value='ar' style="border: none;background-color: white;">
+                                                        <span class="btn-title">{% trans "العربية" %}</span>
+                                                    </button></span></a> </li>
+                                                    <li><a><span class="menu-text"></span><button type='submit' name='language' value='de' style="border: none;background-color: white;">
+                                                        <span class="btn-title">{% trans "German" %}</span>
+                                                    </button></span></a> </li>
+                                                {% else %}
+                                                <li><a><span class="menu-text"> <button type='submit' name='language' value='en' style="border: none;background-color: white;">
+                                                   {% trans "English" %}</span>
+                                                </button></span></a> </li>
+                                                <li><a><span class="menu-text"></span><button type='submit' name='language' value='ar' style="border: none;background-color: white;" >
+                                                    <span class="btn-title">{% trans "العربية" %}</span>
+                                                </button></span></a> </li>
+                                                {% endif %}
+                                            </form></span></a>
+                                        </li>
+                                        <li></li>
                                     </ul>
                                 </li>
-                                <li><a href="{% url 'about:partener_network' %}"><span class="menu-text">{% trans "PARTNERS AND NETWORKS" %}</span></a></li>
-                                <li><a href="{% url 'about:internal_system' %}"><span class="menu-text">{% trans "INTERNAL SYSTEM AND RESOURCES" %}</span></a></li>
-                                <li><a href="{% url 'about:where_we_work' %}"><span class="menu-text"> {% trans "WHERE WE WORK" %}
-                                        </span></a></li>
-
-                            </ul>
-                        </li>
-                        <li class="has-children">
-                            <a href="{% url 'what_we_are_doing:what_we_are_doing' %}"><span class="menu-text">{% trans "WHAT WE ARE DOING" %}</span></a>
-                            <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
-                            <ul class="sub-menu">
-                                <li><a href="{% url 'what_we_are_doing:themes' %}"><span class="menu-text">{% trans "OUR THEMES" %}</span></a>
-                                </li>
-                                <li><a href="projects.html"><span class="menu-text">{% trans "OUR PROJECTS" %} </span></a>
-                                </li>
-
-
-
-                            </ul>
-                        </li>
-                        <li class="has-children">
-                            <a href="{% url 'get_involved:get_involved' %}"><span class="menu-text">{% trans "GET INVOLVED" %}</span></a>
-                            <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
-                            <ul class="sub-menu">
-                                <li><a href="{% url 'get_involved:career_list' %}"><span
-                                            class="menu-text">{% trans "CAREERS" %}</span></a></li>
-                                <li><a href="{% url 'get_involved:volunteer' %}"><span class="menu-text">{% trans "JOIN US AS VOLUNTEER" %}</span></a></li>
-                                <li><a href="{% url 'get_involved:donate' %}"><span class="menu-text">{% trans "DONATE" %}</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-children">
-                            <a href="{% url 'media:media' %}"><span class="menu-text">{% trans "MEDIA" %}</span></a>
-                            <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
-                            <ul class="sub-menu">
-                                {%for category in categories %}
-                                <li><a href="{% url 'media:media' %}?category={{category}}"><span class="menu-text"> 
-                                    {% if LANGUAGE_CODE == 'en' %} 
-                                        {{ category.en_name }}
-                                    {% elif LANGUAGE_CODE == 'ar' %} 
-                                        {{ category.ar_name }}
-                                    {% endif %}
-                                </a></li>
-                      {%endfor%}  
-        
-                            </ul>
-                    </li>
-                    <li>
-                        <a href="{% url 'home:contact' %}"><span class="menu-text">{% trans "CONTACT" %}</span></a>
-                        <span class="menu-toggle"></span>
-                    </li>
-
-                    <li class="dropdown"><a href=""><span class="menu-text">{% trans "LANGUAGE" %}</span></a>
-                        <ul>
-                          <li> <form action="{% url 'set_language' %}"   method="post">
-                            {% csrf_token %}
-                            {% get_current_language as LANGUAGE_CODE %}                                         
-                            <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}">
-                            {% if LANGUAGE_CODE == 'ar' %}
-                                <button type='submit' name='language' value='en' class="theme-btn btn-style-ones" >
-                                   English</span>
-                                </button>
-                            {% else %}
-                                <button type='submit' name='language' value='ar' class="theme-btn btn-style-ones">
-                                    <span class="btn-title">German</span>
-                                </button>
-                            {% endif %}
-                        </form></li>
-                          <li></li>
-                        </ul>
-                      </li>
-
-                 
-                    </ul>
+                                
+                  
+                             
+                                </ul>
                 </nav>
             </div>
         </div>
