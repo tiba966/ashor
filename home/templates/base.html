@@ -173,20 +173,21 @@
                                                 {% csrf_token %}
                                                 {% get_current_language as LANGUAGE_CODE %}
                                                 <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}">
-                                                {% if LANGUAGE_CODE == 'ar' %}
-                                                <li><a><span class="menu-text"><button type='submit' name='language' value='en'>
-                                                       {% trans "English" %}</span>
-                                                    </button></span></a> </li>
-                                                <li><a><span  class="menu-text"><button type='submit' name='language' value='de' style="border: none;background-color: white;">
-                                                        <span class="btn-title">{% trans "German" %}</span>
-                                                    </button></span></a> </li>
-                                                {% elif LANGUAGE_CODE == 'en' %}
+                                               
+                                                {% if LANGUAGE_CODE == 'en' %}
                                                 <li><a><span class="menu-text"><button type='submit' name='language' value='ar' style="border: none;background-color: white;">
                                                         <span class="btn-title">{% trans "العربية" %}</span>
                                                     </button></span></a> </li>
                                                     <li><a><span class="menu-text"></span><button type='submit' name='language' value='de' style="border: none;background-color: white;">
                                                         <span class="btn-title">{% trans "German" %}</span>
                                                     </button></span></a> </li>
+                                                    {% elif LANGUAGE_CODE == 'ar' %}
+                                                    <li><a><span class="menu-text"><button type='submit' name='language' value='en'>
+                                                           {% trans "English" %}</span>
+                                                        </button></span></a> </li>
+                                                    <li><a><span  class="menu-text"><button type='submit' name='language' value='de' style="border: none;background-color: white;">
+                                                            <span class="btn-title">{% trans "German" %}</span>
+                                                        </button></span></a> </li>
                                                 {% else %}
                                                 <li><a><span class="menu-text"> <button type='submit' name='language' value='en' style="border: none;background-color: white;">
                                                    {% trans "English" %}</span>
