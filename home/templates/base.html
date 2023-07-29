@@ -81,25 +81,47 @@
                                             <li><a href="{% url 'about:vission_mission' %}"><span
                                                         class="menu-text">{% trans "VISSION AND MISSION" %}</span></a></li>
                                             <li class="has-children">
-                                                <a href="{% url 'about:core_list' %}"><span class="menu-text">{% trans "OUR PEOPLE" %}
+                                                <a href="{% url 'about:people' %}"><span class="menu-text">{% trans "OUR PEOPLE" %}
                                                     </span></a>
                                                 <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
                                                 <ul class="sub-menu">
-                                                    
+                                                    <li><a href="{% url 'about:core_list' %}"><span class="menu-text">{% trans "CORE STAFF" %} </span></a></li>
+
                                                     <li><a href="{% url 'about:grass_root' %}"><span class="menu-text">{% trans "GRASS ROOT VOLUNTEER GROUPS" %} </span></a></li>
-                                                    <li><a href="{% url 'about:academics' %}"><span class="menu-text">{% trans "Academics" %}
+                                                    <li><a href="{% url 'about:academics' %}"><span class="menu-text">{% trans "ACADEMICS" %}
                                                             </span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-children">
+                                                <a href="{% url 'about:roles' %}"><span class="menu-text">{% trans "ROLES & RESPONSIBILITIES" %}
+                                                    </span></a>
+                                                <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                                <ul class="sub-menu">
+                                                    <li><a href="{% url 'about:internal_system' %}"><span
+                                                        class="menu-text">{% trans "INTERNAL SYSTEM & RESOURCES" %}</span></a></li>
+                                                        <li><a href="{% url 'about:capacity' %}"><span
+                                                            class="menu-text">{% trans "CAPACITY DEVELOPMENT" %} </span></a></li>
+                                                            
+                                                </ul>
+                                            </li>
+                                        
+                                            <li class="has-children">
+                                                <a href="{% url 'about:resources' %}"><span class="menu-text">{% trans "RESOURCES & PUBLICATIONS" %}
+                                                    </span></a>
+                                                <span class="menu-toggle"><i class="far fa-angle-down"></i></span>
+                                                <ul class="sub-menu">
+                                                    <li><a href="{% url 'about:methodology' %}"><span
+                                                        class="menu-text">{% trans "METHODOLOGIES & APPROACHES" %} </span></a></li>
+
+                                                            <li><a href="{% url 'about:assesments' %}"><span
+                                                                class="menu-text">{% trans "ASSESSMENTS & ANALYSIS" %} </span></a></li>
+                                                                <li><a href="{% url 'about:polies' %}"><span
+                                                                    class="menu-text">{% trans "POLICY & STRATEGIES" %} </span></a></li>      
                                                 </ul>
                                             </li>
                                             <li><a href="{% url 'about:partener_network' %}"><span
                                                         class="menu-text">{% trans "PARTNERS & NETWORKS" %}</span></a></li>
-                                            <li><a href="{% url 'about:internal_system' %}"><span
-                                                        class="menu-text">{% trans "INTERNAL SYSTEM & RESOURCES" %}</span></a></li>
-                                                        <li><a href="{% url 'about:capacity' %}"><span
-                                                            class="menu-text">{% trans "Capacity Development" %} </span></a></li>
-                                                            <li><a href="{% url 'about:methodology' %}"><span
-                                                                class="menu-text">{% trans "Methodologies and Approaches" %} </span></a></li>
-                                            <li><a href="{% url 'about:where_we_work' %}"><span class="menu-text"> {% trans "WHERE WE WORK" %} </span></a></li>
+                                           <li><a href="{% url 'about:where_we_work' %}"><span class="menu-text"> {% trans "WHERE WE WORK" %} </span></a></li>
                                         </ul>
                                     </li>
     
@@ -265,9 +287,9 @@
                             <h4 class="footer-widget-title">{% trans "Address" %}</h4>
                             <div class="footer-widget-content">
                                 <div class="content">
-                                    <p>{% trans "Salah Al-Den, Iraq" %}</p>
-                                    <p><a href="tel:+964 773 1476 198"></a>+964 773 1476 198 </p>
-                                    <p><a href="mailto:representative@aifrd.org">representative@aifrd.org </a></p>
+                                    <p>{% trans "HQ : Kirkuk Governorate, Iraq" %}</p>
+                                    <p><a href="tel:+964 773 1476 198"></a>+964 771 577 5521 </p>
+                                    <p><a href="mailto:info@ashuor.org">info@ashuor.org</a></p>
                                 </div>
                                 <div class="footer-social-inline">
                                     <a href="https://www.facebook.com/ashuriraq/"><i
@@ -382,7 +404,7 @@
                                                 <ul class="sub-menu">
                                                     
                                                     <li><a href="{% url 'about:grass_root' %}"><span class="menu-text">{% trans "GRASS ROOT VOLUNTEER GROUPS" %} </span></a></li>
-                                                    <li><a href="{% url 'about:academics' %}"><span class="menu-text">{% trans "Academics" %}
+                                                    <li><a href="{% url 'about:academics' %}"><span class="menu-text">{% trans "ACADEMICS" %}
                                                             </span></a></li>
                                                 </ul>
                                             </li>
@@ -391,9 +413,9 @@
                                             <li><a href="{% url 'about:internal_system' %}"><span
                                                         class="menu-text">{% trans "INTERNAL SYSTEM & RESOURCES" %}</span></a></li>
                                                         <li><a href="{% url 'about:capacity' %}"><span
-                                                            class="menu-text">{% trans "Capacity Development" %} </span></a></li>
+                                                            class="menu-text">{% trans "CAPACITY DEVELOPMENT" %} </span></a></li>
                                                             <li><a href="{% url 'about:methodology' %}"><span
-                                                                class="menu-text">{% trans "Methodologies and Approaches" %} </span></a></li>
+                                                                class="menu-text">{% trans "METHODOLOGIES AND APPROACHES" %} </span></a></li>
                                             <li><a href="{% url 'about:where_we_work' %}"><span class="menu-text"> {% trans "WHERE WE WORK" %} </span></a></li>
                                         </ul>
                                     </li>

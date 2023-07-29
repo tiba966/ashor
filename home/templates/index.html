@@ -20,7 +20,7 @@
                         <div class="row row-25 banner-content-area">
                             <div class="col-lg-4">
                                 <div class="banner-slider-content-2 right">
-                                    <h1>AWAKEN <br> YOUR GIFTS <br>NOW </h1>
+                                    <h1>SPREAD<br> PEACE AMONG <br>YOU </h1>
                                 </div>
                             </div>
                             <div class="col-lg-8">
@@ -71,8 +71,8 @@
         <div class="row align-items-center">
             <div class="col-lg-7">
                 <div class="about-content max-width-100 pl-60 pl-md-20 pl-sm-0 pl-xs-0 mt-sm-50 mt-xs-50">
-                    <span class="sub-title">{% trans "Since" %} <strong>2018</strong></span>
-                    <h2 class="title">Ashor <span>{% trans "Iraq organization" %} </span> </h2>
+                    <span class="sub-title">{% trans "Since" %} <strong>2015</strong></span>
+                    <h2 class="title">Ashor <span>{% trans "Iraq Foundation" %} </span> </h2>
                     <p>{% if LANGUAGE_CODE == 'en' %}{{i.text_about_index}}
                         {% elif LANGUAGE_CODE == 'ar' %}{{i.text_about_index_ar}}
                         {% elif LANGUAGE_CODE == 'de' %}{{i.text_about_index_dr}}{% endif %}</p>
@@ -156,14 +156,12 @@
                 <div class="about-me-video-wrapper about-us-one-video">
 
                     <!-- Video Start -->
-                    <div class="embed-responsive embed-responsive-21by9">
-                        <video controls autoplay loop muted="false" playsinline data-object-fit="cover"
-                            width="100%">
-                            <source src="{% static 'careers/v1.mp4' %}" type="video/mp4">
-
-                            <source src="{% static 'careers/v1.ogg' %}" type="video/ogg">
-
-                        </video>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        
+                        <div class="overview-course-video">
+                            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/F-Tbpi8sNb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen allow="autoplay; encrypted-media"></iframe>                          </div>
+                          
+                          
                     </div>
                     <!-- Video End -->
 

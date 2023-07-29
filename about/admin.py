@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from django.contrib import admin
-from .models import About,WhereWeWork,MethodologyList,Methodology, CoreBgImage,Capacity,CapacityList, Goal,GrassRoot, Academics, PartenerLogo, InternalSystemList, VisionMissionValue, PartenerNetwork, InternalSystem, GoalList, Core, History
+from .models import About,Resources, Assesments, Roles, People, Polies, WhereWeWork,WhereWeWorkBackground,MethodologyList,Methodology, CoreBgImage,Capacity,CapacityList, Goal,GrassRoot, Academics, PartenerLogo, InternalSystemList, VisionMissionValue, PartenerNetwork, InternalSystem, GoalList, Core, History
 
 class MethodologyListAdmin(admin.ModelAdmin):
     list_display = ['id',
@@ -96,9 +96,19 @@ class GoalsAdmin(admin.ModelAdmin):
                     'goal_desc_ar',
                     'goal_desc_dr'
                     ]
+class WhereWeWorkBackgroundAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                    'image_where_we_work',
+                    ]
 class WhereWeWorkAdmin(admin.ModelAdmin):
     list_display = ['id',
-                    'image_banner_where_we_work',
+                    'address',
+                    'address_ar',
+                    'address_dr',
+                    'address_num',
+                    'governorate',
+                    'governorate_ar',
+                    'governorate_dr',
                     
                     ]
 class CoreAdmin(admin.ModelAdmin):
@@ -164,21 +174,71 @@ class GoalAdmin(admin.ModelAdmin):
                     'image_banner_goal',
                     'goal_desc',
                     'goal_desc_ar',
-                                        'goal_desc_dr',
+      'goal_desc_dr',
 
                     ]
+class RolesAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                    'image_banner_roles',
+                    'text_roles',
+                    'text_roles_ar',
+      'text_roles_dr',
+
+                    ]
+class ResourcesAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                    'image_banner_resourc',
+                    'text_resourc',
+                    'text_resourc_ar',
+      'text_resourc_dr',
+
+                    ]
+class PoliesAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                    'image_banner_polies',
+                    'text_polies',
+                    'text_polies_ar',
+      'text_polies_dr',
+
+                    ]
+
+class AssesmentsAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                    'image_banner_assesments',
+                    'text_assesments',
+                    'text_assesments_ar',
+      'text_assesments_dr',
+
+                    ]
+class PeopleAdmin(admin.ModelAdmin):
+    list_display = ['id',
+                    'image_banner_people',
+                    'text_people',
+                    'text_people_ar',
+      'text_people_dr',
+
+                    ]
+
+admin.site.register(People, PeopleAdmin)
+
+admin.site.register(Polies, PoliesAdmin)
+admin.site.register(Assesments, AssesmentsAdmin)
+admin.site.register(Roles, RolesAdmin)
 
 admin.site.register(VisionMissionValue, VisionMissionValueAdmin)
 admin.site.register(History, HistoryAdmin)
 admin.site.register(GoalList, GoalsAdmin)
 admin.site.register(Core, CoreAdmin)
 admin.site.register(PartenerNetwork, PartenerNetworkAdmin)
+admin.site.register(Resources, ResourcesAdmin)
+
 admin.site.register(InternalSystem, InternalSystemAdmin)
 admin.site.register(About, AboutAdmin)
 admin.site.register(WhereWeWork, WhereWeWorkAdmin)
 admin.site.register(Goal, GoalAdmin)
 admin.site.register(MethodologyList, MethodologyListAdmin)
 admin.site.register(Methodology, MethodologyAdmin)
+admin.site.register(WhereWeWorkBackground, WhereWeWorkBackgroundAdmin)
 
 admin.site.register(PartenerLogo, PartenerLogoAdmin)
 admin.site.register(Academics, AcademicsAdmin)

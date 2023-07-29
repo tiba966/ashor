@@ -1,11 +1,41 @@
 from rest_framework import serializers
-from .models import About,Goal,CoreBgImage,Methodology, Capacity,CapacityList,MethodologyList, GrassRoot,Academics, VisionMissionValue,InternalSystemList, PartenerLogo, WhereWeWork, PartenerNetwork, InternalSystem, GoalList, Core, History
+from .models import About,Assesments,Resources, Roles, Polies, People, Goal,CoreBgImage,Methodology,WhereWeWorkBackground, Capacity,CapacityList,MethodologyList, GrassRoot,Academics, VisionMissionValue,InternalSystemList, PartenerLogo, WhereWeWork, PartenerNetwork, InternalSystem, GoalList, Core, History
 
 
+class WhereWeWorkBackgroundSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = WhereWeWorkBackground
+        fields = '__all__'
+class ResourcesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Resources
+        fields = '__all__'
 class AboutSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = About
+        fields = '__all__'
+class AssesmentsSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Assesments
+        fields = '__all__'
+class RolesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Roles
+        fields = '__all__'
+class PoliesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Polies
+        fields = '__all__'
+class PeopleSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = People
         fields = '__all__'
 class MethodologyListSerializer(serializers.ModelSerializer):
 

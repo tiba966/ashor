@@ -68,6 +68,56 @@ class History(models.Model):
         max_length=1000, default='',  blank=True,)
     text_history2_dr = models.TextField(
         max_length=1000, default='',  blank=True,)
+
+
+class People(models.Model):
+    image_banner_people = models.FileField(
+        validators=[validate_image_extension], upload_to='background/about/', )
+    text_people = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    text_people_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    text_people_dr = models.TextField(
+        max_length=1000, default='',  blank=True,)
+class Resources(models.Model):
+    image_banner_resourc = models.FileField(
+        validators=[validate_image_extension], upload_to='background/about/', )
+    text_resourc = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    text_resourc_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    text_resourc_dr = models.TextField(
+        max_length=1000, default='',  blank=True,)
+
+
+class Polies(models.Model):
+    image_banner_polies = models.FileField(
+        validators=[validate_image_extension], upload_to='background/about/', )
+    text_polies = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    text_polies_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    text_polies_dr = models.TextField(
+        max_length=1000, default='',  blank=True,)
+class Roles(models.Model):
+    image_banner_roles = models.FileField(
+        validators=[validate_image_extension], upload_to='background/about/', )
+    text_roles = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    text_roles_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    text_roles_dr = models.TextField(
+        max_length=1000, default='',  blank=True,)
+class Assesments(models.Model):
+    image_banner_assesments = models.FileField(
+        validators=[validate_image_extension], upload_to='background/about/', )
+    text_assesments = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    text_assesments_ar = models.TextField(
+        max_length=1000, default='',  blank=True,)
+    text_assesments_dr = models.TextField(
+        max_length=1000, default='',  blank=True,)
+
 class Goal(models.Model):
     image_banner_goal = models.FileField(
         validators=[validate_image_extension], upload_to='background/about/', )
@@ -114,18 +164,11 @@ class GoalList(models.Model):
         max_length=1000, default='',  blank=True,)
     goal_desc_dr = models.TextField(
         max_length=1000, default='',  blank=True,)
-
-# class Capacity(models.Model):
-    # image_banner_capacity  = models.FileField(
-    #     validators=[validate_image_extension], upload_to='background/about/', )
+class WhereWeWorkBackground(models.Model):
+    image_where_we_work  = models.FileField(
+        validators=[validate_image_extension], upload_to='background/about/', )
    
-    # capacity_desc = models.TextField(
-    #     max_length=1000, default='',  blank=True,)
-    # capacity_desc_ar = models.TextField(
-    #     max_length=1000, default='',  blank=True,)
-    # capacity_desc_dr = models.TextField(
-    #     max_length=1000, default='',  blank=True,)
-        
+  
 class Capacity(models.Model):
     image_banner_capacity  = models.FileField(
         validators=[validate_image_extension], upload_to='background/about/', )
@@ -199,9 +242,20 @@ class PartenerNetwork(models.Model):
 
 
 class WhereWeWork(models.Model):
-    image_banner_where_we_work = models.FileField(
-        validators=[validate_image_extension], upload_to='background/WhereWeWork/', )
-
+    governorate = models.CharField(
+        max_length=500, default='',  blank=True,)
+    governorate_ar = models.CharField(
+        max_length=500, default='',  blank=True,)
+    governorate_dr = models.CharField(
+        max_length=500, default='',  blank=True,)
+    address = models.CharField(
+        max_length=500, default='',  blank=True,)
+    address_ar = models.CharField(
+        max_length=500, default='',  blank=True,)
+    address_dr = models.CharField(
+        max_length=500, default='',  blank=True,)
+    address_num = models.CharField(
+        max_length=500, default='',  blank=True,)
 class InternalSystemList(models.Model):
     internal_list = models.TextField(
         max_length=1000, default='',  blank=True,)
