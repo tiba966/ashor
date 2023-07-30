@@ -88,7 +88,8 @@ class Project(models.Model):
         max_length=1000, default='', blank=True, )
     project_name_dr = models.CharField(
         max_length=1000, default='', blank=True, )
-    project_date = models.DateField(default=date.today, blank=True)
+    project_date = models.CharField(
+        max_length=1000, default='', blank=True, )
     year = models.CharField(choices=YEAR, max_length=6)
 
     category =  models.ForeignKey(
