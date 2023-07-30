@@ -18,7 +18,6 @@ db.sqlite3
 *.bak
 .DS_Store
 # execlude static files
-/static
 # If you are using PyCharm #
 .idea/
 .idea/**/workspace.xml
