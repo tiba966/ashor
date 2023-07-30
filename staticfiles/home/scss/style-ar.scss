@@ -1,0 +1,54 @@
+// [dir="rtl"] {
+
+//     p,
+//     h1,
+//     h2,
+//     h3,
+//     h4,
+//     h5,
+//     h6,
+//     span,
+//     text {
+
+//         text-align: right;
+//     }
+// }
+.banner-slider-content-2.left {
+    [dir="rtl"] & {
+        text-align: right;
+    }
+}
+
+.banner-slider {
+    .banner-slider-nav {
+        i {
+            [dir="rtl"] & {
+                transform: scale(-1);
+            }
+        }
+    }
+}
+
+.link {
+    i {
+
+        [dir="rtl"] & {
+            transform: scale(-1);
+        }
+    }
+
+    mark {
+        &::after {
+            transform-origin: right;
+        }
+    }
+}
+
+.load-more-btn {
+    i {
+
+        [dir="rtl"] & {
+            transform: scale(-1);
+        }
+    }
+}
